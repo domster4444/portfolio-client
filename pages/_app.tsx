@@ -1,11 +1,15 @@
 import '../styles/globals.css';
-import type { AppProps } from 'next/app';
+import { AppProps } from 'next/app';
 import { UserProvider } from '@auth0/nextjs-auth0';
+
+import { NextUIProvider } from '@nextui-org/react';
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
     <UserProvider>
-      <Component {...pageProps} />
+      <NextUIProvider>
+        <Component {...pageProps} />
+      </NextUIProvider>
     </UserProvider>
   );
 }
