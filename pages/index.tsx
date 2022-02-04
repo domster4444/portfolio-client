@@ -23,11 +23,6 @@ const PrimaryButton = styled.button`
   }
 `;
 
-// disable runtime on javascript export completely
-export const config = {
-  unstable_runtimeJS: false,
-};
-
 const Home: NextPage = () => {
   const { user, error, isLoading } = useUser();
   const [visible, setVisible] = React.useState(false);
