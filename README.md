@@ -1,34 +1,63 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+<h1 align="center">Welcome to Portfolio Generator 👋</h1>
+<p>
+  <img alt="Version" src="https://img.shields.io/badge/version-0.0.1-blue.svg?cacheSeconds=2592000" />
+  <a href="https://storybook.com" target="_blank">
+    <img alt="Documentation" src="https://img.shields.io/badge/documentation-yes-brightgreen.svg" />
+  </a>
+  <a href="https://opensource.org/licenses/MIT" target="_blank">
+    <img alt="License: MIT" src="https://img.shields.io/badge/License-MIT-yellow.svg" />
+  </a>
+  <a href="https://twitter.com/Kshitiz29498705" target="_blank">
+    <img alt="Twitter: Kshitiz29498705" src="https://img.shields.io/twitter/follow/Kshitiz29498705.svg?style=social" />
+  </a>
+</p>
 
-## Getting Started
+> An Application To Generate Portfolio Presence
 
-First, run the development server:
+### 🏠 [Homepage](/)
 
-```bash
-npm run dev
-# or
-yarn dev
+### ✨ [Demo](https://www.youtube.com)
+
+## Install
+
+```sh
+npm i
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Usage
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+```sh
+npm run dev
+```
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+## Run tests
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+```sh
+npm run test
+```
 
-## Learn More
+## Author
 
-To learn more about Next.js, take a look at the following resources:
+👤 **Kshitiz**
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- Website: blackkshitiz.netlify.app
+- Twitter: [@Kshitiz29498705](https://twitter.com/Kshitiz29498705)
+- Github: [@domster4444](https://github.com/domster4444)
+- LinkedIn: [@kshitizshah7](https://linkedin.com/in/kshitizshah7)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## 🤝 Contributing
 
-## Deploy on Vercel
+Contributions, issues and feature requests are welcome!<br />Feel free to check [issues page](https://github.com/domster4444/portfolio-client/issues). You can also take a look at the [contributing guide](https://github.com/domster4444/contribution_guide/blob/main/readme.md).
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Show your support
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Give a ⭐️ if this project helped you!
+
+## 📝 License
+
+Copyright © 2022 [Kshitiz](https://github.com/domster4444).<br />
+This project is [MIT](https://opensource.org/licenses/MIT) licensed.
+
+---
+
+_This README was generated with ❤️ by [readme-md-generator](https://github.com/kefranabg/readme-md-generator)_
