@@ -45,6 +45,7 @@ const Home: NextPage = () => {
 
   return (
     <>
+      <h1>welcome</h1>
       <Link href="/api/auth/login">
         <PrimaryButton>Login</PrimaryButton>
       </Link>
