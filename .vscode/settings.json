@@ -5,9 +5,10 @@
     "**/.hg": true,
     "**/CVS": true,
     "**/.DS_Store": true,
-    "**/Thumbs.db": true
+    "**/Thumbs.db": true,
+    "__tests__/index.test.tsx": true
   },
-  "hide-files.files": [],
+  "hide-files.files": ["__tests__/index.test.tsx"],
   "workbench.colorCustomizations": {
     "activityBar.activeBackground": "#3333ff",
     "activityBar.activeBorder": "#600000",
