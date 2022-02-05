@@ -20,6 +20,18 @@ class MyDocument extends Document {
     return (
       <Html lang="en">
         <Head />
+
+        {/* boxicons */}
+        <link
+          rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css"
+        />
+        <link
+          rel="stylesheet"
+          href="https://unpkg.com/boxicons@latest/css/boxicons.min.css"
+        />
+
+        {/* google analytics */}
         <link rel="manifest" href="/manifest.json" />
         <script
           async
