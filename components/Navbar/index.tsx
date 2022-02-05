@@ -35,7 +35,9 @@ const Navbar = (props: PropsTypes): JSX.Element => {
                   <Menu>Logout</Menu>
                 </Link>
               ) : menuItem !== 'Login' && menuItem !== 'Logout' ? (
-                <Menu key={menuItem}>{menuItem}</Menu>
+                <Link passHref href={menuItem.toLowerCase()}>
+                  <Menu key={menuItem}>{menuItem}</Menu>
+                </Link>
               ) : null}
             </React.Fragment>
           ))}
