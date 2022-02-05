@@ -7,6 +7,9 @@ import { Loading } from '@nextui-org/react';
 import Layout from '../components/Layout';
 import Navbar from '../components/Navbar';
 
+//pages
+import HomePage from './homepage';
+
 const Home: NextPage = () => {
   const { user, error, isLoading } = useUser();
 
@@ -48,7 +51,7 @@ const Home: NextPage = () => {
           logo=""
           menus={['About', 'Home']}
         />
-        <h1>welcome</h1>
+        <HomePage />
       </Layout>
     </>
   );
