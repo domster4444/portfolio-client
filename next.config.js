@@ -6,6 +6,7 @@ const nextConfig = withPWA({
     disable: process.env.NODE_ENV === 'development',
   },
   reactStrictMode: true,
+  compress: true,
 });
 
 module.exports = nextConfig;
