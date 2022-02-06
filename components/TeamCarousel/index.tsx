@@ -1,6 +1,8 @@
 import React from 'react';
 import { Button } from '@nextui-org/react';
 import { Heart, Work } from 'react-iconly';
+import Image from 'next/image';
+import member1 from 'public/images/members/member1.jpg';
 
 const index: React.FC = () => {
   return (
@@ -14,9 +16,11 @@ const index: React.FC = () => {
             <div className="card">
               <div className="content">
                 <div className="img">
-                  <img
-                    src="https://scontent.fktm1-2.fna.fbcdn.net/v/t1.15752-9/272773064_627681405010414_1657976025951488449_n.jpg?_nc_cat=107&ccb=1-5&_nc_sid=ae9488&_nc_ohc=t7jzEGz0VNYAX8ijfyn&_nc_ht=scontent.fktm1-2.fna&oh=03_AVJYIO5SucH-lRhvLFILRILPbc10d3I0Lxk8pwyms3HeVQ&oe=6226257D"
-                    alt=""
+                  <Image
+                    height="124"
+                    width="124"
+                    src={member1}
+                    alt="team members"
                   />
                   -
                 </div>
@@ -73,9 +77,11 @@ const index: React.FC = () => {
             <div className="card">
               <div className="content">
                 <div className="img">
-                  <img
-                    src="https://scontent.fktm1-2.fna.fbcdn.net/v/t1.15752-9/272773064_627681405010414_1657976025951488449_n.jpg?_nc_cat=107&ccb=1-5&_nc_sid=ae9488&_nc_ohc=t7jzEGz0VNYAX8ijfyn&_nc_ht=scontent.fktm1-2.fna&oh=03_AVJYIO5SucH-lRhvLFILRILPbc10d3I0Lxk8pwyms3HeVQ&oe=6226257D"
-                    alt=""
+                  <Image
+                    height="124"
+                    width="124"
+                    src={member1}
+                    alt="team members"
                   />
                   -
                 </div>
@@ -131,9 +137,11 @@ const index: React.FC = () => {
             <div className="card">
               <div className="content">
                 <div className="img">
-                  <img
-                    src="https://scontent.fktm1-2.fna.fbcdn.net/v/t1.15752-9/272773064_627681405010414_1657976025951488449_n.jpg?_nc_cat=107&ccb=1-5&_nc_sid=ae9488&_nc_ohc=t7jzEGz0VNYAX8ijfyn&_nc_ht=scontent.fktm1-2.fna&oh=03_AVJYIO5SucH-lRhvLFILRILPbc10d3I0Lxk8pwyms3HeVQ&oe=6226257D"
-                    alt=""
+                  <Image
+                    height="124"
+                    width="124"
+                    src={member1}
+                    alt="team members"
                   />
                   -
                 </div>
@@ -190,9 +198,11 @@ const index: React.FC = () => {
             <div className="card">
               <div className="content">
                 <div className="img">
-                  <img
-                    src="https://scontent.fktm1-2.fna.fbcdn.net/v/t1.15752-9/272773064_627681405010414_1657976025951488449_n.jpg?_nc_cat=107&ccb=1-5&_nc_sid=ae9488&_nc_ohc=t7jzEGz0VNYAX8ijfyn&_nc_ht=scontent.fktm1-2.fna&oh=03_AVJYIO5SucH-lRhvLFILRILPbc10d3I0Lxk8pwyms3HeVQ&oe=6226257D"
-                    alt=""
+                  <Image
+                    height="124"
+                    width="124"
+                    src={member1}
+                    alt="team members"
                   />
                   -
                 </div>
@@ -248,9 +258,11 @@ const index: React.FC = () => {
             <div className="card">
               <div className="content">
                 <div className="img">
-                  <img
-                    src="https://scontent.fktm1-2.fna.fbcdn.net/v/t1.15752-9/272773064_627681405010414_1657976025951488449_n.jpg?_nc_cat=107&ccb=1-5&_nc_sid=ae9488&_nc_ohc=t7jzEGz0VNYAX8ijfyn&_nc_ht=scontent.fktm1-2.fna&oh=03_AVJYIO5SucH-lRhvLFILRILPbc10d3I0Lxk8pwyms3HeVQ&oe=6226257D"
-                    alt=""
+                  <Image
+                    height="124"
+                    width="124"
+                    src={member1}
+                    alt="team members"
                   />
                   -
                 </div>
@@ -307,9 +319,11 @@ const index: React.FC = () => {
             <div className="card">
               <div className="content">
                 <div className="img">
-                  <img
-                    src="https://scontent.fktm1-2.fna.fbcdn.net/v/t1.15752-9/272773064_627681405010414_1657976025951488449_n.jpg?_nc_cat=107&ccb=1-5&_nc_sid=ae9488&_nc_ohc=t7jzEGz0VNYAX8ijfyn&_nc_ht=scontent.fktm1-2.fna&oh=03_AVJYIO5SucH-lRhvLFILRILPbc10d3I0Lxk8pwyms3HeVQ&oe=6226257D"
-                    alt=""
+                  <Image
+                    height="124"
+                    width="124"
+                    src={member1}
+                    alt="team members"
                   />
                   -
                 </div>
@@ -364,8 +378,12 @@ const index: React.FC = () => {
           </div>
         </div>
         <div className="button">
-          <label htmlFor="one" className="active one"></label>
-          <label htmlFor="two" className="two"></label>
+          <label htmlFor="one" className="active one">
+            <span style={{ color: 'transparent' }}>first page</span>
+          </label>
+          <label htmlFor="two" className="two">
+            <span style={{ color: 'transparent' }}>second page</span>
+          </label>
         </div>
       </div>
     </div>

@@ -7,7 +7,8 @@ import Document, {
   DocumentContext,
   DocumentInitialProps,
 } from 'next/document';
-import { GA_TRACKING_ID } from 'lib/gtag';
+// ! Enable Google Analytics from _document,_app & /lib/gtag.js
+// import { GA_TRACKING_ID } from 'lib/gtag';
 
 class MyDocument extends Document {
   static async getInitialProps(
@@ -22,14 +23,14 @@ class MyDocument extends Document {
         <Head />
 
         {/* boxicons */}
-        <link
+        {/* <link
           rel="stylesheet"
           href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css"
-        />
+        /> */}
 
         {/* google analytics */}
         <link rel="manifest" href="/manifest.json" />
-        <script
+        {/* <script
           async
           src={`https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`}
         ></script>
@@ -44,12 +45,15 @@ class MyDocument extends Document {
             });
             `,
           }}
-        ></script>
+        ></script> */}
         <title>Portfolio Application</title>
         <meta charSet="utf-8" />
-        <meta name="veiwport" content="width-device-width, initial-scale=1.0" />
+        <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="view" content="width-device-width, initial-scale=1.0" />
         <meta name="author" content="Kshitiz" />
         <meta name="description" content="Portfolio Builder Application" />
+        <meta name="keywords" content="portfolio, builder, application" />
+
         <body>
           <Main />
           <NextScript />

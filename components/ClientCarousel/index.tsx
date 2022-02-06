@@ -2,10 +2,10 @@ import React from 'react';
 import Image from 'next/image';
 import styled from 'styled-components';
 // images
-import client1 from 'public/images/clients/1.png';
-import client2 from 'public/images/clients/2.png';
-import client3 from 'public/images/clients/3.png';
-import client4 from 'public/images/clients/4.png';
+import client1 from 'public/images/clients/1.jpg';
+import client2 from 'public/images/clients/2.jpg';
+import client3 from 'public/images/clients/3.jpg';
+import client4 from 'public/images/clients/4.jpg';
 
 // components
 

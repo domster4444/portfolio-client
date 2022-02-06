@@ -12,7 +12,7 @@ const HomePage: NextPage = () => {
     <Layout>
       <Head>
         <title>Home</title>
-        <meta name="description" content="Meta description for the Home page" />
+        <meta name="description" content="Home page of portfolio generator" />
       </Head>
 
       <main>
