@@ -1,0 +1,199 @@
+// .processPageMain1 {
+//   .numberFont {
+//     margin-bottom: -0.2rem;
+//     animation-name: float;
+//     animation-duration: 2.7s;
+//     animation-iteration-count: infinite;
+//     color: rgb(205, 206, 207);
+//   }
+
+//   @include flex('center', 'center');
+//   .leftSection {
+//     padding-left: 2rem;
+//     border-top-left-radius: 5rem;
+//     border-left: 2px dashed #5d9dff;
+//     width: 50%;
+
+//     // ? 100% coverage
+//     @include media('<=796px') {
+//       width: 100%;
+//     }
+//     h1 {
+//       font-size: 4.2rem;
+//     }
+//     h2 {
+//       margin: 0rem 0rem 2rem 0rem;
+//       font-size: 3.4rem;
+//       line-height: 3.7rem;
+//     }
+//     p {
+//       @include media('<=977px') {
+//         font-size: 2rem;
+//       }
+
+//       // ? 100% coverage
+//       @include media('<=796px') {
+//         font-size: 2.2rem !important;
+//       }
+//       @include media('<=788px') {
+//         font-size: 1.4rem !important;
+//       }
+//       line-height: 2.5rem;
+//       line-height: 2.7rem;
+//       font-size: 1.5rem;
+//       @include media('<=796px') {
+//         font-size: 1.2rem;
+//       }
+//     }
+//   }
+//   .rightSection {
+//     @include flex(center, center);
+//     img {
+//       width: 60%;
+//     }
+//     @include media('<=796px') {
+//       width: 100%;
+//     }
+
+//     width: 50%;
+//   }
+// }
+
+// .processPageMain2 {
+//   @extend .processPageMain1;
+
+//   flex-direction: row-reverse;
+//   .leftSection {
+//     border: none;
+//   }
+//   .rightSection {
+//     border-right: 2px dashed #d3d0d0;
+//     border-left: none;
+//   }
+// }
+// .processPageMain22 {
+//   @extend .processPageMain1;
+
+//   .leftSection {
+//     border-left: none;
+//     border-right: 2px dashed #d3d0d0;
+//   }
+//   .rightSection {
+//     border: none;
+//   }
+// }
+// .processPageMain4 {
+//   margin-bottom: 2rem;
+//   @extend .processPageMain1;
+
+//   .leftSection {
+//     border: none;
+//   }
+//   .rightSection {
+//     border-bottom-right-radius: 5rem;
+//     border-left: none;
+//     border-right: 2px dashed #5d9dff;
+//   }
+// }
+// ---------------------------------------------------------
+.processPageMain1 {
+  //? decrease 01 02 03 04 05 Block Div's Default margin top
+  h1 {
+    margin-top: 0.5rem;
+  }
+  .numberFont {
+    margin-bottom: -0.2rem;
+    animation-name: float;
+    animation-duration: 2.7s;
+    animation-iteration-count: infinite;
+    color: #428dfc;
+  }
+
+  @include flex('center', 'center');
+  .leftSection {
+    padding: 2rem;
+    margin-top: 2rem;
+    background-color: white;
+    border-radius: 1rem;
+    padding-left: 2rem;
+
+    width: 50%;
+
+    // ? 100% coverage
+    @include media('<=796px') {
+      width: 100%;
+    }
+    h1 {
+      font-size: 4.2rem;
+    }
+    h2 {
+      margin: 0rem 0rem 2rem 0rem;
+      font-size: 3.4rem;
+      line-height: 3.7rem;
+    }
+    p {
+      @include media('<=977px') {
+        font-size: 2rem;
+      }
+
+      // ? 100% coverage
+      @include media('<=796px') {
+        font-size: 2.2rem !important;
+      }
+      @include media('<=788px') {
+        font-size: 1.4rem !important;
+      }
+      line-height: 2.5rem;
+      line-height: 2.7rem;
+      font-size: 1.5rem;
+      @include media('<=796px') {
+        font-size: 1.2rem;
+      }
+    }
+  }
+  .rightSection {
+    @include flex(center, center);
+    img {
+      width: 60%;
+    }
+    @include media('<=796px') {
+      width: 100%;
+    }
+
+    width: 50%;
+  }
+}
+
+.processPageMain2 {
+  @extend .processPageMain1;
+
+  flex-direction: row-reverse;
+  .leftSection {
+    border: none;
+  }
+  .rightSection {
+    border-left: none;
+  }
+}
+.processPageMain22 {
+  @extend .processPageMain1;
+
+  .leftSection {
+    border-left: none;
+  }
+  .rightSection {
+    border: none;
+  }
+}
+.processPageMain4 {
+  margin-bottom: 2rem;
+  @extend .processPageMain1;
+
+  .leftSection {
+    border: none;
+  }
+  .rightSection {
+    border-left: none;
+  }
+}
+// ---------------------------------------------------------

@@ -1,0 +1,52 @@
+#navBar {
+  padding: 0.5rem 0rem;
+  @include flexContainer;
+  justify-content: center;
+  nav {
+    font-weight: 400;
+    @include flexContainer;
+    justify-content: space-between;
+    width: 65%;
+    @include media('<=1351px') {
+      width: 100%;
+    }
+    #logoBlock {
+      height: 100%;
+
+      img {
+        height: 100%;
+        width: 180px;
+      }
+    }
+    #menuBlock {
+      ul {
+        @include media('<=788px') {
+          display: none;
+        }
+        justify-content: center;
+        list-style: none;
+        @include flexContainer;
+        li {
+          padding: 2rem 0rem;
+          color: $primary_black;
+          font-size: 2rem;
+
+          margin: 0rem 1.2rem;
+        }
+        #blueGhostBtn {
+          box-shadow: 0px 30px 30px 0px rgba(0, 11, 40, 0.1);
+          border-radius: 4rem;
+          padding: 1rem 4rem;
+          border: 1px solid $royal_blue;
+          color: $royal_blue;
+
+          transition: all 300ms ease-in-out;
+          &:active {
+            transition: all 10ms ease-in-out;
+            transform: scale(1.04);
+          }
+        }
+      }
+    }
+  }
+}

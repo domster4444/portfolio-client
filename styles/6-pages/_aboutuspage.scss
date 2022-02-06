@@ -1,0 +1,144 @@
+#AboutUsPageMain {
+  span {
+    position: absolute;
+    width: 0.35rem;
+    height: 5.5rem;
+    left: 2rem;
+  }
+  .defaultGrey {
+    background: #ccc;
+  }
+  .red {
+    background: red;
+  }
+  .blue {
+    background: blue;
+  }
+  .green {
+    background: green;
+  }
+  .orange {
+    background: orange;
+  }
+  padding-top: 8rem;
+  h1 {
+    margin: 0;
+  }
+  .title {
+    font-size: 5rem;
+  }
+  .subTitle {
+    color: #91a0b0;
+  }
+
+  #principleCardSection {
+    padding-bottom: 1rem;
+    .principleCard {
+      transition: all 600ms ease-in-out;
+      &:hover {
+        transition: all 200ms ease-in-out;
+        transform: scale(1.02);
+        transform: translateY(-1rem);
+        box-shadow: 0px 20px 60px 0px rgba(194, 233, 255, 0.5);
+      }
+
+      img {
+        height: 3.5rem;
+        position: absolute;
+        top: 2rem;
+      }
+      position: relative;
+    }
+    @include flex('center', '');
+    justify-content: center;
+    margin-top: 4rem;
+    .principleCard {
+      h3 {
+        margin: 0;
+        font-size: 1.8rem;
+      }
+
+      .subParagraph {
+        color: #91a0b0;
+        font-size: 1.4rem;
+      }
+
+      .description {
+        font-size: 1rem;
+        margin-top: 2rem;
+      }
+      padding-top: 8rem;
+      padding-left: 4rem;
+      padding-right: 2rem;
+      padding-bottom: 2rem;
+
+      margin: 1.5rem;
+      background-color: white;
+      width: 24rem;
+    }
+  }
+}
+
+.whychooseus_section {
+  background-color: white;
+  @include flex(center, center);
+}
+
+.AboutUs_WhyChooseUs_Card:hover > h2 {
+  color: rgb(94, 44, 237);
+}
+
+.AboutUs_WhyChooseUs_Card {
+  transition: all 400ms ease-in-out;
+  &:hover {
+    transition: all 200ms ease-in-out;
+    transform: scale(1.02);
+    transform: translateY(-1rem);
+    box-shadow: 0px 0px 21px 1px #e7e5ff;
+    @include boxShadow;
+  }
+  h2 {
+    font-size: 2.1rem;
+  }
+
+  p {
+    font-size: 1.4rem;
+    margin-top: 2rem;
+  }
+  .arrowIconContainer {
+    margin-top: 2rem;
+    img {
+      height: 2.5rem;
+    }
+  }
+
+  @include flex(center, center);
+  flex-direction: column;
+  text-align: center;
+  margin: 2rem;
+  padding: 3rem 2rem;
+  background-color: white;
+  max-width: 30rem;
+  min-width: 19rem;
+
+  .AboutUs_WhyChooseUs_Card-Circles {
+    margin: 1rem;
+    height: 4rem;
+    width: 4rem;
+    border-top-left-radius: 50%;
+    border-bottom-left-radius: 50%;
+    border-bottom-right-radius: 50%;
+  }
+  .blue {
+    box-shadow: 0px 10px 30px 0px rgba(44, 130, 237, 0.4);
+    background-image: linear-gradient(40deg, #2c82ed 0%, #38d0fc 100%);
+  }
+  .gold {
+    box-shadow: 0px 10px 30px 0px rgba(255, 155, 18, 0.4);
+    background-image: linear-gradient(-27deg, #ff8901 0%, #ffb21b 100%);
+  }
+}
+.green {
+  box-shadow: 0px 10px 30px 0px rgba(87, 178, 42, 0.4);
+  background-image: linear-gradient(40deg, #57b22a 0%, #77ea3d 100%);
+}

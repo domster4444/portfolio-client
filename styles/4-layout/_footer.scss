@@ -1,0 +1,73 @@
+#mainFooter {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+  .greyBox {
+    @include media('<=1000px') {
+      width: 90%;
+    }
+    margin: 4rem 1rem 0rem 1rem;
+
+    border-radius: 0.8rem;
+    padding: 1rem;
+    font-size: 1.4rem;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    max-width: 90rem;
+    color: white;
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+  h1 {
+    margin-left: 25%;
+
+    font-size: 2.7rem;
+  }
+
+  color: white;
+  background-color: #09142e;
+  footer {
+    padding-top: 0.6rem;
+
+    @include media('>=979px') {
+      @include flex(center, '');
+    }
+    @include flex('', center);
+
+    flex-wrap: wrap;
+    section {
+      @include media('<=979px') {
+        margin: 3rem 12rem 0rem 12rem;
+      }
+      @include media('<=tablet') {
+        margin: 3rem 4rem 0rem 4rem;
+      }
+      position: relative;
+      margin: 3rem 8rem 0rem 8rem;
+
+      .logo {
+        img {
+          width: 3.7rem;
+          height: 4.1rem;
+        }
+        position: absolute;
+        top: -1rem;
+        left: -5rem;
+        font-size: 3.5rem;
+      }
+      a {
+        color: white;
+      }
+      ul li {
+        margin-top: 1rem;
+        &:hover {
+          text-decoration: underline;
+        }
+        list-style: none;
+        font-size: 1.4rem;
+      }
+      h3 {
+        font-size: 1.7rem;
+        margin-bottom: 1.5rem;
+      }
+    }
+  }
+}

@@ -17,10 +17,9 @@ const HomePage: NextPage = () => {
 
       <main>
         <h1>This is home page</h1>
+        <TeamCarousel />
         <ClientCarousel />
         <Accordion />
-
-        <TeamCarousel />
       </main>
     </Layout>
   );

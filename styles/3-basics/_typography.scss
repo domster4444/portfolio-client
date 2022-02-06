@@ -1,0 +1,54 @@
+//poppins base
+
+.poppins_base {
+  font-family: 'Poppins', sans-serif;
+}
+
+.poppins_light_300 {
+  @extend .poppins_base;
+  font-weight: 300;
+}
+
+.poppins_regular_400 {
+  @extend .poppins_base;
+  font-weight: 400;
+}
+.poppins_medium_500 {
+  @extend .poppins_base;
+  font-weight: 500;
+}
+.poppins_semibold_600 {
+  @extend .poppins_base;
+  font-weight: 600;
+}
+.poppins_bold_700 {
+  @extend .poppins_base;
+  font-weight: 700;
+}
+
+// sofia base
+
+.Sofia_Bold {
+  font-family: 'Sofia_Bold';
+}
+.Sofia_Light {
+  font-family: 'Sofia_Light';
+}
+.Sofia_Regular {
+  font-family: 'Sofia_Regular';
+}
+.Sofia_SemiBold {
+  font-family: 'Sofia_SemiBold';
+}
+
+.Sofia_Bold,
+.Sofia_Light,
+.Sofia_Regular,
+.Sofia_SemiBold {
+  font-weight: inherit;
+}
+
+.numberFont {
+  font-family: 'Train One', cursive;
+  font-weight: 400;
+}

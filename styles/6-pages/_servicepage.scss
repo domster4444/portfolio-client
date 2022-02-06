@@ -1,0 +1,194 @@
+#servicePageMain {
+  .dottedDesign {
+    @include media('<=desktop') {
+      visibility: hidden;
+    }
+  }
+
+  #bestFeatureSection {
+    margin-top: 3rem;
+    h1 {
+      margin-top: 4rem;
+      margin-bottom: 3rem;
+    }
+    p {
+      color: rgb(106, 124, 146);
+      font-size: 1.7rem;
+    }
+    padding: 5rem 0rem;
+    background-color: rgb(90, 79, 233);
+    #bestFeatureSectionDiamondIllustrator {
+      position: absolute;
+      z-index: 1;
+    }
+    .bestFeatureCards {
+      position: relative;
+      z-index: 2;
+      text-align: center;
+      transition: all 200ms ease-in-out;
+      &:hover {
+        transition: all 200ms ease-in-out;
+        transform: translateY(-1rem);
+      }
+      padding: 2rem;
+      border-radius: 1rem;
+      .iconContainer {
+        margin-top: -5rem;
+      }
+      margin: 4rem;
+      @include media('<=1520px') {
+        margin: 2rem;
+      }
+      @include media('<=1392px') {
+        margin: 4rem;
+      }
+      @include media('<=1351px') {
+        margin: 1rem;
+      }
+      @include media('<=1351px') {
+        margin: 2rem 1rem;
+
+        width: 18.3rem;
+        height: 23.7rem;
+      }
+
+      width: 28.3rem;
+      height: 23.7rem;
+      background: white;
+    }
+  }
+
+  padding-top: 10rem;
+
+  #rightSection {
+    img {
+      width: 40rem;
+    }
+  }
+  #leftSection {
+    p {
+      color: rgb(145, 160, 176);
+      line-height: 2.5rem;
+      font-size: 1.6rem;
+    }
+    h1 {
+      font-size: 4rem;
+    }
+    #generealDescriptionSection_leftSection_innerCardContainer {
+      @include flex(center, center);
+      .smallServiceCard {
+        h1 {
+          font-size: 1.8rem;
+        }
+        p {
+          line-height: 2.5rem;
+          color: rgb(145, 160, 176);
+          font-size: 1.6rem;
+        }
+        padding: 1rem;
+        margin: 1rem 4rem 2rem 0rem;
+        width: 24rem;
+        height: 24rem;
+      }
+    }
+  }
+}
+
+.serviceDescriptionSection {
+  @include flex(center, center);
+  .rightSection {
+    h1 {
+      font-size: 3.6rem;
+    }
+
+    p {
+      line-height: 2.7rem;
+      font-size: 1.9rem;
+    }
+    width: 52rem;
+  }
+
+  .leftSection,
+  .rightSection {
+    padding: 1rem;
+  }
+  .leftSection {
+    position: relative;
+    padding-top: 10rem;
+    width: 45rem;
+    height: 60rem;
+    img {
+      position: absolute;
+    }
+
+    .savingUI1 {
+      position: absolute;
+      height: 40rem;
+    }
+    .savingUI2 {
+      position: absolute;
+      top: 15rem;
+      visibility: hidden;
+    }
+  }
+}
+
+#serviceDescriptionSection2 {
+  @extend .serviceDescriptionSection;
+  flex-direction: row-reverse;
+  .leftSection {
+    border-top: 2px dashed lightgray;
+    border-right: 2px dashed lightgray;
+  }
+}
+#serviceDescriptionSection1 {
+  .leftSection {
+    border-top: 2px dashed lightgray;
+    border-left: 2px dashed lightgray;
+  }
+}
+
+// hexagon
+
+.hexagon {
+  border: 4px solid transparent;
+  background: transparent;
+  border-radius: 20px;
+  transform: rotate(90deg);
+  height: 57px;
+  width: 62px;
+  clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+}
+
+.redHexagon {
+  @extend .hexagon;
+
+  background-image: linear-gradient(35deg, #ff0000 0%, #ff5959 50%);
+}
+
+.blueHexagon {
+  @extend .hexagon;
+
+  background-image: linear-gradient(35deg, #2c82ed 0%, #38d0fc 50%);
+}
+
+.greenHexagon {
+  @extend .hexagon;
+
+  background-image: linear-gradient(35deg, #57b22a 0%, #77ea3d 50%);
+}
+.purpleHexagon {
+  @extend .hexagon;
+
+  background-image: linear-gradient(35deg, #5038ff 0%, #868aff 50%);
+}
+.goldHexagon {
+  @extend .hexagon;
+
+  background-image: linear-gradient(35deg, #ff8901 0%, #ffb21b 50%);
+}
+.pinkHexagon {
+  @extend .hexagon;
+
+  background-image: linear-gradient(35deg, #ff0c4b 0%, lightpink 100%);
+}

@@ -1,0 +1,147 @@
+#ourTeamPage {
+  #teamInfoSection {
+    display: flex;
+    flex-wrap: wrap;
+    .card {
+      margin: 2rem;
+      padding: 2rem 0.5rem;
+      min-width: 35rem;
+      max-width: 50rem;
+
+      display: flex;
+      .leftDivision {
+        width: 10rem;
+        .sphereDivision {
+          height: 10rem;
+          width: 10rem;
+          border-radius: 50%;
+          #firstTeamMember {
+            background-image: url(../img/ourTeam/kapoor.png);
+          }
+          #secondTeamMember {
+            background-image: url(../img/ourTeam/kritika.PNG);
+          }
+          #thirdTeamMember {
+            background-image: url(../img/ourTeam/kshitiz.png);
+          }
+          #fourthTeamMember {
+            background-image: url(../img/ourTeam/kizz.PNG);
+          }
+          .teamMember {
+            background-position: center;
+            background-size: cover;
+            border-radius: 50%;
+            height: 10rem;
+            width: 10rem;
+          }
+        }
+      }
+      .rightDivision {
+        padding: 0rem 1rem;
+        p {
+          color: rgb(77, 76, 78);
+          margin-bottom: 2rem;
+          line-height: 2.5rem;
+          font-size: 1.3rem;
+        }
+        .container {
+          font-size: 1.3rem;
+          display: flex;
+          justify-content: space-between;
+
+          .left {
+            .occupation {
+              color: rgb(177, 175, 175);
+              font-size: 1.2rem;
+            }
+          }
+          .right {
+            a {
+              color: rgb(134, 71, 228);
+              font-size: 1.5rem;
+            }
+            font-size: 1.5rem;
+            svg {
+              height: 1rem;
+            }
+          }
+        }
+      }
+    }
+  }
+  #sectionTwo {
+    width: 100%;
+    margin: 3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    flex-wrap: wrap;
+    img {
+      height: 25rem;
+    }
+
+    #rightDivision {
+      h3 {
+        margin: 2rem 0rem;
+        font-size: 2.8rem;
+      }
+      p {
+        font-size: 2.5rem;
+      }
+    }
+  }
+  #heroSection {
+    text-align: center;
+    @include media('>=789px') {
+      font-size: 2rem;
+    }
+    @include media('>=649px') {
+      font-size: 1.4rem;
+    }
+
+    h1 {
+      @include media('<=789px') {
+        margin-top: 10rem;
+      }
+      @include media('>=789px') {
+        margin-top: 10rem;
+      }
+      @include media('>=937px') {
+        margin-top: 20rem;
+      }
+      //   text shift down aft 539
+      @include media('<=539px') {
+        margin-top: 26rem;
+      }
+    }
+    height: 72rem;
+    @include media('<=629px') {
+      height: 60rem;
+    }
+    @include media('<=936px') {
+      height: 50rem;
+    }
+
+    display: flex;
+    justify-content: center;
+    div {
+      margin-top: 8rem;
+    }
+    margin-top: -8rem;
+    @include media('<=539px') {
+      margin-top: -15rem;
+    }
+    background-image: url(../img/ourTeam/HeroSectionBg.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+  hr {
+    @include media('>=1350px') {
+      width: 60%;
+      transform: translateX(-50%);
+      margin-left: 50%;
+    }
+  }
+}

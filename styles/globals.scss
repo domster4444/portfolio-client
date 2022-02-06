@@ -1,0 +1,54 @@
+// This is the single file output by sass . It is intended to ONLY @inport other files.
+
+//?1-HELPERS
+// @import '1-helpers/functions';
+// @import '1-helpers/mixins';
+// @import '1-helpers/variables';
+
+//?2-TOOLS
+// @import '2-tools/animate';
+// @import '2-tools/breakpoint';
+// @import '2-tools/flickity';
+// @import '2-tools/hint';
+// @import '2-tools/hover';
+// @import '2-tools/normalize';
+
+//?3-BASICS
+
+// @import '3-basics/base';
+// @import '3-basics/buttons';
+// @import '3-basics/customanimations';
+// @import '3-basics/fonts';
+// @import '3-basics/global';
+// @import '3-basics/links';
+// @import '3-basics/responsive_mixin';
+// @import '3-basics/selection-colors';
+// @import '3-basics/typography';
+
+//?4-LAYOUT   SHARED BIG COMPONENTS
+// @import '4-layout/body-template';
+
+//? 5-MODULES
+@import '5-modules/clientCarousel';
+@import '5-modules/teamCarousel';
+
+//? 5-PAGES
+// @import '6-pages/attendanceRegistration';
+
+// ? NEXT Default
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
