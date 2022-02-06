@@ -1,8 +1,11 @@
 import React from 'react';
 import Head from 'next/head';
-
-import Layout from '../../components/Layout';
 import { NextPage } from 'next';
+
+// components
+import Layout from 'components/Layout';
+import ClientCarousel from 'components/ClientCarousel/index';
+
 const HomePage: NextPage = () => {
   return (
     <Layout>
@@ -13,6 +16,7 @@ const HomePage: NextPage = () => {
 
       <main>
         <h1>This is home page</h1>
+        <ClientCarousel />
       </main>
     </Layout>
   );

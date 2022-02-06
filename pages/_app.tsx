@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 import { useRouter } from 'next/router';
 import * as gtag from '../lib/gtag';
-import '../styles/globals.css';
+import 'styles/globals.css';
 import { AppProps } from 'next/app';
 import { UserProvider } from '@auth0/nextjs-auth0';
 
