@@ -4,8 +4,8 @@ import { NextPage } from 'next';
 
 // components
 import Layout from 'components/Layout';
-import ClientCarousel from 'components/ClientCarousel/index';
-
+import ClientCarousel from 'components/ClientCarousel';
+import Accordion from 'components/Accordion';
 const HomePage: NextPage = () => {
   return (
     <Layout>
@@ -17,6 +17,7 @@ const HomePage: NextPage = () => {
       <main>
         <h1>This is home page</h1>
         <ClientCarousel />
+        <Accordion />
       </main>
     </Layout>
   );
