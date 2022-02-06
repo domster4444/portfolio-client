@@ -43,7 +43,7 @@ const Layout: React.FC = ({ children }: any) => {
         <Navbar
           isLoggedIn={user ? true : false}
           logo=""
-          menus={['About', 'Home']}
+          menus={['About', 'Home', 'Login', 'Logout']}
         />
 
         {children}
