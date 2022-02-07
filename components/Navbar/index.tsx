@@ -12,7 +12,7 @@ import type { PropsTypes } from './types';
 import Image from 'next/image';
 
 import { Nav, Menu } from './style';
-import Dropdown from './components/Dropdown';
+import Dropdown from 'components/DropDown';
 
 const Navbar = (props: PropsTypes): JSX.Element => {
   const { logo, isLoggedIn, menus } = props;
@@ -22,8 +22,8 @@ const Navbar = (props: PropsTypes): JSX.Element => {
       <ul>
         <li className="Nav__leftDivision">
           <Image
-            height="45"
-            width="45"
+            height={45}
+            width={45}
             src={logo !== '' ? logo : LogoImg}
             alt="logo"
           />

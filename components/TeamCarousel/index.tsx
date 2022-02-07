@@ -17,8 +17,8 @@ const index: React.FC = () => {
               <div className="content">
                 <div className="img">
                   <Image
-                    height="124"
-                    width="124"
+                    height={124}
+                    width={124}
                     src={member1}
                     alt="team members"
                   />
@@ -78,8 +78,8 @@ const index: React.FC = () => {
               <div className="content">
                 <div className="img">
                   <Image
-                    height="124"
-                    width="124"
+                    height={124}
+                    width={124}
                     src={member1}
                     alt="team members"
                   />
@@ -138,8 +138,8 @@ const index: React.FC = () => {
               <div className="content">
                 <div className="img">
                   <Image
-                    height="124"
-                    width="124"
+                    height={124}
+                    width={124}
                     src={member1}
                     alt="team members"
                   />
@@ -199,8 +199,8 @@ const index: React.FC = () => {
               <div className="content">
                 <div className="img">
                   <Image
-                    height="124"
-                    width="124"
+                    height={124}
+                    width={124}
                     src={member1}
                     alt="team members"
                   />
@@ -259,8 +259,8 @@ const index: React.FC = () => {
               <div className="content">
                 <div className="img">
                   <Image
-                    height="124"
-                    width="124"
+                    height={124}
+                    width={124}
                     src={member1}
                     alt="team members"
                   />
@@ -320,8 +320,8 @@ const index: React.FC = () => {
               <div className="content">
                 <div className="img">
                   <Image
-                    height="124"
-                    width="124"
+                    height={124}
+                    width={124}
                     src={member1}
                     alt="team members"
                   />
@@ -332,16 +332,41 @@ const index: React.FC = () => {
                   <div className="job">Web Devloper</div>
                 </div>
                 <div className="media-icons">
-                  <a href="#">
+                  <a
+                    href="https://facebook.com"
+                    aria-label="Facebook"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="social-icon facebook grayscale"
+                  >
                     <i className="fab fa-facebook-f"></i>
                   </a>
-                  <a href="#">
+                  <a
+                    href="https://twitter.com"
+                    aria-label="Twitter"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="social-icon twitter grayscale"
+                  >
                     <i className="fab fa-twitter"></i>
                   </a>
-                  <a href="#">
+
+                  <a
+                    href="https://instagram.com"
+                    aria-label="Instagram"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="social-icon instagram grayscale"
+                  >
                     <i className="fab fa-instagram"></i>
                   </a>
-                  <a href="#">
+                  <a
+                    href="https://youtube.com"
+                    aria-label="Youtube"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="social-icon youtube grayscale"
+                  >
                     <i className="fab fa-youtube"></i>
                   </a>
                 </div>

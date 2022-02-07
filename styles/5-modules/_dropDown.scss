@@ -1,0 +1,50 @@
+// ?? Real DropDown (not the button)
+.dropDownContainer {
+  position: relative;
+}
+/* <li> */
+.nav-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 2.1rem;
+}
+
+/* Dropdown Menu */
+
+.dropdown {
+  // box-shadow: 0px 2px 4px rgb(0 0 0 / 18%) !important;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  z-index: 100;
+  position: absolute;
+  top: 45px;
+  width: 200px;
+  transform: translateX(-30%);
+  background-color: white;
+  border-radius: 8px;
+  padding: 1rem;
+  overflow: hidden;
+  transition: height 500ms ease;
+}
+
+.menu {
+  width: 100%;
+}
+
+.menu-item {
+  cursor: pointer;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  border-radius: 8px;
+  transition: background 500ms;
+  padding: 0.1rem;
+}
+
+.menu-item .icon-button:hover {
+  filter: none;
+}
+
+.menu-item:hover {
+  background-color: #f5f5f5;
+}

@@ -17,112 +17,112 @@ const index: React.FC = () => {
           <div className="slide">
             <Image
               src={client1}
-              height="100"
-              width="250"
+              height={100}
+              width={250}
               alt="client company logo"
             />
           </div>
           <div className="slide">
             <Image
               src={client2}
-              height="100"
-              width="250"
+              height={100}
+              width={250}
               alt="client company logo"
             />
           </div>
           <div className="slide">
             <Image
               src={client3}
-              height="100"
-              width="250"
+              height={100}
+              width={250}
               alt="client company logo"
             />
           </div>
           <div className="slide">
             <Image
               src={client4}
-              height="100"
-              width="250"
+              height={100}
+              width={250}
               alt="client company logo"
             />
           </div>
           <div className="slide">
             <Image
               src={client1}
-              height="100"
-              width="250"
+              height={100}
+              width={250}
               alt="client company logo"
             />
           </div>
           <div className="slide">
             <Image
               src={client2}
-              height="100"
-              width="250"
+              height={100}
+              width={250}
               alt="client company logo"
             />
           </div>
           <div className="slide">
             <Image
               src={client3}
-              height="100"
-              width="250"
+              height={100}
+              width={250}
               alt="client company logo"
             />
           </div>
           <div className="slide">
             <Image
               src={client4}
-              height="100"
-              width="250"
+              height={100}
+              width={250}
               alt="client company logo"
             />
           </div>
           <div className="slide">
             <Image
               src={client1}
-              height="100"
-              width="250"
+              height={100}
+              width={250}
               alt="client company logo"
             />
           </div>
           <div className="slide">
             <Image
               src={client2}
-              height="100"
-              width="250"
+              height={100}
+              width={250}
               alt="client company logo"
             />
           </div>
           <div className="slide">
             <Image
               src={client3}
-              height="100"
-              width="250"
+              height={100}
+              width={250}
               alt="client company logo"
             />
           </div>
           <div className="slide">
             <Image
               src={client4}
-              height="100"
-              width="250"
+              height={100}
+              width={250}
               alt="client company logo"
             />
           </div>
           <div className="slide">
             <Image
               src={client1}
-              height="100"
-              width="250"
+              height={100}
+              width={250}
               alt="client company logo"
             />
           </div>
           <div className="slide">
             <Image
               src={client2}
-              height="100"
-              width="250"
+              height={100}
+              width={250}
               alt="client company logo"
             />
           </div>
