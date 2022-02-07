@@ -17,7 +17,7 @@ const HomePage: NextPage = () => {
       </Head>
 
       <main>
-        <h1>This is home page</h1>
+        <h1>This is home page published on Namecheap</h1>
         <TeamCarousel />
         <ClientCarousel />
         <Accordion />
