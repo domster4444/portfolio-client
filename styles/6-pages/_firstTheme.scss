@@ -1,5 +1,8 @@
 #firstTheme {
   .hero {
+    @media only screen and (max-width: 600px) {
+      text-align: center;
+    }
     padding: 5rem 0rem;
     position: relative;
     // background-color: black;
@@ -13,6 +16,21 @@
     justify-content: center;
     &__left {
       margin: 1rem;
+      form {
+        transform: translateX(-30%);
+        margin-left: 30%;
+        // background-color: blue;
+        margin-bottom: 5rem;
+        #mail {
+          @media only screen and (max-width: 600px) {
+            width: 80vw !important;
+          }
+        }
+        #btn {
+          left: 8rem;
+          top: 5rem;
+        }
+      }
     }
     &__right {
       img {
@@ -123,6 +141,10 @@
   .about img {
     height: auto;
     width: 430px;
+    @media only screen and (max-width: 600px) {
+      width: 230px;
+    }
+    margin: 5rem 0rem 0rem 0rem !important;
   }
   .about-text {
     width: 550px;
