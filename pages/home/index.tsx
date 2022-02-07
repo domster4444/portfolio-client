@@ -7,7 +7,6 @@ import Layout from 'components/Layout';
 import ClientCarousel from 'components/ClientCarousel';
 import Accordion from 'components/Accordion';
 import TeamCarousel from 'components/TeamCarousel';
-import DropDown from 'components/DropDown';
 const HomePage: NextPage = () => {
   return (
     <Layout>
