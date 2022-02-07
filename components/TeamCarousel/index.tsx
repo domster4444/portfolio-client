@@ -361,8 +361,8 @@ const index: React.FC = () => {
                     <i className="fab fa-instagram"></i>
                   </a>
                   <a
-                    href="https://youtube.com"
-                    aria-label="Youtube"
+                    href="https://linkedin.com"
+                    aria-label="Linkedin"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="social-icon youtube grayscale"
