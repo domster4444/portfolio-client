@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-
+import Link from 'next/link';
 import { CSSTransition } from 'react-transition-group';
 import DropDownBtn from 'components/Navbar/components/Dropdown';
 const index = () => {
@@ -40,18 +40,19 @@ function DropdownMenu() {
   //!needed DropdownItem
   function DropdownItem(props: any) {
     return (
-      <div
-        //   @ts-ignore
-        href="#"
-        style={{
-          justifyContent: 'center',
-          color: 'black',
-        }}
-        className="menu-item"
-        onClick={() => props.goToMenu && setActiveMenu(props.goToMenu)}
-      >
-        {props.children}
-      </div>
+      <Link passHref href={`${props.route}`}>
+        <div
+          //   @ts-ignore
+          style={{
+            justifyContent: 'center',
+            color: 'black',
+          }}
+          className="menu-item"
+          onClick={() => props.goToMenu && setActiveMenu(props.goToMenu)}
+        >
+          {props.children}
+        </div>
+      </Link>
     );
   }
 
@@ -69,10 +70,11 @@ function DropdownMenu() {
         onEnter={calcHeight}
       >
         <div className="menu">
-          <DropdownItem>Log in</DropdownItem>
-          <DropdownItem>Sign up</DropdownItem>
-          <DropdownItem>Help</DropdownItem>
-          <DropdownItem>Contact us</DropdownItem>
+          <DropdownItem route="/api/auth/login">
+            Log in or Register
+          </DropdownItem>
+          <DropdownItem route="/support">Support</DropdownItem>
+          <DropdownItem route="/contact">Contact us</DropdownItem>
         </div>
       </CSSTransition>
     </div>

@@ -4,7 +4,6 @@
  * @description : This is a Navbar component
  * @author : Kshitiz Shah
  */
-
 import LogoImg from 'public/images/Logo.svg';
 import React from 'react';
 import Link from 'next/link';

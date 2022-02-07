@@ -21,8 +21,6 @@ const HomePage: NextPage = () => {
         <TeamCarousel />
         <ClientCarousel />
         <Accordion />
-
-        <DropDown />
       </main>
     </Layout>
   );
