@@ -12,7 +12,6 @@ import {
   Buy,
   Logout,
 } from 'react-iconly';
-import { Avatar } from '@nextui-org/react';
 
 type Props = {
   children: JSX.Element;
