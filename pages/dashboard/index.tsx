@@ -6,7 +6,7 @@ import { Filter, Home, User, Image, Play, Buy, Logout } from 'react-iconly';
 
 const Dashboard = () => {
   const logoutSubmitHandler = () => {
-    alert('logout');
+    console.log('logout successfull');
   };
   useEffect(() => {
     function menuBtnChange() {
@@ -169,21 +169,23 @@ const Dashboard = () => {
           <span className="tooltip">Setting</span>
         </li> */}
           <li className="profile">
-            <button
-              style={{
-                right: '0',
-                backgroundColor: 'transparent',
-                cursor: 'pointer',
-                padding: '2rem',
-                position: 'absolute',
-              }}
-              type="button"
-              onClick={logoutSubmitHandler}
-            >
-              <i className="bx  bx-log-out" id="log_out">
-                <Logout set="bold" primaryColor="#c4c4c4" />
-              </i>
-            </button>
+            <Link passHref href="/api/auth/logout">
+              <button
+                style={{
+                  right: '0',
+                  backgroundColor: 'transparent',
+                  cursor: 'pointer',
+                  padding: '2rem',
+                  position: 'absolute',
+                }}
+                type="button"
+                onClick={logoutSubmitHandler}
+              >
+                <i className="bx  bx-log-out" id="log_out">
+                  <Logout set="bold" primaryColor="#c4c4c4" />
+                </i>
+              </button>
+            </Link>
           </li>
           {/* .,.,.,.,.,.,.,.,.,.,....................,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,, */}
 
