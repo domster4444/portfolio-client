@@ -16,6 +16,7 @@ const SideDrawer: React.FC = () => {
   const logoutSubmitHandler = () => {
     console.log('logout successfull');
   };
+
   useEffect(() => {
     function menuBtnChange() {
       //  @ts-ignore

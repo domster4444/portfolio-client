@@ -1,7 +1,6 @@
 // ?MAking extra layer to avoid rendering of public pages before being redirected to DASHBOARD PAGE
 import React from 'react';
 import styled from 'styled-components';
-
 import { useUser } from '@auth0/nextjs-auth0';
 import { Loading } from '@nextui-org/react';
 import { useRouter } from 'next/router';

@@ -6,6 +6,8 @@ import { AppProps } from 'next/app';
 import { UserProvider } from '@auth0/nextjs-auth0';
 
 import { NextUIProvider } from '@nextui-org/react';
+import 'react-toastify/dist/ReactToastify.css';
+import { ToastContainer } from 'react-toastify';
 
 function MyApp({ Component, pageProps }: AppProps) {
   // const router = useRouter();
@@ -23,6 +25,7 @@ function MyApp({ Component, pageProps }: AppProps) {
       <UserProvider>
         <NextUIProvider>
           <Component {...pageProps} />
+          <ToastContainer />
         </NextUIProvider>
       </UserProvider>
     </>
