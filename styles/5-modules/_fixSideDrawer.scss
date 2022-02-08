@@ -1,0 +1,29 @@
+//Complex Hover Styles For DropDown Menu
+.changeColorToBlackOnHover {
+  color: white;
+  transition: all ease-in-out 350ms;
+  display: flex;
+  align-items: center;
+  border-radius: 0.85rem;
+  &:hover {
+    i {
+      color: black; //Make the icon color black on hovering "setUpDetails"
+    }
+    ul {
+      a {
+        li {
+          color: black; // make bio,contact,all links black on hover of "SetupDetail"
+        }
+      }
+    }
+    color: black; // make "setup detail" black on hover
+    transition: all ease-in-out 200ms;
+    background-color: white; // make whole bg white on hover on "SetupDetails"
+  }
+}
+
+//make sideDrawer's bottom most part to upper level zindex : 1000 to avoid
+// setup Details' link appear over the sideDrawer's bottom most part
+.profile {
+  z-index: 1000;
+}

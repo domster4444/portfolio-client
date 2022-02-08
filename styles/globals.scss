@@ -15,7 +15,7 @@
 
 //?3-BASICS
 
-// @import '3-basics/base';
+@import '3-basics/base';
 // @import '3-basics/buttons';
 // @import '3-basics/customanimations';
 // @import '3-basics/fonts';
@@ -32,6 +32,10 @@
 @import '5-modules/clientCarousel';
 @import '5-modules/teamCarousel';
 @import '5-modules/dropDown';
+// private dashboard's sidedrawer
+@import '5-modules/sideDrawerDrop';
+@import '5-modules/fixSideDrawer';
+@import '5-modules/sideDrawer';
 
 //? 5-PAGES
 @import '6-pages/404';
