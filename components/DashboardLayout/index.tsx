@@ -1,187 +1,50 @@
 import React, { useEffect, useState } from 'react';
-import Link from 'next/link';
-// import Link from 'next/link';
-import DropDown from 'components/Menu/SideDrawerDrop';
-import {
-  Filter,
-  CloseSquare,
-  Home,
-  User,
-  Image,
-  Play,
-  Buy,
-  Logout,
-} from 'react-iconly';
+import { useRouter } from 'next/router';
+import { useUser } from '@auth0/nextjs-auth0';
+import { Loading } from '@nextui-org/react';
+import SideDrawer from 'components/DashboardLayout/SideDrawer/SideDrawer';
 
 type Props = {
   children: JSX.Element;
 };
-
+// @ts-ignore
 const DashboardLayout: React.FC<Props> = ({ children }) => {
-  const logoutSubmitHandler = () => {
-    console.log('logout successfull');
-  };
-  useEffect(() => {
-    function menuBtnChange() {
-      //  @ts-ignore
-      if (sidebar.classList.contains('open')) {
-        //  @ts-ignore
-        closeBtn.classList.replace('bx-menu', 'bx-menu-alt-right'); // replacing the iocns class
-        //  @ts-ignore
+  const { user, error, isLoading } = useUser();
 
-        setTimeout(() => {
-          for (let i = 0; i < linkName.length; i++) {
-            linkName[i].classList.replace('hideName', 'showName');
-          }
-        }, 200);
-      } else {
-        //  @ts-ignore
-        closeBtn.classList.replace('bx-menu-alt-right', 'bx-menu'); // replacing the iocns class
-        //  @ts-ignore
-
-        for (let i = 0; i < linkName.length; i++) {
-          linkName[i].classList.replace('showName', 'hideName');
-        }
-      }
-    }
-
-    const sidebar = document.querySelector('.sidebar');
-    const closeBtn = document.querySelector('#btn');
-    const linkName = document.querySelectorAll('.links_name');
-
-    //  @ts-ignore
-    closeBtn.addEventListener('click', () => {
-      //  @ts-ignore
-      sidebar.classList.toggle('open');
-      menuBtnChange(); // calling the function(optional)
-    });
-  }, []);
-
-  const [opened, setOpened] = useState(false);
-
-  return (
-    <>
-      <div className="sidebar">
-        <div className="logo-details">
-          <i className="bx bxl-c-plus-plus icon" />
-          <div className="logo_name">Portfolio</div>
-          <i className="bx bx-menu" id="btn">
-            <Filter
-              // @ts-ignore
-              id="hamburger--open"
-              set="bold"
-              primaryColor="#c4c4c4"
-            />
-            <CloseSquare
-              // @ts-ignore
-              id="hamburger--close"
-              set="bold"
-              primaryColor="white"
-            />
-          </i>
-        </div>
-        <ul className="nav-list">
-          {/* <li>
-          <i className="bx bx-search" />
-          <input type="text" placeholder="Search..." />
-          <span className="tooltip">Search</span>
-        </li> */}
-          <li className="dashboardLayout__sideMenus">
-            <Home
-              // @ts-ignore
-              className="sideMenus__icon"
-              set="bold"
-              primaryColor="#c4c4c4"
-            />
-            <Link passHref href="/dashboard/home">
-              <span className="links_name hideName">Dashboard</span>
-            </Link>
-          </li>
-          <li className="dashboardLayout__sideMenus">
-            <User
-              // @ts-ignore
-              className="sideMenus__icon"
-              set="bold"
-              primaryColor="#c4c4c4"
-            />
-            <Link passHref href="/dashboard/home">
-              <span className="links_name hideName">Profile</span>
-            </Link>
-          </li>
-          <li className="dashboardLayout__sideMenus">
-            <Image
-              // @ts-ignore
-              className="sideMenus__icon"
-              set="bold"
-              primaryColor="#c4c4c4"
-            />
-            <Link passHref href="/dashboard/home">
-              <span className="links_name hideName">Themes</span>
-            </Link>
-          </li>
-          <li className="dashboardLayout__sideMenus">
-            <Play
-              // @ts-ignore
-              className="sideMenus__icon"
-              set="bold"
-              primaryColor="#c4c4c4"
-            />
-            <Link passHref href="/dashboard/home">
-              <span className="links_name hideName">Video Guidance</span>
-            </Link>
-          </li>
-          <li className="dashboardLayout__sideMenus">
-            <Buy
-              // @ts-ignore
-              className="sideMenus__icon"
-              set="bold"
-              primaryColor="#c4c4c4"
-            />
-            <Link passHref href="/dashboard/home">
-              <span className="links_name hideName">Video Guidance</span>
-            </Link>
-          </li>
-
-          <li className="profile">
-            <Link passHref href="/api/auth/logout">
-              <button
-                style={{
-                  right: '0',
-                  backgroundColor: 'transparent',
-                  cursor: 'pointer',
-                  padding: '2rem',
-                  position: 'absolute',
-                }}
-                type="button"
-                onClick={logoutSubmitHandler}
-              >
-                <i className="bx  bx-log-out" id="log_out">
-                  <Logout set="bold" primaryColor="#c4c4c4" />
-                </i>
-              </button>
-            </Link>
-          </li>
-          {/* .,.,.,.,.,.,.,.,.,.,....................,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,, */}
-
-          <li
-            onClick={() => {
-              setOpened(!opened);
-            }}
-          >
-            <div className="changeColorToBlackOnHover">
-              <i className="bx bx-grid-alt" />
-              {/* <span className="links_name hideName">Setting</span> */}
-              <DropDown opened={opened} />
-            </div>
-            <span className="tooltip">Setup Details</span>
-          </li>
-          {/* .,.,.,.,.,.,.,.,.,.,....................,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,, */}
-        </ul>
+  const router = useRouter();
+  if (isLoading) {
+    return (
+      <div
+        style={{
+          display: 'flex',
+          position: 'absolute',
+          height: '100vh',
+          width: '100vw',
+          justifyContent: 'center',
+          alignItems: 'center',
+        }}
+      >
+        <Loading size="xl" />
       </div>
+    );
+  }
 
-      <section className="home-section">{children}</section>
-    </>
-  );
+  if (error) return <div>{error.message}</div>;
+  if (user) {
+    return (
+      <>
+        {/* //?making extra component for sidedrawer to avoid using useeffect using inside this component */}
+        {/* //?using useeffect here & doing conditional rendering brings error so it's been done this way */}
+        <SideDrawer />
+        <section className="home-section">{children}</section>
+      </>
+    );
+  } else if (!user) {
+    router.back(); //!history will have "/about" only ,everything else will be removed from history,if you get back you will end in  chrome daily dev home page cozz, there is no history before "/about" */}
+    return null;
+  } else {
+    return <div>SOMETHING WENT WRONG IN DASHBOARD Lay...</div>;
+  }
 };
 
 export default DashboardLayout;
