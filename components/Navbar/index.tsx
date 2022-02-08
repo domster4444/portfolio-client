@@ -32,7 +32,7 @@ const Navbar = (props: PropsTypes): JSX.Element => {
             <React.Fragment key={index}>
               {menuItem === 'Login' && isLoggedIn === false ? (
                 <Link passHref href="/api/auth/login">
-                  <Menu>Login</Menu>
+                  <Menu> Login</Menu>
                 </Link>
               ) : menuItem === 'Logout' && isLoggedIn === true ? (
                 <Link passHref href="/api/auth/logout">

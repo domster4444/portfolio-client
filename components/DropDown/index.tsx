@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
 import { CSSTransition } from 'react-transition-group';
 import DropDownBtn from 'components/Navbar/components/Dropdown';
+import { toast } from 'react-toastify';
 const index = () => {
   return (
     <span className="dropDownContainer">
@@ -48,7 +49,16 @@ function DropdownMenu() {
             color: 'black',
           }}
           className="menu-item"
-          onClick={() => props.goToMenu && setActiveMenu(props.goToMenu)}
+          onClick={() => {
+            //? if login_or_register uses this components , then  set isLoading to true
+            if (props.name === 'login_or_register') {
+              toast('Please Wait ...', {
+                position: 'top-center',
+              });
+            }
+
+            return props.goToMenu && setActiveMenu(props.goToMenu);
+          }}
         >
           {props.children}
         </div>
@@ -70,7 +80,7 @@ function DropdownMenu() {
         onEnter={calcHeight}
       >
         <div className="menu">
-          <DropdownItem route="/api/auth/login">
+          <DropdownItem route="/api/auth/login" name="login_or_register">
             Log in or Register
           </DropdownItem>
           <DropdownItem route="/support">Support</DropdownItem>
