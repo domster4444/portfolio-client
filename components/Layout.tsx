@@ -7,7 +7,6 @@ import Navbar from 'components/Navbar';
 import Footer from 'components/Footer';
 import { useRouter } from 'next/router';
 
-
 const Container = styled.div`
   width: 100vw;
   display: flex;
@@ -22,12 +21,10 @@ const Block = styled.div`
 const Layout: React.FC = ({ children }: any) => {
   const { user, error, isLoading } = useUser();
 
-
- const router = useRouter();
-if(user){
-      router.replace('/dashboard'); //!history will have "/about" only ,everything else will be removed from history,if you get back you will end in  chrome daily dev home page cozz, there is no history before "/about" */}
-}  
-
+  const router = useRouter();
+  if (user) {
+    router.replace('/dashboard/home'); //!history will have "/about" only ,everything else will be removed from history,if you get back you will end in  chrome daily dev home page cozz, there is no history before "/about" */}
+  }
 
   if (error) return <div>{error.message}</div>;
   if (isLoading) {
@@ -46,7 +43,7 @@ if(user){
       </div>
     );
   }
-  if(user){
+  if (user) {
   }
   return (
     <Container>

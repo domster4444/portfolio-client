@@ -1,29 +1,23 @@
-
-
-
 // ------
-
 
 .sidebar::-webkit-scrollbar {
   width: 1em;
 }
- 
+
 .sidebar::-webkit-scrollbar-track {
   box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
 }
- 
+
 .sidebar::-webkit-scrollbar-thumb {
   background-color: white;
-  
+
   outline: 1px solid slategrey;
 }
 
-
 .sidebar::-webkit-scrollbar {
-  width: 4px!important;
+  width: 4px !important;
 }
 .sidebar {
-  
   position: fixed;
   left: 0;
   top: 0;
@@ -92,8 +86,7 @@
 
 .sidebar .nav-list {
   height: 100%;
-  margin:0!important;
-
+  margin: 0 !important;
 }
 
 .sidebar li {
@@ -160,78 +153,8 @@
   color: #fff;
 }
 
-.sidebar.open .bx-search:hover {
-  background: #1d1b31;
-  color: #fff;
-}
-
-.sidebar .bx-search:hover {
-  background: #fff;
-  color: #11101d;
-}
-
-.sidebar li a {
-  display: flex;
-  width: 100%;
-  border-radius: 12px;
-  align-items: center;
-  text-decoration: none;
-  transition: all 0.4s ease;
-  background: #11101d;
-}
-
 .sidebar li a:hover {
   background: #fff;
-}
-
-.sidebar li a .links_name {
-  color: #fff;
-  font-size: 15px;
-  font-weight: 400;
-  white-space: nowrap;
-  opacity: 0;
-  pointer-events: none;
-  transition: 0.4s;
-}
-
-.sidebar.open li a .links_name {
-  opacity: 1;
-  pointer-events: auto;
-}
-
-.sidebar li a:hover .links_name,
-.sidebar li a:hover i {
-  transition: all 0.5s ease;
-  color: #11101d;
-}
-
-.sidebar li i {
-  height: 50px;
-  line-height: 50px;
-  font-size: 18px;
-  border-radius: 12px;
-}
-
-.sidebar li.profile {
-  position: fixed;
-  height: 60px;
-  width: 78px;
-  left: 0;
-  bottom: -8px;
-  padding: 10px 14px;
-  background: #1d1b31;
-  transition: all 0.5s ease;
-  overflow: hidden;
-}
-
-.sidebar.open li.profile {
-  width: 250px;
-}
-
-.sidebar li .profile-details {
-  display: flex;
-  align-items: center;
-  flex-wrap: nowrap;
 }
 
 .sidebar li img {
@@ -240,18 +163,6 @@
   object-fit: cover;
   border-radius: 6px;
   margin-right: 10px;
-}
-
-.sidebar li.profile .name,
-.sidebar li.profile .job {
-  font-size: 15px;
-  font-weight: 400;
-  color: #fff;
-  white-space: nowrap;
-}
-
-.sidebar li.profile .job {
-  font-size: 12px;
 }
 
 .sidebar .profile #log_out {
@@ -300,4 +211,113 @@
   .sidebar li .tooltip {
     display: none;
   }
+}
+//? primary menus
+.dashboardLayout__sideMenus {
+  color: white;
+  flex-wrap: wrap;
+  display: flex;
+  align-items: center;
+  padding: 0.6rem 0rem 0.6rem 1rem;
+  cursor: pointer;
+  border-radius: 0.5rem;
+  &:hover {
+    background: #fff;
+    color: black;
+  }
+}
+.sideMenus__icon {
+  // distance between sidedrawer's menu's -> icons and text
+  margin-right: 0.45rem;
+}
+//? Hamburger Container
+.bx-menu,
+.bx-menu-alt-right {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+// when opened , for bx-menu -> class switch   bx-menu-alt-right
+.bx-menu-alt-right {
+  #hamburger--open {
+    display: none;
+  }
+}
+.bx-menu {
+  #hamburger--close {
+    display: none;
+  }
+}
+
+#hamburger--open {
+  height: 2rem;
+  width: 2rem;
+}
+#hamburger--close {
+  height: 2.5rem;
+  width: 2.5rem;
+}
+
+//? keep logout apppear in bottom right corner
+.sidebar li.profile {
+  position: fixed;
+  height: 60px;
+  width: 78px;
+  left: 0;
+  bottom: -8px;
+  padding: 10px 14px;
+  background: #1d1b31;
+  overflow: hidden;
+}
+.sidebar.open li.profile {
+  // width equivalent to width of sidedrawer
+  width: 250px;
+}
+
+// Switch of class when sidedrawer opens & closes
+.showName {
+}
+.hideName {
+  display: none;
+}
+.setupDetails__menuContainer {
+  .setupDetails__menuItem {
+    // ? setup detail's ITEM RADIUS
+    border-radius: 0.25rem;
+    padding: 0.75rem 0rem 0.75rem 0.35rem !important;
+  }
+  .setupDetails__menuItem:hover {
+    cursor: pointer;
+    background-color: #1d1b31;
+    color: white;
+  }
+}
+
+// SETUP DETAILS CONTAINER
+.changeColorToBlackOnHover {
+  // ?setup detail's WHOLE CONTAINER RADIUS
+  border-radius: 0.25rem;
+  color: black;
+  background-color: white;
+  // text-align: center;
+  font-size: 1.2rem;
+  // transition: all ease-in-out 350ms;
+  // display: flex;
+  // align-items: center;
+  // border-radius: 0.85rem;
+  // &:hover {
+  //   i {
+  //     color: black; //Make the icon color black on hovering "setUpDetails"
+  //   }
+  //   ul {
+  //     a {
+  //       li {
+  //         color: black; // make bio,contact,all links black on hover of "SetupDetail"
+  //       }
+  //     }
+  //   }
+  //   color: black; // make "setup detail" black on hover
+  //   transition: all ease-in-out 200ms;
+  //   background-color: white; // make whole bg white on hover on "SetupDetails"
+  // }
 }

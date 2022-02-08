@@ -2,14 +2,23 @@ import React, { useEffect, useState } from 'react';
 import Link from 'next/link';
 // import Link from 'next/link';
 import DropDown from 'components/Menu/SideDrawerDrop';
-import { Filter, Home, User, Image, Play, Buy, Logout } from 'react-iconly';
+import {
+  Filter,
+  CloseSquare,
+  Home,
+  User,
+  Image,
+  Play,
+  Buy,
+  Logout,
+} from 'react-iconly';
 import { Avatar } from '@nextui-org/react';
 
 type Props = {
   children: JSX.Element;
 };
 
-const Dashboard: React.FC<Props> = ({ children }) => {
+const DashboardLayout: React.FC<Props> = ({ children }) => {
   const logoutSubmitHandler = () => {
     console.log('logout successfull');
   };
@@ -19,17 +28,27 @@ const Dashboard: React.FC<Props> = ({ children }) => {
       if (sidebar.classList.contains('open')) {
         //  @ts-ignore
         closeBtn.classList.replace('bx-menu', 'bx-menu-alt-right'); // replacing the iocns class
+        //  @ts-ignore
+
+        setTimeout(() => {
+          for (let i = 0; i < linkName.length; i++) {
+            linkName[i].classList.replace('hideName', 'showName');
+          }
+        }, 200);
       } else {
         //  @ts-ignore
         closeBtn.classList.replace('bx-menu-alt-right', 'bx-menu'); // replacing the iocns class
+        //  @ts-ignore
+
+        for (let i = 0; i < linkName.length; i++) {
+          linkName[i].classList.replace('showName', 'hideName');
+        }
       }
     }
 
     const sidebar = document.querySelector('.sidebar');
     const closeBtn = document.querySelector('#btn');
-    //  _____________COMMENTED FOR SEARCH
-    // const searchBtn = document.querySelector('.bx-search');
-    //  _____________COMMENTED FOR SEARCH
+    const linkName = document.querySelectorAll('.links_name');
 
     //  @ts-ignore
     closeBtn.addEventListener('click', () => {
@@ -37,18 +56,6 @@ const Dashboard: React.FC<Props> = ({ children }) => {
       sidebar.classList.toggle('open');
       menuBtnChange(); // calling the function(optional)
     });
-
-    //  _____________COMMENTED FOR SEARCH
-    // //  @ts-ignore
-    // searchBtn.addEventListener('click', () => {
-    //   // Sidebar open when you click on the search iocn
-    //   //  @ts-ignore
-    //   sidebar.classList.toggle('open');
-    //   menuBtnChange(); // calling the function(optional)
-    // });
-    //  _____________COMMENTED FOR SEARCH
-
-    // following are the code to change sidebar button(optional)
   }, []);
 
   const [opened, setOpened] = useState(false);
@@ -58,9 +65,20 @@ const Dashboard: React.FC<Props> = ({ children }) => {
       <div className="sidebar">
         <div className="logo-details">
           <i className="bx bxl-c-plus-plus icon" />
-          <div className="logo_name">DeerPortfolio</div>
+          <div className="logo_name">Portfolio</div>
           <i className="bx bx-menu" id="btn">
-            <Filter set="bold" primaryColor="#c4c4c4" />
+            <Filter
+              // @ts-ignore
+              id="hamburger--open"
+              set="bold"
+              primaryColor="#c4c4c4"
+            />
+            <CloseSquare
+              // @ts-ignore
+              id="hamburger--close"
+              set="bold"
+              primaryColor="white"
+            />
           </i>
         </div>
         <ul className="nav-list">
@@ -69,110 +87,62 @@ const Dashboard: React.FC<Props> = ({ children }) => {
           <input type="text" placeholder="Search..." />
           <span className="tooltip">Search</span>
         </li> */}
-          <li>
-            <a href="/welcome">
-              <i
-                className="bx bx-pie-chart-alt-2"
-                style={{
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                }}
-              >
-                <Home set="bold" primaryColor="#c4c4c4" />
-              </i>
-
-              <span className="links_name">Dashboard</span>
-            </a>
-            <span className="tooltip">Dashboard</span>
+          <li className="dashboardLayout__sideMenus">
+            <Home
+              // @ts-ignore
+              className="sideMenus__icon"
+              set="bold"
+              primaryColor="#c4c4c4"
+            />
+            <Link passHref href="/dashboard/home">
+              <span className="links_name hideName">Dashboard</span>
+            </Link>
+          </li>
+          <li className="dashboardLayout__sideMenus">
+            <User
+              // @ts-ignore
+              className="sideMenus__icon"
+              set="bold"
+              primaryColor="#c4c4c4"
+            />
+            <Link passHref href="/dashboard/home">
+              <span className="links_name hideName">Profile</span>
+            </Link>
+          </li>
+          <li className="dashboardLayout__sideMenus">
+            <Image
+              // @ts-ignore
+              className="sideMenus__icon"
+              set="bold"
+              primaryColor="#c4c4c4"
+            />
+            <Link passHref href="/dashboard/home">
+              <span className="links_name hideName">Themes</span>
+            </Link>
+          </li>
+          <li className="dashboardLayout__sideMenus">
+            <Play
+              // @ts-ignore
+              className="sideMenus__icon"
+              set="bold"
+              primaryColor="#c4c4c4"
+            />
+            <Link passHref href="/dashboard/home">
+              <span className="links_name hideName">Video Guidance</span>
+            </Link>
+          </li>
+          <li className="dashboardLayout__sideMenus">
+            <Buy
+              // @ts-ignore
+              className="sideMenus__icon"
+              set="bold"
+              primaryColor="#c4c4c4"
+            />
+            <Link passHref href="/dashboard/home">
+              <span className="links_name hideName">Video Guidance</span>
+            </Link>
           </li>
 
-          <li>
-            {/* // eslint-disable-next-line react/jsx-no-undef */}
-            <a href="/profile">
-              <i
-                style={{
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                }}
-                className="bx  bx-user"
-              >
-                <User set="bold" primaryColor="#c4c4c4" />
-              </i>
-              <span className="links_name">Profile</span>
-            </a>
-            <span className="tooltip">Profile</span>
-          </li>
-          <li>
-            <a href="/themes">
-              <i
-                style={{
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                }}
-                className="bx  bx-folder"
-              >
-                <Image set="bold" primaryColor="#c4c4c4" />
-              </i>
-              <span className="links_name">Themes</span>
-            </a>
-            <span className="tooltip">Themes</span>
-          </li>
-          {/* <li>
-          <Link  href="/details">
-            <i style={{display:'flex',alignItems:'center',justifyContent:'center'}} className="bx  bx-grid-alt" />
-            <span className="links_name">My Details</span>
-          </Link>
-          <span className="tooltip">Details</span>
-        </li> */}
-          <li>
-            <a href="/videoguidance">
-              <i
-                style={{
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                }}
-                className="bx  bx-chat"
-              >
-                <Play set="bold" primaryColor="#c4c4c4" />
-              </i>
-              <span className="links_name">Video Guidance</span>
-            </a>
-            <span className="tooltip">Guidance</span>
-          </li>
-          <li>
-            <a href="/payment">
-              <i
-                style={{
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                }}
-                className="bx  bx-cart-alt"
-              >
-                <Buy set="bold" primaryColor="#c4c4c4" />
-              </i>
-              <span className="links_name">Payment</span>
-            </a>
-            <span className="tooltip">Order</span>
-          </li>
-          {/* <li>
-          <Link  href="https://google.com">
-            <i style={{display:'flex',alignItems:'center',justifyContent:'center'}} className="bx  bx-heart" />
-            <span className="links_name">Saved</span>
-          </Link>
-          <span className="tooltip">Saved</span>
-        </li> */}
-          {/* <li>
-          <Link  href="https://google.com">
-            <i style={{display:'flex',alignItems:'center',justifyContent:'center'}} className="bx  bx-cog" />
-            <span className="links_name">Setting</span>
-          </Link>
-          <span className="tooltip">Setting</span>
-        </li> */}
           <li className="profile">
             <Link passHref href="/api/auth/logout">
               <button
@@ -201,7 +171,7 @@ const Dashboard: React.FC<Props> = ({ children }) => {
           >
             <div className="changeColorToBlackOnHover">
               <i className="bx bx-grid-alt" />
-              {/* <span className="links_name">Setting</span> */}
+              {/* <span className="links_name hideName">Setting</span> */}
               <DropDown opened={opened} />
             </div>
             <span className="tooltip">Setup Details</span>
@@ -215,4 +185,4 @@ const Dashboard: React.FC<Props> = ({ children }) => {
   );
 };
 
-export default Dashboard;
+export default DashboardLayout;

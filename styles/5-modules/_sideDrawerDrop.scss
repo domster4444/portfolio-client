@@ -1,32 +1,32 @@
-#DropDownSection {
-  width: 100%;
-  transition: all ease-in-out 200ms;
+// #DropDownSection {
+//   width: 100%;
+//   transition: all ease-in-out 200ms;
 
-  ul {
-    // background-color: pink;
-    a {
-      width: 95%;
-      font-size: 1.6rem;
-      background-color: transparent;
-      color: white;
-      margin: 0.55rem 0rem;
-      &:hover {
-        transition: all ease-in-out 300ms;
-        background-color: rgb(17, 16, 29);
-        li {
-          color: white;
-        }
-      }
-    }
-    li {
-      transition: all ease-in-out 500ms;
+//   ul {
+//     // background-color: pink;
+//     a {
+//       width: 95%;
+//       font-size: 1.6rem;
+//       background-color: transparent;
+//       color: white;
+//       margin: 0.55rem 0rem;
+//       &:hover {
+//         transition: all ease-in-out 300ms;
+//         background-color: rgb(17, 16, 29);
+//         li {
+//           color: white;
+//         }
+//       }
+//     }
+//     li {
+//       transition: all ease-in-out 500ms;
 
-      border-radius: 0.75rem;
-      margin: 0.55rem 0.5rem;
-      padding: 1rem 1rem;
-    }
-  }
-}
+//       border-radius: 0.75rem;
+//       margin: 0.55rem 0.5rem;
+//       padding: 1rem 1rem;
+//     }
+//   }
+// }
 .sidebar li {
   overflow: hidden;
 }
