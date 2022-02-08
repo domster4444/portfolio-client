@@ -278,13 +278,13 @@
 .showName {
 }
 .hideName {
-  display: none;
+  display: none !important;
 }
 .setupDetails__menuContainer {
+  padding: 1rem; // ? setup detail's ITEM RADIUS
   .setupDetails__menuItem {
-    // ? setup detail's ITEM RADIUS
     border-radius: 0.25rem;
-    padding: 0.75rem 0rem 0.75rem 0.35rem !important;
+    padding: 0.75rem 1rem 0.75rem 0.35rem !important;
   }
   .setupDetails__menuItem:hover {
     cursor: pointer;
@@ -297,8 +297,8 @@
 .changeColorToBlackOnHover {
   // ?setup detail's WHOLE CONTAINER RADIUS
   border-radius: 0.25rem;
-  color: black;
-  background-color: white;
+  color: white;
+  // background-color: white;
   // text-align: center;
   font-size: 1.2rem;
   // transition: all ease-in-out 350ms;
@@ -320,4 +320,18 @@
   //   transition: all ease-in-out 200ms;
   //   background-color: white; // make whole bg white on hover on "SetupDetails"
   // }
+}
+// ?sidedrawer SetupDetails Menu
+.setupDetails__mainMenu {
+  color: white;
+  flex-wrap: wrap;
+  display: flex;
+  align-items: center;
+  padding: 0.6rem 0rem 0.6rem 1rem;
+  cursor: pointer;
+  border-radius: 0.5rem;
+  &:hover {
+    background: #fff;
+    color: black;
+  }
 }

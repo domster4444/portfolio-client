@@ -1,17 +1,25 @@
 import React from 'react';
 import Link from 'next/link';
+import { ChevronUpCircle, ChevronDownCircle } from 'react-iconly';
 const DropDown = ({ opened }: any) => {
   return (
-    <div id="DropDownSection">
-      <div
-      // style={
-      //   opened === true
-      //     ? { fontSize: '1.25rem', transition: 'all ease-in-out 200ms' }
-      //     : {
-      //         fontSize: '1.5rem',
-      //       }
-      // }
-      >
+    <div id="DropDownSection" className="links_name hideName">
+      <div className="setupDetails__mainMenu ">
+        {opened ? (
+          <ChevronUpCircle
+            // @ts-ignore
+            className="sideMenus__icon"
+            set="bold"
+            primaryColor="#c4c4c4"
+          />
+        ) : (
+          <ChevronDownCircle
+            // @ts-ignore
+            className="sideMenus__icon"
+            set="bold"
+            primaryColor="#c4c4c4"
+          />
+        )}
         Setup Details
       </div>
 
