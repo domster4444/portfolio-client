@@ -137,23 +137,25 @@ const SideDrawer: React.FC = () => {
             </li>
           </Link>
 
-          <li className="profile">
-            <button
-              style={{
-                right: '0',
-                backgroundColor: 'transparent',
-                cursor: 'pointer',
-                padding: '2rem',
-                position: 'absolute',
-              }}
-              type="button"
-              onClick={logoutSubmitHandler}
-            >
-              <i className="bx  bx-log-out" id="log_out">
-                <Logout set="bold" primaryColor="#c4c4c4" />
-              </i>
-            </button>
-          </li>
+          <Link passHref href="/api/auth/logout">
+            <li className="profile">
+              <button
+                style={{
+                  right: '0',
+                  backgroundColor: 'transparent',
+                  cursor: 'pointer',
+                  padding: '2rem',
+                  position: 'absolute',
+                }}
+                type="button"
+                onClick={logoutSubmitHandler}
+              >
+                <i className="bx  bx-log-out" id="log_out">
+                  <Logout set="bold" primaryColor="#c4c4c4" />
+                </i>
+              </button>
+            </li>
+          </Link>
           {/* .,.,.,.,.,.,.,.,.,.,....................,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,, */}
 
           <li

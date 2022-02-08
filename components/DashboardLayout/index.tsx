@@ -3,7 +3,7 @@ import { useRouter } from 'next/router';
 import { useUser } from '@auth0/nextjs-auth0';
 import { Loading } from '@nextui-org/react';
 import SideDrawer from 'components/DashboardLayout/SideDrawer/SideDrawer';
-
+import Navbar from 'components/DashboardLayout/Navbar/Navbar';
 type Props = {
   children: JSX.Element;
 };
@@ -36,7 +36,12 @@ const DashboardLayout: React.FC<Props> = ({ children }) => {
         {/* //?making extra component for sidedrawer to avoid using useeffect using inside this component */}
         {/* //?using useeffect here & doing conditional rendering brings error so it's been done this way */}
         <SideDrawer />
-        <section className="home-section">{children}</section>
+        {/*//!BODY OF DASHBOARD  */}
+        <section className="home-section">
+          <Navbar />
+          {children}
+        </section>
+        {/*//!BODY OF DASHBOARD  */}
       </>
     );
   } else if (!user) {
