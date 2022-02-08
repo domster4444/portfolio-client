@@ -81,80 +81,78 @@ const SideDrawer: React.FC = () => {
           <input type="text" placeholder="Search..." />
           <span className="tooltip">Search</span>
         </li> */}
-          <li className="dashboardLayout__sideMenus">
-            <Home
-              // @ts-ignore
-              className="sideMenus__icon"
-              set="bold"
-              primaryColor="#c4c4c4"
-            />
-            <Link passHref href="/dashboard/home">
+          <Link passHref href="/dashboard/home">
+            <li className="dashboardLayout__sideMenus">
+              <Home
+                // @ts-ignore
+                className="sideMenus__icon"
+                set="bold"
+                primaryColor="#c4c4c4"
+              />
               <span className="links_name hideName">Dashboard</span>
-            </Link>
-          </li>
-          <li className="dashboardLayout__sideMenus">
-            <User
-              // @ts-ignore
-              className="sideMenus__icon"
-              set="bold"
-              primaryColor="#c4c4c4"
-            />
-            <Link passHref href="/dashboard/home">
+            </li>
+          </Link>
+          <Link passHref href="/dashboard/profile">
+            <li className="dashboardLayout__sideMenus">
+              <User
+                // @ts-ignore
+                className="sideMenus__icon"
+                set="bold"
+                primaryColor="#c4c4c4"
+              />
               <span className="links_name hideName">Profile</span>
-            </Link>
-          </li>
-          <li className="dashboardLayout__sideMenus">
-            <Image
-              // @ts-ignore
-              className="sideMenus__icon"
-              set="bold"
-              primaryColor="#c4c4c4"
-            />
-            <Link passHref href="/dashboard/home">
+            </li>
+          </Link>
+          <Link passHref href="/dashboard/theme">
+            <li className="dashboardLayout__sideMenus">
+              <Image
+                // @ts-ignore
+                className="sideMenus__icon"
+                set="bold"
+                primaryColor="#c4c4c4"
+              />
               <span className="links_name hideName">Themes</span>
-            </Link>
-          </li>
-          <li className="dashboardLayout__sideMenus">
-            <Play
-              // @ts-ignore
-              className="sideMenus__icon"
-              set="bold"
-              primaryColor="#c4c4c4"
-            />
-            <Link passHref href="/dashboard/home">
+            </li>
+          </Link>
+          <Link passHref href="/dashboard/videoguidance">
+            <li className="dashboardLayout__sideMenus">
+              <Play
+                // @ts-ignore
+                className="sideMenus__icon"
+                set="bold"
+                primaryColor="#c4c4c4"
+              />
               <span className="links_name hideName">Video Guidance</span>
-            </Link>
-          </li>
-          <li className="dashboardLayout__sideMenus">
-            <Buy
-              // @ts-ignore
-              className="sideMenus__icon"
-              set="bold"
-              primaryColor="#c4c4c4"
-            />
-            <Link passHref href="/dashboard/home">
-              <span className="links_name hideName">Video Guidance</span>
-            </Link>
-          </li>
+            </li>
+          </Link>
+          <Link passHref href="/dashboard/payment">
+            <li className="dashboardLayout__sideMenus">
+              <Buy
+                // @ts-ignore
+                className="sideMenus__icon"
+                set="bold"
+                primaryColor="#c4c4c4"
+              />
+              <span className="links_name hideName">Payment</span>
+            </li>
+          </Link>
 
           <li className="profile">
-            <Link passHref href="/api/auth/logout">
-              <button
-                style={{
-                  right: '0',
-                  backgroundColor: 'transparent',
-                  cursor: 'pointer',
-                  padding: '2rem',
-                  position: 'absolute',
-                }}
-                type="button"
-                onClick={logoutSubmitHandler}
-              >
-                <i className="bx  bx-log-out" id="log_out">
-                  <Logout set="bold" primaryColor="#c4c4c4" />
-                </i>
-              </button>
-            </Link>
+            <button
+              style={{
+                right: '0',
+                backgroundColor: 'transparent',
+                cursor: 'pointer',
+                padding: '2rem',
+                position: 'absolute',
+              }}
+              type="button"
+              onClick={logoutSubmitHandler}
+            >
+              <i className="bx  bx-log-out" id="log_out">
+                <Logout set="bold" primaryColor="#c4c4c4" />
+              </i>
+            </button>
           </li>
           {/* .,.,.,.,.,.,.,.,.,.,....................,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,, */}
 

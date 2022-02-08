@@ -1,4 +1,5 @@
 import React from 'react';
+// @ts-ignore
 import DashboardLayout from 'components/DashboardLayout';
 const index = () => {
   return (
