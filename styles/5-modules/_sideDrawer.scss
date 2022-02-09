@@ -27,6 +27,10 @@
   padding: 6px 14px;
   z-index: 99;
   transition: all 0.5s ease;
+  li {
+    // list menus of sidedrawer
+    font-size: 1.8rem;
+  }
 }
 
 .sidebar.open {
@@ -47,7 +51,8 @@
 
 .sidebar .logo-details .logo_name {
   color: #fff;
-  font-size: 20px;
+  // Logo Text Font Size
+  font-size: 2.5rem;
   font-weight: 600;
   opacity: 0;
   transition: all 0.5s ease;
@@ -79,7 +84,7 @@
   color: #fff;
   height: 60px;
   min-width: 50px;
-  font-size: 28px;
+  font-size: 30px;
   text-align: center;
   line-height: 60px;
 }
@@ -199,14 +204,6 @@
   width: calc(100% - 250px);
 }
 
-.home-section .text {
-  display: inline-block;
-  color: #11101d;
-  font-size: 25px;
-  font-weight: 500;
-  margin: 18px;
-}
-
 @media (max-width: 420px) {
   .sidebar li .tooltip {
     display: none;
@@ -300,7 +297,6 @@
   color: white;
   // background-color: white;
   // text-align: center;
-  font-size: 1.2rem;
   // transition: all ease-in-out 350ms;
   // display: flex;
   // align-items: center;
@@ -323,6 +319,7 @@
 }
 // ?sidedrawer SetupDetails Menu
 .setupDetails__mainMenu {
+  font-size: 1.8rem;
   color: white;
   flex-wrap: wrap;
   display: flex;

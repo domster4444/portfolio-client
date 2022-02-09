@@ -36,25 +36,25 @@ const DropDown = ({ opened }: any) => {
                     }
               }
             >
-              <Link passHref href="/bio">
+              <Link passHref href="/dashboard/bio">
                 <li className="setupDetails__menuItem">Bio</li>
               </Link>
-              <Link passHref href="/contacts">
+              <Link passHref href="/dashboard/contacts">
                 <li className="setupDetails__menuItem">Contacts</li>
               </Link>
-              <Link passHref href="/education">
+              <Link passHref href="/dashboard/education">
                 <li className="setupDetails__menuItem">Education</li>
               </Link>
-              <Link passHref href="/work">
+              <Link passHref href="/dashboard/work">
                 <li className="setupDetails__menuItem">Work</li>
               </Link>
-              <Link passHref href="/skills">
+              <Link passHref href="/dashboard/skills">
                 <li className="setupDetails__menuItem">Skills</li>
               </Link>
-              <Link passHref href="/projects">
+              <Link passHref href="/dashboard/projects">
                 <li className="setupDetails__menuItem">Projects</li>
               </Link>
-              <Link passHref href="/achievements">
+              <Link passHref href="/dashboard/achievements">
                 <li className="setupDetails__menuItem">Achievements</li>
               </Link>
             </ul>
