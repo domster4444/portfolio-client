@@ -7,8 +7,8 @@ import DashboardLayout from 'components/DashboardLayout';
 import { toast } from 'react-toastify';
 
 const index = () => {
-  const submitHandler = (e) => {
-    e.preventDefault();
+  const submitHandler = (event: React.FormEvent<HTMLFormElement>): void => {
+    event.preventDefault();
     toast('successfully updated', {
       position: 'top-center',
     });
