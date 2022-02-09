@@ -200,7 +200,7 @@ const FirstTheme = () => {
               <i className="fab fa-dribbble" />
             </a>
           </div>
-          <p className="end">CopyRight By Tahmid Ahmed</p>
+          <p className="end">Thank You For Visiting @ CC</p>
         </footer>
       </body>
     </div>
