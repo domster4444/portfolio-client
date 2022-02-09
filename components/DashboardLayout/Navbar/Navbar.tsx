@@ -17,7 +17,7 @@ const Navbar: React.FC = () => {
       //   console.log(data.email);
       //   console.log(data.email_verified);
       //   console.log(data.nickname);
-      //   console.log(data.picture);
+      console.log(data.picture);
       setUserPhoto(data.picture);
       setUserName(data.nickname);
     });

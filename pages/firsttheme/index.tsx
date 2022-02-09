@@ -10,6 +10,7 @@ import React from 'react';
 // import MainImage from '../../public/images/themes/1theme/img/main-img.png';
 import Image from 'next/image';
 
+import HeroImage from '../../public/images/themes/1theme/img/hero-img.jpg';
 import MainImage from '../../public/images/themes/1theme/img/main-img.png';
 
 const FirstTheme = () => {
@@ -82,7 +83,7 @@ const FirstTheme = () => {
           </div>
 
           <div className="hero__right">
-            <Image src={MainImage} alt="photograph" />
+            <Image src={HeroImage} alt="photograph" />
           </div>
         </div>
 

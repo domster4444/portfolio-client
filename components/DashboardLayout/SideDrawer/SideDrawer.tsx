@@ -93,6 +93,7 @@ const SideDrawer: React.FC = () => {
               <span className="links_name hideName">Dashboard</span>
             </li>
           </Link>
+
           <Link passHref href="/dashboard/profile">
             <li className="dashboardLayout__sideMenus">
               <User
