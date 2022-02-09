@@ -27,7 +27,7 @@ const allThemes = [
     url: 'https://www.portfoliosite.me/2',
     name: 'Kshitiz Portfolio',
     description: 'portfolio by author kshitiz',
-    imageUrl: 'https://i.imgur.com/CTgJgkd.jpg',
+    imageUrl: 'https://i.imgur.com/pDTrAxx.jpg',
   },
   {
     isPaid: 'not-premium',
