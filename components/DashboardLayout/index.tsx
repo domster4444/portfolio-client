@@ -4,9 +4,13 @@ import { useUser } from '@auth0/nextjs-auth0';
 import { Loading } from '@nextui-org/react';
 import SideDrawer from 'components/DashboardLayout/SideDrawer/SideDrawer';
 import Navbar from 'components/DashboardLayout/Navbar/Navbar';
+
+import styled from 'styled-components';
+import NoticeCardWrapper from 'components/NoticeCard/components/NoticeCardWrapper';
 type Props = {
   children: JSX.Element;
 };
+
 // @ts-ignore
 const DashboardLayout: React.FC<Props> = ({ children }) => {
   const { user, error, isLoading } = useUser();
@@ -17,7 +21,6 @@ const DashboardLayout: React.FC<Props> = ({ children }) => {
       <div
         style={{
           display: 'flex',
-          position: 'absolute',
           height: '100vh',
           width: '100vw',
           justifyContent: 'center',
@@ -36,6 +39,7 @@ const DashboardLayout: React.FC<Props> = ({ children }) => {
         {/* //?making extra component for sidedrawer to avoid using useeffect using inside this component */}
         {/* //?using useeffect here & doing conditional rendering brings error so it's been done this way */}
         <SideDrawer />
+        <NoticeCardWrapper />
         {/*//!BODY OF DASHBOARD  */}
         <section className="home-section">
           <Navbar />
