@@ -486,7 +486,7 @@ const Index = () => {
             </div>
           </div>
         </section>
-        <footer id="footer">
+        <footer id="theme2_footer">
           <h3>GET IN TOUCH</h3>
           <h2 className="playfair_300">CONTACT ME</h2>
           <hr></hr>

@@ -10,24 +10,24 @@ import { NextPage } from 'next';
 const allThemes = [
   {
     isPaid: 'full-premium',
-    url: 'http://localhost:3000/firsttheme',
+    url: 'https://www.portfoliosite.me/1',
     name: 'Space Template',
     description: 'This is the first theme',
     imageUrl: 'https://i.imgur.com/uMQLC1d_d.webp?maxwidth=760&fidelity=grand',
   },
   {
     isPaid: 'not-premium',
-    url: 'http://localhost:3000/firsttheme',
+    url: 'https://www.portfoliosite.me/1',
     name: 'Red Elegant Theme',
     description: 'This is the second theme',
     imageUrl: 'https://i.imgur.com/uMQLC1d_d.webp?maxwidth=760&fidelity=grand',
   },
   {
     isPaid: 'not-premium',
-    url: 'https://akira-elementor.axonvip.com/en/',
-    name: 'Theme 3',
-    description: 'This is the third theme',
-    imageUrl: 'https://i.imgur.com/uMQLC1d_d.webp?maxwidth=760&fidelity=grand',
+    url: 'https://www.portfoliosite.me/2',
+    name: 'Kshitiz Portfolio',
+    description: 'portfolio by author kshitiz',
+    imageUrl: 'https://i.imgur.com/pDTrAxx.jpg',
   },
   {
     isPaid: 'not-premium',
