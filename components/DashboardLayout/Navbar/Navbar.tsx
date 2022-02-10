@@ -10,7 +10,7 @@ const Navbar: React.FC = () => {
   const [userName, setUserName] = React.useState<string>('anonymous');
 
   const axiosinstance = axios.create({
-    baseURL: `${globalConstant.baseURL}`,
+    baseURL: 'https://portfoliosite.me',
   });
 
   function getUserPhoto() {
