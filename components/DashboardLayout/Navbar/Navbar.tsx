@@ -33,18 +33,18 @@ const Navbar: React.FC = () => {
       <header>
         <nav
           style={{
-            padding: '0.5rem 1rem',
+            padding: '1rem 1rem 0rem 0rem',
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'flex-end',
           }}
         >
-          <Text size="1.25rem" style={{ margin: '0rem 0.5rem' }}>
+          <Text size="2rem" style={{ margin: '0rem 0.5rem' }}>
             {userName}
           </Text>
           <Avatar
             style={{ cursor: 'pointer' }}
-            size="lg"
+            size="xl"
             src={userPhoto}
             zoomed
             bordered
