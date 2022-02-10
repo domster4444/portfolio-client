@@ -9,6 +9,7 @@ import {
   Image,
   Play,
   Buy,
+  TwoUsers,
   Logout,
 } from 'react-iconly';
 
@@ -156,6 +157,17 @@ const SideDrawer: React.FC = () => {
                 primaryColor="#c4c4c4"
               />
               <span className="links_name hideName">Payment</span>
+            </li>
+          </Link>
+          <Link passHref href="/dashboard/support">
+            <li className="dashboardLayout__sideMenus">
+              <TwoUsers
+                // @ts-ignore
+                className="sideMenus__icon"
+                set="bold"
+                primaryColor="#c4c4c4"
+              />
+              <span className="links_name hideName">Support</span>
             </li>
           </Link>
 
