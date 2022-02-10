@@ -18,13 +18,22 @@ const SideDrawer: React.FC = () => {
   };
 
   useEffect(() => {
+    const openSideDrawer = () => {
+      //  @ts-ignore
+      sidebar.classList.toggle('open');
+      setTimeout(() => {
+        for (let i = 0; i < linkName.length; i++) {
+          linkName[i].classList.replace('hideName', 'showName');
+        }
+      }, 200);
+    };
+
     function menuBtnChange() {
       //  @ts-ignore
       if (sidebar.classList.contains('open')) {
         //  @ts-ignore
         closeBtn.classList.replace('bx-menu', 'bx-menu-alt-right'); // replacing the iocns class
         //  @ts-ignore
-
         setTimeout(() => {
           for (let i = 0; i < linkName.length; i++) {
             linkName[i].classList.replace('hideName', 'showName');
@@ -51,6 +60,17 @@ const SideDrawer: React.FC = () => {
       sidebar.classList.toggle('open');
       menuBtnChange(); // calling the function(optional)
     });
+
+    // ! If vw is > 900 then open the sideDrawer & make text visible
+
+    var width =
+      window.innerWidth ||
+      document.documentElement.clientWidth ||
+      document.body.clientWidth;
+
+    if (width > 900) {
+      openSideDrawer();
+    }
   }, []);
 
   const [opened, setOpened] = useState(false);

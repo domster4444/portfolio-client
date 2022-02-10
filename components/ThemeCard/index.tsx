@@ -25,11 +25,9 @@ const ThemeCardSmall = styled.div`
     width: 30rem;
   }
 
-  transition: all 0.6s ease-in-out;
+  border: 0.2rem solid transparent;
   &:hover {
-    transition: all 0.3s ease-in-out;
-    transform: translateY(-1.25rem);
-    /* border: 0.25rem solid green; */
+    border: 0.2rem solid black;
   }
 `;
 
@@ -76,6 +74,7 @@ const UseBtn = styled.button`
 `;
 const themeCardBtnContainer = {
   display: 'flex',
+  padding: '0rem 0.7rem',
   justifyContent: 'space-between',
   margin: '0.5rem 0rem',
 };

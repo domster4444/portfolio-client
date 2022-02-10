@@ -10,3 +10,13 @@
     align-items: center;
   }
 }
+
+.input_container {
+  padding: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  @media only screen and (max-width: 765px) {
+    flex-direction: column;
+  }
+}

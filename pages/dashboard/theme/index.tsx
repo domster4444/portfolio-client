@@ -7,6 +7,7 @@ import ThemeStyles from './themes.module.scss';
 import DashboardLayout from 'components/DashboardLayout';
 import { NextPage } from 'next';
 import { globalConstant } from 'constant/constant';
+import { Input, css, Button } from '@nextui-org/react';
 
 const allThemes = [
   {
@@ -183,37 +184,56 @@ const Index: NextPage = () => {
         <>
           <div>
             <header className="text">Themes</header>
-            <div className="input_container">
-              <h1>{filter}</h1>
-              <input
-                style={{ fontSize: '2rem' }}
-                type="text"
+            <div className={ThemeStyles.input_container}>
+              {/* <h1>{filter}</h1> */}
+
+              <Input
                 value={filter}
                 onChange={(e) => {
                   inputChangeHandler(e);
                 }}
+                type="text"
+                clearable
+                bordered
+                css={{ background: 'white' }}
+                placeholder="Search"
+                size="xl"
+                style={{ fontSize: '2rem' }}
               />
-              <button
+
+              <Button
                 onClick={renderAllTheme}
                 type="button"
                 style={{ fontSize: '2rem', margin: '0rem 1rem' }}
+                color="primary"
+                auto
+                shadow
+                size="xl"
               >
-                ALL THEMES
-              </button>
-              <button
+                All
+              </Button>
+              <Button
                 onClick={renderPaidTheme}
                 type="button"
                 style={{ fontSize: '2rem', margin: '0rem 1rem' }}
+                color="error"
+                auto
+                shadow
+                size="xl"
               >
-                PAID THEMES
-              </button>
-              <button
+                Premium
+              </Button>
+              <Button
                 onClick={renderFreeTheme}
                 type="button"
+                shadow
                 style={{ fontSize: '2rem', margin: '0rem 1rem' }}
+                color="success"
+                auto
+                size="xl"
               >
-                FREE THEMES
-              </button>
+                Free
+              </Button>
             </div>
             <div className={ThemeStyles.cardContainer}>
               {(() => {
