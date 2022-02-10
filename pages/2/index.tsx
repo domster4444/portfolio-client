@@ -136,7 +136,7 @@ const Index = () => {
   });
   return (
     <>
-      <main id="body">
+      <main id="theme2__body">
         <div id="blurblank"></div>
         <nav id="toolbar">
           <ul id="toolbar-ul">

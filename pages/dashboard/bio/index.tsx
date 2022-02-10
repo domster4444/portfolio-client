@@ -1,10 +1,18 @@
 import React from 'react';
-import { Button, Textarea, Container, Card, Spacer } from '@nextui-org/react';
+import {
+  Button,
+  Textarea,
+  Container,
+  Card,
+  Spacer,
+  css,
+} from '@nextui-org/react';
 import { ChevronLeft, ChevronRight, TickSquare } from 'react-iconly';
 
 // @ts-ignore
 import DashboardLayout from 'components/DashboardLayout';
 import { toast } from 'react-toastify';
+import BioStyles from './bio.module.scss';
 
 const index = () => {
   const submitHandler = (event: React.FormEvent<HTMLFormElement>): void => {
@@ -19,20 +27,24 @@ const index = () => {
         {/* form */}
 
         <Container
-          style={{
+          css={{
             justifyContent: 'center',
             width: '100%',
             display: 'flex',
           }}
         >
-          <Card style={{ maxWidth: '45rem' }}>
+          <Card className={BioStyles.card}>
             <form
               className="bio"
               onSubmit={(e) => {
                 submitHandler(e);
               }}
             >
-              <input name="bio__img" id="bio__img" type="file" />
+              <input
+                name="bio__img"
+                className={BioStyles.bio_fileBtn}
+                type="file"
+              />
               <Spacer y={1.5} />
               <label htmlFor="bio__info">
                 <Textarea
@@ -43,11 +55,16 @@ const index = () => {
                   placeholder='"I am a full stack developer with a passion for building things that make a difference"'
                   status="default"
                   width="100%"
-                  style={{ minHeight: '10rem', fontSize: '1.4rem' }}
+                  style={{ minHeight: '20rem', fontSize: '2rem' }}
                 />
               </label>
               <Spacer y={1.5} />
-              <Button type="submit" color="success" size="lg">
+              <Button
+                type="submit"
+                color="success"
+                size="xl"
+                className={BioStyles.btnContainer__btn}
+              >
                 Update
                 <Spacer x={0.5} />
                 <TickSquare set="bold" primaryColor="white" />
@@ -57,19 +74,12 @@ const index = () => {
 
             {/* btn container */}
             <>
-              <div
-                className="prevNext__btnContainer"
-                style={{
-                  display: 'flex',
-                  justifyContent: 'space-between',
-                  flexWrap: 'wrap',
-                }}
-              >
+              <div className={BioStyles.prevNext__btnContainer}>
                 <Button
                   shadow
                   color="secondary"
-                  size="lg"
-                  style={{ marginTop: '0.5rem' }}
+                  size="xl"
+                  className={BioStyles.btnContainer__btn}
                 >
                   <ChevronLeft set="bold" primaryColor="white" />
                   Previous Page
@@ -77,8 +87,8 @@ const index = () => {
                 <Button
                   shadow
                   color="primary"
-                  size="lg"
-                  style={{ marginTop: '0.5rem' }}
+                  size="xl"
+                  className={BioStyles.btnContainer__btn}
                 >
                   Next Page
                   <ChevronRight set="bold" primaryColor="white" />

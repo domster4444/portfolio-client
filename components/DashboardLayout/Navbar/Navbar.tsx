@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { Avatar, Text } from '@nextui-org/react';
+import { globalConstant } from 'constant/constant';
 
 const Navbar: React.FC = () => {
   const defaultUserPhoto =
@@ -9,7 +10,7 @@ const Navbar: React.FC = () => {
   const [userName, setUserName] = React.useState<string>('anonymous');
 
   const axiosinstance = axios.create({
-    baseURL: 'https://www.portfoliosite.me',
+    baseURL: `${globalConstant.baseURL}`,
   });
 
   function getUserPhoto() {

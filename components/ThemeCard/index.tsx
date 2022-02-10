@@ -1,5 +1,6 @@
 /* eslint-disable no-unused-vars */
 import React, { useState, useEffect, useRef } from 'react';
+import Link from 'next/link';
 import styled from 'styled-components';
 import { TweenMax, Power3 } from 'gsap';
 
@@ -128,11 +129,11 @@ const ThemeCard = ({ url, name, description, imageUrl }: ThemeProps) => {
                 className="themeCard__btnContainer"
                 style={themeCardBtnContainer}
               >
-                <PreviewBtn className="medium" type="button">
-                  <a rel="noreferrer" target="_blank" href={`${url}`}>
+                <Link passHref href={`${url}`}>
+                  <PreviewBtn className="medium" type="button">
                     Preview
-                  </a>
-                </PreviewBtn>
+                  </PreviewBtn>
+                </Link>
                 <UseBtn className="medium" type="button">
                   Use
                 </UseBtn>

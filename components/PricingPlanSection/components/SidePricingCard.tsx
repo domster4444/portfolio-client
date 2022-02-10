@@ -4,20 +4,22 @@ import KhaltiCheckout from 'khalti-checkout-web';
 import config from 'lib/utilities/payment/KhaltiConfig';
 
 type PropType = {
-  price: string;
+  priceTag: string;
   title: string;
   description: string;
+  priceAmount: number | null;
 };
 
 export default function SidePricingCard({
-  price,
+  priceTag,
   title,
   description,
+  priceAmount,
 }: PropType) {
   const checkout = new KhaltiCheckout(config);
   return (
     <div className="priceCard">
-      <h1>{price}</h1>
+      <h1>{priceTag}</h1>
       <h2>{title}</h2>
       <p>{description}</p>
 
@@ -25,7 +27,11 @@ export default function SidePricingCard({
         <button
           type="button"
           onClick={() => {
-            checkout.show({ amount: 100000 });
+            if (priceAmount) {
+              checkout.show({ amount: priceAmount * 100 });
+            } else {
+              alert('something went wrong');
+            }
           }}
           className="cursor"
         >

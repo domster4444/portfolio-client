@@ -2,13 +2,14 @@
 import axios from 'axios';
 
 import myKey from './KhaltiKey';
+import { globalConstant } from 'constant/constant';
 
 const config = {
   // replace this key with yours
   publicKey: myKey.publicTestKey,
   productIdentity: '1234567890',
   productName: 'My Ecommerce Store',
-  productUrl: 'http://localhost:3000',
+  productUrl: `${globalConstant.baseURL}`,
   eventHandler: {
     onSuccess(payload: any) {
       // hit merchant api for initiating verfication
@@ -46,8 +47,8 @@ const config = {
     },
   },
   paymentPreference: [
-    'Khasi',
-    'BANDING',
+    'KHALTI',
+    'EBANKING',
     'MOBILE_BANKING',
     'CONNECT_IPS',
     'SCT',

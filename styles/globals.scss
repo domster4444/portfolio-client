@@ -19,7 +19,7 @@
 // @import '3-basics/buttons';
 // @import '3-basics/customanimations';
 // @import '3-basics/fonts';
-// @import '3-basics/global';
+@import '3-basics/global';
 // @import '3-basics/links';
 // @import '3-basics/responsive_mixin';
 // @import '3-basics/selection-colors';
@@ -70,4 +70,8 @@ a {
   font-size: 25px;
   font-weight: 500;
   margin: 18px;
+}
+
+html {
+  scroll-behavior: smooth;
 }

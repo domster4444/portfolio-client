@@ -5,22 +5,9 @@ $royal_line_color: rgb(51, 51, 51);
 $footer-color: rgb(23, 23, 23);
 // This is the single file output by sass . It is intended to ONLY @inport other files.
 
-#body,
-section {
-  overflow-x: hidden;
-  background: $royal_black;
-}
-:root {
-  font-size: 10px;
-}
-
 // toolbar z indx 100
 // blur blank z indx 101
 // asidebar z indx 1000
-
-html {
-  scroll-behavior: smooth;
-}
 
 //?1-HELPERS
 @mixin fullImage {
@@ -35,559 +22,623 @@ html {
   transition: all 0.15s ease-in-out 0s;
 }
 
-// ___________________________toolbar start
-
-#blurblank {
-  filter: blur(400px);
-  -webkit-filter: blur(400px);
-  display: none;
-  height: 100vh;
-  width: 100vw;
-  position: absolute;
-  background: black;
-  z-index: 100;
-  cursor: pointer;
-}
-
-#toolbar {
-  -webkit-box-shadow: 0px 21px 226px 55px rgba(0, 0, 0, 0.75);
-  -moz-box-shadow: 0px 21px 226px 55px rgba(0, 0, 0, 0.75);
-  box-shadow: 0px 21px 226px 55px rgba(0, 0, 0, 0.75);
-
-  position: relative;
-  z-index: 100;
-  background: rgb(17, 17, 17);
-  @include flexContainer;
-  justify-content: center;
-  #toolbar-ul {
-    margin-top: 5.3rem;
+#theme2__body {
+  overflow-x: hidden;
+  background: $royal_black;
+  section {
+    overflow-x: hidden;
+    background: $royal_black;
   }
-  #toolbar-ul {
-    width: 66%;
+
+  // ___________________________toolbar start
+
+  #blurblank {
+    filter: blur(400px);
+    -webkit-filter: blur(400px);
+    display: none;
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    background: black;
+    z-index: 100;
+    cursor: pointer;
   }
-  ul {
-    align-items: center;
-    list-style: none;
+
+  #toolbar {
+    -webkit-box-shadow: 0px 21px 226px 55px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 21px 226px 55px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 21px 226px 55px rgba(0, 0, 0, 0.75);
+
+    position: relative;
+    z-index: 100;
+    background: rgb(17, 17, 17);
     @include flexContainer;
-    justify-content: space-between;
-
-    #name-logo {
-      color: $royal_white;
-      letter-spacing: 0.75rem;
-      font-weight: bold;
-      font-size: 1.8rem;
-      span {
-        color: $royal_blue;
-      }
+    justify-content: center;
+    #toolbar-ul {
+      margin-top: 5.3rem;
     }
-    li {
-      #hamburger {
-        position: relative;
-        padding: 2rem;
-        z-index: 100;
-        cursor: pointer;
-        @include flexContainer;
-        flex-direction: column;
-        margin: 1rem;
-        .line {
-          width: 2rem;
-          margin: 0.1rem 0rem;
-          background-color: $royal_blue;
-          height: 0.4rem;
+    #toolbar-ul {
+      width: 66%;
+    }
+    ul {
+      align-items: center;
+      list-style: none;
+      @include flexContainer;
+      justify-content: space-between;
+
+      #name-logo {
+        color: $royal_white;
+        letter-spacing: 0.75rem;
+        font-weight: bold;
+        font-size: 1.8rem;
+        span {
+          color: $royal_blue;
+        }
+      }
+      li {
+        #hamburger {
+          position: relative;
+          padding: 2rem;
+          z-index: 100;
+          cursor: pointer;
+          @include flexContainer;
+          flex-direction: column;
+          margin: 1rem;
+          .line {
+            width: 2rem;
+            margin: 0.1rem 0rem;
+            background-color: $royal_blue;
+            height: 0.4rem;
+          }
         }
       }
     }
   }
-}
 
-// ___________________________sidebar start
+  // ___________________________sidebar start
 
-aside {
-  transition: height 600ms ease-in-out;
-  transform: translateX(8rem);
-  height: 40vh;
-  width: 48rem;
-  visibility: hidden;
-  position: relative;
-  z-index: 1000;
-  #exit-aside {
-    cursor: pointer;
-    padding: 2rem;
-    top: 2rem;
-    right: 9rem;
-    position: absolute;
-    #upper-cross {
-      transform: rotate(45deg);
-      width: 2.5rem;
-      margin: -0.5rem 0rem;
-      background-color: $royal_blue;
-      height: 0.4rem;
+  aside {
+    transition: height 600ms ease-in-out;
+    transform: translateX(8rem);
+    height: 40vh;
+    width: 48rem;
+    visibility: hidden;
+    position: relative;
+    z-index: 1000;
+    #exit-aside {
+      cursor: pointer;
+      padding: 2rem;
+      top: 2rem;
+      right: 9rem;
+      position: absolute;
+      #upper-cross {
+        transform: rotate(45deg);
+        width: 2.5rem;
+        margin: -0.5rem 0rem;
+        background-color: $royal_blue;
+        height: 0.4rem;
+      }
+      #lower-cross {
+        transform: rotate(-45deg);
+        width: 2.5rem;
+        margin: 0.1rem 0rem;
+        background-color: $royal_blue;
+        height: 0.4rem;
+      }
     }
-    #lower-cross {
-      transform: rotate(-45deg);
-      width: 2.5rem;
-      margin: 0.1rem 0rem;
-      background-color: $royal_blue;
-      height: 0.4rem;
+
+    @include flexContainer;
+    align-items: center;
+
+    top: 0;
+    right: 0;
+    background-color: rgb(33, 33, 33);
+    position: absolute;
+
+    ul {
+      @include flexContainer;
+      flex-direction: column;
+      li {
+        padding: 0.8rem;
+        margin: 0.5rem;
+        letter-spacing: 1rem;
+        font-size: 2.6rem;
+      }
+      .active {
+        color: $royal_blue;
+      }
     }
   }
 
-  @include flexContainer;
-  align-items: center;
+  #toolbar ul aside ul {
+    width: 100%;
+    li {
+      width: 100%;
+      padding-left: 6rem;
+      cursor: pointer;
+      &:hover {
+        transform: scale(1.2);
+      }
+    }
+  }
+  #exit-aside {
+    transform-origin: center;
+    transition: transform 300ms ease-in-out 100ms;
+  }
+  #exit-aside:hover {
+    transform: scale(1.5) rotate(180deg);
+  }
 
-  top: 0;
-  right: 0;
-  background-color: rgb(33, 33, 33);
-  position: absolute;
+  // ___________________________sidebar end
 
-  ul {
+  #statistics-section {
+    margin-top: 9rem;
+    background-image: url(https://demo.crocoblock.com/rg/wp-content/uploads/2018/05/richard-img10.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    @include flexContainer;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .statistics-card {
+    margin: 3rem;
+
+    border: 1px solid $royal_line_color;
+    min-width: 37rem;
+    height: 42rem;
+    .number {
+      font-size: 3.7rem;
+      margin-top: 5.3rem;
+      text-align: center;
+      color: $royal_white;
+    }
+    .blueVerticleLineContainer {
+      margin: 5rem;
+      @include flexContainer;
+      justify-content: center;
+      .blueVerticleLine {
+        transform: rotate(-90deg);
+        background: $royal_blue;
+        height: 0.5rem;
+        width: 3.3rem;
+      }
+    }
+    .logoContainer {
+      margin-top: 5.3rem;
+      @include flexContainer;
+      justify-content: center;
+      img {
+        height: 6.3rem;
+        width: 6.3rem;
+      }
+    }
+    h2 {
+      margin-top: 5.3rem;
+      text-align: center;
+      font-size: 1.8rem;
+      color: $royal_white;
+    }
+  }
+  // _________________________________________projects
+
+  #projectSection {
+    margin-top: 5.9rem;
     @include flexContainer;
     flex-direction: column;
-    li {
-      padding: 0.8rem;
-      margin: 0.5rem;
-      letter-spacing: 1rem;
-      font-size: 2.6rem;
-    }
-    .active {
-      color: $royal_blue;
-    }
-  }
-}
+    #projectsDivision {
+      @include flexContainer;
+      flex-wrap: wrap;
+      justify-content: center;
+      .card {
+        cursor: pointer;
 
-#toolbar ul aside ul {
-  width: 100%;
-  li {
-    width: 100%;
-    padding-left: 6rem;
-    cursor: pointer;
-    &:hover {
-      transform: scale(1.2);
-    }
-  }
-}
-#exit-aside {
-  transform-origin: center;
-  transition: transform 300ms ease-in-out 100ms;
-}
-#exit-aside:hover {
-  transform: scale(1.5) rotate(180deg);
-}
+        margin: 1rem;
+        text-align: center;
+        width: 27.5rem;
 
-// ___________________________sidebar end
-
-#statistics-section {
-  margin-top: 9rem;
-  background-image: url(https://demo.crocoblock.com/rg/wp-content/uploads/2018/05/richard-img10.jpg);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  @include flexContainer;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-.statistics-card {
-  margin: 3rem;
-
-  border: 1px solid $royal_line_color;
-  min-width: 37rem;
-  height: 42rem;
-  .number {
-    font-size: 3.7rem;
-    margin-top: 5.3rem;
-    text-align: center;
-    color: $royal_white;
-  }
-  .blueVerticleLineContainer {
-    margin: 5rem;
-    @include flexContainer;
-    justify-content: center;
-    .blueVerticleLine {
-      transform: rotate(-90deg);
-      background: $royal_blue;
-      height: 0.5rem;
-      width: 3.3rem;
-    }
-  }
-  .logoContainer {
-    margin-top: 5.3rem;
-    @include flexContainer;
-    justify-content: center;
-    img {
-      height: 6.3rem;
-      width: 6.3rem;
-    }
-  }
-  h2 {
-    margin-top: 5.3rem;
-    text-align: center;
-    font-size: 1.8rem;
-    color: $royal_white;
-  }
-}
-// _________________________________________projects
-
-#projectSection {
-  margin-top: 5.9rem;
-  @include flexContainer;
-  flex-direction: column;
-  #projectsDivision {
-    @include flexContainer;
-    flex-wrap: wrap;
-    justify-content: center;
-    .card {
-      cursor: pointer;
-
-      margin: 1rem;
-      text-align: center;
-      width: 27.5rem;
-
-      height: 63.6rem;
-      img {
-        transition: all 300ms ease-in-out;
-        &:hover {
-          box-shadow: 0.5rem 0.5rem 5.5rem 0.21rem grey;
-          cursor: pointer;
+        height: 63.6rem;
+        img {
+          transition: all 300ms ease-in-out;
+          &:hover {
+            box-shadow: 0.5rem 0.5rem 5.5rem 0.21rem grey;
+            cursor: pointer;
+          }
+          height: 40rem;
+          width: 100%;
         }
-        height: 40rem;
-        width: 100%;
+        h4 {
+          color: $royal_blue;
+          font-size: 1.5rem;
+          margin-top: 5rem;
+        }
+        h1 {
+          color: $royal_white;
+          font-size: 2.6rem;
+          margin-top: 2rem;
+        }
+        hr {
+          margin-top: 4.3rem;
+          border: none;
+          height: 0.1rem;
+          background: $royal_line_color;
+        }
+        h3 {
+          font-size: 1.4rem;
+          color: $royal_white;
+          margin-top: 2.5rem;
+        }
       }
-      h4 {
-        color: $royal_blue;
-        font-size: 1.5rem;
-        margin-top: 5rem;
+    }
+    #viewAllBtnDivision {
+      @include flexContainer;
+      justify-content: center;
+      button {
+        background-color: black;
+        color: white;
+        border-left: 0.1rem solid $royal_blue;
+        border-top: 0.1rem solid $royal_blue;
+        border-right: 0.5rem solid $royal_blue;
+        border-bottom: 0.5rem solid $royal_blue;
+        border-radius: 0px;
+        cursor: pointer;
+        font-size: 1.3rem;
+        height: 6.3rem;
+
+        width: 18.5rem;
+        transition: all 400ms ease;
+        &:hover {
+          color: black;
+          background-color: $royal_blue;
+
+          border: none;
+        }
+      }
+    }
+  }
+
+  // _____________________________project
+  #interestContainer {
+    @include flexContainer;
+    align-items: center;
+    justify-content: center;
+    #interestBlock {
+      @include flexContainer;
+      align-items: center;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      @include media('>=desktop') {
+        width: 60%;
+      }
+      width: 90%;
+    }
+    #leftContainer {
+      @include media('<=tablet') {
+        margin-top: 3rem;
+      }
+      img {
+        width: 37rem;
+        height: 28.5rem;
+      }
+    }
+    #rightContainer {
+      @include media('<=tablet') {
+        margin-top: 3rem;
+      }
+      font-size: 1.8rem;
+      color: white;
+    }
+  }
+
+  //  _________________________hero section
+
+  #heroSection {
+    margin-top: -9rem;
+    @include media('<=desktop') {
+      margin-top: 0rem;
+    }
+    @include flexContainer;
+    justify-content: center;
+    flex-wrap: wrap;
+    img {
+      border-left: 10px solid #949494;
+      border-bottom: 10px solid #949494;
+      margin-top: -5rem;
+      animation-name: animationOne;
+      animation-duration: 2.8s;
+      animation-iteration-count: infinite;
+      border-bottom-left-radius: 5rem;
+      border-bottom-right-radius: 5rem;
+      height: 85rem;
+      width: 72rem;
+
+      @include media('<=desktop') {
+        height: 50rem;
+        width: 40rem;
+      }
+    }
+    article {
+      padding-top: 8rem;
+      @include flexContainer;
+      justify-content: center;
+      align-items: center;
+      #my-introduction-heading {
+      }
+      h2 {
+        color: $royal_white;
+        text-align: center;
+        font-size: 6rem;
       }
       h1 {
-        color: $royal_white;
-        font-size: 2.6rem;
-        margin-top: 2rem;
+        padding: 0rem;
+        margin: 0rem;
+        -webkit-background-clip: text;
+        color: transparent;
+        background-image: linear-gradient(
+          to top,
+          #676767,
+          #808080,
+          #9a9a9a,
+          #b5b5b5,
+          #d1d1d1
+        );
+        font-size: 18.7rem;
       }
-      hr {
-        margin-top: 4.3rem;
-        border: none;
-        height: 0.1rem;
-        background: $royal_line_color;
-      }
-      h3 {
-        font-size: 1.4rem;
-        color: $royal_white;
-        margin-top: 2.5rem;
+      h4 {
+        letter-spacing: 5px;
+        text-align: center;
+        margin-top: 5rem;
+        font-size: 1.8rem;
+        font-weight: bold;
+        color: $royal_blue;
       }
     }
   }
-  #viewAllBtnDivision {
+
+  // ______________________________________get in touch
+  #theme2_footer {
+    background-color: white;
+    margin-top: 5rem;
+    flex-direction: column;
+    align-items: center;
+    @include flexContainer;
+    padding-top: 10.8rem;
+    h3 {
+      text-align: center;
+
+      font-size: 1.8rem;
+    }
+    h2 {
+      text-align: center;
+      margin-top: 2rem;
+      color: black;
+      font-size: 3.5rem;
+    }
+    hr {
+      margin-top: 2rem;
+      height: 0rem;
+      border: 1px solid rgb(51, 51, 51);
+      width: 30vw;
+    }
+    .footer_rect {
+      background-color: rgb(94, 199, 200);
+      height: 0.6rem;
+      width: 5rem;
+    }
+
+    input {
+      display: none;
+
+      margin-top: 3rem;
+      width: 25rem;
+      height: 3.8rem;
+      color: white;
+      font-size: 2.5rem;
+      outline: none;
+      background-color: transparent;
+      border-bottom: 0.2rem solid white;
+      border-left: none;
+      border-right: none;
+      border-top: none;
+    }
+
+    button {
+      cursor: pointer;
+      border-radius: 3rem;
+      border: none;
+      outline: none;
+    }
+    .socialBtn {
+      &:hover {
+        transform: scale(0.95);
+      }
+      margin: 4rem;
+      height: 9.9rem;
+      width: 9.9rem;
+    }
+
+    #fbBtn {
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-image: url(https://i.imgur.com/qd83jju.png);
+    }
+    #instaBtn {
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-image: url(https://i.imgur.com/Zd2vco3.png);
+    }
+
+    h5,
+    a,
+    h1 {
+      color: white;
+    }
+  }
+  // ________________________________contact me
+  #contactMeSectionContainer {
+    margin-bottom: 10rem;
+    justify-content: center;
+    @include flexContainer;
+    align-items: center;
+  }
+  #container_contact_me {
+    justify-content: center;
+    @include flexContainer;
+    align-items: center;
+  }
+  #contactMeSection {
+    width: 75%;
+    @include media('<=tablet') {
+      width: 100%;
+    }
+    margin-top: 10rem;
     @include flexContainer;
     justify-content: center;
-    button {
-      background-color: black;
-      color: white;
-      border-left: 0.1rem solid $royal_blue;
-      border-top: 0.1rem solid $royal_blue;
-      border-right: 0.5rem solid $royal_blue;
-      border-bottom: 0.5rem solid $royal_blue;
-      border-radius: 0px;
-      cursor: pointer;
-      font-size: 1.3rem;
-      height: 6.3rem;
-
-      width: 18.5rem;
-      transition: all 400ms ease;
-      &:hover {
-        color: black;
-        background-color: $royal_blue;
-
-        border: none;
-      }
-    }
-  }
-}
-
-// _____________________________project
-#interestContainer {
-  @include flexContainer;
-  align-items: center;
-  justify-content: center;
-  #interestBlock {
-    @include flexContainer;
     align-items: center;
     flex-wrap: wrap;
-    justify-content: space-around;
-    @include media('>=desktop') {
-      width: 60%;
+    -webkit-box-shadow: 0px 0px 44px -6px rgba(0, 0, 0, 1);
+    -moz-box-shadow: 0px 0px 44px -6px rgba(0, 0, 0, 1);
+    box-shadow: 0px 0px 44px -6px rgba(0, 0, 0, 1);
+    background-color: #191919;
+    #leftSection,
+    #rightSection {
+      margin: 0rem 2rem;
     }
-    width: 90%;
-  }
-  #leftContainer {
-    @include media('<=tablet') {
-      margin-top: 3rem;
-    }
-    img {
-      width: 37rem;
-      height: 28.5rem;
-    }
-  }
-  #rightContainer {
-    @include media('<=tablet') {
-      margin-top: 3rem;
-    }
-    font-size: 1.8rem;
-    color: white;
-  }
-}
-
-//  _________________________hero section
-
-#heroSection {
-  margin-top: -9rem;
-  @include media('<=desktop') {
-    margin-top: 0rem;
-  }
-  @include flexContainer;
-  justify-content: center;
-  flex-wrap: wrap;
-  img {
-    border-left: 10px solid #949494;
-    border-bottom: 10px solid #949494;
-    margin-top: -5rem;
-    animation-name: animationOne;
-    animation-duration: 2.8s;
-    animation-iteration-count: infinite;
-    border-bottom-left-radius: 5rem;
-    border-bottom-right-radius: 5rem;
-    height: 85rem;
-    width: 72rem;
-
-    @include media('<=desktop') {
-      height: 50rem;
-      width: 40rem;
-    }
-  }
-  article {
-    padding-top: 8rem;
-    @include flexContainer;
-    justify-content: center;
-    align-items: center;
-    #my-introduction-heading {
-    }
-    h2 {
-      color: $royal_white;
+    #leftSection {
       text-align: center;
-      font-size: 6rem;
-    }
-    h1 {
-      padding: 0rem;
-      margin: 0rem;
-      -webkit-background-clip: text;
-      color: transparent;
-      background-image: linear-gradient(
-        to top,
-        #676767,
-        #808080,
-        #9a9a9a,
-        #b5b5b5,
-        #d1d1d1
-      );
-      font-size: 18.7rem;
-    }
-    h4 {
-      letter-spacing: 5px;
-      text-align: center;
-      margin-top: 5rem;
-      font-size: 1.8rem;
-      font-weight: bold;
-      color: $royal_blue;
-    }
-  }
-}
-
-// ______________________________________get in touch
-#theme2_footer {
-  background-color: white;
-  margin-top: 5rem;
-  flex-direction: column;
-  align-items: center;
-  @include flexContainer;
-  padding-top: 10.8rem;
-  h3 {
-    text-align: center;
-
-    font-size: 1.8rem;
-  }
-  h2 {
-    text-align: center;
-    margin-top: 2rem;
-    color: black;
-    font-size: 3.5rem;
-  }
-  hr {
-    margin-top: 2rem;
-    height: 0rem;
-    border: 1px solid rgb(51, 51, 51);
-    width: 30vw;
-  }
-  .footer_rect {
-    background-color: rgb(94, 199, 200);
-    height: 0.6rem;
-    width: 5rem;
-  }
-
-  input {
-    display: none;
-
-    margin-top: 3rem;
-    width: 25rem;
-    height: 3.8rem;
-    color: white;
-    font-size: 2.5rem;
-    outline: none;
-    background-color: transparent;
-    border-bottom: 0.2rem solid white;
-    border-left: none;
-    border-right: none;
-    border-top: none;
-  }
-
-  button {
-    cursor: pointer;
-    border-radius: 3rem;
-    border: none;
-    outline: none;
-  }
-  .socialBtn {
-    &:hover {
-      transform: scale(0.95);
-    }
-    margin: 4rem;
-    height: 9.9rem;
-    width: 9.9rem;
-  }
-
-  #fbBtn {
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-image: url(https://i.imgur.com/qd83jju.png);
-  }
-  #instaBtn {
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-image: url(https://i.imgur.com/Zd2vco3.png);
-  }
-
-  h5,
-  a,
-  h1 {
-    color: white;
-  }
-}
-// ________________________________contact me
-#contactMeSectionContainer {
-  margin-bottom: 10rem;
-  justify-content: center;
-  @include flexContainer;
-  align-items: center;
-}
-#container_contact_me {
-  justify-content: center;
-  @include flexContainer;
-  align-items: center;
-}
-#contactMeSection {
-  width: 75%;
-  @include media('<=tablet') {
-    width: 100%;
-  }
-  margin-top: 10rem;
-  @include flexContainer;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  -webkit-box-shadow: 0px 0px 44px -6px rgba(0, 0, 0, 1);
-  -moz-box-shadow: 0px 0px 44px -6px rgba(0, 0, 0, 1);
-  box-shadow: 0px 0px 44px -6px rgba(0, 0, 0, 1);
-  background-color: #191919;
-  #leftSection,
-  #rightSection {
-    margin: 0rem 2rem;
-  }
-  #leftSection {
-    text-align: center;
-    h3 {
-      margin-top: 2rem;
-      font-size: 3.2rem;
-      color: $royal_white;
-    }
-    h1 {
-      margin-top: -0.4rem;
-      font-size: 7.1rem;
-      color: $royal_white;
-    }
-    h2 {
-      margin-top: -2.4rem;
-      font-size: 2.9rem;
-      color: $royal_blue;
-    }
-    h4 {
-      margin-top: 2.4rem;
-      font-size: 2.4rem;
-      color: $royal_white;
-    }
-  }
-  #rightSection {
-    @include media('<=desktop') {
-      padding-top: 5rem;
-    }
-    img {
-      height: 49rem;
-      @include media('<=tablet') {
-        height: 65rem;
+      h3 {
+        margin-top: 2rem;
+        font-size: 3.2rem;
+        color: $royal_white;
+      }
+      h1 {
+        margin-top: -0.4rem;
+        font-size: 7.1rem;
+        color: $royal_white;
+      }
+      h2 {
+        margin-top: -2.4rem;
+        font-size: 2.9rem;
+        color: $royal_blue;
+      }
+      h4 {
+        margin-top: 2.4rem;
+        font-size: 2.4rem;
+        color: $royal_white;
       }
     }
-  }
-}
-
-//______________________________ biography section
-
-#BiographySection {
-  margin-top: 10.6rem;
-  @include flexContainer;
-  justify-content: center;
-  flex-wrap: wrap;
-  #biography--left-Division,
-  #biography--right-Division {
-    margin: 0rem 4rem;
-  }
-  #biography--left-Division {
-    img {
-      width: 26.4rem;
-      height: 21.9rem;
-    }
-    ul {
-      list-style: none;
-      margin-top: 2.8rem;
-      text-align: right;
-      li {
-        font-size: 1.5rem;
-        margin: 1.9rem 0rem;
-        a {
-          padding: 1rem;
+    #rightSection {
+      @include media('<=desktop') {
+        padding-top: 5rem;
+      }
+      img {
+        height: 49rem;
+        @include media('<=tablet') {
+          height: 65rem;
         }
       }
     }
   }
 
-  #biography--right-Division {
-    width: 30%;
-    @include media('<=desktop') {
-      width: 60rem;
+  //______________________________ biography section
+
+  #BiographySection {
+    margin-top: 10.6rem;
+    @include flexContainer;
+    justify-content: center;
+    flex-wrap: wrap;
+    #biography--left-Division,
+    #biography--right-Division {
+      margin: 0rem 4rem;
+    }
+    #biography--left-Division {
+      img {
+        width: 26.4rem;
+        height: 21.9rem;
+      }
+      ul {
+        list-style: none;
+        margin-top: 2.8rem;
+        text-align: right;
+        li {
+          font-size: 1.5rem;
+          margin: 1.9rem 0rem;
+          a {
+            padding: 1rem;
+          }
+        }
+      }
     }
 
-    ul {
-      list-style: none;
+    #biography--right-Division {
+      width: 30%;
+      @include media('<=desktop') {
+        width: 60rem;
+      }
 
-      li {
-        position: relative;
+      ul {
+        list-style: none;
+
+        li {
+          position: relative;
+          h4 {
+            font-size: 1.6rem;
+            color: $royal_blue;
+          }
+          h1 {
+            font-size: 4.2rem;
+            color: $royal_white;
+            margin-bottom: 4rem;
+          }
+          .blue-line-box {
+            top: 13.4rem;
+            position: absolute;
+            width: 6.8rem;
+            background-color: $royal_blue;
+            height: 0.8rem;
+          }
+          // royal_line_color
+          hr {
+            border: none;
+            height: 1px;
+            background-color: $royal_line_color;
+            margin-bottom: 5.8rem;
+          }
+          p {
+            letter-spacing: 0.9px;
+            line-height: 2.5;
+            font-size: 1.6rem;
+            @include media('<=desktop') {
+              font-size: 1.7rem;
+            }
+            color: white;
+          }
+        }
+      }
+    }
+  }
+
+  // _________________________________best work section
+  #bestWorkSection {
+    position: relative;
+    #blueRectForTwo {
+      top: 12.2rem;
+      @include media('<=572px') {
+        top: 16.9rem;
+      }
+      position: absolute;
+      height: 0.5rem;
+      width: 8rem;
+      background-color: $royal_blue;
+    }
+    margin-top: 5rem;
+    @include flexContainer;
+    justify-content: center;
+    #leftSection {
+      width: 34%;
+      article {
         h4 {
           font-size: 1.6rem;
           color: $royal_blue;
@@ -595,69 +646,14 @@ aside {
         h1 {
           font-size: 4.2rem;
           color: $royal_white;
-          margin-bottom: 4rem;
-        }
-        .blue-line-box {
-          top: 13.4rem;
-          position: absolute;
-          width: 6.8rem;
-          background-color: $royal_blue;
-          height: 0.8rem;
-        }
-        // royal_line_color
-        hr {
-          border: none;
-          height: 1px;
-          background-color: $royal_line_color;
-          margin-bottom: 5.8rem;
-        }
-        p {
-          letter-spacing: 0.9px;
-          line-height: 2.5;
-          font-size: 1.6rem;
-          @include media('<=desktop') {
-            font-size: 1.7rem;
-          }
-          color: white;
         }
       }
     }
-  }
-}
-
-// _________________________________best work section
-#bestWorkSection {
-  position: relative;
-  #blueRectForTwo {
-    top: 12.2rem;
-    @include media('<=572px') {
-      top: 16.9rem;
-    }
-    position: absolute;
-    height: 0.5rem;
-    width: 8rem;
-    background-color: $royal_blue;
-  }
-  margin-top: 5rem;
-  @include flexContainer;
-  justify-content: center;
-  #leftSection {
-    width: 34%;
-    article {
-      h4 {
-        font-size: 1.6rem;
-        color: $royal_blue;
+    #rightSection {
+      img {
+        width: 28.4rem;
+        height: 20.9rem;
       }
-      h1 {
-        font-size: 4.2rem;
-        color: $royal_white;
-      }
-    }
-  }
-  #rightSection {
-    img {
-      width: 28.4rem;
-      height: 20.9rem;
     }
   }
 }
