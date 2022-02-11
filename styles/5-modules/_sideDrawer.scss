@@ -34,7 +34,7 @@
 }
 
 .sidebar.open {
-  width: 250px;
+  width: 205px;
 }
 
 .sidebar .logo-details {
@@ -180,7 +180,6 @@
   height: 60px;
   line-height: 60px;
   border-radius: 0px;
-  transition: all 0.5s ease;
 }
 
 .sidebar.open .profile #log_out {
@@ -200,8 +199,8 @@
 }
 
 .sidebar.open ~ .home-section {
-  left: 250px;
-  width: calc(100% - 250px);
+  left: 205px;
+  width: calc(100% - 205px);
 }
 
 @media (max-width: 420px) {
@@ -265,10 +264,11 @@
   padding: 10px 14px;
   background: #1d1b31;
   overflow: hidden;
+  transition: all ease-in-out 300ms;
 }
 .sidebar.open li.profile {
   // width equivalent to width of sidedrawer
-  width: 250px;
+  width: 205px;
 }
 
 // Switch of class when sidedrawer opens & closes

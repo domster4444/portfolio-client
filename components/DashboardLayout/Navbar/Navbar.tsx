@@ -5,7 +5,7 @@ import { globalConstant } from 'constant/constant';
 
 const Navbar: React.FC = () => {
   const defaultUserPhoto =
-    "'https://www.pngkit.com/png/detail/115-1150342_user-avatar-icon-iconos-de-mujeres-a-color.png'";
+    'https://www.pngkit.com/png/detail/115-1150342_user-avatar-icon-iconos-de-mujeres-a-color.png';
   const [userPhoto, setUserPhoto] = React.useState<string>(defaultUserPhoto);
   const [userName, setUserName] = React.useState<string>('anonymous');
 

@@ -1,5 +1,6 @@
 /* eslint-disable no-unused-vars */
 import React, { useState, useEffect, useRef } from 'react';
+import { Modal, Input, Row, Checkbox, Text, Button } from '@nextui-org/react';
 import Link from 'next/link';
 import styled from 'styled-components';
 import { TweenMax, Power3 } from 'gsap';
@@ -110,6 +111,13 @@ const ThemeCard = ({ url, name, description, imageUrl }: ThemeProps) => {
     }
   }, [isLoaded]);
 
+  // modal with use modal
+  const [visible, setVisible] = React.useState(false);
+  const handler = () => setVisible(true);
+  const closeHandler = () => {
+    setVisible(false);
+    console.log('closed');
+  };
   return (
     <>
       {(() => {
@@ -133,9 +141,42 @@ const ThemeCard = ({ url, name, description, imageUrl }: ThemeProps) => {
                     Preview
                   </PreviewBtn>
                 </Link>
-                <UseBtn className="medium" type="button">
+
+                <UseBtn className="medium" type="button" onClick={handler}>
                   Use
                 </UseBtn>
+
+                <Modal
+                  closeButton
+                  blur
+                  aria-labelledby="modal-title"
+                  open={visible}
+                  onClose={closeHandler}
+                >
+                  <Modal.Header>
+                    <Text id="modal-title" size={18}>
+                      Do you really want to use this &nbsp;
+                      <Text b size={18}>
+                        Theme ?
+                      </Text>
+                    </Text>
+                  </Modal.Header>
+
+                  <Modal.Footer>
+                    <Button
+                      auto
+                      flat
+                      color="error"
+                      size="xl"
+                      onClick={closeHandler}
+                    >
+                      No Go Back
+                    </Button>
+                    <Button auto size="xl" onClick={closeHandler}>
+                      Yes I want to use it
+                    </Button>
+                  </Modal.Footer>
+                </Modal>
               </div>
             </ThemeCardSmall>
           );
