@@ -7,25 +7,25 @@ import ThemeStyles from './themes.module.scss';
 import DashboardLayout from 'components/DashboardLayout';
 import { NextPage } from 'next';
 import { globalConstant } from 'constant/constant';
-import { Input, css, Button } from '@nextui-org/react';
+import { Input, Button } from '@nextui-org/react';
 
 const allThemes = [
   {
     isPaid: 'full-premium',
     url: `${globalConstant.baseURL}/1`,
-    name: 'Space Template',
+    name: 'Modal Template',
     description: 'This is the first theme',
     imageUrl: 'https://i.imgur.com/uMQLC1d_d.webp?maxwidth=760&fidelity=grand',
   },
   {
-    isPaid: 'not-premium',
-    url: `${globalConstant.baseURL}/1`,
-    name: 'Red Elegant Theme',
+    isPaid: 'full-premium',
+    url: `${globalConstant.baseURL}/3`,
+    name: 'Black Finished Designer Theme',
     description: 'This is the second theme',
-    imageUrl: 'https://i.imgur.com/uMQLC1d_d.webp?maxwidth=760&fidelity=grand',
+    imageUrl: 'https://i.imgur.com/6zJPuJw.png',
   },
   {
-    isPaid: 'not-premium',
+    isPaid: 'full-premium',
     url: `${globalConstant.baseURL}/2`,
     name: 'Kshitiz Portfolio',
     description: 'portfolio by author kshitiz',
