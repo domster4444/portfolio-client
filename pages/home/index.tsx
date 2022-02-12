@@ -7,6 +7,7 @@ import LayoutValidator from 'components/LayoutValidator';
 import ClientCarousel from 'components/ClientCarousel';
 import Accordion from 'components/Accordion';
 import TeamCarousel from 'components/TeamCarousel';
+
 const HomePage: NextPage = () => {
   return (
     <LayoutValidator>

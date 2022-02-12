@@ -1,7 +1,7 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
+import { globalConstant } from 'constant/constant';
 import axios from 'axios';
 import { Avatar, Text } from '@nextui-org/react';
-import { globalConstant } from 'constant/constant';
 
 const Navbar: React.FC = () => {
   const defaultUserPhoto =

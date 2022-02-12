@@ -7,6 +7,19 @@ const nextConfig = withPWA({
   },
   reactStrictMode: true,
   compress: true,
+  images: {
+    domains: [
+      's.gravatar.com',
+      'storage.googleapis.com',
+      'lh1.googleusercontent.com',
+      'lh2.googleusercontent.com',
+      'lh3.googleusercontent.com',
+      'lh4.googleusercontent.com',
+      'lh5.googleusercontent.com',
+      'lh6.googleusercontent.com',
+      'platform-lookaside.fbsbx.com',
+    ],
+  },
 });
 
 module.exports = nextConfig;
