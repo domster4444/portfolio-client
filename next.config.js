@@ -18,6 +18,7 @@ const nextConfig = withPWA({
       'lh5.googleusercontent.com',
       'lh6.googleusercontent.com',
       'platform-lookaside.fbsbx.com',
+      'i.imgur.com',
     ],
   },
 });
