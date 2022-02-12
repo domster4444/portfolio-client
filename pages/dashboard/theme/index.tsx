@@ -183,6 +183,7 @@ const Index: NextPage = () => {
       <DashboardLayout>
         <>
           <div>
+            <ScrollToTop smooth />
             <header className="text">Themes</header>
             <div className={ThemeStyles.input_container}>
               {/* <h1>{filter}</h1> */}
