@@ -33,10 +33,10 @@ const allThemes = [
   },
   {
     isPaid: 'not-premium',
-    url: `${globalConstant.baseURL}/1`,
-    name: 'Theme 4',
+    url: `${globalConstant.baseURL}/4`,
+    name: 'Extream Basic Theme',
     description: 'This is the fourth theme',
-    imageUrl: 'https://i.imgur.com/uMQLC1d_d.webp?maxwidth=760&fidelity=grand',
+    imageUrl: 'https://i.imgur.com/AaQy0W5.png',
   },
   {
     isPaid: 'not-premium',
