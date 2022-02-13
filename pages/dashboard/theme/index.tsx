@@ -21,7 +21,7 @@ const allThemes = [
     isPaid: 'full-premium',
     url: `${globalConstant.baseURL}/3`,
     name: 'Black Finished Designer Theme',
-    description: 'This is the second theme',
+    description: 'This is the third theme',
     imageUrl: 'https://i.imgur.com/6zJPuJw.png',
   },
   {
@@ -40,10 +40,10 @@ const allThemes = [
   },
   {
     isPaid: 'not-premium',
-    url: `${globalConstant.baseURL}/1`,
-    name: 'Theme 5',
-    description: 'This is the fifth theme',
-    imageUrl: 'https://i.imgur.com/uMQLC1d_d.webp?maxwidth=760&fidelity=grand',
+    url: `${globalConstant.baseURL}/5`,
+    name: 'Clean Girl Theme',
+    description: 'This is the clean girl theme',
+    imageUrl: 'https://i.imgur.com/yzoKUuj.png',
   },
   {
     isPaid: 'not-premium',
