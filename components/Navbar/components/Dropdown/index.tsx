@@ -24,8 +24,8 @@ const index = () => {
           className="feather feather-menu"
           style={{
             display: 'block',
-            height: '1.7rem',
-            width: '1.7rem',
+            height: '2.5rem',
+            width: '2.5rem',
             fill: '#717171',
             margin: '0 0.1rem',
           }}
@@ -43,8 +43,8 @@ const index = () => {
           focusable="false"
           style={{
             display: 'block',
-            height: '1.7rem',
-            width: '1.7rem',
+            height: '2.5rem',
+            width: '2.5rem',
             fill: '#717171',
             margin: '0 0.1rem',
           }}

@@ -25,8 +25,8 @@ const index: React.FC = () => {
                   -
                 </div>
                 <div className="details">
-                  <div className="name">Nicole Lewis</div>
-                  <div className="job">Web Devloper</div>
+                  <div className="name poppins_medium_500 ">Nicole Lewis</div>
+                  <div className="job poppins_regular_400">Web Devloper</div>
                 </div>
                 <div className="media-icons">
                   <a href="#">
@@ -44,6 +44,7 @@ const index: React.FC = () => {
                 </div>
 
                 <Button
+                  size="xl"
                   shadow
                   style={{ margin: '0.45rem 0rem' }}
                   icon={
@@ -54,10 +55,12 @@ const index: React.FC = () => {
                     />
                   }
                   color="error"
+                  className="poppins_regular_400"
                 >
                   View Profile
                 </Button>
                 <Button
+                  size="xl"
                   shadow
                   icon={
                     <Work
@@ -67,6 +70,7 @@ const index: React.FC = () => {
                     />
                   }
                   color="secondary"
+                  className="poppins_regular_400"
                 >
                   Hire Me
                 </Button>
@@ -86,8 +90,8 @@ const index: React.FC = () => {
                   -
                 </div>
                 <div className="details">
-                  <div className="name">Nicole Lewis</div>
-                  <div className="job">Web Devloper</div>
+                  <div className="name poppins_medium_500 ">Nicole Lewis</div>
+                  <div className="job poppins_regular_400">Web Devloper</div>
                 </div>
                 <div className="media-icons">
                   <a href="#">
@@ -105,6 +109,7 @@ const index: React.FC = () => {
                 </div>
 
                 <Button
+                  size="xl"
                   shadow
                   style={{ margin: '0.45rem 0rem' }}
                   icon={
@@ -115,10 +120,12 @@ const index: React.FC = () => {
                     />
                   }
                   color="error"
+                  className="poppins_regular_400"
                 >
                   View Profile
                 </Button>
                 <Button
+                  size="xl"
                   shadow
                   icon={
                     <Work
@@ -128,6 +135,7 @@ const index: React.FC = () => {
                     />
                   }
                   color="secondary"
+                  className="poppins_regular_400"
                 >
                   Hire Me
                 </Button>
@@ -146,8 +154,8 @@ const index: React.FC = () => {
                   -
                 </div>
                 <div className="details">
-                  <div className="name">Nicole Lewis</div>
-                  <div className="job">Web Devloper</div>
+                  <div className="name poppins_medium_500 ">Nicole Lewis</div>
+                  <div className="job poppins_regular_400">Web Devloper</div>
                 </div>
                 <div className="media-icons">
                   <a href="#">
@@ -165,6 +173,7 @@ const index: React.FC = () => {
                 </div>
 
                 <Button
+                  size="xl"
                   shadow
                   style={{ margin: '0.45rem 0rem' }}
                   icon={
@@ -175,10 +184,12 @@ const index: React.FC = () => {
                     />
                   }
                   color="error"
+                  className="poppins_regular_400"
                 >
                   View Profile
                 </Button>
                 <Button
+                  size="xl"
                   shadow
                   icon={
                     <Work
@@ -188,6 +199,7 @@ const index: React.FC = () => {
                     />
                   }
                   color="secondary"
+                  className="poppins_regular_400"
                 >
                   Hire Me
                 </Button>
@@ -207,8 +219,8 @@ const index: React.FC = () => {
                   -
                 </div>
                 <div className="details">
-                  <div className="name">Nicole Lewis</div>
-                  <div className="job">Web Devloper</div>
+                  <div className="name poppins_medium_500 ">Nicole Lewis</div>
+                  <div className="job poppins_regular_400">Web Devloper</div>
                 </div>
                 <div className="media-icons">
                   <a href="#">
@@ -226,6 +238,7 @@ const index: React.FC = () => {
                 </div>
 
                 <Button
+                  size="xl"
                   shadow
                   style={{ margin: '0.45rem 0rem' }}
                   icon={
@@ -236,10 +249,12 @@ const index: React.FC = () => {
                     />
                   }
                   color="error"
+                  className="poppins_regular_400"
                 >
                   View Profile
                 </Button>
                 <Button
+                  size="xl"
                   shadow
                   icon={
                     <Work
@@ -249,6 +264,7 @@ const index: React.FC = () => {
                     />
                   }
                   color="secondary"
+                  className="poppins_regular_400"
                 >
                   Hire Me
                 </Button>
@@ -267,8 +283,8 @@ const index: React.FC = () => {
                   -
                 </div>
                 <div className="details">
-                  <div className="name">Nicole Lewis</div>
-                  <div className="job">Web Devloper</div>
+                  <div className="name poppins_medium_500 ">Nicole Lewis</div>
+                  <div className="job poppins_regular_400">Web Devloper</div>
                 </div>
                 <div className="media-icons">
                   <a href="#">
@@ -286,6 +302,7 @@ const index: React.FC = () => {
                 </div>
 
                 <Button
+                  size="xl"
                   shadow
                   style={{ margin: '0.45rem 0rem' }}
                   icon={
@@ -296,10 +313,12 @@ const index: React.FC = () => {
                     />
                   }
                   color="error"
+                  className="poppins_regular_400"
                 >
                   View Profile
                 </Button>
                 <Button
+                  size="xl"
                   shadow
                   icon={
                     <Work
@@ -309,6 +328,7 @@ const index: React.FC = () => {
                     />
                   }
                   color="secondary"
+                  className="poppins_regular_400"
                 >
                   Hire Me
                 </Button>
@@ -328,8 +348,8 @@ const index: React.FC = () => {
                   -
                 </div>
                 <div className="details">
-                  <div className="name">Nicole Lewis</div>
-                  <div className="job">Web Devloper</div>
+                  <div className="name poppins_medium_500 ">Nicole Lewis</div>
+                  <div className="job poppins_regular_400">Web Devloper</div>
                 </div>
                 <div className="media-icons">
                   <a
@@ -372,6 +392,7 @@ const index: React.FC = () => {
                 </div>
 
                 <Button
+                  size="xl"
                   shadow
                   style={{ margin: '0.45rem 0rem' }}
                   icon={
@@ -382,10 +403,12 @@ const index: React.FC = () => {
                     />
                   }
                   color="error"
+                  className="poppins_regular_400"
                 >
                   View Profile
                 </Button>
                 <Button
+                  size="xl"
                   shadow
                   icon={
                     <Work
@@ -395,6 +418,7 @@ const index: React.FC = () => {
                     />
                   }
                   color="secondary"
+                  className="poppins_regular_400"
                 >
                   Hire Me
                 </Button>

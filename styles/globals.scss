@@ -23,7 +23,7 @@
 // @import '3-basics/links';
 // @import '3-basics/responsive_mixin';
 // @import '3-basics/selection-colors';
-// @import '3-basics/typography';
+@import '3-basics/typography';
 
 //?4-LAYOUT   SHARED BIG COMPONENTS
 @import '4-layout/footer';
@@ -36,6 +36,7 @@
 @import '5-modules/sideDrawerDrop';
 @import '5-modules/fixSideDrawer';
 @import '5-modules/sideDrawer';
+@import '5-modules/accordion';
 
 //? 5-PAGES
 @import '6-pages/404';
@@ -77,4 +78,8 @@ a {
 
 html {
   scroll-behavior: smooth;
+}
+// Accordion
+.nextui-collapse-title {
+  font-size: 2rem;
 }

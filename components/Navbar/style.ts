@@ -24,6 +24,7 @@ export const Nav = styled.nav`
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
+    font-size: 1.6rem;
   }
 `;
 

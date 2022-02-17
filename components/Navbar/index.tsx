@@ -27,7 +27,7 @@ const Navbar = (props: PropsTypes): JSX.Element => {
             alt="logo"
           />
         </li>
-        <li className="Nav__rightDivision">
+        <li className="Nav__rightDivision poppins_regular_400">
           {menus.map((menuItem: string, index: number) => (
             <React.Fragment key={index}>
               {menuItem === 'Login' && isLoggedIn === false ? (
@@ -57,8 +57,8 @@ const Navbar = (props: PropsTypes): JSX.Element => {
           >
             <div
               style={{
-                height: '1.75rem',
-                width: '1.75rem',
+                height: '2.5rem',
+                width: '2.5rem',
                 borderRadius: '0.25rem',
                 display: 'flex',
                 alignItems: 'center',
@@ -70,8 +70,8 @@ const Navbar = (props: PropsTypes): JSX.Element => {
                 data-name="Layer 1"
                 viewBox="0 0 128 128"
                 style={{
-                  height: '1.5rem',
-                  width: '1.5rem',
+                  height: '2.5rem',
+                  width: '2.5rem',
                   fill: '#717171',
                   margin: '0 0.1rem',
                 }}
