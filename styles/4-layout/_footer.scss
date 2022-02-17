@@ -1,6 +1,6 @@
 footer {
   width: 100%;
-  font-size: 16px;
+  font-size: 1.8rem;
   background: #1c2444;
   padding: 2em 4em;
   display: flex;
@@ -10,6 +10,9 @@ footer {
 }
 
 footer ul {
+  li {
+    font-size: 1.6rem;
+  }
   list-style: none;
 }
 
