@@ -15,7 +15,7 @@ import ClientCarousel from 'components/ClientCarousel';
 import Accordion from 'components/Accordion';
 import TeamCarousel from 'components/TeamCarousel';
 import FullWidthVideo from 'components/FullWidthVideo';
-
+import heroIllustrator from 'public/images/pages/home/heroIllustrator.svg';
 import member1 from 'public/images/members/member1.jpg';
 
 //? why section
@@ -59,14 +59,13 @@ const WhySectionCard = styled.div`
 
 //? join now section
 const JoinNowSection = styled.section`
-  margin-top: 10rem;
+  margin: 10rem 1rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   background: #440ccc;
-  border-top-left-radius: 3rem;
-  border-top-right-radius: 3rem;
+  border-radius: 1.5rem;
 `;
 const JoinNowSectionTitle = styled.h2`
   margin-top: 5rem;
@@ -151,6 +150,21 @@ const VideoSecRightBtn = styled.button`
   }
 `;
 
+const HeroContainer = styled.section`
+  margin-top: 2rem;
+  border-radius: 2.5rem;
+  padding: 0rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  background: #f8f8f8;
+  min-height: 50rem;
+  align-items: center;
+  @media (max-width: 960px) {
+    padding-top: 4rem;
+    flex-direction: column;
+  }
+`;
+
 const HomePage: NextPage = () => {
   // watch video button
 
@@ -176,11 +190,56 @@ const HomePage: NextPage = () => {
         {/*  video modal end */}
 
         <main>
-          <TeamCarousel />
+          <HeroContainer>
+            <div className="hero__left">
+              <h1
+                className="poppins_semibold_600"
+                style={{
+                  fontSize: '7rem',
+                  lineHeight: '1.2',
+                  color: '#191970',
+                  letterSpacing: '0.1rem',
+                }}
+              >
+                We Build <br /> Beautiful Portfolio
+              </h1>
+              <VideoSecRightBtn
+                onClick={handler}
+                className="poppins_regular_400"
+              >
+                Join Us
+              </VideoSecRightBtn>
+            </div>
+            <div className="hero__right">
+              <Image src={heroIllustrator}></Image>
+            </div>
+          </HeroContainer>
+
+          <section
+            style={{
+              margin: '10rem 0rem',
+            }}
+          >
+            <h2
+              style={{
+                position: 'relative',
+                color: '#191970',
+                letterSpacing: '0.1rem',
+                fontSize: '5rem',
+                textAlign: 'center',
+              }}
+              className="poppins_semibold_600"
+            >
+              Our Team
+            </h2>
+
+            <TeamCarousel />
+          </section>
+
           {/* //? Why section */}
           <WhySection className="whySection">
-            <WhySectionTitle className="whySection__title poppins_bold_800">
-              <Fade left>Why choose our portfollio with us?</Fade>
+            <WhySectionTitle className="whySection__title poppins_semibold_600">
+              <Fade bottom>Why choose our portfollio with us?</Fade>
             </WhySectionTitle>
             <WhySectionContainer>
               <Fade left>
@@ -282,21 +341,31 @@ const HomePage: NextPage = () => {
           <section
             className="testimonial"
             style={{
-              margin: '5rem 0rem',
+              margin: '15rem 0rem',
             }}
           >
-            <Fade left>
-              <h2
+            <h2
+              style={{
+                position: 'relative',
+                color: '#191970',
+                letterSpacing: '0.1rem',
+                fontSize: '5rem',
+              }}
+              className="poppins_semibold_600"
+            >
+              Testimonial Section
+              <div
                 style={{
-                  color: '#191970',
-                  letterSpacing: '0.1rem',
-                  fontSize: '5rem',
+                  background: '#191970',
+                  height: '4.5px',
+                  width: '4rem',
+                  position: 'absolute',
+                  top: '3.5rem',
+                  left: '-2.9rem',
+                  transform: 'rotate(-90deg)',
                 }}
-                className="poppins_bold_700"
-              >
-                Testimonial Section
-              </h2>
-            </Fade>
+              ></div>
+            </h2>
 
             <div
               className="testimonial__cardContainer"
@@ -581,12 +650,70 @@ const HomePage: NextPage = () => {
             </div>
           </section>
           {/* //? client carousel */}
-          <ClientCarousel />
+          <section
+            style={{
+              margin: '10rem 0rem',
+            }}
+          >
+            <h2
+              style={{
+                position: 'relative',
+                color: '#191970',
+                letterSpacing: '0.1rem',
+                fontSize: '5rem',
+              }}
+              className="poppins_semibold_600"
+            >
+              Our Clients
+              <div
+                style={{
+                  background: '#191970',
+                  height: '4.5px',
+                  width: '4rem',
+                  position: 'absolute',
+                  top: '3.5rem',
+                  left: '-2.9rem',
+                  transform: 'rotate(-90deg)',
+                }}
+              ></div>
+            </h2>
+
+            <ClientCarousel />
+          </section>
+
           {/* //? FAQ */}
-          <Accordion />
+          <section
+            style={{
+              margin: '10rem 0rem',
+            }}
+          >
+            <h2
+              style={{
+                position: 'relative',
+                color: '#191970',
+                letterSpacing: '0.1rem',
+                fontSize: '5rem',
+              }}
+              className="poppins_semibold_600"
+            >
+              Frequently Asked Question
+              <div
+                style={{
+                  background: '#191970',
+                  height: '4.5px',
+                  width: '4rem',
+                  position: 'absolute',
+                  top: '3.5rem',
+                  left: '-2.9rem',
+                  transform: 'rotate(-90deg)',
+                }}
+              ></div>
+            </h2>
+            <Accordion />
+          </section>
 
           {/* //? Join section */}
-          <Zoom>
+          <Fade bottom>
             <JoinNowSection>
               <JoinNowSectionTitle className="poppins_bold_800">
                 Join our team
@@ -595,7 +722,7 @@ const HomePage: NextPage = () => {
                 Create My Portfolio
               </JoinNowSectionBtn>
             </JoinNowSection>
-          </Zoom>
+          </Fade>
         </main>
       </React.Fragment>
     </LayoutValidator>

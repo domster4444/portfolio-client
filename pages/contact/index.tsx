@@ -7,9 +7,10 @@ import { NextPage } from 'next';
 import styled from 'styled-components';
 // @ts-ignore
 import { Fade } from 'react-reveal';
-import { Input, Spacer, Button } from '@nextui-org/react';
+import { Input, Spacer, Button, Textarea, css } from '@nextui-org/react';
 
 const ContactHeaderWrapper = styled.header`
+  margin-top: 20px;
   background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' height='100%25' width='100%25'%3E%3Cdefs%3E%3Cpattern id='doodad' width='131' height='131' viewBox='0 0 40 40' patternUnits='userSpaceOnUse' patternTransform='rotate(154)'%3E%3Crect width='100%25' height='100%25' fill='rgba(226, 233, 250,1)'/%3E%3Cpath d='M-10 19.5h 60v1h-60zM-10-21h60v1h-60' fill='rgba(232, 239, 252,1)'/%3E%3Ccircle r='0.5' cx='0' cy='20' fill='rgba(203, 218, 246,1)'/%3E%3Ccircle r='0.5' cx='40' cy='20' fill='rgba(203, 218, 246,1)'/%3E%3C/pattern%3E%3C/defs%3E%3Crect fill='url(%23doodad)' height='200%25' width='200%25'/%3E%3C/svg%3E ");
   min-height: 10vh;
   background-size: cover;
@@ -60,35 +61,36 @@ const ContactPage: NextPage = () => {
             content="Meta description for the About page"
           />
         </Head>
-        <ContactHeaderWrapper>
-          <Fade bottom>
-            <h2
-              className="poppins_semibold_600"
-              style={{
-                fontSize: '3.5rem',
-                color: '#1c2444',
-                letterSpacing: '0.1rem',
-                textAlign: 'center',
-              }}
-            >
-              We'd love to hear from you!
-            </h2>
-            <p
-              className="poppins_regular_400"
-              style={{
-                fontSize: '1.8rem',
-                textAlign: 'center',
-                color: '#1c2444',
-              }}
-            >
-              Whether you have a question about features, trials, pricing,need a
-              demo, or anything else,our team is ready to answer all your
-              questions
-            </p>
-          </Fade>
-        </ContactHeaderWrapper>
 
         <main>
+          <ContactHeaderWrapper>
+            <Fade bottom>
+              <h2
+                className="poppins_semibold_600"
+                style={{
+                  fontSize: '3.5rem',
+                  color: '#1c2444',
+                  letterSpacing: '0.1rem',
+                  textAlign: 'center',
+                }}
+              >
+                We'd love to hear from you!
+              </h2>
+              <p
+                className="poppins_regular_400"
+                style={{
+                  fontSize: '1.8rem',
+                  textAlign: 'center',
+                  color: '#1c2444',
+                }}
+              >
+                Whether you have a question about features, trials, pricing,need
+                a demo, or anything else,our team is ready to answer all your
+                questions
+              </p>
+            </Fade>
+          </ContactHeaderWrapper>
+
           <h2
             className="poppins_semibold_600"
             style={{
@@ -200,11 +202,18 @@ const ContactPage: NextPage = () => {
                 >
                   <Input size="xl" width="95%" placeholder="Email" bordered />
                   <Spacer y={0.5} />
-                  <Input size="xl" width="95%" placeholder="Email" bordered />
+                  <Input
+                    size="xl"
+                    width="95%"
+                    placeholder="Subject of query"
+                    bordered
+                  />
                   <Spacer y={0.5} />
-                  <Input size="xl" width="95%" placeholder="Email" bordered />
+
+                  {/* <Textarea bordered placeholder="Description" /> */}
                 </div>
                 <Spacer y={0.5} />
+
                 <Button
                   size="xl"
                   color="gradient"
@@ -212,7 +221,7 @@ const ContactPage: NextPage = () => {
                     width: '100%',
                   }}
                 >
-                  Send
+                  Send Request
                 </Button>
               </form>
             </ContactContainerRight>

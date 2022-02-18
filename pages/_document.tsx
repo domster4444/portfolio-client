@@ -47,18 +47,27 @@ class MyDocument extends Document {
           }}
         ></script> */}
 
-        {/* google font */}
+        {/* google font poppins */}
 
+        {/* config link */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link
           rel="preconnect"
           href="https://fonts.gstatic.com"
           crossOrigin="true"
         />
+
+        {/* google font Poppins */}
         <link
           href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
           rel="stylesheet"
         ></link>
+
+        {/* google font Abril Fatface */}
+        <link
+          href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap"
+          rel="stylesheet"
+        />
 
         <title>Portfolio Application</title>
         <meta charSet="utf-8" />
