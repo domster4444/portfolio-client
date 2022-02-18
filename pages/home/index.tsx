@@ -7,6 +7,7 @@ import Image from 'next/image';
 
 // @ts-ignore
 import { Fade, Zoom } from 'react-reveal';
+import { Modal } from '@nextui-org/react';
 
 // components
 import LayoutValidator from 'components/LayoutValidator';
@@ -19,7 +20,7 @@ import member1 from 'public/images/members/member1.jpg';
 
 //? why section
 const WhySection = styled.section`
-  margin-top: 10rem;
+  margin: 5rem 0rem;
 `;
 const WhySectionTitle = styled.h2`
   margin-bottom: 5rem;
@@ -151,6 +152,15 @@ const VideoSecRightBtn = styled.button`
 `;
 
 const HomePage: NextPage = () => {
+  // watch video button
+
+  const [visible, setVisible] = React.useState(false);
+  const handler = () => setVisible(true);
+  const closeHandler = () => {
+    setVisible(false);
+    console.log('closed');
+  };
+
   return (
     <LayoutValidator>
       <React.Fragment>
@@ -159,24 +169,14 @@ const HomePage: NextPage = () => {
           <meta name="description" content="Home page of portfolio generator" />
         </Head>
 
-        <main>
-          {/* //? Video Section */}
-          <VideoSection>
-            <VideoSecLeft>
-              <FullWidthVideo />
-            </VideoSecLeft>
+        {/*  video modal start */}
+        <Modal blur open={visible} onClose={closeHandler}>
+          <FullWidthVideo />
+        </Modal>
+        {/*  video modal end */}
 
-            <VideoSecRight>
-              <Fade right>
-                <VideoSecRightTitle className="poppins_semibold_600">
-                  Watch our video
-                </VideoSecRightTitle>
-                <VideoSecRightBtn className="poppins_regular_400">
-                  Watch Now
-                </VideoSecRightBtn>
-              </Fade>
-            </VideoSecRight>
-          </VideoSection>
+        <main>
+          <TeamCarousel />
           {/* //? Why section */}
           <WhySection className="whySection">
             <WhySectionTitle className="whySection__title poppins_bold_800">
@@ -257,9 +257,26 @@ const HomePage: NextPage = () => {
             </WhySectionContainer>
           </WhySection>
 
-          <TeamCarousel />
-          <ClientCarousel />
-          <Accordion />
+          {/* //? Video Section */}
+          <VideoSection>
+            <VideoSecLeft>
+              <FullWidthVideo />
+            </VideoSecLeft>
+
+            <VideoSecRight>
+              <Fade right>
+                <VideoSecRightTitle className="poppins_semibold_600">
+                  Watch our video
+                </VideoSecRightTitle>
+                <VideoSecRightBtn
+                  onClick={handler}
+                  className="poppins_regular_400"
+                >
+                  Watch Now
+                </VideoSecRightBtn>
+              </Fade>
+            </VideoSecRight>
+          </VideoSection>
 
           {/* //? Testimonial Section */}
           <section
@@ -563,6 +580,10 @@ const HomePage: NextPage = () => {
               </Zoom>
             </div>
           </section>
+          {/* //? client carousel */}
+          <ClientCarousel />
+          {/* //? FAQ */}
+          <Accordion />
 
           {/* //? Join section */}
           <Zoom>
