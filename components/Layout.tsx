@@ -48,11 +48,12 @@ const Layout: React.FC<Props> = ({ children }) => {
         <Navbar
           isLoggedIn={user ? true : false}
           logo=""
-          menus={['About', 'Home', 'Logout']}
+          menus={['Contact', 'About', 'Home', 'Logout']}
         />
 
         {children}
       </Block>
+
       <Footer />
     </Container>
   );

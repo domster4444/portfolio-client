@@ -16,7 +16,6 @@ import TeamCarousel from 'components/TeamCarousel';
 import FullWidthVideo from 'components/FullWidthVideo';
 
 import member1 from 'public/images/members/member1.jpg';
-import { red } from '@mui/material/colors';
 
 //? why section
 const WhySection = styled.section`
@@ -166,19 +165,22 @@ const HomePage: NextPage = () => {
             <VideoSecLeft>
               <FullWidthVideo />
             </VideoSecLeft>
+
             <VideoSecRight>
-              <VideoSecRightTitle className="poppins_semibold_600">
-                Watch our video
-              </VideoSecRightTitle>
-              <VideoSecRightBtn className="poppins_regular_400">
-                Watch Now
-              </VideoSecRightBtn>
+              <Fade right>
+                <VideoSecRightTitle className="poppins_semibold_600">
+                  Watch our video
+                </VideoSecRightTitle>
+                <VideoSecRightBtn className="poppins_regular_400">
+                  Watch Now
+                </VideoSecRightBtn>
+              </Fade>
             </VideoSecRight>
           </VideoSection>
           {/* //? Why section */}
           <WhySection className="whySection">
             <WhySectionTitle className="whySection__title poppins_bold_800">
-              Why build my portfolio with us?
+              <Fade left>Why choose our portfollio with us?</Fade>
             </WhySectionTitle>
             <WhySectionContainer>
               <Fade left>
@@ -266,16 +268,19 @@ const HomePage: NextPage = () => {
               margin: '5rem 0rem',
             }}
           >
-            <h2
-              style={{
-                color: '#191970',
-                letterSpacing: '0.1rem',
-                fontSize: '5rem',
-              }}
-              className="poppins_bold_700"
-            >
-              Testimonial Section
-            </h2>
+            <Fade left>
+              <h2
+                style={{
+                  color: '#191970',
+                  letterSpacing: '0.1rem',
+                  fontSize: '5rem',
+                }}
+                className="poppins_bold_700"
+              >
+                Testimonial Section
+              </h2>
+            </Fade>
+
             <div
               className="testimonial__cardContainer"
               style={{
@@ -285,243 +290,277 @@ const HomePage: NextPage = () => {
                 justifyContent: 'space-between',
               }}
             >
-              {/*//* card  1*/}
-              <div
-                className="card"
-                style={{
-                  position: 'relative',
-                  width: '35rem',
-                  display: 'flex',
-                  justifyContent: 'center',
-                  flexDirection: 'column',
-                  background: 'white',
-                  borderRadius: '10px',
-                  boxShadow: '0px 0px 10px rgba(0, 0, 0, 0.1)',
-                  padding: '1rem',
-                  margin: '1rem',
-                }}
-              >
+              <Zoom>
+                {/*//* card  1*/}
                 <div
+                  className="card"
                   style={{
-                    border: '3px  solid #ccc',
-                    top: '-4rem',
-                    transform: 'translateX(-50%)',
-                    marginLeft: '50%',
-                    borderRadius: '50%',
-                    background: '#7928ca',
-                    width: '100px',
-                    height: '100px',
+                    position: 'relative',
+                    width: '35rem',
                     display: 'flex',
                     justifyContent: 'center',
-                    alignItems: 'center',
-                    overflow: 'hidden',
-                    position: 'absolute',
-                  }}
-                  className="card__img"
-                >
-                  <Image height={124} width={124} src={member1} alt="client" />
-                </div>
-                <p
-                  style={{
-                    marginTop: '5.5rem',
-                    fontSize: '1.9rem',
+                    flexDirection: 'column',
+                    background: 'white',
+                    borderRadius: '10px',
+                    boxShadow: '0px 0px 10px rgba(0, 0, 0, 0.1)',
+                    padding: '1rem',
+                    margin: '1rem',
                   }}
                 >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
+                  <div
                     style={{
-                      fill: '#b3b3b3',
-                      transform: '',
-                      msFilter: '',
+                      border: '3px  solid #ccc',
+                      top: '-4rem',
+                      transform: 'translateX(-50%)',
+                      marginLeft: '50%',
+                      borderRadius: '50%',
+                      background: '#7928ca',
+                      width: '100px',
+                      height: '100px',
+                      display: 'flex',
+                      justifyContent: 'center',
+                      alignItems: 'center',
+                      overflow: 'hidden',
+                      position: 'absolute',
+                    }}
+                    className="card__img"
+                  >
+                    <Image
+                      height={124}
+                      width={124}
+                      src={member1}
+                      alt="client"
+                    />
+                  </div>
+                  <p
+                    style={{
+                      marginTop: '5.5rem',
+                      fontSize: '1.9rem',
                     }}
                   >
-                    <path d="M3.691 6.292C5.094 4.771 7.217 4 10 4h1v2.819l-.804.161c-1.37.274-2.323.813-2.833 1.604A2.902 2.902 0 0 0 6.925 10H10a1 1 0 0 1 1 1v7c0 1.103-.897 2-2 2H3a1 1 0 0 1-1-1v-5l.003-2.919c-.009-.111-.199-2.741 1.688-4.789zM20 20h-6a1 1 0 0 1-1-1v-5l.003-2.919c-.009-.111-.199-2.741 1.688-4.789C16.094 4.771 18.217 4 21 4h1v2.819l-.804.161c-1.37.274-2.323.813-2.833 1.604A2.902 2.902 0 0 0 17.925 10H21a1 1 0 0 1 1 1v7c0 1.103-.897 2-2 2z"></path>
-                  </svg>
-                  Lorem ipsum, dolor sit amet consectetur adipisicing elit. est
-                  totam praesentium. Maiores quo doloribus officia cumque error?
-                </p>
-              </div>
-              {/* //* card  2 */}
-              <div
-                className="card"
-                style={{
-                  position: 'relative',
-                  width: '35rem',
-                  display: 'flex',
-                  justifyContent: 'center',
-                  flexDirection: 'column',
-                  background: 'white',
-                  borderRadius: '10px',
-                  boxShadow: '0px 0px 10px rgba(0, 0, 0, 0.1)',
-                  padding: '1rem',
-                  margin: '1rem',
-                }}
-              >
-                <div
-                  style={{
-                    top: '-4rem',
-                    transform: 'translateX(-50%)',
-                    marginLeft: '50%',
-                    borderRadius: '50%',
-                    background: '#7928ca',
-                    width: '100px',
-                    height: '100px',
-                    display: 'flex',
-                    justifyContent: 'center',
-                    alignItems: 'center',
-                    overflow: 'hidden',
-                    position: 'absolute',
-                    border: '3px  solid #ccc',
-                  }}
-                  className="card__img"
-                >
-                  <Image height={124} width={124} src={member1} alt="client" />
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      style={{
+                        fill: '#b3b3b3',
+                        transform: '',
+                        msFilter: '',
+                      }}
+                    >
+                      <path d="M3.691 6.292C5.094 4.771 7.217 4 10 4h1v2.819l-.804.161c-1.37.274-2.323.813-2.833 1.604A2.902 2.902 0 0 0 6.925 10H10a1 1 0 0 1 1 1v7c0 1.103-.897 2-2 2H3a1 1 0 0 1-1-1v-5l.003-2.919c-.009-.111-.199-2.741 1.688-4.789zM20 20h-6a1 1 0 0 1-1-1v-5l.003-2.919c-.009-.111-.199-2.741 1.688-4.789C16.094 4.771 18.217 4 21 4h1v2.819l-.804.161c-1.37.274-2.323.813-2.833 1.604A2.902 2.902 0 0 0 17.925 10H21a1 1 0 0 1 1 1v7c0 1.103-.897 2-2 2z"></path>
+                    </svg>
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                    est totam praesentium. Maiores quo doloribus officia cumque
+                    error?
+                  </p>
                 </div>
-                <p
-                  style={{
-                    marginTop: '5.5rem',
-                    fontSize: '1.9rem',
-                  }}
-                >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    style={{
-                      fill: '#b3b3b3',
-                      transform: '',
-                      msFilter: '',
-                    }}
-                  >
-                    <path d="M3.691 6.292C5.094 4.771 7.217 4 10 4h1v2.819l-.804.161c-1.37.274-2.323.813-2.833 1.604A2.902 2.902 0 0 0 6.925 10H10a1 1 0 0 1 1 1v7c0 1.103-.897 2-2 2H3a1 1 0 0 1-1-1v-5l.003-2.919c-.009-.111-.199-2.741 1.688-4.789zM20 20h-6a1 1 0 0 1-1-1v-5l.003-2.919c-.009-.111-.199-2.741 1.688-4.789C16.094 4.771 18.217 4 21 4h1v2.819l-.804.161c-1.37.274-2.323.813-2.833 1.604A2.902 2.902 0 0 0 17.925 10H21a1 1 0 0 1 1 1v7c0 1.103-.897 2-2 2z"></path>
-                  </svg>
-                  Lorem ipsum, dolor sit amet consectetur adipisicing elit. est
-                  totam praesentium. Maiores quo doloribus officia cumque error?
-                </p>
-              </div>
-              {/* //* card 3 */}
-              <div
-                className="card"
-                style={{
-                  position: 'relative',
-                  width: '35rem',
-                  display: 'flex',
-                  justifyContent: 'center',
-                  flexDirection: 'column',
-                  background: 'white',
-                  borderRadius: '10px',
-                  boxShadow: '0px 0px 10px rgba(0, 0, 0, 0.1)',
-                  padding: '1rem',
-                  margin: '1rem',
-                }}
-              >
-                <div
-                  style={{
-                    top: '-4rem',
-                    transform: 'translateX(-50%)',
-                    marginLeft: '50%',
-                    borderRadius: '50%',
-                    background: '#7928ca',
-                    width: '100px',
-                    height: '100px',
-                    display: 'flex',
-                    justifyContent: 'center',
-                    alignItems: 'center',
-                    overflow: 'hidden',
-                    position: 'absolute',
-                    border: '3px  solid #ccc',
-                  }}
-                  className="card__img"
-                >
-                  <Image height={124} width={124} src={member1} alt="client" />
-                </div>
-                <p
-                  style={{
-                    marginTop: '5.5rem',
-                    fontSize: '1.9rem',
-                  }}
-                >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    style={{
-                      fill: '#b3b3b3',
-                      transform: '',
-                      msFilter: '',
-                    }}
-                  >
-                    <path d="M3.691 6.292C5.094 4.771 7.217 4 10 4h1v2.819l-.804.161c-1.37.274-2.323.813-2.833 1.604A2.902 2.902 0 0 0 6.925 10H10a1 1 0 0 1 1 1v7c0 1.103-.897 2-2 2H3a1 1 0 0 1-1-1v-5l.003-2.919c-.009-.111-.199-2.741 1.688-4.789zM20 20h-6a1 1 0 0 1-1-1v-5l.003-2.919c-.009-.111-.199-2.741 1.688-4.789C16.094 4.771 18.217 4 21 4h1v2.819l-.804.161c-1.37.274-2.323.813-2.833 1.604A2.902 2.902 0 0 0 17.925 10H21a1 1 0 0 1 1 1v7c0 1.103-.897 2-2 2z"></path>
-                  </svg>
-                  Lorem ipsum, dolor sit amet consectetur adipisicing elit. est
-                  totam praesentium. Maiores quo doloribus officia cumque error?
-                </p>
-              </div>
+              </Zoom>
 
-              {/* //* card 4 */}
-              <div
-                className="card"
-                style={{
-                  position: 'relative',
-                  width: '35rem',
-                  display: 'flex',
-                  justifyContent: 'center',
-                  flexDirection: 'column',
-                  background: 'white',
-                  borderRadius: '10px',
-                  boxShadow: '0px 0px 10px rgba(0, 0, 0, 0.1)',
-                  padding: '1rem',
-                  margin: '1rem',
-                }}
-              >
+              <Zoom>
+                {/* //* card  2 */}
                 <div
+                  className="card"
                   style={{
-                    top: '-4rem',
-                    transform: 'translateX(-50%)',
-                    marginLeft: '50%',
-                    borderRadius: '50%',
-                    background: '#7928ca',
-                    width: '100px',
-                    height: '100px',
+                    position: 'relative',
+                    width: '35rem',
                     display: 'flex',
                     justifyContent: 'center',
-                    alignItems: 'center',
-                    overflow: 'hidden',
-                    position: 'absolute',
-                    border: '3px  solid #ccc',
-                  }}
-                  className="card__img"
-                >
-                  <Image height={124} width={124} src={member1} alt="client" />
-                </div>
-                <p
-                  style={{
-                    marginTop: '5.5rem',
-                    fontSize: '1.9rem',
+                    flexDirection: 'column',
+                    background: 'white',
+                    borderRadius: '10px',
+                    boxShadow: '0px 0px 10px rgba(0, 0, 0, 0.1)',
+                    padding: '1rem',
+                    margin: '1rem',
                   }}
                 >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
+                  <div
                     style={{
-                      fill: '#b3b3b3',
-                      transform: '',
-                      msFilter: '',
+                      top: '-4rem',
+                      transform: 'translateX(-50%)',
+                      marginLeft: '50%',
+                      borderRadius: '50%',
+                      background: '#7928ca',
+                      width: '100px',
+                      height: '100px',
+                      display: 'flex',
+                      justifyContent: 'center',
+                      alignItems: 'center',
+                      overflow: 'hidden',
+                      position: 'absolute',
+                      border: '3px  solid #ccc',
+                    }}
+                    className="card__img"
+                  >
+                    <Image
+                      height={124}
+                      width={124}
+                      src={member1}
+                      alt="client"
+                    />
+                  </div>
+                  <p
+                    style={{
+                      marginTop: '5.5rem',
+                      fontSize: '1.9rem',
                     }}
                   >
-                    <path d="M3.691 6.292C5.094 4.771 7.217 4 10 4h1v2.819l-.804.161c-1.37.274-2.323.813-2.833 1.604A2.902 2.902 0 0 0 6.925 10H10a1 1 0 0 1 1 1v7c0 1.103-.897 2-2 2H3a1 1 0 0 1-1-1v-5l.003-2.919c-.009-.111-.199-2.741 1.688-4.789zM20 20h-6a1 1 0 0 1-1-1v-5l.003-2.919c-.009-.111-.199-2.741 1.688-4.789C16.094 4.771 18.217 4 21 4h1v2.819l-.804.161c-1.37.274-2.323.813-2.833 1.604A2.902 2.902 0 0 0 17.925 10H21a1 1 0 0 1 1 1v7c0 1.103-.897 2-2 2z"></path>
-                  </svg>
-                  Lorem ipsum, dolor sit amet consectetur adipisicing elit. est
-                  totam praesentium. Maiores quo doloribus officia cumque error?
-                </p>
-              </div>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      style={{
+                        fill: '#b3b3b3',
+                        transform: '',
+                        msFilter: '',
+                      }}
+                    >
+                      <path d="M3.691 6.292C5.094 4.771 7.217 4 10 4h1v2.819l-.804.161c-1.37.274-2.323.813-2.833 1.604A2.902 2.902 0 0 0 6.925 10H10a1 1 0 0 1 1 1v7c0 1.103-.897 2-2 2H3a1 1 0 0 1-1-1v-5l.003-2.919c-.009-.111-.199-2.741 1.688-4.789zM20 20h-6a1 1 0 0 1-1-1v-5l.003-2.919c-.009-.111-.199-2.741 1.688-4.789C16.094 4.771 18.217 4 21 4h1v2.819l-.804.161c-1.37.274-2.323.813-2.833 1.604A2.902 2.902 0 0 0 17.925 10H21a1 1 0 0 1 1 1v7c0 1.103-.897 2-2 2z"></path>
+                    </svg>
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                    est totam praesentium. Maiores quo doloribus officia cumque
+                    error?
+                  </p>
+                </div>
+              </Zoom>
+
+              <Zoom>
+                {/* //* card 3 */}
+                <div
+                  className="card"
+                  style={{
+                    position: 'relative',
+                    width: '35rem',
+                    display: 'flex',
+                    justifyContent: 'center',
+                    flexDirection: 'column',
+                    background: 'white',
+                    borderRadius: '10px',
+                    boxShadow: '0px 0px 10px rgba(0, 0, 0, 0.1)',
+                    padding: '1rem',
+                    margin: '1rem',
+                  }}
+                >
+                  <div
+                    style={{
+                      top: '-4rem',
+                      transform: 'translateX(-50%)',
+                      marginLeft: '50%',
+                      borderRadius: '50%',
+                      background: '#7928ca',
+                      width: '100px',
+                      height: '100px',
+                      display: 'flex',
+                      justifyContent: 'center',
+                      alignItems: 'center',
+                      overflow: 'hidden',
+                      position: 'absolute',
+                      border: '3px  solid #ccc',
+                    }}
+                    className="card__img"
+                  >
+                    <Image
+                      height={124}
+                      width={124}
+                      src={member1}
+                      alt="client"
+                    />
+                  </div>
+                  <p
+                    style={{
+                      marginTop: '5.5rem',
+                      fontSize: '1.9rem',
+                    }}
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      style={{
+                        fill: '#b3b3b3',
+                        transform: '',
+                        msFilter: '',
+                      }}
+                    >
+                      <path d="M3.691 6.292C5.094 4.771 7.217 4 10 4h1v2.819l-.804.161c-1.37.274-2.323.813-2.833 1.604A2.902 2.902 0 0 0 6.925 10H10a1 1 0 0 1 1 1v7c0 1.103-.897 2-2 2H3a1 1 0 0 1-1-1v-5l.003-2.919c-.009-.111-.199-2.741 1.688-4.789zM20 20h-6a1 1 0 0 1-1-1v-5l.003-2.919c-.009-.111-.199-2.741 1.688-4.789C16.094 4.771 18.217 4 21 4h1v2.819l-.804.161c-1.37.274-2.323.813-2.833 1.604A2.902 2.902 0 0 0 17.925 10H21a1 1 0 0 1 1 1v7c0 1.103-.897 2-2 2z"></path>
+                    </svg>
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                    est totam praesentium. Maiores quo doloribus officia cumque
+                    error?
+                  </p>
+                </div>
+              </Zoom>
+
+              <Zoom>
+                {/* //* card 4 */}
+                <div
+                  className="card"
+                  style={{
+                    position: 'relative',
+                    width: '35rem',
+                    display: 'flex',
+                    justifyContent: 'center',
+                    flexDirection: 'column',
+                    background: 'white',
+                    borderRadius: '10px',
+                    boxShadow: '0px 0px 10px rgba(0, 0, 0, 0.1)',
+                    padding: '1rem',
+                    margin: '1rem',
+                  }}
+                >
+                  <div
+                    style={{
+                      top: '-4rem',
+                      transform: 'translateX(-50%)',
+                      marginLeft: '50%',
+                      borderRadius: '50%',
+                      background: '#7928ca',
+                      width: '100px',
+                      height: '100px',
+                      display: 'flex',
+                      justifyContent: 'center',
+                      alignItems: 'center',
+                      overflow: 'hidden',
+                      position: 'absolute',
+                      border: '3px  solid #ccc',
+                    }}
+                    className="card__img"
+                  >
+                    <Image
+                      height={124}
+                      width={124}
+                      src={member1}
+                      alt="client"
+                    />
+                  </div>
+                  <p
+                    style={{
+                      marginTop: '5.5rem',
+                      fontSize: '1.9rem',
+                    }}
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      style={{
+                        fill: '#b3b3b3',
+                        transform: '',
+                        msFilter: '',
+                      }}
+                    >
+                      <path d="M3.691 6.292C5.094 4.771 7.217 4 10 4h1v2.819l-.804.161c-1.37.274-2.323.813-2.833 1.604A2.902 2.902 0 0 0 6.925 10H10a1 1 0 0 1 1 1v7c0 1.103-.897 2-2 2H3a1 1 0 0 1-1-1v-5l.003-2.919c-.009-.111-.199-2.741 1.688-4.789zM20 20h-6a1 1 0 0 1-1-1v-5l.003-2.919c-.009-.111-.199-2.741 1.688-4.789C16.094 4.771 18.217 4 21 4h1v2.819l-.804.161c-1.37.274-2.323.813-2.833 1.604A2.902 2.902 0 0 0 17.925 10H21a1 1 0 0 1 1 1v7c0 1.103-.897 2-2 2z"></path>
+                    </svg>
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                    est totam praesentium. Maiores quo doloribus officia cumque
+                    error?
+                  </p>
+                </div>
+              </Zoom>
             </div>
           </section>
 

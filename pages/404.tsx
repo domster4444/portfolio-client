@@ -20,13 +20,21 @@ const PageNotFound = () => {
           height={500}
         />
       </div>
+
       <h1 className="PNF__title">Page not found</h1>
+
       <div className="PNF__btn__container">
         {/* <Link passHref href="/"> */}
         <Button
           className="PNF__button"
           color="primary"
           size="xl"
+          style={{
+            height: '5rem',
+            width: '5rem',
+
+            fontSize: '2.2rem',
+          }}
           onClick={redirectBack}
         >
           Go Back
