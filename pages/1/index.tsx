@@ -65,7 +65,7 @@ const FirstTheme = () => {
             </h1>
             <h3>I'am a Web Developer.</h3>
             <div className="newslatter">
-              <form>
+              {/* <form>
                 <input
                   type="email"
                   name="email"
@@ -78,7 +78,7 @@ const FirstTheme = () => {
                   name="submit"
                   value="Lets Start"
                 />
-              </form>
+              </form> */}
             </div>
           </div>
 

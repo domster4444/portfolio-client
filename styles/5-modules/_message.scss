@@ -1,0 +1,52 @@
+.MessageContainer {
+  color: black;
+  // background-color: pink;
+  // using align self with display flex to make right- message  on right side without using absolute
+  display: flex;
+  margin: 0.25rem 0rem;
+  flex-direction: column;
+}
+
+.MessageContainer__message--left {
+  background: rgb(238, 238, 238);
+  margin: 0.5rem 0rem;
+  border-radius: 1.75rem;
+  padding: 0.55rem 1.5rem;
+  font-size: 1.6rem;
+  max-width: 15rem;
+  min-width: 5rem;
+}
+
+.MessageContainer__message--right {
+  align-self: flex-end;
+  color: white;
+  border-radius: 1.75rem;
+  padding: 0.55rem 1.5rem;
+  font-size: 1.6rem;
+  margin: 0.5rem 0rem;
+  background: slateblue;
+  width: 10rem;
+  margin-right: 1rem;
+  word-break: keep-all;
+}
+
+.MessageContainer__message--user {
+  color: white;
+  background: #0000002d;
+  border-radius: 0.5rem;
+  padding: 0.1rem 0.5rem;
+  font-size: 1.5rem !important;
+}
+
+.styles_scrollable-div__prSCv::-webkit-scrollbar {
+  width: 1rem;
+}
+
+.styles_scrollable-div__prSCv::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+.styles_scrollable-div__prSCv::-webkit-scrollbar-thumb {
+  background-color: rgb(255, 255, 255);
+  outline: 1px solid slategrey;
+}

@@ -83,8 +83,9 @@ function DropdownMenu() {
           <DropdownItem route="/api/auth/login" name="login_or_register">
             Log in or Register
           </DropdownItem>
-          <DropdownItem route="/support">Support</DropdownItem>
-          <DropdownItem route="/contact">Contact us</DropdownItem>
+          <DropdownItem route="/home">Home</DropdownItem>
+          <DropdownItem route="/about">About</DropdownItem>
+          <DropdownItem route="/contact">Contact Us</DropdownItem>
         </div>
       </CSSTransition>
     </div>

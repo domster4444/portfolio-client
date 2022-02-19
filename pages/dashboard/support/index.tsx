@@ -5,6 +5,8 @@ import { useForm, ValidationError } from '@formspree/react';
 import { NextPage } from 'next';
 import { Text, Textarea, Button, Spacer, Card } from '@nextui-org/react';
 import styled from 'styled-components';
+import ChatBox from 'components/ChatBox';
+import { useUser } from '@auth0/nextjs-auth0';
 
 const SupportCard = styled.div`
   display: flex;
@@ -42,6 +44,8 @@ const SubmitBtn = {
 };
 
 const Index: NextPage = () => {
+  const { user, error, isLoading } = useUser();
+
   const [state, handleSubmit] = useForm('xdobeqnz');
 
   if (state.succeeded) {
@@ -57,8 +61,11 @@ const Index: NextPage = () => {
             <Card bordered shadow={false} css={{ mw: '400px' }}>
               <Text size={25}> Thank you for your message. !</Text>
               <Text size={25}>
-                {' '}
                 We will get back to you as soon as possible.
+              </Text>
+              <Text size={25}>
+                We will send you a message to your email :
+                {user ? user.email : ''}
               </Text>
             </Card>
           </div>
@@ -78,7 +85,14 @@ const Index: NextPage = () => {
                 <label htmlFor="email">
                   Email Address
                   <br />
-                  <input id="email" type="email" name="email" />
+                  <input
+                    disabled
+                    id="email"
+                    type="email"
+                    name="email"
+                    // @ts-ignore
+                    value={user ? user.email : ''}
+                  />
                 </label>
 
                 <ValidationError
@@ -119,6 +133,14 @@ const Index: NextPage = () => {
               </form>
             </FormCard>
           </SupportCard>
+
+          <section
+            style={{
+              margin: '5rem 0rem',
+            }}
+          >
+            <ChatBox />
+          </section>
         </>
       </DashboardLayout>
     </>

@@ -1,9 +1,13 @@
 import styled from 'styled-components';
 export const Nav = styled.nav`
-  display: flex;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
   justify-content: space-between;
   box-shadow: 0 4px 2px -2px rgba(0, 0, 0, 0.1);
   border-radius: 1rem;
+  background-color: white;
+  z-index: 1;
 
   ul {
     display: flex;
