@@ -1,4 +1,15 @@
 .blog__article {
+  .blog_title {
+    padding-top: 0rem;
+    padding-bottom: 0rem;
+    padding-left: 1rem;
+    border-left: 5px solid #000b387a;
+    margin: 2rem 0rem;
+    font-size: 4rem;
+    @media only screen and (max-width: 900px) {
+      font-size: 3.5rem;
+    }
+  }
   transform: translateX(-50%);
   margin-left: 50%;
   width: 70%;

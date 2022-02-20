@@ -17,6 +17,9 @@ const BlogContainer = styled.div`
 const BlogCard = styled.div`
   overflow: hidden;
   width: 400px;
+  @media only screen and (max-width: 430px) {
+    width: 95%;
+  }
   min-height: 450px;
   background-color: #ffffff;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 5px;

@@ -32,19 +32,7 @@ export const Post = ({
       {/* <Toolbar /> */}
       <article className="blog__article">
         <Fade top>
-          <h1
-            className="poppins_medium_500"
-            style={{
-              paddingTop: '0rem',
-              paddingBottom: '0rem',
-              paddingLeft: '1rem',
-              borderLeft: '5px solid #000b387a',
-              margin: '2rem 0rem',
-              fontSize: '4.5rem',
-            }}
-          >
-            {title}
-          </h1>
+          <h2 className=" poppins_medium_500 blog_title">{title}</h2>
         </Fade>
 
         {imageUrl && (
