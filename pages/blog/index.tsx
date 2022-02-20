@@ -131,9 +131,8 @@ const BlogPage: NextPage = ({ posts }: any) => {
                           fontSize: '1.8rem',
                         }}
                       >
-                        Lorem, ipsum dolor sit amet consectetur adipisicing
-                        elit. Unde facilis magni temporibus praesentium, at
-                        corrupti!
+                        {/* @ts-ignore */}
+                        {p.body[0].children[0].text}
                       </p>
                       <span
                         style={{
