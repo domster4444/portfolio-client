@@ -1,5 +1,7 @@
 import imageUrlBuilder from '@sanity/image-url';
 import { useState, useEffect } from 'react';
+import { useRouter } from 'next/router';
+
 // import styles from '../../styles/Post.module.css';
 // @ts-ignore
 import BlockContent from '@sanity/block-content-to-react';
@@ -16,6 +18,8 @@ export const Post = ({
   body: any;
   image: any;
 }) => {
+  const router = useRouter();
+
   const [imageUrl, setImageUrl] = useState('');
 
   useEffect(() => {
@@ -28,7 +32,13 @@ export const Post = ({
   }, [image]);
 
   return (
-    <Layout>
+    <div>
+      <button
+        onClick={() => router.back()}
+        className="poppins_regular_400 backBtn"
+      >
+        Go Back
+      </button>
       {/* <Toolbar /> */}
       <article className="blog__article">
         <Fade top>
@@ -46,7 +56,7 @@ export const Post = ({
           <BlockContent blocks={body} />
         </div>
       </article>
-    </Layout>
+    </div>
   );
 };
 

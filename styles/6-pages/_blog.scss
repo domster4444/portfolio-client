@@ -1,3 +1,23 @@
+.backBtn {
+  background: white;
+  padding: 1rem;
+  font-size: 1.8rem;
+  border-radius: 1.25rem;
+  outline: none;
+  border: 1px solid #ccc;
+  margin: 1rem 3rem;
+  cursor: pointer;
+  z-index: 100;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 20px;
+  left: 10px;
+
+  &:hover {
+    color: white;
+    background: black;
+  }
+}
 .blog__article {
   .blog_title {
     padding-top: 0rem;
