@@ -4,7 +4,9 @@ import { useState, useEffect } from 'react';
 // @ts-ignore
 import BlockContent from '@sanity/block-content-to-react';
 // import { Toolbar } from '../../components/toolbar';
-
+import Layout from 'components/Layout';
+// @ts-ignore
+import { Fade } from 'react-reveal';
 export const Post = ({
   title,
   body,
@@ -26,16 +28,28 @@ export const Post = ({
   }, [image]);
 
   return (
-    <div>
+    <Layout>
       {/* <Toolbar /> */}
-      <div>
-        <h1>{title}</h1>
+      <article className="blog__article">
+        <Fade top>
+          <h1
+            className="poppins_medium_500"
+            style={{
+              paddingTop: '0rem',
+              paddingBottom: '0rem',
+              paddingLeft: '1rem',
+              borderLeft: '5px solid #000b387a',
+              margin: '2rem 0rem',
+              fontSize: '4.5rem',
+            }}
+          >
+            {title}
+          </h1>
+        </Fade>
+
         {imageUrl && (
           <img
-            style={{
-              width: '100%',
-              height: '50rem',
-            }}
+            style={{ width: '100%', maxHeight: '70rem', borderRadius: '1rem' }}
             src={imageUrl}
           />
         )}
@@ -43,8 +57,8 @@ export const Post = ({
         <div className="poppins_bold_700">
           <BlockContent blocks={body} />
         </div>
-      </div>
-    </div>
+      </article>
+    </Layout>
   );
 };
 

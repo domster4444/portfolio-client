@@ -16,20 +16,26 @@ const BlogContainer = styled.div`
 
 const BlogCard = styled.div`
   overflow: hidden;
-  width: 300px;
-  height: 300px;
-  background-color: #f5f5f5;
+  width: 400px;
+  min-height: 450px;
+  background-color: #ffffff;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 5px;
   margin: 10px;
   border-radius: 10px;
   display: flex;
   flex-direction: column;
-  border: 2px solid transparent;
   p {
     font-size: 1.8rem;
   }
   &:hover {
+    h4 {
+      color: #001e97;
+    }
     cursor: pointer;
-    border: 2px solid grey;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 40px;
+  }
+  &:active {
+    transform: scale(0.99);
   }
 
   img {
@@ -73,7 +79,7 @@ const BlogPage: NextPage = ({ posts }: any) => {
             textAlign: 'center',
           }}
         >
-          Welcome To Blog Page
+          Welcome To Our Blog Page
         </h1>
 
         <BlogContainer className="blog__container">
@@ -91,24 +97,56 @@ const BlogPage: NextPage = ({ posts }: any) => {
                 return (
                   <div key={index}>
                     <BlogCard
+                      style={{
+                        position: 'relative',
+                        paddingBottom: '1.5rem',
+                      }}
                       onClick={() => {
                         router.push(`/post/${p.slug.current}`);
                       }}
                     >
+                      <Image
+                        src={`${p.mainImage}`}
+                        alt="blog"
+                        height={300}
+                        width={500}
+                      />
                       <h4
+                        className="poppins_medium_500"
                         style={{
-                          fontSize: '1.8rem',
+                          marginTop: '1.5rem',
+                          padding: '0rem 1.25rem',
+                          fontSize: '2.0rem',
                         }}
                       >
                         {p.title}
                       </h4>
-                      <Image
-                        src={`${p.mainImage}`}
-                        alt="blog"
-                        height={500}
-                        width={500}
-                      />
-                      <p>{p._createdAt}</p>
+                      <p
+                        style={{
+                          color: '#838fa0',
+                          padding: '0rem 1.25rem',
+                          fontSize: '1.8rem',
+                        }}
+                      >
+                        Lorem, ipsum dolor sit amet consectetur adipisicing
+                        elit. Unde facilis magni temporibus praesentium, at
+                        corrupti!
+                      </p>
+                      <span
+                        style={{
+                          padding: '0.25rem',
+                          borderRadius: '0.45rem',
+                          background: 'white',
+                          bottom: '0',
+                          color: 'black',
+                          position: 'absolute',
+                          right: '0',
+                          fontSize: '1.4rem',
+                        }}
+                        className="poppins_regular_400"
+                      >
+                        Date : {p._createdAt.slice(0, 10)}
+                      </span>
                     </BlogCard>
                   </div>
                 );
