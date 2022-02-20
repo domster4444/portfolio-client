@@ -48,7 +48,7 @@ export const Post = ({
   );
 };
 
-export const getServerSideProps = async (pageContext) => {
+export const getServerSideProps = async (pageContext: any) => {
   const pageSlug = pageContext.query.slug;
 
   if (!pageSlug) {
