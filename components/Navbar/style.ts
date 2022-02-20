@@ -9,6 +9,11 @@ export const Nav = styled.nav`
   background-color: white;
   z-index: 1;
 
+  @media (max-width: 768px) {
+    #nav__menus {
+      display: none;
+    }
+  }
   ul {
     display: flex;
     justify-content: space-between;

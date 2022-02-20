@@ -86,6 +86,8 @@ function DropdownMenu() {
           <DropdownItem route="/home">Home</DropdownItem>
           <DropdownItem route="/about">About</DropdownItem>
           <DropdownItem route="/contact">Contact Us</DropdownItem>
+          <DropdownItem route="/pricing">Pricing</DropdownItem>
+          <DropdownItem route="/blog">Blog</DropdownItem>
         </div>
       </CSSTransition>
     </div>

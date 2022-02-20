@@ -29,7 +29,7 @@ const Navbar = (props: PropsTypes): JSX.Element => {
         </li>
         <li className="Nav__rightDivision poppins_regular_400">
           {menus.map((menuItem: string, index: number) => (
-            <React.Fragment key={index}>
+            <div id="nav__menus" key={index}>
               {menuItem === 'Login' && isLoggedIn === false ? (
                 <Link passHref href="/api/auth/login">
                   <Menu> Login</Menu>
@@ -43,9 +43,9 @@ const Navbar = (props: PropsTypes): JSX.Element => {
                   <Menu key={menuItem}>{menuItem}</Menu>
                 </Link>
               ) : null}
-            </React.Fragment>
+            </div>
           ))}
-
+          {/* Globe menu */}
           <Menu
             style={{
               display: 'flex',
@@ -83,7 +83,7 @@ const Navbar = (props: PropsTypes): JSX.Element => {
               </svg>
             </div>
           </Menu>
-
+          {/* nav dropdown menu */}
           <Dropdown />
         </li>
       </ul>

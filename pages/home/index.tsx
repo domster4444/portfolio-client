@@ -2,6 +2,7 @@
 import React from 'react';
 import Head from 'next/head';
 import { NextPage } from 'next';
+import Link from 'next/link';
 import styled from 'styled-components';
 import Image from 'next/image';
 
@@ -203,12 +204,12 @@ const HomePage: NextPage = () => {
               >
                 We Build <br /> Beautiful Portfolio
               </h1>
-              <VideoSecRightBtn
-                onClick={handler}
-                className="poppins_regular_400"
-              >
-                Join Us
-              </VideoSecRightBtn>
+
+              <Link passHref href="/api/auth/login">
+                <VideoSecRightBtn className="poppins_regular_400">
+                  Join Us
+                </VideoSecRightBtn>
+              </Link>
             </div>
             <div className="hero__right">
               <Image src={heroIllustrator}></Image>
@@ -1005,10 +1006,10 @@ const HomePage: NextPage = () => {
           <Fade bottom>
             <JoinNowSection>
               <JoinNowSectionTitle className="poppins_bold_800">
-                Join our team
+                Try It For Free
               </JoinNowSectionTitle>
               <JoinNowSectionBtn className="poppins_regular_400">
-                Create My Portfolio
+                Try Demo
               </JoinNowSectionBtn>
             </JoinNowSection>
           </Fade>
