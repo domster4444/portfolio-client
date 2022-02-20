@@ -9,6 +9,7 @@ const nextConfig = withPWA({
   compress: true,
   images: {
     domains: [
+      'cdn.sanity.io',
       's.gravatar.com',
       'storage.googleapis.com',
       'lh1.googleusercontent.com',

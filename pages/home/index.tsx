@@ -7,7 +7,7 @@ import Image from 'next/image';
 
 // @ts-ignore
 import { Fade, Zoom } from 'react-reveal';
-import { Modal } from '@nextui-org/react';
+import { Modal, Text, Col, Card, Grid, Row, Button } from '@nextui-org/react';
 
 // components
 import LayoutValidator from 'components/LayoutValidator';
@@ -215,6 +215,295 @@ const HomePage: NextPage = () => {
             </div>
           </HeroContainer>
 
+          <section
+            style={{
+              margin: '10rem 0rem',
+              display: 'flex',
+              flexDirection: 'column',
+            }}
+          >
+            <h2
+              style={{
+                position: 'relative',
+                color: '#191970',
+                letterSpacing: '0.1rem',
+                fontSize: '5rem',
+                textAlign: 'center',
+              }}
+              className="poppins_semibold_600"
+            >
+              Featured Themes
+            </h2>
+            <div
+              style={{
+                display: 'flex',
+                justifyContent: 'center',
+                width: '100%',
+                flexWrap: 'wrap',
+              }}
+            >
+              {/* //* card start */}
+              <Card
+                cover
+                style={{
+                  margin: '1rem',
+                  minWidth: '30rem',
+                  maxWidth: '35rem',
+                }}
+              >
+                <Card.Header css={{ position: 'absolute', zIndex: 1, top: 5 }}>
+                  <Col>
+                    <Text
+                      size={12}
+                      weight="bold"
+                      transform="uppercase"
+                      color="#ffffffAA"
+                    >
+                      New
+                    </Text>
+                    <Text h3 color="black">
+                      Acme camera
+                    </Text>
+                  </Col>
+                </Card.Header>
+                <Card.Body>
+                  <Card.Image
+                    src="https://i.imgur.com/6zJPuJw.png"
+                    height={400}
+                    width="100%"
+                    alt="Card example background"
+                  />
+                </Card.Body>
+                <Card.Footer
+                  blur
+                  css={{
+                    position: 'absolute',
+                    borderTop:
+                      '$borderWeights$light solid rgba(255, 255, 255, 0.2)',
+                    bottom: 0,
+                    zIndex: 1,
+                  }}
+                >
+                  <Row>
+                    <Col>
+                      <Text color="#000" size={18}>
+                        Available soon.
+                      </Text>
+                      <Text color="#000" size={14}>
+                        Get notified.
+                      </Text>
+                    </Col>
+                    <Col>
+                      <Row justify="flex-end">
+                        <Button flat auto rounded>
+                          <Text size={18} transform="uppercase">
+                            Get It
+                          </Text>
+                        </Button>
+                      </Row>
+                    </Col>
+                  </Row>
+                </Card.Footer>
+              </Card>
+              {/* //* card start */}
+              {/* //* card start */}
+              <Card
+                cover
+                style={{
+                  margin: '1rem',
+                  minWidth: '30rem',
+                  maxWidth: '35rem',
+                }}
+              >
+                <Card.Header css={{ position: 'absolute', zIndex: 1, top: 5 }}>
+                  <Col>
+                    <Text
+                      size={12}
+                      weight="bold"
+                      transform="uppercase"
+                      color="#ffffffAA"
+                    >
+                      New
+                    </Text>
+                    <Text h3 color="black">
+                      Acme camera
+                    </Text>
+                  </Col>
+                </Card.Header>
+                <Card.Body>
+                  <Card.Image
+                    src="https://i.imgur.com/6zJPuJw.png"
+                    height={400}
+                    width="100%"
+                    alt="Card example background"
+                  />
+                </Card.Body>
+                <Card.Footer
+                  blur
+                  css={{
+                    position: 'absolute',
+                    borderTop:
+                      '$borderWeights$light solid rgba(255, 255, 255, 0.2)',
+                    bottom: 0,
+                    zIndex: 1,
+                  }}
+                >
+                  <Row>
+                    <Col>
+                      <Text color="#000" size={18}>
+                        Available soon.
+                      </Text>
+                      <Text color="#000" size={14}>
+                        Get notified.
+                      </Text>
+                    </Col>
+                    <Col>
+                      <Row justify="flex-end">
+                        <Button flat auto rounded>
+                          <Text size={18} transform="uppercase">
+                            Get It
+                          </Text>
+                        </Button>
+                      </Row>
+                    </Col>
+                  </Row>
+                </Card.Footer>
+              </Card>
+              {/* //* card start */}
+
+              {/* //* card start */}
+              <Card
+                cover
+                style={{
+                  margin: '1rem',
+                  minWidth: '30rem',
+                  maxWidth: '35rem',
+                }}
+              >
+                <Card.Header css={{ position: 'absolute', zIndex: 1, top: 5 }}>
+                  <Col>
+                    <Text
+                      size={12}
+                      weight="bold"
+                      transform="uppercase"
+                      color="#ffffffAA"
+                    >
+                      New
+                    </Text>
+                    <Text h3 color="black">
+                      Acme camera
+                    </Text>
+                  </Col>
+                </Card.Header>
+                <Card.Body>
+                  <Card.Image
+                    src="https://i.imgur.com/6zJPuJw.png"
+                    height={400}
+                    width="100%"
+                    alt="Card example background"
+                  />
+                </Card.Body>
+                <Card.Footer
+                  blur
+                  css={{
+                    position: 'absolute',
+                    borderTop:
+                      '$borderWeights$light solid rgba(255, 255, 255, 0.2)',
+                    bottom: 0,
+                    zIndex: 1,
+                  }}
+                >
+                  <Row>
+                    <Col>
+                      <Text color="#000" size={18}>
+                        Available soon.
+                      </Text>
+                      <Text color="#000" size={14}>
+                        Get notified.
+                      </Text>
+                    </Col>
+                    <Col>
+                      <Row justify="flex-end">
+                        <Button flat auto rounded>
+                          <Text size={18} transform="uppercase">
+                            Get It
+                          </Text>
+                        </Button>
+                      </Row>
+                    </Col>
+                  </Row>
+                </Card.Footer>
+              </Card>
+              {/* //* card start */}
+
+              {/* //* card start */}
+              <Card
+                cover
+                style={{
+                  margin: '1rem',
+                  minWidth: '30rem',
+                  maxWidth: '35rem',
+                }}
+              >
+                <Card.Header css={{ position: 'absolute', zIndex: 1, top: 5 }}>
+                  <Col>
+                    <Text
+                      size={12}
+                      weight="bold"
+                      transform="uppercase"
+                      color="#ffffffAA"
+                    >
+                      New
+                    </Text>
+                    <Text h3 color="black">
+                      Acme camera
+                    </Text>
+                  </Col>
+                </Card.Header>
+                <Card.Body>
+                  <Card.Image
+                    src="https://i.imgur.com/6zJPuJw.png"
+                    height={400}
+                    width="100%"
+                    alt="Card example background"
+                  />
+                </Card.Body>
+                <Card.Footer
+                  blur
+                  css={{
+                    position: 'absolute',
+                    borderTop:
+                      '$borderWeights$light solid rgba(255, 255, 255, 0.2)',
+                    bottom: 0,
+                    zIndex: 1,
+                  }}
+                >
+                  <Row>
+                    <Col>
+                      <Text color="#000" size={18}>
+                        Available soon.
+                      </Text>
+                      <Text color="#000" size={14}>
+                        Get notified.
+                      </Text>
+                    </Col>
+                    <Col>
+                      <Row justify="flex-end">
+                        <Button flat auto rounded>
+                          <Text size={18} transform="uppercase">
+                            Get It
+                          </Text>
+                        </Button>
+                      </Row>
+                    </Col>
+                  </Row>
+                </Card.Footer>
+              </Card>
+              {/* //* card start */}
+            </div>
+          </section>
+
+          {/* team section */}
           <section
             style={{
               margin: '10rem 0rem',
