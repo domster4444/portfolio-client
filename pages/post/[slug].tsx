@@ -5,7 +5,15 @@ import { useState, useEffect } from 'react';
 import BlockContent from '@sanity/block-content-to-react';
 // import { Toolbar } from '../../components/toolbar';
 
-export const Post = ({ title, body, image }) => {
+export const Post = ({
+  title,
+  body,
+  image,
+}: {
+  title: string;
+  body: any;
+  image: any;
+}) => {
   const [imageUrl, setImageUrl] = useState('');
 
   useEffect(() => {
