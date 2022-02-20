@@ -4,7 +4,7 @@ import { useRouter } from 'next/router';
 import 'styles/globals.scss';
 import { AppProps } from 'next/app';
 import { UserProvider } from '@auth0/nextjs-auth0';
-
+import { globalConstant } from 'constant/constant';
 import { NextUIProvider } from '@nextui-org/react';
 import 'react-toastify/dist/ReactToastify.css';
 import { ToastContainer } from 'react-toastify';
@@ -20,6 +20,28 @@ function MyApp({ Component, pageProps }: AppProps) {
   //     router.events.off('routeChangeComplete', handleRouteChange);
   //   };
   // }, [router.events]);
+  const router = useRouter();
+
+  useEffect(() => {
+    var condition = window.navigator.onLine ? 'online' : 'offline';
+    if (condition === 'online') {
+      console.log('ONLINE');
+      fetch('https://www.google.com/', {
+        // Check for internet connectivity
+        mode: 'no-cors',
+      })
+        .then(() => {
+          console.log('CONNECTED TO INTERNET');
+        })
+        .catch(() => {
+          console.log('INTERNET CONNECTIVITY ISSUE');
+        });
+    } else {
+      console.log('OFFLINE');
+      location.href = `${globalConstant.baseURL}/home`;
+    }
+  });
+
   return (
     <>
       <UserProvider>
