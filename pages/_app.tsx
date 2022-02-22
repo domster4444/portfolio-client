@@ -38,6 +38,7 @@ function MyApp({ Component, pageProps }: AppProps) {
         });
     } else {
       console.log('OFFLINE');
+
       location.href = `${globalConstant.baseURL}/home`;
     }
   });

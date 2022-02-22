@@ -84,9 +84,16 @@ type ThemeProps = {
   name: string;
   description: string;
   imageUrl: string;
+  useUrl: string;
 };
 // eslint-disable-next-line object-curly-newline
-const ThemeCard = ({ url, name, description, imageUrl }: ThemeProps) => {
+const ThemeCard = ({
+  url,
+  name,
+  description,
+  imageUrl,
+  useUrl,
+}: ThemeProps) => {
   const [isLoaded, setIsLoaded] = useState(false);
   let animateThemeCard = useRef(null);
   useEffect(() => {
@@ -172,9 +179,12 @@ const ThemeCard = ({ url, name, description, imageUrl }: ThemeProps) => {
                     >
                       No Go Back
                     </Button>
-                    <Button auto size="xl" onClick={closeHandler}>
-                      Yes I want to use it
-                    </Button>
+
+                    <Link passHref href={`${useUrl}`}>
+                      <Button auto size="xl" onClick={closeHandler}>
+                        Yes I want to use it
+                      </Button>
+                    </Link>
                   </Modal.Footer>
                 </Modal>
               </div>
