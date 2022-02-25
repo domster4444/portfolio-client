@@ -8,6 +8,8 @@ import { globalConstant } from 'constant/constant';
 import { NextUIProvider } from '@nextui-org/react';
 import 'react-toastify/dist/ReactToastify.css';
 import { ToastContainer } from 'react-toastify';
+import store from 'main/store';
+import { Provider } from 'react-redux';
 
 function MyApp({ Component, pageProps }: AppProps) {
   // const router = useRouter();
@@ -45,12 +47,15 @@ function MyApp({ Component, pageProps }: AppProps) {
 
   return (
     <>
-      <UserProvider>
-        <NextUIProvider>
-          <Component {...pageProps} />
-          <ToastContainer />
-        </NextUIProvider>
-      </UserProvider>
+      <Provider store={store}>
+        <UserProvider>
+          <NextUIProvider>
+            <Component {...pageProps} />
+
+            <ToastContainer />
+          </NextUIProvider>
+        </UserProvider>
+      </Provider>
     </>
   );
 }

@@ -2,16 +2,8 @@ import React from 'react';
 import SetCard from 'components/Set/SetCard';
 import styled from 'styled-components';
 import { TickSquare } from 'react-iconly';
-
+import { Input, Lable } from '../Form.style';
 import { Spacer, Button } from '@nextui-org/react';
-const Lable = styled.label`
-  font-size: 1.8rem;
-`;
-const Input = styled.input`
-  height: 5rem;
-  font-size: 2.4rem;
-  width: 100%;
-`;
 
 const index: React.FC = () => {
   return (

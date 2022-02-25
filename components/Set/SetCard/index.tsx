@@ -3,7 +3,9 @@ import styled from 'styled-components';
 const Card = styled.div`
   background: white;
   border-radius: 5px;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+
   padding: 1rem;
   margin: 1rem;
   width: 90%;

@@ -2,13 +2,38 @@ import React, { useEffect } from 'react';
 import { Button, Modal, useModal } from '@nextui-org/react';
 import NoticeCardStyles from './NoticeCard.module.scss';
 import Link from 'next/link';
+import { useUser } from '@auth0/nextjs-auth0';
+import { axiosInstance } from 'lib/utilities/api/api';
 
-const NoticeCard = () => {
+const NoticeCard = ({
+  createAccount,
+}: {
+  createAccount: () => Promise<void>;
+}) => {
   const { setVisible, bindings } = useModal();
+  const { user, error, isLoading } = useUser();
 
   useEffect(() => {
     // ! AUTOMATICALLY IT SENTS VISIBILITY OF MODEL TO FALSE IN EVERY RENDER
-    setVisible(false);
+
+    if (user) {
+      axiosInstance
+        .post('/api/v1/users/check', {
+          email: user.email,
+        })
+
+        .then((res: any) => {
+          console.log('💚axios NoticeCard', res.data);
+          if (res.data.exist) {
+            setVisible(false);
+          } else {
+            setVisible(true);
+          }
+        })
+        .catch((error) => {
+          console.log(' 🟠axios NoticeCard error', error);
+        });
+    }
   }, []);
   return (
     <>
@@ -217,7 +242,14 @@ const NoticeCard = () => {
               Disagree
             </Button>
           </Link>
-          <Button size="xl" auto onClick={() => setVisible(false)}>
+          <Button
+            size="xl"
+            auto
+            onClick={() => {
+              createAccount();
+              setVisible(false);
+            }}
+          >
             Agree
           </Button>
         </Modal.Footer>
