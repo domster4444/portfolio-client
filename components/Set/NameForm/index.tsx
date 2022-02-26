@@ -61,7 +61,7 @@ const Index = ({ nextPreBtn }: { nextPreBtn: boolean }) => {
       };
 
       axiosInstance
-        .post('/api/v1/users/nameform', dataToSend)
+        .post('/api/v1/users/alldetails', dataToSend)
 
         .then((res: any) => {
           console.log('💚axios NameForm update Success', res.data);
