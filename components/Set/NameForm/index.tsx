@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import {
   Button,
   Textarea,
@@ -9,6 +9,8 @@ import {
 } from '@nextui-org/react';
 import { ChevronLeft, ChevronRight, TickSquare } from 'react-iconly';
 import { Input, Lable } from './Form.style';
+import { axiosInstance } from 'lib/utilities/api/api';
+import { useUser } from '@auth0/nextjs-auth0';
 
 // @ts-ignore
 import DashboardLayout from 'components/DashboardLayout';
@@ -16,12 +18,66 @@ import { toast } from 'react-toastify';
 import BioStyles from './bio.module.scss';
 
 const Index = ({ nextPreBtn }: { nextPreBtn: boolean }) => {
+  const [firstName, setFirstName] = useState<string>('');
+  const [middleName, setMiddleName] = useState<string>('');
+  const [lastName, setLastName] = useState<string>('');
+  const [userName, setUserName] = useState<string>('');
+  const { user, error, isLoading } = useUser();
+
   const submitHandler = (event: React.FormEvent<HTMLFormElement>): void => {
     event.preventDefault();
-    toast('name form successfully updated', {
-      position: 'top-center',
-    });
+
+    if (user) {
+      const dataToSend = {
+        email: user.email,
+        firstName: firstName,
+        middleName: middleName,
+        lastName: lastName,
+        userName: userName,
+      };
+
+      axiosInstance
+        .patch('/api/v1/users/nameform', dataToSend)
+
+        .then((res: any) => {
+          console.log('💚axios NameForm update Success', res.data);
+          toast(res.data.message, {
+            position: 'top-center',
+          });
+        })
+        .catch((error) => {
+          console.log(' 🟠axios NameForm error', error);
+          toast(error, {
+            position: 'top-center',
+          });
+        });
+    }
   };
+
+  useEffect(() => {
+    if (user) {
+      const dataToSend: any = {
+        email: user.email,
+      };
+
+      axiosInstance
+        .post('/api/v1/users/nameform', dataToSend)
+
+        .then((res: any) => {
+          console.log('💚axios NameForm update Success', res.data);
+          setFirstName(res.data.detailExist.firstName);
+          setMiddleName(res.data.detailExist.middleName);
+          setLastName(res.data.detailExist.lastName);
+          setUserName(res.data.detailExist.userName);
+        })
+        .catch((error) => {
+          console.log(' 🟠axios NameForm error', error);
+          toast(error, {
+            position: 'top-center',
+          });
+        });
+    }
+  }, [user]);
 
   return (
     <>
@@ -42,26 +98,50 @@ const Index = ({ nextPreBtn }: { nextPreBtn: boolean }) => {
             <Lable htmlFor="">
               UserName :
               <br />
-              <Input type="text" />
+              <Input
+                value={userName}
+                type="text"
+                onChange={(e) => {
+                  setUserName(e.target.value);
+                }}
+              />
             </Lable>
             <Lable htmlFor="">
               FirstName :
               <br />
-              <Input type="text" />
+              <Input
+                value={firstName}
+                type="text"
+                onChange={(e) => {
+                  setFirstName(e.target.value);
+                }}
+              />
             </Lable>
             <Spacer y={1} />
 
             <Lable htmlFor="">
               MiddleName :
               <br />
-              <Input type="text" />
+              <Input
+                value={middleName}
+                type="text"
+                onChange={(e) => {
+                  setMiddleName(e.target.value);
+                }}
+              />
             </Lable>
             <Spacer y={1} />
 
             <Lable htmlFor="">
               LastName :
               <br />
-              <Input type="text" />
+              <Input
+                value={lastName}
+                type="text"
+                onChange={(e) => {
+                  setLastName(e.target.value);
+                }}
+              />
             </Lable>
 
             <Spacer y={1.5} />
@@ -70,6 +150,7 @@ const Index = ({ nextPreBtn }: { nextPreBtn: boolean }) => {
               color="success"
               size="xl"
               className={BioStyles.btnContainer__btn}
+              // onClick={updateNameForm}
             >
               Update
               <Spacer x={0.5} />

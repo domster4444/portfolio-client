@@ -38,25 +38,7 @@ const Index = ({ nextPreBtn }: { nextPreBtn: boolean }) => {
               submitHandler(e);
             }}
           >
-            <Lable htmlFor="">
-              FirstName :
-              <br />
-              <Input type="text" />
-            </Lable>
             <Spacer y={1} />
-
-            <Lable htmlFor="">
-              MiddleName :
-              <br />
-              <Input type="text" />
-            </Lable>
-            <Spacer y={1} />
-
-            <Lable htmlFor="">
-              LastName :
-              <br />
-              <Input type="text" />
-            </Lable>
 
             <Spacer y={1} />
             <input
