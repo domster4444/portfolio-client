@@ -20,6 +20,8 @@ const nextConfig = withPWA({
       'lh6.googleusercontent.com',
       'platform-lookaside.fbsbx.com',
       'i.imgur.com',
+      'i.pinimg.com',
+      'res.cloudinary.com',
     ],
   },
 });

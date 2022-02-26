@@ -77,7 +77,7 @@ const Index = ({ nextPreBtn }: { nextPreBtn: boolean }) => {
           });
         });
     }
-  }, [user]);
+  }, []);
 
   return (
     <>

@@ -9,36 +9,51 @@ import React from 'react';
 // images
 // import MainImage from '../../public/images/themes/1theme/img/main-img.png';
 import Image from 'next/image';
+import { axiosInstance } from 'lib/utilities/api/api';
 
 // @ts-ignore
 import HeroImage from 'public/images/themes/1theme/img/hero-img.jpg';
 // @ts-ignore
 import MainImage from 'public/images/themes/1theme/img/main-img.png';
-// import { useRouter } from 'next/router';
+import { useRouter } from 'next/router';
+import { toast } from 'react-toastify';
 
-const FirstTheme = () => {
-  // // ? GET CURRENT WINDOW LOCATION
-  // // const currentLocation = useLocation();
-  // // const currentPath = currentLocation.pathname;
-  // // const currentPathArray = currentPath.split('/');
-  // // const currentPathArrayLength = currentPathArray.length;
-  // // const currentPathArrayLastItem = currentPathArray[currentPathArrayLength - 1];
-  // // console.log('currentLocation =', currentLocation);
-  // // console.log('currentPath =', currentPath);
-  // // console.log('currentPathArray =', currentPathArray);
-  // // console.log('currentPathArrayLength =', currentPathArrayLength);
-  // // console.log('currentPathArrayLastItem =', currentPathArrayLastItem);
+import { useEffect } from 'react';
+const ThemeFirst = () => {
+  // _____STATES______
+  const [firstName, setFirstName] = React.useState('John');
+  const [middleName, setMiddleName] = React.useState('');
+  const [lastName, setLastName] = React.useState('Smith');
+  const [profilePhoto, setProfilePhoto] = React.useState(
+    'https://i.pinimg.com/originals/c1/f8/f6/c1f8f6add7757b34508bd47748ea62e3.jpg'
+  );
 
-  // // ? GET CURRENT ROUTER
-  // const router = useRouter();
-  // const currentPath = router.pathname;
-  // const currentPathArray = currentPath.split('/');
-  // const currentPathArrayLength = currentPathArray.length;
-  // const currentPathArrayLastItem = currentPathArray[currentPathArrayLength - 1];
-  // console.log('currentPath =', currentPath);
-  // console.log('currentPathArray =', currentPathArray);
-  // console.log('currentPathArrayLength =', currentPathArrayLength);
-  // console.log('currentPathArrayLastItem =', currentPathArrayLastItem);
+  const router = useRouter();
+  //?   fetch userName from url
+  const userName = router.asPath.slice(3, 24).toString();
+  console.log('user name in url is : ', userName);
+  useEffect(() => {
+    //?   fetch useDetails from userName of url
+    axiosInstance
+      .post('/api/v1/users/themeDetails', { userName: userName })
+
+      .then((res: any) => {
+        toast(res.data.message, {
+          position: 'top-center',
+        });
+        console.log('💚axios themeDetails update Success', res.data);
+        setFirstName(res.data.detailExist.firstName);
+        setMiddleName(res.data.detailExist.middleName);
+        setLastName(res.data.detailExist.lastName);
+        setProfilePhoto(res.data.detailExist.profilePhoto);
+      })
+      .catch((error) => {
+        console.log(' 🟠axios themeDetails error', error);
+        toast(error, {
+          position: 'top-center',
+        });
+      });
+  });
 
   return (
     <div id="firstTheme">
@@ -75,7 +90,7 @@ const FirstTheme = () => {
           <div className="hero__left" style={{ color: 'white' }}>
             <h4>Hello, my name is</h4>
             <h1>
-              Tahmid <span>Ahmed</span>
+              {firstName} {middleName} <span>{lastName}</span>
             </h1>
             <h3>I'am a Web Developer.</h3>
             <div className="newslatter">
@@ -97,7 +112,12 @@ const FirstTheme = () => {
           </div>
 
           <div className="hero__right">
-            <Image src={HeroImage} alt="photograph" />
+            <Image
+              height={500}
+              width={350}
+              src={profilePhoto}
+              alt="photograph"
+            />
           </div>
         </div>
 
@@ -199,6 +219,7 @@ const FirstTheme = () => {
         {/* <!------footer start---------> */}
         <footer>
           <p>Tahmid Ahmed</p>
+
           <p>
             For more HTML, CSS, and coding tutorial - please click on the link
             below to subscribe to my channel:
@@ -221,4 +242,4 @@ const FirstTheme = () => {
   );
 };
 
-export default FirstTheme;
+export default ThemeFirst;
