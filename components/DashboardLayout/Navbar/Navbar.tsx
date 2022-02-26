@@ -9,12 +9,12 @@ const Navbar: React.FC = () => {
   const [userPhoto, setUserPhoto] = React.useState<string>(defaultUserPhoto);
   const [userName, setUserName] = React.useState<string>('anonymous');
 
-  const axiosinstance = axios.create({
-    baseURL: globalConstant.baseURL,
-  });
+  useEffect(() => {
+    const axiosinstanceI = axios.create({
+      baseURL: globalConstant.baseURL,
+    });
 
-  function getUserPhoto() {
-    axiosinstance.get('/api/auth/me').then(({ data }) => {
+    axiosinstanceI.get('/api/auth/me').then(({ data }) => {
       //   console.log(data.email);
       //   console.log(data.email_verified);
       //   console.log(data.nickname);
@@ -22,10 +22,6 @@ const Navbar: React.FC = () => {
       setUserPhoto(data.picture);
       setUserName(data.nickname);
     });
-  }
-
-  useEffect(() => {
-    getUserPhoto();
   }, []);
 
   return (

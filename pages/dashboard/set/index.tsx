@@ -9,6 +9,8 @@ import {
   css,
 } from '@nextui-org/react';
 import { ChevronLeft, ChevronRight, TickSquare } from 'react-iconly';
+import SetCard from 'components/Set/SetCard';
+import NameForm from 'components/Set/NameForm';
 import BioStyles from './bio.module.scss';
 import ContactForm from 'components/Set/ContactForm';
 import EducationForm from 'components/Set/EducationForm';
@@ -16,6 +18,7 @@ import WorkForm from 'components/Set/WorkForm';
 import SkillsForm from 'components/Set/SkillsForm';
 import ProjectsForm from 'components/Set/ProjectsForm';
 import AchievementsForm from 'components/Set/AchievementsForm';
+import BioForm from 'components/Set/BioForm';
 
 // @ts-ignore
 import DashboardLayout from 'components/DashboardLayout';
@@ -55,79 +58,25 @@ const SetPage: React.FC = () => {
             return (
               <>
                 <hr />
+                <h1>Name FIELD REQUIRED</h1>
+                <NameForm nextPreBtn={false} />
+              </>
+            );
+          }
+        })()}
+
+        {/*//*______________bio___________ */}
+        {(() => {
+          if (
+            string &&
+            // @ts-ignore
+            string.split(',').includes('bio')
+          ) {
+            return (
+              <>
+                <hr />
                 <h1>BIO FIELD REQUIRED</h1>
-
-                <Container
-                  css={{
-                    justifyContent: 'center',
-                    width: '100%',
-                    display: 'flex',
-                  }}
-                >
-                  <Card className={BioStyles.card}>
-                    <form
-                      className="bio"
-                      onSubmit={(e) => {
-                        submitHandler(e);
-                      }}
-                    >
-                      <input
-                        name="bio__img"
-                        className={BioStyles.bio_fileBtn}
-                        type="file"
-                      />
-                      <Spacer y={1.5} />
-                      <label htmlFor="bio__info">
-                        <Textarea
-                          name="bio__info"
-                          helperText="Please enter your bio information"
-                          id="bio__info"
-                          label="Bio info"
-                          placeholder='"I am a full stack developer with a passion for building things that make a difference"'
-                          status="default"
-                          width="100%"
-                          style={{ minHeight: '20rem', fontSize: '2rem' }}
-                        />
-                      </label>
-                      <Spacer y={1.5} />
-                      <Button
-                        type="submit"
-                        color="success"
-                        size="xl"
-                        className={BioStyles.btnContainer__btn}
-                      >
-                        Update
-                        <Spacer x={0.5} />
-                        <TickSquare set="bold" primaryColor="white" />
-                      </Button>
-                      <Spacer y={0.5} />
-                    </form>
-
-                    {/* btn container */}
-                    <>
-                      <div className={BioStyles.prevNext__btnContainer}>
-                        <Button
-                          shadow
-                          color="secondary"
-                          size="xl"
-                          className={BioStyles.btnContainer__btn}
-                        >
-                          <ChevronLeft set="bold" primaryColor="white" />
-                          Previous Page
-                        </Button>
-                        <Button
-                          shadow
-                          color="primary"
-                          size="xl"
-                          className={BioStyles.btnContainer__btn}
-                        >
-                          Next Page
-                          <ChevronRight set="bold" primaryColor="white" />
-                        </Button>
-                      </div>
-                    </>
-                  </Card>
-                </Container>
+                <BioForm nextPreBtn={false} />
               </>
             );
           }
