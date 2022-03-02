@@ -22,6 +22,27 @@ function MyApp({ Component, pageProps }: AppProps) {
   //     router.events.off('routeChangeComplete', handleRouteChange);
   //   };
   // }, [router.events]);
+
+  // f72b54c8-4989-4f5f-9a7a-0297d42d74ee
+  useEffect(() => {
+    // @ts-ignore
+    window.$crisp = [];
+    // @ts-ignore
+    window.CRISP_WEBSITE_ID = 'f72b54c8-4989-4f5f-9a7a-0297d42d74ee';
+    (function () {
+      // @ts-ignore
+      let d = document;
+      // @ts-ignore
+      let s = d.createElement('script');
+      // @ts-ignore
+      s.src = 'https://client.crisp.chat/l.js';
+      // @ts-ignore
+      s.async = 1;
+      // @ts-ignore
+      d.getElementsByTagName('head')[0].appendChild(s);
+    })();
+  });
+
   const router = useRouter();
 
   useEffect(() => {

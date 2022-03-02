@@ -7,7 +7,8 @@ export const Nav = styled.nav`
   box-shadow: 0 4px 2px -2px rgba(0, 0, 0, 0.1);
   border-radius: 1rem;
   background-color: white;
-  z-index: 1;
+  z-index: 100;
+  padding: 1.5rem 0.5rem;
 
   @media (max-width: 768px) {
     #nav__menus {
@@ -24,8 +25,8 @@ export const Nav = styled.nav`
   }
   .Nav__leftDivision {
     img {
-      height: 45px !important;
-      width: 45px !important;
+      height: 35px !important;
+      width: 200px !important;
     }
   }
   .Nav__rightDivision {

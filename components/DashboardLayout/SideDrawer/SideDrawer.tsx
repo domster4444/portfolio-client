@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import Link from 'next/link';
 import DropDown from 'components/Menu/SideDrawerDrop';
+import { Spacer } from '@nextui-org/react';
 import {
   Filter,
   CloseSquare,
@@ -12,6 +13,8 @@ import {
   TwoUsers,
   Logout,
 } from 'react-iconly';
+import LogoImg from 'public/images/logo/logo.jpg';
+import NextImage from 'next/image';
 
 const SideDrawer: React.FC = () => {
   const logoutSubmitHandler = () => {
@@ -80,8 +83,25 @@ const SideDrawer: React.FC = () => {
     <>
       <div className="sidebar">
         <div className="logo-details">
-          <i className="bx bxl-c-plus-plus icon" />
-          <div className="logo_name">Portfolio</div>
+          <div className="logo_name">
+            {/* <NextImage
+              // @ts-ignore
+              height={35}
+              width={200}
+              // @ts-ignore
+              src={LogoImg}
+              alt="logo"
+            /> */}
+            <span
+              className="poppins_medium_500"
+              style={{
+                marginLeft: '1.35rem',
+                color: '#c1c1c1',
+              }}
+            >
+              REVERSE
+            </span>
+          </div>
           <i className="bx bx-menu" id="btn">
             <Filter
               // @ts-ignore
