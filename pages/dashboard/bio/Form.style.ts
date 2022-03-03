@@ -23,7 +23,14 @@ export const Textarea = styled.textarea`
 
   font-size: 2.4rem;
 `;
-const ignore = {
-  '1': '1',
-};
-export default ignore;
+
+
+import React from 'react'
+
+const Form.style = () => {
+  return (
+    <div>Form.style</div>
+  )
+}
+
+export default Form.style

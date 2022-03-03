@@ -5,7 +5,13 @@ export const GreyScaleImg = styled.div`
   }
 `;
 
-const ignore = {
-  '1': '1',
-};
-export default ignore;
+
+import React from 'react'
+
+const Style = () => {
+  return (
+    <div>Style</div>
+  )
+}
+
+export default Style
