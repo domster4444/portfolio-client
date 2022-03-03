@@ -21,12 +21,19 @@ class MyDocument extends Document {
     return (
       <Html lang="en">
         <Head />
+        {/* <!--=============== SWIPER CSS ===============--> */}
+        <link rel="stylesheet" href="./swiper-bundle.min.css" />
+
+        <link
+          rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css"
+        />
 
         {/* boxicons */}
         {/* <link
           rel="stylesheet"
           href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css"
-        /> */}
+        />
 
         {/* google analytics */}
         <link rel="manifest" href="/manifest.json" />
