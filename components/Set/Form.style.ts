@@ -23,3 +23,8 @@ export const Textarea = styled.textarea`
 
   font-size: 2.4rem;
 `;
+
+const ignore = {
+  '1': '1',
+};
+export default ignore;
