@@ -9,8 +9,12 @@ import { useEffect } from 'react';
 import { axiosInstance } from 'lib/utilities/api/api';
 import { toast } from 'react-toastify';
 import { useRouter } from 'next/router';
+import styled from 'styled-components';
 
-import { GreyScaleImg } from './Style';
+const GreyScaleImage = styled.div`
+  filter: grayscale(100%);
+`;
+
 import MainImage from 'public/images/themes/1theme/img/main-img.png';
 const ThemeFirst = () => {
   // _____STATES______
@@ -117,7 +121,7 @@ const ThemeFirst = () => {
           </div>
 
           <div className="hero__right">
-            <GreyScaleImg>
+            <GreyScaleImage>
               {profilePhoto && (
                 <Image
                   height={500}
@@ -126,7 +130,7 @@ const ThemeFirst = () => {
                   alt="photograph"
                 />
               )}
-            </GreyScaleImg>
+            </GreyScaleImage>
           </div>
         </div>
 

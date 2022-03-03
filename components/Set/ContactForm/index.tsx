@@ -1,12 +1,25 @@
 import React, { useState, useEffect } from 'react';
 import SetCard from 'components/Set/SetCard';
-import styled from 'styled-components';
 import { TickSquare } from 'react-iconly';
-import { Input, Lable } from '../Form.style';
 import { Spacer, Button } from '@nextui-org/react';
 import { axiosInstance } from 'lib/utilities/api/api';
 import { useUser } from '@auth0/nextjs-auth0';
 import { toast } from 'react-toastify';
+
+import styled from 'styled-components';
+export const Lable = styled.label`
+  font-size: 1.8rem;
+`;
+export const Input = styled.input`
+  height: 5rem;
+  font-size: 2.4rem;
+  width: 100%;
+  border: none;
+  border-radius: 1rem;
+  outline: none;
+  padding-left: 1rem;
+  background: #f4f4f4;
+`;
 
 const Index: React.FC = () => {
   const { user, error, isLoading } = useUser();

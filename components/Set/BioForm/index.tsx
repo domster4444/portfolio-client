@@ -13,12 +13,26 @@ import {
   css,
 } from '@nextui-org/react';
 import { ChevronLeft, ChevronRight, TickSquare } from 'react-iconly';
-import { Input, Lable } from './Form.style';
 
 // @ts-ignore
 import DashboardLayout from 'components/DashboardLayout';
 import { toast } from 'react-toastify';
 import BioStyles from './bio.module.scss';
+
+import styled from 'styled-components';
+export const Lable = styled.label`
+  font-size: 1.8rem;
+`;
+export const Input = styled.input`
+  height: 5rem;
+  font-size: 2.4rem;
+  width: 100%;
+  border: none;
+  border-radius: 1rem;
+  outline: none;
+  padding-left: 1rem;
+  background: #f4f4f4;
+`;
 
 const Index = ({ nextPreBtn }: { nextPreBtn: boolean }) => {
   const { user, error, isLoading } = useUser();
