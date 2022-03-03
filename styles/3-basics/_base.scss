@@ -3,21 +3,7 @@
 //   margin: 0px;
 //   padding: 0px;
 // }
-// :root {
-//   font-size: 9px;
-//   @include media('<=1466px') {
-//     font-size: 8px;
-//   }
-//   @include media('<=967px') {
-//     font-size: 6.5px;
-//   }
-//   @include media('<=860px') {
-//     font-size: 5.8px;
-//   }
-//   @include media('<=788px') {
-//     font-size: 10px;
-//   }
-// }
+
 // .cursor {
 //   cursor: pointer;
 // }
@@ -66,27 +52,25 @@
 //   outline: none;
 // }
 
-
-*{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 body::-webkit-scrollbar {
   width: 1em;
 }
- 
+
 body::-webkit-scrollbar-track {
   box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
 }
- 
+
 body::-webkit-scrollbar-thumb {
   background-color: white;
-  
+
   outline: 1px solid slategrey;
 }
 
-
 body::-webkit-scrollbar {
-  width: 8px!important;
+  width: 8px !important;
 }

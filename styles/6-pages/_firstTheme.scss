@@ -273,6 +273,11 @@
     font-size: 30px;
     font-weight: bold;
     margin-bottom: 25px;
+    @media screen and (max-width: 600px) {
+      font-size: 20px;
+      padding: 0 10px;
+      text-align: center;
+    }
   }
   .contact-me .button-two {
     background-color: #f9004d;
@@ -308,7 +313,6 @@
   footer p:nth-child(2) {
     color: white;
     font-size: 17px;
-    width: 500px;
     text-align: center;
     line-height: 26px;
   }

@@ -19,6 +19,9 @@
   }
 }
 .blog__article {
+  @include media('<=tablet') {
+    padding: 1rem;
+  }
   .blog_title {
     padding-top: 0rem;
     padding-bottom: 0rem;

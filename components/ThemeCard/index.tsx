@@ -110,7 +110,7 @@ const ThemeCard = ({
   }, []);
   useEffect(() => {
     if (isLoaded === true) {
-      TweenMax.to(animateThemeCard, 0.1, {
+      TweenMax.to(animateThemeCard, 0.2, {
         opacity: 1,
         scale: 1,
         ease: Power3.easeOut,

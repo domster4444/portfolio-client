@@ -663,7 +663,8 @@ const HomePage: NextPage = () => {
                 marginTop: '5rem',
                 display: 'flex',
                 flexWrap: 'wrap',
-                justifyContent: 'space-between',
+
+                justifyContent: 'center',
               }}
             >
               <Zoom>

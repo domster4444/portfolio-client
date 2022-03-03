@@ -245,7 +245,6 @@ const ThemeFirst = () => {
               <i className="fab fa-dribbble" />
             </a>
           </div>
-          <p className="end">Thank You For Visiting @ CC</p>
         </footer>
       </body>
     </div>
