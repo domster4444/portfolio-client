@@ -697,10 +697,11 @@ const Index = () => {
 
       <Script src="./swiper-bundle.min.js"></Script>
 
-      <Script src="./mixitup.min.js"></Script>
+      {/* <Script src="./mixitup.min.js"></Script> */}
 
       {/* <Script src="./main.js"></Script> */}
     </div>
+    // j
   );
 };
 
