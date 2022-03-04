@@ -73,6 +73,15 @@ const allThemes = [
     description: 'This is the clean girl theme',
     imageUrl: 'https://i.imgur.com/S8jb1NW.png',
   },
+  // *nine
+  {
+    isPaid: 'not-premium',
+    url: `${globalConstant.baseURL}/9`,
+    useUrl: `${globalConstant.baseURL}/dashboard/set/?info=bio,skills`,
+    name: 'Purple Theme',
+    description: 'This is the purble blakish theme',
+    imageUrl: 'https://i.imgur.com/Pag5efi.png',
+  },
 ];
 
 const Index: NextPage = () => {
