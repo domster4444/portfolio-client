@@ -97,7 +97,7 @@ const Index = () => {
   }, []);
 
   return (
-    <div id="theme7" className="dark-theme">
+    <div id="theme7" className="default-theme dark-theme">
       {/* <!--=============== HEADER ===============--> */}
 
       <header className="header" id="header">
