@@ -218,7 +218,7 @@ const SideDrawer: React.FC = () => {
             }}
           >
             <div className="changeColorToBlackOnHover">
-              <i className="bx bx-grid-alt" />
+              {/* <i className="bx bx-grid-alt" /> */}
               {/* <span className="links_name hideName">Setting</span> */}
               <DropDown opened={opened} />
             </div>

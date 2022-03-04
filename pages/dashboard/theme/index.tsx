@@ -10,45 +10,68 @@ import { globalConstant } from 'constant/constant';
 import { Input, Button } from '@nextui-org/react';
 
 const allThemes = [
+  // *first
   {
     isPaid: 'full-premium',
     url: `${globalConstant.baseURL}/1`,
     useUrl: `${globalConstant.baseURL}/dashboard/set/?info=bio,contacts,education,work,skills,projects,achievements`,
-    name: 'Modal Template',
+    name: 'Tarzan Theme',
     description: 'This is the first theme',
     imageUrl: 'https://i.imgur.com/uMQLC1d_d.webp?maxwidth=760&fidelity=grand',
   },
+  // *second
   {
     isPaid: 'full-premium',
     url: `${globalConstant.baseURL}/3`,
     useUrl: `${globalConstant.baseURL}/dashboard/set/?info=bio,skills`,
-    name: 'Black Finished Designer Theme',
+    name: 'Deep Thought Theme',
     description: 'This is the third theme',
     imageUrl: 'https://i.imgur.com/6zJPuJw.png',
   },
+  // *third
   {
     isPaid: 'full-premium',
     url: `${globalConstant.baseURL}/2`,
     useUrl: `${globalConstant.baseURL}/dashboard/set/?info=bio,skills`,
-    name: 'Kshitiz Portfolio',
+    name: 'Black Finished Theme',
     description: 'portfolio by author kshitiz',
     imageUrl: 'https://i.imgur.com/pDTrAxx.jpg',
   },
+  // *fourth
   {
     isPaid: 'not-premium',
     url: `${globalConstant.baseURL}/4`,
     useUrl: `${globalConstant.baseURL}/dashboard/set/?info=bio,skills`,
-    name: 'Extream Basic Theme',
+    name: 'Basic Theme',
     description: 'This is the fourth theme',
     imageUrl: 'https://i.imgur.com/AaQy0W5.png',
   },
+  // *fifth
   {
     isPaid: 'not-premium',
     url: `${globalConstant.baseURL}/5`,
     useUrl: `${globalConstant.baseURL}/dashboard/set/?info=bio,skills`,
-    name: 'Clean Girl Theme',
+    name: 'Minimal Theme',
     description: 'This is the clean girl theme',
     imageUrl: 'https://i.imgur.com/yzoKUuj.png',
+  },
+  // *seventh
+  {
+    isPaid: 'not-premium',
+    url: `${globalConstant.baseURL}/7`,
+    useUrl: `${globalConstant.baseURL}/dashboard/set/?info=bio,skills`,
+    name: 'Violet Theme',
+    description: 'This is the clean girl theme',
+    imageUrl: 'https://i.imgur.com/ARjoptJ.png',
+  },
+  // *eighth
+  {
+    isPaid: 'not-premium',
+    url: `${globalConstant.baseURL}/5`,
+    useUrl: `${globalConstant.baseURL}/dashboard/set/?info=bio,skills`,
+    name: 'Venom Theme',
+    description: 'This is the clean girl theme',
+    imageUrl: 'https://i.imgur.com/S8jb1NW.png',
   },
 ];
 
