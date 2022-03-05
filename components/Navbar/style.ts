@@ -25,8 +25,8 @@ export const Nav = styled.nav`
   }
   .Nav__leftDivision {
     img {
-      height: 35px !important;
-      width: 200px !important;
+      height: 55px !important;
+      width: 80px !important;
     }
   }
   .Nav__rightDivision {

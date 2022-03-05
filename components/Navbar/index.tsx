@@ -4,7 +4,7 @@
  * @description : This is a Navbar component
  * @author : Kshitiz Shah
  */
-import LogoImg from 'public/images/logo/logo.jpg';
+import LogoImg from 'public/images/logo/logo.png';
 import React from 'react';
 import Link from 'next/link';
 import type { PropsTypes } from './types';
@@ -22,7 +22,7 @@ const Navbar = (props: PropsTypes): JSX.Element => {
         <li className="Nav__leftDivision">
           <Image
             height={35}
-            width={200}
+            width={100}
             // @ts-ignore
             src={logo !== '' ? logo : LogoImg}
             alt="logo"
