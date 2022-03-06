@@ -8,8 +8,8 @@ export const globalConstant: GblI = {
   //*for development
   serverURL: 'http://localhost:5000',
   //*for production
-  baseURL: 'http://localhost:3000',
-  // baseURL: 'https://www.portfoliosite.me',
+  // baseURL: 'http://localhost:3000',
+  baseURL: 'https://www.portfoliosite.me',
   //? chatserver
   //*for development
   // chatServerURL: 'http://localhost:5050',
