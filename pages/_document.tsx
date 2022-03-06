@@ -21,6 +21,13 @@ class MyDocument extends Document {
     return (
       <Html lang="en">
         <Head />
+
+        {/* trust pilot */}
+        <meta
+          name="trustpilot-one-time-domain-verification-id"
+          content="6b793f18-e645-4987-973a-2603602bdc19"
+        />
+
         {/* <!--=============== SWIPER CSS ===============--> */}
         <link rel="stylesheet" href="./swiper-bundle.min.css" />
 
