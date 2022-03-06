@@ -1,6 +1,33 @@
-import React from 'react';
+import React, { useRef } from 'react';
+import emailjs from 'emailjs-com';
 
-const index = () => {
+const Index = () => {
+  const form = useRef();
+
+  const sendEmail = (e: any) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        // service id
+        'service_n27rpec',
+        // templateid
+        'template_hjiu3jr',
+        // @ts-ignore
+        form.current,
+        // user id
+        'F5CyFrLcvh_TsAGBU'
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
+  };
+
   return (
     <>
       <footer className="footer" id="footer">
@@ -67,10 +94,11 @@ const index = () => {
         <span className="col">
           <div className="subscribe-form-holder">
             <h3 className="form-title">Subscribe to our email newsletter</h3>
-            <form action="#" className="subscribe-form">
+            {/* @ts-ignore */}
+            <form className="subscribe-form" ref={form} onSubmit={sendEmail}>
               <input
                 type="email"
-                name="email"
+                name="message"
                 id="email"
                 className="email subscribe-input"
                 placeholder="Your email"
@@ -133,4 +161,4 @@ const index = () => {
   );
 };
 
-export default index;
+export default Index;
