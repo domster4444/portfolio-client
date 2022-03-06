@@ -23,6 +23,10 @@ const ThemeFirst = () => {
   const [lastName, setLastName] = React.useState('');
   const [profilePhoto, setProfilePhoto] = React.useState('');
   const [bio, setBio] = React.useState('');
+  const [facebook, setFacebook] = React.useState('');
+  const [linkedIn, setLinkedIn] = React.useState('');
+  const [instagram, setInstagram] = React.useState('');
+  const [skills, setSkills] = React.useState<any[]>([]);
 
   const router = useRouter();
   //?   fetch userName from url
@@ -43,6 +47,10 @@ const ThemeFirst = () => {
         setLastName(res.data.detailExist.lastName);
         setProfilePhoto(res.data.detailExist.profilePhoto);
         setBio(res.data.detailExist.bio);
+        setFacebook(res.data.detailExist.facebook);
+        setLinkedIn(res.data.detailExist.linkedin);
+        setInstagram(res.data.detailExist.instagram);
+        setSkills(res.data.detailExist.skills);
       })
       .catch((error) => {
         console.log(' 🟠axios themeDetails error', error);
@@ -121,16 +129,16 @@ const ThemeFirst = () => {
           </div>
 
           <div className="hero__right">
-            <GreyScaleImage>
-              {profilePhoto && (
-                <Image
-                  height={500}
-                  width={350}
-                  src={profilePhoto}
-                  alt="photograph"
-                />
-              )}
-            </GreyScaleImage>
+            {/* <GreyScaleImage> */}
+            {profilePhoto && (
+              <Image
+                height={500}
+                width={350}
+                src={profilePhoto}
+                alt="photograph"
+              />
+            )}
+            {/* </GreyScaleImage> */}
           </div>
         </div>
 
@@ -147,7 +155,16 @@ const ThemeFirst = () => {
               </article>
               <button type="button">Let's Talk</button>
             </div>
-            <Image className="about__photo" src={MainImage} alt="photograph" />
+            <GreyScaleImage>
+              {profilePhoto && (
+                <Image
+                  height={500}
+                  width={350}
+                  src={profilePhoto}
+                  alt="photograph"
+                />
+              )}
+            </GreyScaleImage>
           </div>
         </section>
 
@@ -214,6 +231,39 @@ const ThemeFirst = () => {
           </div>
         </div>
 
+        {/* <!-----skills section start-----------> */}
+        <div className="service">
+          <div className="title">
+            <h2>My Skills</h2>
+          </div>
+
+          <div className="box">
+            {(() => {
+              return skills.map((item, index) => {
+                return (
+                  <div key={index} className="card">
+                    <i className="far fa-bell" />
+                    <h5>item.skillName</h5>
+                    <div className="pra">
+                      <p>
+                        Every website should be built with two primary goals:
+                        Firstly, it needs to work across all devices. Secondly,
+                        it needs to be fast as possible.
+                      </p>
+
+                      <p style={{ textAlign: 'center' }}>
+                        <a className="button" href="#">
+                          Read More
+                        </a>
+                      </p>
+                    </div>
+                  </div>
+                );
+              });
+            })()}
+          </div>
+        </div>
+
         {/* <!------Contact Me------> */}
         <div className="contact-me">
           <p>Lets Discuss Together.</p>
@@ -239,14 +289,14 @@ const ThemeFirst = () => {
             social media accounts.
           </p>
           <div className="social">
-            <a href="#">
-              <i className="fab fa-facebook-f" />
+            <a href={facebook && facebook}>
+              <i className="bx bxl-facebook-circle"></i>
             </a>
-            <a href="#">
-              <i className="fab fa-instagram" />
+            <a href={instagram && instagram}>
+              <i className="bx bxl-instagram"></i>
             </a>
-            <a href="#">
-              <i className="fab fa-dribbble" />
+            <a href={linkedIn && linkedIn}>
+              <i className="bx bxl-linkedin-square"></i>
             </a>
           </div>
         </footer>

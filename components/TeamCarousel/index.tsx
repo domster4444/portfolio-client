@@ -2,7 +2,10 @@ import React from 'react';
 import { Button } from '@nextui-org/react';
 import { Heart, Work } from 'react-iconly';
 import Image from 'next/image';
-import member1 from 'public/images/members/member1.jpg';
+import member1 from 'public/images/members/member1.png';
+import member2 from 'public/images/members/member2.png';
+import member3 from 'public/images/members/member3.png';
+import Link from 'next/link';
 // @ts-ignore
 import { Fade, Zoom } from 'react-reveal';
 
@@ -28,8 +31,10 @@ const index: React.FC = () => {
                     -
                   </div>
                   <div className="details">
-                    <div className="name poppins_medium_500 ">Nicole Lewis</div>
-                    <div className="job poppins_regular_400">Web Devloper</div>
+                    <div className="name poppins_medium_500 ">Kshitiz Shah</div>
+                    <div className="job poppins_regular_400">
+                      Full Stack Developer
+                    </div>
                   </div>
                   <div className="media-icons">
                     <a href="#">
@@ -62,41 +67,52 @@ const index: React.FC = () => {
                   >
                     View Profile
                   </Button>
-                  <Button
-                    size="xl"
-                    shadow
-                    icon={
-                      <Work
-                        //  @ts-ignore
-                        fill="currentColor"
-                        filled
-                      />
-                    }
-                    color="secondary"
-                    className="poppins_regular_400"
+
+                  <Link
+                    href="https://www.linkedin.com/in/kshitizshah7/"
+                    passHref
                   >
-                    Hire Me
-                  </Button>
+                    <Button
+                      size="xl"
+                      shadow
+                      icon={
+                        <Work
+                          //  @ts-ignore
+                          fill="currentColor"
+                          filled
+                        />
+                      }
+                      color="secondary"
+                      className="poppins_regular_400"
+                    >
+                      Hire Me
+                    </Button>
+                  </Link>
                 </div>
               </div>
             </Fade>
 
             <Fade bottom>
               {/* //! card - 2 */}
+
               <div className="card">
                 <div className="content">
                   <div className="img">
                     <Image
                       height={124}
                       width={124}
-                      src={member1}
+                      src={member3}
                       alt="team members"
                     />
                     -
                   </div>
                   <div className="details">
-                    <div className="name poppins_medium_500 ">Nicole Lewis</div>
-                    <div className="job poppins_regular_400">Web Devloper</div>
+                    <div className="name poppins_medium_500 ">
+                      Tushar Luitel
+                    </div>
+                    <div className="job poppins_regular_400">
+                      SEO | Marketing | DevOps
+                    </div>
                   </div>
                   <div className="media-icons">
                     <a href="#">
@@ -129,21 +145,26 @@ const index: React.FC = () => {
                   >
                     View Profile
                   </Button>
-                  <Button
-                    size="xl"
-                    shadow
-                    icon={
-                      <Work
-                        //  @ts-ignore
-                        fill="currentColor"
-                        filled
-                      />
-                    }
-                    color="secondary"
-                    className="poppins_regular_400"
+                  <Link
+                    href="https://www.linkedin.com/in/tushar-luitel/"
+                    passHref
                   >
-                    Hire Me
-                  </Button>
+                    <Button
+                      size="xl"
+                      shadow
+                      icon={
+                        <Work
+                          //  @ts-ignore
+                          fill="currentColor"
+                          filled
+                        />
+                      }
+                      color="secondary"
+                      className="poppins_regular_400"
+                    >
+                      Hire Me
+                    </Button>
+                  </Link>
                 </div>
               </div>
             </Fade>
@@ -155,14 +176,18 @@ const index: React.FC = () => {
                     <Image
                       height={124}
                       width={124}
-                      src={member1}
+                      src={member2}
                       alt="team members"
                     />
                     -
                   </div>
                   <div className="details">
-                    <div className="name poppins_medium_500 ">Nicole Lewis</div>
-                    <div className="job poppins_regular_400">Web Devloper</div>
+                    <div className="name poppins_medium_500 ">
+                      Samrajya Basnet
+                    </div>
+                    <div className="job poppins_regular_400">
+                      Product Manager | Researcher
+                    </div>
                   </div>
                   <div className="media-icons">
                     <a href="#">
@@ -195,21 +220,27 @@ const index: React.FC = () => {
                   >
                     View Profile
                   </Button>
-                  <Button
-                    size="xl"
-                    shadow
-                    icon={
-                      <Work
-                        //  @ts-ignore
-                        fill="currentColor"
-                        filled
-                      />
-                    }
-                    color="secondary"
-                    className="poppins_regular_400"
+
+                  <Link
+                    href="https://www.linkedin.com/in/samrajya-basnyat-5392521a9/"
+                    passHref
                   >
-                    Hire Me
-                  </Button>
+                    <Button
+                      size="xl"
+                      shadow
+                      icon={
+                        <Work
+                          //  @ts-ignore
+                          fill="currentColor"
+                          filled
+                        />
+                      }
+                      color="secondary"
+                      className="poppins_regular_400"
+                    >
+                      Hire Me
+                    </Button>
+                  </Link>
                 </div>
               </div>
             </Fade>

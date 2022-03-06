@@ -17,7 +17,7 @@ import Accordion from 'components/Accordion';
 import TeamCarousel from 'components/TeamCarousel';
 import FullWidthVideo from 'components/FullWidthVideo';
 import heroIllustrator from 'public/images/pages/home/heroIllustrator.svg';
-import member1 from 'public/images/members/member1.jpg';
+import member1 from 'public/images/members/member1.png';
 
 //? why section
 const WhySection = styled.section`
@@ -197,13 +197,24 @@ const HomePage: NextPage = () => {
                 className="poppins_semibold_600"
                 style={{
                   fontSize: '7rem',
-                  lineHeight: '1.2',
+                  lineHeight: '1.1',
                   color: '#191970',
                   letterSpacing: '0.1rem',
                 }}
               >
-                We Build <br /> Beautiful Portfolio
+                Get Your <br /> desired portfolio
               </h1>
+              <p
+                style={{
+                  fontSize: '1.7rem',
+                  lineHeight: '1.5',
+                  color: '#1a1970dd',
+                  letterSpacing: '0.1rem',
+                }}
+              >
+                Portfolio Generator is a tool that helps you to <br /> create
+                your desired portfolio in just a few minutes.
+              </p>
 
               <Link passHref href="/api/auth/login">
                 <VideoSecRightBtn className="poppins_regular_400">
@@ -233,7 +244,7 @@ const HomePage: NextPage = () => {
               }}
               className="poppins_semibold_600"
             >
-              Featured Themes
+              Featured Portfolios
             </h2>
             <div
               style={{
@@ -269,7 +280,7 @@ const HomePage: NextPage = () => {
                 </Card.Header>
                 <Card.Body>
                   <Card.Image
-                    src="https://i.imgur.com/6zJPuJw.png"
+                    src="https://i.imgur.com/ARjoptJ.png"
                     height={400}
                     width="100%"
                     alt="Card example background"
@@ -297,9 +308,11 @@ const HomePage: NextPage = () => {
                     <Col>
                       <Row justify="flex-end">
                         <Button flat auto rounded>
-                          <Text size={18} transform="uppercase">
-                            Get It
-                          </Text>
+                          <Link href="/api/auth/login">
+                            <Text size={18} transform="uppercase">
+                              Get It
+                            </Text>
+                          </Link>
                         </Button>
                       </Row>
                     </Col>
@@ -333,7 +346,7 @@ const HomePage: NextPage = () => {
                 </Card.Header>
                 <Card.Body>
                   <Card.Image
-                    src="https://i.imgur.com/6zJPuJw.png"
+                    src="https://i.imgur.com/S8jb1NW.png"
                     height={400}
                     width="100%"
                     alt="Card example background"
@@ -361,9 +374,81 @@ const HomePage: NextPage = () => {
                     <Col>
                       <Row justify="flex-end">
                         <Button flat auto rounded>
-                          <Text size={18} transform="uppercase">
-                            Get It
-                          </Text>
+                          <Link href="/api/auth/login">
+                            <Text size={18} transform="uppercase">
+                              Get It
+                            </Text>
+                          </Link>
+                        </Button>
+                      </Row>
+                    </Col>
+                  </Row>
+                </Card.Footer>
+              </Card>
+              {/* //* card start */}
+
+              {/* //* card start */}
+              <Card
+                cover
+                style={{
+                  margin: '1rem',
+                  minWidth: '30rem',
+                  maxWidth: '35rem',
+                }}
+              >
+                <Card.Header css={{ position: 'absolute', zIndex: 1, top: 5 }}>
+                  <Col>
+                    <Text
+                      size={12}
+                      weight="bold"
+                      transform="uppercase"
+                      color="#ffffffAA"
+                    >
+                      New
+                    </Text>
+                    <Text h3 color="black">
+                      Acme camera
+                    </Text>
+                  </Col>
+                </Card.Header>
+                <Card.Body>
+                  <Card.Image
+                    src="https://i.imgur.com/uMQLC1d_d.webp?maxwidth=760&fidelity=grand"
+                    height={400}
+                    width="100%"
+                    style={{
+                      margin: '-8rem auto',
+                    }}
+                    alt="Card example background"
+                  />
+                </Card.Body>
+                <Card.Footer
+                  blur
+                  css={{
+                    position: 'absolute',
+                    borderTop:
+                      '$borderWeights$light solid rgba(255, 255, 255, 0.2)',
+                    bottom: 0,
+                    zIndex: 1,
+                  }}
+                >
+                  <Row>
+                    <Col>
+                      <Text color="#000" size={18}>
+                        Available soon.
+                      </Text>
+                      <Text color="#000" size={14}>
+                        Get notified.
+                      </Text>
+                    </Col>
+                    <Col>
+                      <Row justify="flex-end">
+                        <Button flat auto rounded>
+                          <Link href="/api/auth/login">
+                            <Text size={18} transform="uppercase">
+                              Get It
+                            </Text>
+                          </Link>
                         </Button>
                       </Row>
                     </Col>
@@ -426,74 +511,11 @@ const HomePage: NextPage = () => {
                     <Col>
                       <Row justify="flex-end">
                         <Button flat auto rounded>
-                          <Text size={18} transform="uppercase">
-                            Get It
-                          </Text>
-                        </Button>
-                      </Row>
-                    </Col>
-                  </Row>
-                </Card.Footer>
-              </Card>
-              {/* //* card start */}
-
-              {/* //* card start */}
-              <Card
-                cover
-                style={{
-                  margin: '1rem',
-                  minWidth: '30rem',
-                  maxWidth: '35rem',
-                }}
-              >
-                <Card.Header css={{ position: 'absolute', zIndex: 1, top: 5 }}>
-                  <Col>
-                    <Text
-                      size={12}
-                      weight="bold"
-                      transform="uppercase"
-                      color="#ffffffAA"
-                    >
-                      New
-                    </Text>
-                    <Text h3 color="black">
-                      Acme camera
-                    </Text>
-                  </Col>
-                </Card.Header>
-                <Card.Body>
-                  <Card.Image
-                    src="https://i.imgur.com/6zJPuJw.png"
-                    height={400}
-                    width="100%"
-                    alt="Card example background"
-                  />
-                </Card.Body>
-                <Card.Footer
-                  blur
-                  css={{
-                    position: 'absolute',
-                    borderTop:
-                      '$borderWeights$light solid rgba(255, 255, 255, 0.2)',
-                    bottom: 0,
-                    zIndex: 1,
-                  }}
-                >
-                  <Row>
-                    <Col>
-                      <Text color="#000" size={18}>
-                        Available soon.
-                      </Text>
-                      <Text color="#000" size={14}>
-                        Get notified.
-                      </Text>
-                    </Col>
-                    <Col>
-                      <Row justify="flex-end">
-                        <Button flat auto rounded>
-                          <Text size={18} transform="uppercase">
-                            Get It
-                          </Text>
+                          <Link href="/api/auth/login">
+                            <Text size={18} transform="uppercase">
+                              Get It
+                            </Text>
+                          </Link>
                         </Button>
                       </Row>
                     </Col>

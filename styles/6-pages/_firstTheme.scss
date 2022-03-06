@@ -34,6 +34,7 @@
     }
     &__right {
       img {
+        width: auto !important;
         border-top-right-radius: 5rem;
         border-bottom-left-radius: 5rem;
       }
@@ -219,6 +220,15 @@
     height: 365px;
     width: 335px;
     padding: 20px 35px;
+    background: #191919;
+    border-radius: 20px;
+    margin: 15px;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+  }
+  .skill-card {
+    padding: 10px 35px;
     background: #191919;
     border-radius: 20px;
     margin: 15px;
