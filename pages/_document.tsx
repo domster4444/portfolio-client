@@ -1,4 +1,5 @@
 // this file gets loaded for all of our pages
+// @ts-nocheck
 import Document, {
   Html,
   Head,
@@ -23,13 +24,12 @@ class MyDocument extends Document {
         <Head />
 
         {/* trust pilot */}
-        <meta
-          name="trustpilot-one-time-domain-verification-id"
-          content="6b793f18-e645-4987-973a-2603602bdc19"
-        />
+        {/* <!-- TrustBox script --> */}
+
+        {/* <!-- End TrustBox script --> */}
 
         {/* <!--=============== SWIPER CSS ===============--> */}
-        <link rel="stylesheet" href="./swiper-bundle.min.css" />
+        {/* <link rel="stylesheet" href="./swiper-bundle.min.css" /> */}
 
         <link
           rel="stylesheet"

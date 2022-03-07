@@ -39,7 +39,9 @@ const Index = ({ nextPreBtn }: { nextPreBtn: boolean }) => {
   const [imageUrl, setImageUrl] = useState('');
   const [bioFieldData, setBioFieldData] = useState('');
 
-  const submitHandler = (event: React.FormEvent<HTMLFormElement>): void => {
+  const updateBioFormHander = (
+    event: React.FormEvent<HTMLFormElement>
+  ): void => {
     event.preventDefault();
 
     if (imageUrl === '' || bioFieldData === '') {
@@ -105,7 +107,7 @@ const Index = ({ nextPreBtn }: { nextPreBtn: boolean }) => {
   };
 
   // ===
-  const handleSubmit = (e: any) => {
+  const submitImageHandler = (e: any) => {
     alert('Form Submitted');
     e.preventDefault();
     if (!previewSource) return;
@@ -173,7 +175,7 @@ const Index = ({ nextPreBtn }: { nextPreBtn: boolean }) => {
           <form
             className="bio"
             onSubmit={(e) => {
-              submitHandler(e);
+              updateBioFormHander(e);
             }}
           >
             <h2>
@@ -202,10 +204,9 @@ const Index = ({ nextPreBtn }: { nextPreBtn: boolean }) => {
 
             {/* submit image btn start */}
             <Button
-              type="submit"
               color="success"
               size="xl"
-              onClick={handleSubmit}
+              onClick={submitImageHandler}
               className={BioStyles.btnContainer__btn}
             >
               submit Image

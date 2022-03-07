@@ -182,6 +182,11 @@ const HomePage: NextPage = () => {
         <Head>
           <title>Home</title>
           <meta name="description" content="Home page of portfolio generator" />
+          <script
+            type="text/javascript"
+            src="//widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js"
+            async
+          ></script>
         </Head>
 
         {/*  video modal start */}
@@ -962,6 +967,27 @@ const HomePage: NextPage = () => {
               </Zoom>
             </div>
           </section>
+
+          {/* //? trust pilot  */}
+          <div
+            className="trustpilot-widget"
+            data-locale="en-US"
+            data-template-id="5419b6a8b0d04a076446a9ad"
+            data-businessunit-id="62249ff52cd8e9cff066b50e"
+            data-style-height="24px"
+            data-style-width="100%"
+            data-theme="light"
+            data-min-review-count="10"
+          >
+            <a
+              href="https://www.trustpilot.com/review/portfoliosite.me"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Trustpilot
+            </a>
+          </div>
+
           {/* //? client carousel */}
           <section
             style={{
