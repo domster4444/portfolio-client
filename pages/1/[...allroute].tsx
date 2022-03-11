@@ -133,7 +133,7 @@ const ThemeFirst = () => {
             {profilePhoto && (
               <Image
                 height={500}
-                width={350}
+                width={450}
                 src={profilePhoto}
                 alt="photograph"
               />
@@ -158,8 +158,8 @@ const ThemeFirst = () => {
             <GreyScaleImage>
               {profilePhoto && (
                 <Image
-                  height={500}
-                  width={350}
+                  height={450}
+                  width={400}
                   src={profilePhoto}
                   alt="photograph"
                 />
