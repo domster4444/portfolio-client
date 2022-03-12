@@ -9,8 +9,8 @@ export const globalConstant: GblI = {
   // serverURL: 'http://localhost:5000',
   serverURL: 'https://hexgrade.herokuapp.com',
   //*for production
-  baseURL: 'http://localhost:3000',
-  // baseURL: 'https://portfoliosite.me',
+  // baseURL: 'http://localhost:3000',
+  baseURL: 'https://portfoliosite.me',
   //? chatserver
   //*for development
   // chatServerURL: 'http://localhost:5050',
