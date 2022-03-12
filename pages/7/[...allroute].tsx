@@ -37,7 +37,11 @@ const ThemeSeven = () => {
 
   useEffect(() => {
     //?   fetch userName from url
-    const userName = window.location.href.slice(24, 34).toString();
+    const myWindowUrl = window.location.href;
+    const urlArray = myWindowUrl.split('/');
+    console.log(urlArray[4]);
+    const userName = urlArray[4];
+
     console.log('user name in url is : ', userName);
 
     //?   fetch useDetails from userName of url
