@@ -251,11 +251,14 @@ const ThemeSeven = () => {
               {(() => {
                 if (profilePhoto) {
                   return (
-                    <Image
+                    <img
                       src={profilePhoto && profilePhoto}
                       alt=""
-                      height={1000}
-                      width={1000}
+                      style={{
+                        height: '100%',
+                        width: '100%',
+                        // borderRadius: '50%',
+                      }}
                       className="home__img"
                     />
                   );
@@ -288,11 +291,11 @@ const ThemeSeven = () => {
             {(() => {
               if (profilePhoto) {
                 return (
-                  <Image
+                  <img
                     src={profilePhoto && profilePhoto}
                     alt=""
-                    height={1000}
-                    width={1000}
+                    // height={1000}
+                    // width={1000}
                     className="about__img"
                   />
                 );

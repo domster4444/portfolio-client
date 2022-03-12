@@ -290,6 +290,8 @@ body {
     font-size: var(--biggest-font-size);
   }
   .home__img {
+    height: auto !important;
+    max-height: auto !important;
     width: 160px;
   }
   .home__handle {
