@@ -27,6 +27,7 @@ const ThemeSeven = () => {
   const [linkedIn, setLinkedIn] = React.useState('');
   const [instagram, setInstagram] = React.useState('');
   const [skills, setSkills] = React.useState<any[]>([]);
+  const [projects, setProjects] = React.useState<any[]>([]);
   const [workHistory, setWorkHistory] = React.useState<any[]>([]);
   const [email, setEmail] = React.useState<string | null>(null);
   const [whatsApp, setWhatsApp] = React.useState<string | null>(null);
@@ -75,6 +76,7 @@ const ThemeSeven = () => {
         setSkills(res.data.detailExist.skills);
         setEmail(res.data.detailExist.email);
         setWorkHistory(res.data.detailExist.workExperience);
+        setProjects(res.data.detailExist.projects);
       })
       .catch((error) => {
         console.log(' 🟠axios themeDetails error', error);
@@ -500,7 +502,7 @@ const ThemeSeven = () => {
         <section className="work section" id="work">
           <span className="section__subtitle">My Portfolio</span>
           <h2 className="section__title">Recent Works</h2>
-          <div className="work__filters">
+          {/* <div className="work__filters">
             <span className="work__item active-work" data-filter="all">
               All
             </span>
@@ -513,43 +515,59 @@ const ThemeSeven = () => {
             <span className="work__item" data-filter=".design">
               Design
             </span>
-          </div>
+          </div> */}
           <div className="work__container container grid">
             {/* work card  */}
-            <div className="work__card mix web">
-              <Image src={work1} alt="" className="work__img" />
-              <h3 className="work__titWeb Designle"></h3>
-              <a href=" " className="work__button">
-                Demo <i className="bx bx-right-arrow-alt work__icon"></i>
-              </a>
-            </div>
+            {(() => {
+              return projects.map((item: any, index: number) => {
+                return (
+                  <div key={index} className="work__card mix web">
+                    <div className="unset-img">
+                      {(() => {
+                        if (item.projectImage) {
+                          return (
+                            <div className="unset-img">
+                              <img
+                                // @ts-ignore
+                                src={item.projectImage}
+                                alt=""
+                                className="work__img custom-img"
+                              />
+                            </div>
+                          );
+                        } else {
+                          return <></>;
+                        }
+                      })()}
+                    </div>
 
-            {/* <!-- work card --> */}
-            <div className="work__card mix movil">
-              <Image src={work1} alt="" className="work__img" />
-              <h3 className="work__title">Web Design</h3>
-              <a href=" " className="work__button">
-                Demo <i className="bx bx-right-arrow-alt work__icon"></i>
-              </a>
-            </div>
-
-            {/* <!-- work card --> */}
-            <div className="work__card mix design">
-              <Image src={work1} alt="" className="work__img" />
-              <h3 className="work__title">Web Design</h3>
-              <a href=" " className="work__button">
-                Demo <i className="bx bx-right-arrow-alt work__icon"></i>
-              </a>
-            </div>
-
-            {/* <!-- work card --> */}
-            <div className="work__card mix design">
-              <Image src={work1} alt="" className="work__img" />
-              <h3 className="work__title">Web Design</h3>
-              <a href=" " className="work__button">
-                Demo <i className="bx bx-right-arrow-alt work__icon"></i>
-              </a>
-            </div>
+                    <h3 className="work__titWeb Designle"></h3>
+                    <a href=" " className="work__button">
+                      {item.projectName}{' '}
+                    </a>
+                    <p className="work__paragraph">
+                      {item.projectDescription}{' '}
+                    </p>
+                    <a href={item.projectVideoLink} className="work__button">
+                      vdo
+                      <i className="bx bx-right-arrow-alt work__icon"></i>
+                    </a>
+                    <a href={item.projectGithubLink} className="work__button">
+                      github
+                      <i className="bx bx-right-arrow-alt work__icon"></i>
+                    </a>
+                    <a href={item.projectWebsiteLink} className="work__button">
+                      website
+                      <i className="bx bx-right-arrow-alt work__icon"></i>
+                    </a>
+                    <a href={item.projectDocLink} className="work__button">
+                      website
+                      <i className="bx bx-right-arrow-alt work__icon"></i>
+                    </a>
+                  </div>
+                );
+              });
+            })()}
           </div>
         </section>
 

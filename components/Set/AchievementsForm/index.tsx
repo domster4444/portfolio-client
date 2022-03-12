@@ -1,8 +1,15 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+import ImageShower from 'components/ImageShower/ImageShower';
+import Image from 'next/image';
+import { axiosInstance } from 'lib/utilities/api/api';
+import { useUser } from '@auth0/nextjs-auth0';
+import { toast } from 'react-toastify';
+import { globalConstant } from 'constant/constant';
+import styled from 'styled-components';
+
 import SetCard from 'components/Set/SetCard';
 import { TickSquare } from 'react-iconly';
 
-import styled from 'styled-components';
 export const Lable = styled.label`
   font-size: 1.8rem;
 `;
@@ -30,37 +37,244 @@ export const Textarea = styled.textarea`
 
 import { Spacer, Button } from '@nextui-org/react';
 
-const index: React.FC = () => {
+const Index: React.FC = () => {
+  const { user, error, isLoading } = useUser();
+  const [imageUrl, setImageUrl] = useState<string>('');
+  const [achievementName, setAchievementName] = useState<string>('');
+  const [achievementDescription, setAchievementDescription] =
+    useState<string>('');
+
+  const [achievements, setAchievements] = useState<any>([]);
+
+  // !___________________FETCH ALL DATA & SET
+  const fetchAllDataAndSet = () => {
+    if (user) {
+      const dataToSend: any = {
+        email: user.email,
+      };
+
+      axiosInstance
+        .post('/api/v1/users/alldetails', dataToSend)
+
+        .then((res: any) => {
+          console.log('💚axios NameForm update Success', res.data);
+          setAchievements(res.data.detailExist.achievements);
+          console.log(res.data.detailExist.achievements);
+        })
+        .catch((error) => {
+          console.log(' 🟠axios NameForm error', error);
+          toast(error, {
+            position: 'top-center',
+          });
+        });
+    }
+  };
+
+  // !_____________________ UPDATE FORM
+
+  const updateAchievementField = (
+    e: React.FormEvent<HTMLFormElement>
+  ): void => {
+    e.preventDefault();
+
+    if (
+      imageUrl === '' ||
+      achievementName === '' ||
+      achievementDescription === ''
+    ) {
+      if (imageUrl === '') {
+        toast('Image should be uploaded & submitted', {
+          position: 'top-center',
+        });
+      } else {
+        toast('All fields are required', {
+          position: 'top-center',
+        });
+      }
+    } else {
+      if (user) {
+        const dataToSend = {
+          achievementImage: imageUrl,
+          achievementName: achievementName,
+          achievementDescription: achievementDescription,
+          email: user.email,
+        };
+
+        axiosInstance
+          .patch('/api/v1/users/achievementform', dataToSend)
+
+          .then((res: any) => {
+            console.log('💚axios BioForm update Success', res.data);
+            toast(res.data.message, {
+              position: 'top-center',
+            });
+
+            fetchAllDataAndSet();
+          })
+          .catch((error) => {
+            console.log(' 🟠axios BioForm error', error);
+            toast(error, {
+              position: 'top-center',
+            });
+          });
+      }
+    }
+  };
+
+  // *___________________ UPLOAD IMAGE START
+
+  const [fileInputState, setFileInputState] = useState('');
+  const [selectedFile, setSelectedFile] = useState('');
+  const [previewSource, setPreviewSource] = useState();
+  const [successMsg, setSuccessMsg] = useState('');
+  const [errMsg, setErrMsg] = useState('');
+  //! ___________config for preview image
+  const changeHandler = (e: any) => {
+    // for singleFileUpload the file will be in 0th Index
+    //* store file in variable
+    const file = e.target.files[0];
+
+    previewFile(file);
+  };
+  const previewFile = (file: any) => {
+    // FileReader is builtIn Js object class
+    //* create instance of FileReader to convert our image to base64String
+    const reader = new FileReader();
+    //*convert file to base64String using js object class "FielsReader"
+    reader.readAsDataURL(file);
+    //* when file is converted to base64String, call the onload function
+    reader.onloadend = () => {
+      //* set the previewSource to the base64String
+      // @ts-ignore
+      setPreviewSource(reader.result);
+    };
+  };
+
+  //! __________onSubmission of Image to cloudinary
+  const submitImageHandler = (e: any) => {
+    e.preventDefault();
+    if (!previewSource) return;
+    uploadImage(previewSource);
+  };
+
+  const uploadImage = async (base64EncodedImage: any) => {
+    console.log('uploadImage' + base64EncodedImage);
+    try {
+      const data = await fetch(`${globalConstant.serverURL}/api/upload`, {
+        method: 'POST',
+        body: JSON.stringify({ data: base64EncodedImage }),
+        headers: { 'Content-Type': 'application/json' },
+      });
+      const response = await data.json();
+      console.log(response);
+      setImageUrl(response.url);
+      setFileInputState('');
+      // @ts-ignore
+      setPreviewSource('');
+
+      setSuccessMsg('Image uploaded successfully');
+    } catch (err) {
+      console.error(err);
+      setErrMsg('Something went wrong!');
+    }
+  };
+
+  // * UPLOAD IMAGE END
+
+  // ? GET ALL DATA
+
+  useEffect(() => {
+    fetchAllDataAndSet();
+  }, []);
+
   return (
     <SetCard>
       <form
-        action=""
         style={{
           width: '100%',
         }}
+        onSubmit={(e) => {
+          updateAchievementField(e);
+        }}
       >
+        {(() => {
+          return achievements.map((item: any, index: number) => {
+            return (
+              <li key={index}>
+                <img
+                  src={item.achievementImage}
+                  height="50"
+                  width="50"
+                  alt=""
+                />
+                <dl>
+                  <dt>{item.achievementName}</dt>
+                  <dd>{item.achievementDescription}</dd>
+                </dl>
+                <hr />
+              </li>
+            );
+          });
+        })()}
+
+        <Lable htmlFor="">
+          Achievement Image :
+          <br />
+          <h2>
+            URL:{' '}
+            {(() => {
+              if (imageUrl) {
+                return imageUrl;
+              }
+              return 'No Image Currently Selected';
+            })()}
+          </h2>
+          {/* @ts-ignore */}
+          <img src={imageUrl ? imageUrl : null} alt="" />
+          <Spacer y={1} />
+          <Spacer y={1} />
+          {/* //* preview the image if previewSource is not empty */}
+          {previewSource && <img src={previewSource} alt="preview" />}
+          <ImageShower />
+          <input
+            name="bio__img"
+            type="file"
+            value={fileInputState}
+            onChange={changeHandler}
+          />
+          {/* submit image btn start */}
+          <Button color="success" size="xl" onClick={submitImageHandler}>
+            submit Image
+            <Spacer x={0.5} />
+          </Button>
+        </Lable>
+
+        <br />
+
         <Lable htmlFor="">
           Achievement name :
           <br />
-          <Input type="text" />
+          <Input
+            type="text"
+            onChange={(e) => {
+              setAchievementName(e.target.value);
+            }}
+          />
         </Lable>
         <br />
 
         <Lable htmlFor="">
           Achievement description :
           <br />
-          <Textarea />
+          <Textarea
+            onChange={(e) => {
+              setAchievementDescription(e.target.value);
+            }}
+          />
         </Lable>
         <br />
 
-        <Lable htmlFor="">
-          Achievement Image :
-          <br />
-          <Input type="file" />
-        </Lable>
-        <br />
-
-        <Button type="submit" color="success" size="xl">
+        <Button color="success" size="xl" type="submit">
           Update
           <Spacer x={0.5} />
           <TickSquare set="bold" primaryColor="white" />
@@ -70,4 +284,4 @@ const index: React.FC = () => {
   );
 };
 
-export default index;
+export default Index;

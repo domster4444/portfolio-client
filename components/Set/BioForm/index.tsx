@@ -3,6 +3,7 @@ import ImageShower from 'components/ImageShower/ImageShower';
 import Image from 'next/image';
 import { axiosInstance } from 'lib/utilities/api/api';
 import { useUser } from '@auth0/nextjs-auth0';
+import { globalConstant } from 'constant/constant';
 
 import {
   Button,
@@ -45,9 +46,15 @@ const Index = ({ nextPreBtn }: { nextPreBtn: boolean }) => {
     event.preventDefault();
 
     if (imageUrl === '' || bioFieldData === '') {
-      toast('Both Image & Bio Field Must be filled', {
-        position: 'top-center',
-      });
+      if (imageUrl === '') {
+        toast('Image should be uploaded & submitted', {
+          position: 'top-center',
+        });
+      } else {
+        toast('All fields are required', {
+          position: 'top-center',
+        });
+      }
     } else {
       console.log('🉐imageUrl, bioFieldData');
       console.log(imageUrl, bioFieldData);
@@ -108,7 +115,6 @@ const Index = ({ nextPreBtn }: { nextPreBtn: boolean }) => {
 
   // ===
   const submitImageHandler = (e: any) => {
-    alert('Form Submitted');
     e.preventDefault();
     if (!previewSource) return;
     uploadImage(previewSource);
@@ -117,7 +123,7 @@ const Index = ({ nextPreBtn }: { nextPreBtn: boolean }) => {
   const uploadImage = async (base64EncodedImage: any) => {
     console.log('uploadImage' + base64EncodedImage);
     try {
-      const data = await fetch('http://localhost:5000/api/upload', {
+      const data = await fetch(`${globalConstant.serverURL}/api/upload`, {
         method: 'POST',
         body: JSON.stringify({ data: base64EncodedImage }),
         headers: { 'Content-Type': 'application/json' },
