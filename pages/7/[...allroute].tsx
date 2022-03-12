@@ -182,7 +182,7 @@ const ThemeSeven = () => {
   });
 
   return (
-    <div id="theme7" className="default-theme dark-theme">
+    <div id="theme7" className="default-theme light-theme">
       {/* <!--=============== HEADER ===============--> */}
 
       <header className="header" id="header">
