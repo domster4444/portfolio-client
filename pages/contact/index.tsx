@@ -66,7 +66,7 @@ const ContactPage: NextPage = () => {
           <ContactHeaderWrapper>
             <Fade bottom>
               <h2
-                className="poppins_semibold_600"
+                className="source_700"
                 style={{
                   fontSize: '3.5rem',
                   color: '#1c2444',
@@ -92,7 +92,7 @@ const ContactPage: NextPage = () => {
           </ContactHeaderWrapper>
 
           <h2
-            className="poppins_semibold_600"
+            className="source_700"
             style={{
               margin: '2.5rem 0rem',
               textAlign: 'center',
@@ -137,7 +137,7 @@ const ContactPage: NextPage = () => {
               </div>
 
               <h3
-                className="poppins_semibold_600"
+                className="source_700"
                 style={{
                   fontSize: '2.5rem',
                   letterSpacing: '0.1rem',
@@ -167,7 +167,7 @@ const ContactPage: NextPage = () => {
             <ContactContainerRight>
               <form>
                 <h3
-                  className="contactForm__title poppins_semibold_600"
+                  className="contactForm__title source_700"
                   style={{
                     margin: '2.25rem 0rem',
                     fontSize: '2.5rem',

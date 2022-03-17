@@ -199,7 +199,7 @@ const HomePage: NextPage = () => {
           <HeroContainer>
             <div className="hero__left">
               <h1
-                className="poppins_semibold_600"
+                className="source_700"
                 style={{
                   fontSize: '7rem',
                   lineHeight: '1.1',
@@ -247,7 +247,7 @@ const HomePage: NextPage = () => {
                 fontSize: '5rem',
                 textAlign: 'center',
               }}
-              className="poppins_semibold_600"
+              className="source_700"
             >
               Featured Portfolios
             </h2>
@@ -545,7 +545,7 @@ const HomePage: NextPage = () => {
                 fontSize: '5rem',
                 textAlign: 'center',
               }}
-              className="poppins_semibold_600"
+              className="source_700"
             >
               Our Team
             </h2>
@@ -555,7 +555,7 @@ const HomePage: NextPage = () => {
 
           {/* //? Why section */}
           <WhySection className="whySection">
-            <WhySectionTitle className="whySection__title poppins_semibold_600">
+            <WhySectionTitle className="whySection__title source_700">
               <Fade bottom>Why choose our portfollio with us?</Fade>
             </WhySectionTitle>
             <WhySectionContainer>
@@ -641,7 +641,20 @@ const HomePage: NextPage = () => {
 
             <VideoSecRight>
               <Fade right>
-                <VideoSecRightTitle className="poppins_semibold_600">
+                <p
+                  className="poppins_regular_400"
+                  style={{
+                    marginTop: '3rem',
+                    fontSize: '2rem',
+                    margin: '0',
+                    lineHeight: '2.25rem',
+                    textDecoration: 'underline',
+                    color: '#8d8d8d',
+                  }}
+                >
+                  Check out our video
+                </p>
+                <VideoSecRightTitle className="source_700">
                   Watch our video
                 </VideoSecRightTitle>
                 <VideoSecRightBtn
@@ -668,7 +681,7 @@ const HomePage: NextPage = () => {
                 letterSpacing: '0.1rem',
                 fontSize: '5rem',
               }}
-              className="poppins_semibold_600"
+              className="source_700"
             >
               Testimonial Section
               <div
@@ -1001,7 +1014,7 @@ const HomePage: NextPage = () => {
                 letterSpacing: '0.1rem',
                 fontSize: '5rem',
               }}
-              className="poppins_semibold_600"
+              className="source_700"
             >
               Our Clients
               <div
@@ -1033,7 +1046,7 @@ const HomePage: NextPage = () => {
                 letterSpacing: '0.1rem',
                 fontSize: '5rem',
               }}
-              className="poppins_semibold_600"
+              className="source_700"
             >
               Frequently Asked Question
               <div
@@ -1054,7 +1067,7 @@ const HomePage: NextPage = () => {
           {/* //? Join section */}
           <Fade bottom>
             <JoinNowSection>
-              <JoinNowSectionTitle className="poppins_bold_800">
+              <JoinNowSectionTitle className="source_700">
                 Try It For Free
               </JoinNowSectionTitle>
               <JoinNowSectionBtn className="poppins_regular_400">

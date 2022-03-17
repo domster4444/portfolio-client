@@ -6,6 +6,8 @@ import { useEffect } from 'react';
 import imageUrlBuilder from '@sanity/image-url';
 import Image from 'next/image';
 import { useRouter } from 'next/router';
+// @ts-ignore
+import { Fade, Zoom } from 'react-reveal';
 
 const BlogContainer = styled.div`
   display: flex;
@@ -74,17 +76,44 @@ const BlogPage: NextPage = ({ posts }: any) => {
     }
   }, [posts]);
 
+  const ContactHeaderWrapper = styled.header`
+    margin-top: 20px;
+    /* background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' height='100%25' width='100%25'%3E%3Cdefs%3E%3Cpattern id='doodad' width='131' height='131' viewBox='0 0 40 40' patternUnits='userSpaceOnUse' patternTransform='rotate(154)'%3E%3Crect width='100%25' height='100%25' fill='rgba(226, 233, 250,1)'/%3E%3Cpath d='M-10 19.5h 60v1h-60zM-10-21h60v1h-60' fill='rgba(232, 239, 252,1)'/%3E%3Ccircle r='0.5' cx='0' cy='20' fill='rgba(203, 218, 246,1)'/%3E%3Ccircle r='0.5' cx='40' cy='20' fill='rgba(203, 218, 246,1)'/%3E%3C/pattern%3E%3C/defs%3E%3Crect fill='url(%23doodad)' height='200%25' width='200%25'/%3E%3C/svg%3E "); */
+    min-height: 10vh;
+    background-size: cover;
+    background-position: center;
+    padding: 5rem 2rem;
+    border-radius: 1.5rem;
+  `;
+
   return (
     <Layout>
       <section className="blog">
-        <h1
-          style={{
-            textAlign: 'center',
-          }}
-        >
-          Welcome To Our Blog Page
-        </h1>
-
+        <ContactHeaderWrapper>
+          <Fade bottom>
+            <h2
+              className="source_700"
+              style={{
+                fontSize: '3.5rem',
+                color: '#1c2444',
+                letterSpacing: '0.1rem',
+                textAlign: 'center',
+              }}
+            >
+              Blogs & Articles
+            </h2>
+            <p
+              className="poppins_regular_400"
+              style={{
+                fontSize: '1.8rem',
+                textAlign: 'center',
+                color: '#1c2444',
+              }}
+            >
+              Expand your knowledge by reading our blogs.
+            </p>
+          </Fade>
+        </ContactHeaderWrapper>
         <BlogContainer className="blog__container">
           {mappedPosts.length >= 0 ? (
             mappedPosts.map(

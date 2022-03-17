@@ -25,8 +25,10 @@ export default function CenterPricingCard({
       <h2
         style={{
           fontSize: '3rem',
+          letterSpacing: '0.15rem',
           fontWeight: 'bold',
         }}
+        className="source_700"
       >
         {title}
       </h2>

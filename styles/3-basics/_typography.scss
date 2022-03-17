@@ -48,3 +48,13 @@
   font-family: 'Abril Fatface', cursive;
 }
 // typo complete
+
+// source serif pro
+.source_base {
+  font-family: 'Source Serif Pro', serif;
+}
+
+.source_700 {
+  @extend .source_base;
+  font-weight: 700;
+}

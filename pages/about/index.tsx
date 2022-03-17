@@ -33,7 +33,7 @@ const AboutPage: NextPage = () => {
           <ContactHeaderWrapper>
             <Fade bottom>
               <h2
-                className="poppins_semibold_600"
+                className="source_700"
                 style={{
                   fontSize: '3.5rem',
                   color: '#1c2444',
@@ -65,7 +65,7 @@ const AboutPage: NextPage = () => {
               letterSpacing: '0.1rem',
               fontSize: '5rem',
             }}
-            className="poppins_bold_700"
+            className="source_700"
           >
             Our timeline
             <div

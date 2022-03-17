@@ -25,7 +25,9 @@ export default function SidePricingCard({
         style={{
           fontSize: '3rem',
           fontWeight: 'bold',
+          letterSpacing: '0.15rem',
         }}
+        className="source_700"
       >
         {title}
       </h2>

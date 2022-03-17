@@ -3,6 +3,9 @@ import React, { useEffect, useState } from 'react';
 import SidePricingCard from './components/SidePricingCard';
 import CenterPricingCard from './components/CenterPricingCard';
 import { Switch } from '@nextui-org/react';
+// @ts-ignore
+
+import { Fade, Zoom } from 'react-reveal';
 
 export default function PricingPlanSection(): JSX.Element {
   const [isAnnual, setAnnualSwitch] = useState(false);
@@ -15,31 +18,47 @@ export default function PricingPlanSection(): JSX.Element {
       <div className="containerCenter">
         <div className="contentBlock">
           <main>
-            <h2>PRICING & PLANS</h2>
+            <Fade bottom>
+              <h2>PRICING & PLANS</h2>
 
-            <h1>Best Pricing & Plans</h1>
+              <h1
+                className="source_700"
+                style={{
+                  letterSpacing: '0.1rem',
+                  fontSize: '4rem',
+                  color: '#191970',
+                }}
+              >
+                Best Pricing & Plans
+              </h1>
+              <div
+                style={{
+                  marginBottom: '2rem',
+                  display: 'flex',
+                  justifyContent: 'center',
+                  alignItems: 'center',
+                }}
+              >
+                <b style={{ fontSize: '2rem', margin: '0rem 0.5rem' }}>
+                  Switch To Annual Subscription
+                </b>
 
+                <Switch
+                  animated={false}
+                  size="xl"
+                  checked={false}
+                  onClick={(e) => {
+                    handleAnnualSwitch(e);
+                  }}
+                />
+              </div>
+            </Fade>
             <div
+              className="container"
               style={{
-                marginBottom: '2rem',
-                display: 'flex',
-                justifyContent: 'center',
-                alignItems: 'center',
+                marginTop: '5rem',
               }}
             >
-              <b style={{ fontSize: '2rem', margin: '0rem 0.5rem' }}>
-                Switch To Annual Subscription
-              </b>
-              <Switch
-                animated={false}
-                size="xl"
-                checked={false}
-                onClick={(e) => {
-                  handleAnnualSwitch(e);
-                }}
-              />
-            </div>
-            <div className="container">
               <SidePricingCard
                 priceTag={isAnnual === true ? 'रु 4800 /year' : 'रु 400 /month'}
                 title="Basic"

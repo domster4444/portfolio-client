@@ -83,6 +83,19 @@ class MyDocument extends Document {
           rel="stylesheet"
         />
 
+        {/*google font source serrif pro for titles / headings */}
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link
+          rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossOrigin="true"
+        />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Source+Serif+Pro:wght@700&display=swap"
+          rel="stylesheet"
+        ></link>
+        {/*  */}
+
         <title>Portfolio Application</title>
         <meta charSet="utf-8" />
         <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
