@@ -21,13 +21,13 @@ const AboutPage: NextPage = () => {
   return (
     <Layout>
       <>
-        <Head>
-          <title>About</title>
-          <meta
+        {/* <Head> */}
+        {/* <title>About</title> */}
+        {/* <meta
             name="description"
             content="Meta description for the About page"
-          />
-        </Head>
+          /> */}
+        {/* </Head> */}
 
         <main className="about__main">
           <ContactHeaderWrapper>

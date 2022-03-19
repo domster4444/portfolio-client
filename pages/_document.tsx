@@ -96,14 +96,23 @@ class MyDocument extends Document {
         ></link>
         {/*  */}
 
-        <title>Portfolio Application</title>
+        <title>
+          Digital Portfolio Generator Websites For Students, Teachers,
+          Engineers, Doctors, Nurse and Professionals
+        </title>
         <meta charSet="utf-8" />
         <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
         <meta name="view" content="width-device-width, initial-scale=1.0" />
-        <meta name="author" content="Kshitiz" />
-        <meta name="description" content="Portfolio Builder Application" />
-        <meta name="keywords" content="portfolio, builder, application" />
-
+        <meta name="author" content="Kshitiz Shah" />
+        <meta
+          name="description"
+          content="Create your online presence with your skills, work, achievements, portfolios and professional career with an online portfolio website."
+        />
+        <meta
+          name="keywords"
+          content="Online Portfolio, Portfolio Site, Job Portfolio Website, Online Occupation Website, professional Portfolio , Student Website, Student Portfolio, career ePortfolio,Career Portfolio, Online ePortfolio, Portfolio, Student Resume, Online Job Portfolio, Career Portfolio, web-based portfolio, job portfolio, job resume, online nursing portfolio, Website Portfolio, online personal portfolio, nusrse portfolio website, nurse portfolio, student portfolio, student portfolio website, education portfolio, education portfolio website,
+          portfolio gen,portfolio generator free,website screenshot portfolio generator,online portfolio generator,portfolio generator online,eportfolio generator,hexgrade"
+        />
         <body>
           <Main />
           <NextScript />

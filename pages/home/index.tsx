@@ -179,15 +179,15 @@ const HomePage: NextPage = () => {
   return (
     <LayoutValidator>
       <React.Fragment>
-        <Head>
-          <title>Home</title>
-          <meta name="description" content="Home page of portfolio generator" />
-          <script
+        {/* <Head> */}
+        {/* <title>Home</title> */}
+        {/* <meta name="description" content="Home page of portfolio generator" /> */}
+        {/* <script
             type="text/javascript"
             src="//widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js"
             async
-          ></script>
-        </Head>
+          ></script> */}
+        {/* </Head> */}
 
         {/*  video modal start */}
         <Modal blur open={visible} onClose={closeHandler}>

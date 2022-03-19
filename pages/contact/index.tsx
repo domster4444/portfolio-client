@@ -54,13 +54,13 @@ const ContactPage: NextPage = () => {
   return (
     <Layout>
       <>
-        <Head>
-          <title>Contact</title>
-          <meta
+        {/* <Head> */}
+        {/* <title>Contact</title> */}
+        {/* <meta
             name="description"
             content="Meta description for the About page"
-          />
-        </Head>
+          /> */}
+        {/* </Head> */}
 
         <main>
           <ContactHeaderWrapper>
