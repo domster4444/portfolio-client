@@ -11,7 +11,7 @@ export const globalConstant: GblI = {
   //*for production
   // baseURL: 'http://localhost:3000',
   // baseURL: 'https://portfoliosite.me',
-  baseURL: 'https://hexgrade.com',
+  baseURL: 'https://www.hexgrade.com',
   //? chatserver
   //*for development
   // chatServerURL: 'http://localhost:5050',
