@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.portfoliosite.me/api/my-sitemap
+Sitemap: https://www.hexgrade.com/api/my-sitemap
