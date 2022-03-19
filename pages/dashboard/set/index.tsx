@@ -58,7 +58,6 @@ const SetPage: React.FC = () => {
             return (
               <>
                 <hr />
-                <h1>Name FIELD REQUIRED</h1>
                 <NameForm nextPreBtn={false} />
               </>
             );
@@ -75,7 +74,6 @@ const SetPage: React.FC = () => {
             return (
               <>
                 <hr />
-                <h1>BIO FIELD REQUIRED</h1>
                 <BioForm nextPreBtn={false} />
               </>
             );
@@ -91,7 +89,6 @@ const SetPage: React.FC = () => {
             return (
               <>
                 <hr />
-                <h1>Contact FIELD REQUIRED</h1>
                 <ContactForm />
               </>
             );
@@ -108,7 +105,6 @@ const SetPage: React.FC = () => {
             return (
               <>
                 <hr />
-                <h1>Education FIELD REQUIRED</h1>
                 <EducationForm />
               </>
             );
@@ -124,7 +120,6 @@ const SetPage: React.FC = () => {
             return (
               <>
                 <hr />
-                <h1>Work FIELD REQUIRED</h1>
                 <WorkForm />
               </>
             );
@@ -140,7 +135,6 @@ const SetPage: React.FC = () => {
             return (
               <>
                 <hr />
-                <h1>SKILLS FIELD REQUIRED</h1>
                 <SkillsForm />
               </>
             );
@@ -157,7 +151,6 @@ const SetPage: React.FC = () => {
             return (
               <>
                 <hr />
-                <h1>PROJECTS FIELD REQUIRED</h1>
                 <ProjectsForm />
               </>
             );
@@ -173,7 +166,6 @@ const SetPage: React.FC = () => {
             return (
               <>
                 <hr />
-                <h1>Achievements FIELD REQUIRED</h1>
                 <AchievementsForm />
               </>
             );

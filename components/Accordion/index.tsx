@@ -21,10 +21,11 @@ const index: React.FC = () => {
               >
                 <Collapse title="What are benefits of joining us ?">
                   <Text size={20}>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                    ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                    The benifits that you get when you join us are: - You get to
+                    create your portfolio and showcase your skills - You get our
+                    best team of developers to help you with building your
+                    portfolio website. - Our best customer care team will guide
+                    you through every steps.
                   </Text>
                 </Collapse>
                 <Collapse
@@ -32,10 +33,8 @@ const index: React.FC = () => {
                   title="Where can I get customer assistance?"
                 >
                   <Text size={20}>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                    ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                    You can get customer assistance by clicking the chat icon
+                    present in bottom right most corner of our website.
                   </Text>
                 </Collapse>
 
@@ -44,10 +43,9 @@ const index: React.FC = () => {
                   title="What services we provide ?"
                 >
                   <Text size={20}>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                    ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                    We provide extensive services to our customers for
+                    generating their desired portfolio presence & personal site
+                    to crack their next job interview.
                   </Text>
                 </Collapse>
               </Collapse.Group>

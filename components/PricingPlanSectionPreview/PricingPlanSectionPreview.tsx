@@ -63,7 +63,8 @@ export default function PricingPlanSection(): JSX.Element {
                 priceTag={isAnnual === true ? 'रु 4800 /year' : 'रु 400 /month'}
                 title="Basic"
                 description="
-                My lady bits and bobs cup of tea bubble and squeak brolly
+                The most popular plan.If your are seeking for a job, this is the plan for you.
+
                 "
                 priceAmount={isAnnual === true ? 4800 : 400}
               />
@@ -71,7 +72,7 @@ export default function PricingPlanSection(): JSX.Element {
                 priceTag={isAnnual === true ? 'रु 8400 /year' : 'रु 700 /month'}
                 title="Elite"
                 description="
-                My lady bits and bobs cup of tea bubble and squeak brolly
+                Elite plan is for those who really want all the features and full access to our future plans.
                 
                 "
                 priceAmount={isAnnual === true ? 8400 : 700}
@@ -80,7 +81,7 @@ export default function PricingPlanSection(): JSX.Element {
                 priceTag={isAnnual === true ? 'रु 7800 /year' : 'रु 650 /month'}
                 title="Premium"
                 description="
-                My lady bits and bobs cup of tea bubble and squeak brolly
+                Premium plan is for those who wants professional themes and more features than the basic plan.
                 "
                 priceAmount={isAnnual === true ? 7800 : 650}
               />

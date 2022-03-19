@@ -4,9 +4,31 @@ const { Readable } = require('stream');
 export default async (req, res) => {
   // An array with your links
   const links = [
-    { url: '/blog/my-first-blog-post/', changefreq: 'daily', priority: 0.3 },
-    { url: '/blog/my-second-blog-post', changefreq: 'daily', priority: 0.3 },
-    { url: '/blog/my-third-blog-post/', changefreq: 'daily', priority: 0.3 },
+    { url: '/home', changefreq: 'daily', priority: 0.9 },
+    { url: '/about', changefreq: 'daily', priority: 0.9 },
+    { url: '/contact', changefreq: 'daily', priority: 0.9 },
+    { url: '/pricing', changefreq: 'daily', priority: 0.9 },
+    { url: '/blog', changefreq: 'daily', priority: 0.9 },
+    {
+      url: '/post/how-to-create-perfect-portfolio-website',
+      changefreq: 'daily',
+      priority: 0.4,
+    },
+    {
+      url: '/post/benefits-of-havinga-portfolio-website',
+      changefreq: 'daily',
+      priority: 0.4,
+    },
+    {
+      url: '/post/things-you-should-consider-while-building-your-perfect-portfolio-website',
+      changefreq: 'daily',
+      priority: 0.4,
+    },
+    {
+      url: '/post/how-to-break-your-interview-process-by-online-presence',
+      changefreq: 'daily',
+      priority: 0.4,
+    },
   ];
 
   // Create a stream to write to

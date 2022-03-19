@@ -94,8 +94,8 @@ const AboutPage: NextPage = () => {
                     </span>
                   </div>
                   <div className="desc poppins_regular_400">
-                    Fire of passion ignites way more intensely than that of
-                    before
+                    We are working day by day to improve our customer experience
+                    and to make our products better.
                   </div>
                 </div>
               </li>
@@ -110,7 +110,8 @@ const AboutPage: NextPage = () => {
                     </span>
                   </div>
                   <div className="desc poppins_regular_400">
-                    We realized that, stepping back is also a way to grow.
+                    We got to know the market and the customer base and adapt
+                    our products to meet their needs.
                   </div>
                 </div>
               </li>
@@ -125,7 +126,8 @@ const AboutPage: NextPage = () => {
                     </span>
                   </div>
                   <div className="desc poppins_regular_400">
-                    We managed to make a long jump to make it grow bigger.
+                    We are launching our first product and we are excited to see
+                    the results.
                   </div>
                 </div>
               </li>
@@ -139,7 +141,10 @@ const AboutPage: NextPage = () => {
                     </span>
                   </div>
                   <div className="desc poppins_regular_400">
-                    It was the beginning where our idea came into existence.
+                    Firstly, we noticed that the market is not as big as we
+                    thought & the problem needs to have a solution.A quick easy
+                    solution is what we were focusing to achieve.That's why we
+                    started our journey.
                   </div>
                 </div>
               </li>
