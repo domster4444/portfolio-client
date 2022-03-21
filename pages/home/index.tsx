@@ -1026,6 +1026,81 @@ const HomePage: NextPage = () => {
 
             <ClientCarousel />
           </section>
+          {/* workflow section */}
+          <section className="workflow_section">
+            <h2 className="workflow-title source_700">Workflow</h2>
+
+            <p className="workflow-paragraph">
+              We takle a broad variety of disciplines in the process of creating{' '}
+              <br />
+              meaningful products for customer satisfation.
+            </p>
+
+            <div className="workflow_card-section">
+              <div className="workflow_card ">
+                <div className="workflow_card-img-container">
+                  {/* <img src="" alt="" /> */}
+                  <i className="bx bx-award"></i>
+                </div>
+
+                <h3 className="poppins_medium_500">
+                  01. Research Competitor to selling points
+                </h3>
+
+                <p className="workflow_card-paragraph poppins_regular_400">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Reprehenderit fugiat recusandae
+                </p>
+              </div>
+              <div className="workflow_card ">
+                <div className="workflow_card-img-container">
+                  {/* <img src="" alt="" /> */}
+                  <i className="bx bx-award"></i>
+                </div>
+
+                <h3 className="poppins_medium_500">
+                  01. Research Competitor to selling points
+                </h3>
+
+                <p className="workflow_card-paragraph poppins_regular_400">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Reprehenderit fugiat recusandae
+                </p>
+              </div>
+              <div className="workflow_card ">
+                <div className="workflow_card-img-container">
+                  {/* <img src="" alt="" /> */}
+                  <i className="bx bx-award"></i>
+                </div>
+
+                <h3 className="poppins_medium_500">
+                  01. Research Competitor to selling points
+                </h3>
+
+                <p className="workflow_card-paragraph poppins_regular_400">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Reprehenderit fugiat recusandae
+                </p>
+              </div>
+              <div className="workflow_card ">
+                <div className="workflow_card-img-container">
+                  {/* <img src="" alt="" /> */}
+                  <i className="bx bx-award"></i>
+                </div>
+
+                <h3 className="poppins_medium_500">
+                  01. Research Competitor to selling points
+                </h3>
+
+                <p className="workflow_card-paragraph poppins_regular_400">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Reprehenderit fugiat recusandae
+                </p>
+              </div>
+            </div>
+          </section>
+
+          {/* workflow section */}
 
           {/* //? FAQ */}
           <section

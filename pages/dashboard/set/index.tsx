@@ -18,6 +18,7 @@ import WorkForm from 'components/Set/WorkForm';
 import SkillsForm from 'components/Set/SkillsForm';
 import ProjectsForm from 'components/Set/ProjectsForm';
 import AchievementsForm from 'components/Set/AchievementsForm';
+import SecondaryImgForm from 'components/Set/SecondaryImgForm';
 import BioForm from 'components/Set/BioForm';
 
 // @ts-ignore
@@ -167,6 +168,21 @@ const SetPage: React.FC = () => {
               <>
                 <hr />
                 <AchievementsForm />
+              </>
+            );
+          }
+        })()}
+        {/*//*______________Secondary Image___________ */}
+        {(() => {
+          if (
+            string &&
+            // @ts-ignore
+            string.split(',').includes('simg')
+          ) {
+            return (
+              <>
+                <hr />
+                <SecondaryImgForm />
               </>
             );
           }

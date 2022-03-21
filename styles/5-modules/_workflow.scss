@@ -1,0 +1,75 @@
+.workflow_section {
+  padding: 4rem 2rem;
+  background-color: #fafafa;
+  border-radius: 2.5rem;
+
+  .workflow-title {
+    letter-spacing: 0.15rem;
+    color: rgb(25, 25, 112);
+    font-size: 4.5rem;
+    text-align: center;
+    width: 100%;
+    justify-content: center;
+  }
+
+  .workflow-paragraph {
+    text-align: center;
+    font-size: 1.8rem;
+    margin-top: 2rem;
+
+    width: 60%;
+    transform: translateX(-50%);
+    margin-left: 50%;
+  }
+
+  .workflow_card-section {
+    flex-wrap: wrap;
+
+    display: flex;
+    justify-content: center;
+    margin: 4rem;
+  }
+  .workflow_card {
+    &:hover {
+      .workflow_card-img-container {
+        background: #ff0d81;
+        i {
+          color: white;
+        }
+      }
+    }
+    h3 {
+      font-size: 1.8rem;
+    }
+    border-radius: 0.75rem;
+    margin: 1.25rem;
+
+    padding: 1.5rem 1.75rem;
+
+    min-width: 20rem;
+    max-width: 25rem;
+    background-color: #fbfbfb;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    .workflow_card-img-container {
+      box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+
+      display: flex;
+      margin-bottom: 1.5rem;
+      justify-content: center;
+      align-items: center;
+      height: 6rem;
+      width: 6rem;
+      transform: translateX(-50%);
+      margin-left: 50%;
+      border-radius: 50%;
+      background: white;
+      i {
+        font-size: 3rem;
+      }
+    }
+
+    .workflow_card-paragraph {
+      font-size: 1.6rem;
+    }
+  }
+}
