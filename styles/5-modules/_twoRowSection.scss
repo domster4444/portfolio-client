@@ -1,0 +1,121 @@
+.two-col_section {
+  margin: 8rem 0rem;
+  display: flex;
+  @include media('<=1200px') {
+    flex-wrap: wrap;
+  }
+
+  justify-content: center;
+  align-items: center;
+  .left-division,
+  .left-division-secondary {
+    // !non reversed column's lower footer  circular icons
+
+    //  lower footer
+
+    &_footer-section {
+      margin: 5rem 0rem;
+      display: flex;
+      flex-wrap: wrap;
+      @include media('<=1200px') {
+        justify-content: center;
+      }
+      .footer_icon-card {
+        display: flex;
+        // box-shadow: rgb(149 157 165 / 20%) 0px 8px 24px;
+
+        border-radius: 0.75rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding: 1rem;
+        width: 15rem;
+        // background-color: #c1c1c1;
+        .icon_card-wrapper {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          i {
+            font-size: 3.25rem;
+            background: radial-gradient(
+              circle at 10% 20%,
+              rgb(171, 102, 255) 0%,
+              rgb(116, 182, 247) 90%
+            );
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+          }
+
+          box-shadow: rgb(149 157 165 / 20%) 0px 8px 24px;
+          height: 8rem;
+          width: 8rem;
+          background-color: white;
+          border-radius: 50%;
+        }
+        span {
+          margin: 0.75rem 0rem;
+
+          font-size: 2.2rem;
+        }
+      }
+    }
+
+    padding: 2.5rem;
+    @include media('<=1200px') {
+      width: 100%;
+    }
+
+    h3 {
+      font-size: 5rem;
+    }
+
+    p {
+      width: 70%;
+      @include media('<=1200px') {
+        width: 100%;
+        text-align: center;
+      }
+
+      padding: 0rem 2rem;
+      font-size: 2rem;
+    }
+  }
+}
+
+.tworow_section-img {
+  margin-top: 2rem;
+
+  border-radius: 2rem;
+}
+
+.two-col_title {
+  width: 70%;
+  @include media('<=1200px') {
+    width: 100%;
+    text-align: center;
+  }
+  color: rgb(25, 25, 112);
+}
+
+.reverse-col {
+  flex-direction: row-reverse;
+}
+// upper where img is on right
+.right-division {
+  width: 74%;
+  @include media('<=800px') {
+    width: 100%;
+  }
+  img {
+    margin-top: 2rem;
+    border-radius: 1.75rem !important;
+  }
+}
+
+.left-division-secondary {
+  display: flex;
+  align-items: flex-end;
+  flex-direction: column;
+  justify-content: center;
+}

@@ -1102,6 +1102,87 @@ const HomePage: NextPage = () => {
 
           {/* workflow section */}
 
+          {/* our intension section */}
+
+          <section className="two-col_section">
+            <Fade left>
+              <div className="left-division">
+                <h3 className="two-col_title source_700">
+                  Here we help ideas grow gradually
+                </h3>
+
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Tempora velit assumenda debitis. Repudiandae est id commodi
+                  quod ex nam veniam!
+                </p>
+
+                <div className="left-division_footer-section">
+                  <div className="footer_icon-card">
+                    <div className="icon_card-wrapper">
+                      <i className="bx bx-rocket" />
+                    </div>
+
+                    <span className="poppins_regular_400">Typography</span>
+                  </div>
+                  <div className="footer_icon-card">
+                    <div className="icon_card-wrapper">
+                      <i className="bx bx-rocket" />
+                    </div>
+
+                    <span className="poppins_regular_400">Animation</span>
+                  </div>
+                  <div className="footer_icon-card">
+                    <div className="icon_card-wrapper">
+                      <i className="bx bx-rocket" />
+                    </div>
+
+                    <span className="poppins_regular_400">Easy to edit</span>
+                  </div>
+                </div>
+              </div>
+            </Fade>
+            <Fade right>
+              <div className="right-division">
+                <img
+                  className="tworow_section-img"
+                  src="
+                https://images.unsplash.com/photo-1611078489935-0cb964de46d6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8bGFwdG9wc3xlbnwwfHwwfHw%3D&w=1000&q=80
+              "
+                  alt=""
+                />
+              </div>
+            </Fade>
+          </section>
+
+          {/* our motive  */}
+
+          <section className="two-col_section reverse-col">
+            <Fade right>
+              <div className="left-division-secondary">
+                <h3 className="two-col_title source_700">
+                  Where all yours innovation starts
+                </h3>
+
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Tempora velit assumenda debitis. Repudiandae est id commodi
+                  quod ex nam veniam!
+                </p>
+              </div>
+            </Fade>
+            <Fade left>
+              <div className="right-division">
+                <img
+                  className="tworow_section-img"
+                  src="
+                  https://images.unsplash.com/photo-1603302576837-37561b2e2302?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTJ8fGxhcHRvcHxlbnwwfHwwfHw%3D&w=1000&q=80  "
+                  alt=""
+                />
+              </div>
+            </Fade>
+          </section>
+
           {/* //? FAQ */}
           <section
             style={{

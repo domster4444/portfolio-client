@@ -1,4 +1,7 @@
 .workflow_section {
+  @include media('<=800px') {
+    width: 100%;
+  }
   padding: 4rem 2rem;
   background-color: #fafafa;
   border-radius: 2.5rem;
@@ -43,10 +46,16 @@
     }
     border-radius: 0.75rem;
     margin: 1.25rem;
+    @include media('<=800px') {
+      margin: 0.35rem;
+    }
 
     padding: 1.5rem 1.75rem;
 
     min-width: 20rem;
+    @include media('<=750px') {
+      min-width: 100%;
+    }
     max-width: 25rem;
     background-color: #fbfbfb;
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
