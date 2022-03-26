@@ -6,21 +6,11 @@ const DropDown = ({ opened }: any) => {
     <div id="DropDownSection" className="links_name hideName">
       <div className="setupDetails__mainMenu ">
         {opened ? (
-          <ChevronUpCircle
-            // @ts-ignore
-            className="sideMenus__icon"
-            set="bold"
-            primaryColor="#c4c4c4"
-          />
+          <i className="bx bx-chevron-up" />
         ) : (
-          <ChevronDownCircle
-            // @ts-ignore
-            className="sideMenus__icon"
-            set="bold"
-            primaryColor="#c4c4c4"
-          />
+          <i className="bx bx-chevron-down" />
         )}
-        Setup Details
+        Setup
       </div>
 
       {(() => {

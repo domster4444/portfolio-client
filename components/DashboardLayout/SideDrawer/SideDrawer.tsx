@@ -83,7 +83,14 @@ const SideDrawer: React.FC = () => {
     <>
       <div className="sidebar">
         <div className="logo-details">
-          <div className="logo_name">
+          <div
+            className="logo_name"
+            style={{
+              width: '100%',
+              display: 'flex',
+              justifyContent: 'center',
+            }}
+          >
             {/* <NextImage
               // @ts-ignore
               height={35}
@@ -93,13 +100,14 @@ const SideDrawer: React.FC = () => {
               alt="logo"
             /> */}
             <span
-              className="poppins_medium_500"
+              className="poppins_medium_500 poppins_medium_500"
               style={{
-                marginLeft: '1.35rem',
-                color: '#c1c1c1',
+                // marginLeft: '2.35rem',
+                color: 'white',
+                // background: 'blue',
               }}
             >
-              REVERSE
+              Hex
             </span>
           </div>
           <i className="bx bx-menu" id="btn">
@@ -125,69 +133,53 @@ const SideDrawer: React.FC = () => {
         </li> */}
           <Link passHref href="/dashboard/home">
             <li className="dashboardLayout__sideMenus">
-              <Home
-                // @ts-ignore
-                className="sideMenus__icon"
-                set="bold"
-                primaryColor="#c4c4c4"
-              />
-              <span className="links_name hideName">Dashboard</span>
+              <i className="bx bx-customize" />
+              <span className="links_name poppins_regular_400 hideName">
+                Home
+              </span>
             </li>
           </Link>
 
           <Link passHref href="/dashboard/profile">
             <li className="dashboardLayout__sideMenus">
-              <User
-                // @ts-ignore
-                className="sideMenus__icon"
-                set="bold"
-                primaryColor="#c4c4c4"
-              />
-              <span className="links_name hideName">Profile</span>
+              <i className="bx bx-user" />
+              <span className="links_name poppins_regular_400 hideName">
+                Profile
+              </span>
             </li>
           </Link>
           <Link passHref href="/dashboard/theme">
             <li className="dashboardLayout__sideMenus">
-              <Image
-                // @ts-ignore
-                className="sideMenus__icon"
-                set="bold"
-                primaryColor="#c4c4c4"
-              />
-              <span className="links_name hideName">Themes</span>
+              <i className="bx bx-image-alt" />
+              <span className="links_name poppins_regular_400 hideName">
+                Themes
+              </span>
             </li>
           </Link>
           <Link passHref href="/dashboard/videoguidance">
             <li className="dashboardLayout__sideMenus">
-              <Play
-                // @ts-ignore
-                className="sideMenus__icon"
-                set="bold"
-                primaryColor="#c4c4c4"
-              />
-              <span className="links_name hideName">Video Guidance</span>
+              <i className="bx bx-video" />
+              <span className="links_name poppins_regular_400 hideName">
+                {' '}
+                Guidance
+              </span>
             </li>
           </Link>
           <Link passHref href="/dashboard/payment">
             <li className="dashboardLayout__sideMenus">
-              <Buy
-                // @ts-ignore
-                className="sideMenus__icon"
-                set="bold"
-                primaryColor="#c4c4c4"
-              />
-              <span className="links_name hideName">Payment</span>
+              <i className="bx bx-wallet-alt" />
+              <span className="links_name poppins_regular_400 hideName">
+                Payment
+              </span>
             </li>
           </Link>
           <Link passHref href="/dashboard/support">
             <li className="dashboardLayout__sideMenus">
-              <TwoUsers
-                // @ts-ignore
-                className="sideMenus__icon"
-                set="bold"
-                primaryColor="#c4c4c4"
-              />
-              <span className="links_name hideName">Support</span>
+              <i className="bx bx-help-circle" />
+
+              <span className="links_name poppins_regular_400 hideName">
+                Support
+              </span>
             </li>
           </Link>
 
@@ -216,13 +208,14 @@ const SideDrawer: React.FC = () => {
             onClick={() => {
               setOpened(!opened);
             }}
+            className="poppins_regular_400"
           >
             <div className="changeColorToBlackOnHover">
               {/* <i className="bx bx-grid-alt" /> */}
-              {/* <span className="links_name hideName">Setting</span> */}
+              {/* <span className="links_name poppins_regular_400 hideName">Setting</span> */}
               <DropDown opened={opened} />
             </div>
-            <span className="tooltip">Setup Details</span>
+            <span className="tooltip ">Setup</span>
           </li>
           {/* .,.,.,.,.,.,.,.,.,.,....................,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,, */}
         </ul>

@@ -1,4 +1,4 @@
-// ------
+// ------ sidedrawer scroll
 
 .sidebar::-webkit-scrollbar {
   width: 1em;
@@ -15,15 +15,20 @@
 }
 
 .sidebar::-webkit-scrollbar {
-  width: 4px !important;
+  width: 0px !important;
 }
+// sidedrawer scroll end here
 .sidebar {
   position: fixed;
   left: 0;
   top: 0;
   height: 100%;
   width: 78px;
-  background: #11101d;
+
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+
+  // !sidedrawer background color --p
+  background: #6434f8;
   padding: 6px 14px;
   z-index: 99;
   transition: all 0.5s ease;
@@ -81,7 +86,8 @@
 }
 
 .sidebar i {
-  color: #fff;
+  //! icons color --p
+  color: white;
   height: 60px;
   min-width: 50px;
   font-size: 30px;
@@ -155,7 +161,7 @@
   transform: translateY(-50%);
   font-size: 22px;
   background: #1d1b31;
-  color: #fff;
+  // color: #fff;
 }
 
 .sidebar li a:hover {
@@ -175,7 +181,9 @@
   top: 50%;
   right: 0;
   transform: translateY(-50%);
-  background: #1d1b31;
+  // !footer button bg when sidedrawer  is open color --p
+
+  background: #6434f8;
   width: 100%;
   height: 60px;
   line-height: 60px;
@@ -189,7 +197,8 @@
 
 .home-section {
   position: relative;
-  background: #e4e9f7;
+  // ! background color of dashboard body --p
+  background: #ffffff;
   min-height: 100vh;
   top: 0;
   left: 78px;
@@ -210,16 +219,20 @@
 }
 //? primary menus
 .dashboardLayout__sideMenus {
+  // !sidedrawer menu color --p
   color: white;
   flex-wrap: wrap;
   display: flex;
   align-items: center;
-  padding: 0.6rem 0rem 0.6rem 1rem;
+  padding: 0.1rem 0rem 0.1rem 0rem;
   cursor: pointer;
-  border-radius: 0.5rem;
+  border-left: 0.75rem solid transparent;
+  // border-radius: 0.5rem;
   &:hover {
-    background: #fff;
-    color: black;
+    // ! sidedrawer hover bg white color --p
+    // background: #fff;
+    // color: black;
+    border-left: 0.75rem solid white;
   }
 }
 .sideMenus__icon {
@@ -256,13 +269,18 @@
 
 //? keep logout apppear in bottom right corner
 .sidebar li.profile {
+  // !_______________________HIDE PROFILE Footer hide
+
+  display: none;
   position: fixed;
   height: 60px;
   width: 78px;
   left: 0;
   bottom: -8px;
   padding: 10px 14px;
-  background: #1d1b31;
+  // !footer bg color (when sidedrawer is open & close) + btn color when sidedrawer is open --p
+
+  background: #6434f8;
   overflow: hidden;
   transition: all ease-in-out 300ms;
 }
@@ -285,6 +303,7 @@
   }
   .setupDetails__menuItem:hover {
     cursor: pointer;
+    // ! setup detail's ITEM HOVER BG COLOR --p
     background-color: #1d1b31;
     color: white;
   }
@@ -320,6 +339,7 @@
 // ?sidedrawer SetupDetails Menu
 .setupDetails__mainMenu {
   font-size: 1.8rem;
+  // ! setup detail's menu color --p
   color: white;
   flex-wrap: wrap;
   display: flex;

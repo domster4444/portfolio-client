@@ -6,16 +6,18 @@ import styled from 'styled-components';
 // @ts-ignore
 import DashboardLayout from 'components/DashboardLayout';
 import Image from 'next/image';
-import Bg from 'public/images/pages/profile/bg.jpg';
+// import Bg from 'public/images/pages/profile/bg.jpg';
 import member1 from 'public/images/members/member1.jpg';
 
 const BgContainer = styled.div`
   height: 30rem;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' height='100%25' width='100%25'%3E%3Cdefs%3E%3Cpattern id='doodad' width='131' height='131' viewBox='0 0 40 40' patternUnits='userSpaceOnUse' patternTransform='rotate(154)'%3E%3Crect width='100%25' height='100%25' fill='rgba(226, 233, 250,1)'/%3E%3Cpath d='M-10 19.5h 60v1h-60zM-10-21h60v1h-60' fill='rgba(232, 239, 252,1)'/%3E%3Ccircle r='0.5' cx='0' cy='20' fill='rgba(203, 218, 246,1)'/%3E%3Ccircle r='0.5' cx='40' cy='20' fill='rgba(203, 218, 246,1)'/%3E%3C/pattern%3E%3C/defs%3E%3Crect fill='url(%23doodad)' height='200%25' width='200%25'/%3E%3C/svg%3E ");
+
   width: 100%;
   overflow: hidden;
 `;
 const ProfileFormContainer = styled.div`
-  border: 1px solid black;
+  /* border: 1px solid black; */
   width: 100%;
   position: relative;
 `;
@@ -48,14 +50,10 @@ const RightProfile = styled.section`
   }
 `;
 const LeftFormSection = styled.section`
-  padding: 1rem;
-  border-radius: 0.35rem;
+  padding: 2rem 2rem;
+  border-radius: 0.85rem;
   background: white;
-`;
-const RightFormSection = styled.section`
-  padding: 1rem;
-  border-radius: 0.35rem;
-  background: white;
+  box-shadow: rgb(149 157 165 / 20%) 0px 8px 24px;
 `;
 
 const UserAvatar = styled.section`
@@ -73,7 +71,7 @@ const UserAvatar = styled.section`
     font-size: 1.5rem;
   }
   span {
-    font-size: 1.2rem;
+    font-size: 1.4rem;
   }
 `;
 
@@ -94,15 +92,58 @@ const LeftFormBtn = styled.button`
   padding: 1rem 0rem;
   background: #fff;
   border: 1px solid #000;
-
   font-size: 1.8rem;
   color: #000;
-  border-radius: 0.35rem;
+  border-radius: 0.85rem;
   margin-top: 1rem;
   cursor: pointer;
   &:hover {
     background: #000;
     color: #fff;
+  }
+`;
+
+// ! right form --profile
+const RightFormSection = styled.section`
+  padding: 1rem;
+  border-radius: 0.35rem;
+  background: white;
+
+  box-shadow: rgb(149 157 165 / 20%) 0px 8px 24px;
+  input {
+    box-shadow: rgb(149 157 165 / 20%) 0px 8px 24px;
+    padding-left: 2rem;
+    font-size: 2rem;
+    &::placeholder {
+      font-size: 1.8rem;
+    }
+    /* background: blue; */
+    width: 35rem;
+    margin: 0.25rem;
+    border: none;
+
+    outline: none;
+    border-radius: 1rem;
+
+    height: 5rem;
+  }
+`;
+const FormTitle = styled.h3`
+  font-size: 3rem;
+  padding-left: 2rem;
+`;
+const InputRowContainer = styled.h3`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* background: red; */
+  flex-wrap: wrap;
+
+  input {
+    @media only screen and (min-width: 1200px) {
+      display: none;
+    }
+    width: 32%;
   }
 `;
 
@@ -156,9 +197,7 @@ const Index: React.FC = () => {
     <>
       <DashboardLayout>
         <>
-          <BgContainer>
-            <Image src={Bg} alt="" />
-          </BgContainer>
+          <BgContainer>{/* <Image src={Bg} alt="" /> */}</BgContainer>
           <ProfileFormContainer>
             <ProfileFormSection>
               <LeftProfile>
@@ -171,47 +210,64 @@ const Index: React.FC = () => {
                       alt="user photograph"
                     />
 
-                    <h2>{userName}</h2>
-                    <span>{userEmail}</span>
+                    <h2 className="poppins_regular_400">{userName}</h2>
+                    <span className="poppins_regular_400">{userEmail}</span>
                   </UserAvatar>
                   <br />
                   <StatusTab>
-                    <hr />
-                    <span>Plan : {userPlan.toUpperCase()}</span>
+                    <span className="poppins_regular_400">
+                      Plan : {userPlan.toUpperCase()}
+                    </span>
                   </StatusTab>
                   <StatusTab>
-                    <hr />
-                    <span>Expiry Date</span>
+                    <span className="poppins_regular_400">Expiry Date</span>
                   </StatusTab>
 
                   <StatusTab>
-                    <hr />
-                    <span>Themes Used</span>
+                    <span className="poppins_regular_400">Themes Used</span>
                   </StatusTab>
                   <StatusTab>
-                    <hr />
-                    <span>
+                    <span className="poppins_regular_400">
                       Account Verified :
                       {` ${isEmailVerified.toString().toUpperCase()}`}
                     </span>
                   </StatusTab>
                   <StatusTab>
-                    <hr />
-                    <span>You Logged In Via : {authMethod.toUpperCase()}</span>
+                    <span className="poppins_regular_400">
+                      You Logged In Via : {authMethod.toUpperCase()}
+                    </span>
                   </StatusTab>
 
-                  <LeftFormBtn>View Public Profile</LeftFormBtn>
+                  <LeftFormBtn className="poppins_regular_400">
+                    View Public Profile
+                  </LeftFormBtn>
                 </LeftFormSection>
               </LeftProfile>
 
               <RightProfile>
                 <RightFormSection>
                   <header>
-                    <h1>Account Settings</h1>
+                    <FormTitle>Account Settings</FormTitle>
 
                     <div>
-                      <input type="text" />
-                      <input type="text" />
+                      <InputRowContainer>
+                        <input type="text" placeholder="Full Name" />
+                        <input type="text" placeholder="Email" />
+
+                        <input type="number" placeholder="Phone Number" />
+                      </InputRowContainer>
+                      <InputRowContainer>
+                        <input type="text" placeholder="Full Name" />
+                        <input type="text" placeholder="Email" />
+
+                        <input type="number" placeholder="Phone Number" />
+                      </InputRowContainer>
+                      <InputRowContainer>
+                        <input type="text" placeholder="Full Name" />
+                        <input type="text" placeholder="Email" />
+
+                        <input type="number" placeholder="Phone Number" />
+                      </InputRowContainer>
                     </div>
                   </header>
                 </RightFormSection>
