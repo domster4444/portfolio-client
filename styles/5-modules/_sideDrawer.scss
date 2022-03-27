@@ -28,7 +28,7 @@
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 
   // !sidedrawer background color --p
-  background: #6434f8;
+  background: white;
   padding: 6px 14px;
   z-index: 99;
   transition: all 0.5s ease;
@@ -55,7 +55,7 @@
 }
 
 .sidebar .logo-details .logo_name {
-  color: #fff;
+  color: black;
   // Logo Text Font Size
   font-size: 2.5rem;
   font-weight: 600;
@@ -87,7 +87,7 @@
 
 .sidebar i {
   //! icons color --p
-  color: white;
+  color: #c1c1c1;
   height: 60px;
   min-width: 50px;
   font-size: 30px;
@@ -137,7 +137,7 @@
 
 .sidebar input {
   font-size: 15px;
-  color: #fff;
+  color: black;
   font-weight: 400;
   outline: none;
   height: 50px;
@@ -165,7 +165,7 @@
 }
 
 .sidebar li a:hover {
-  background: #fff;
+  background: #f6faff;
 }
 
 .sidebar li img {
@@ -220,7 +220,7 @@
 //? primary menus
 .dashboardLayout__sideMenus {
   // !sidedrawer menu color --p
-  color: white;
+  color: #b1b1b1;
   flex-wrap: wrap;
   display: flex;
   align-items: center;
@@ -230,11 +230,16 @@
   // border-radius: 0.5rem;
   &:hover {
     // ! sidedrawer hover bg white color --p
-    // background: #fff;
-    // color: black;
+    background: #f6faff;
+    color: black;
     border-left: 0.75rem solid white;
+    i {
+      //! icons color --p
+      color: black !important;
+    }
   }
 }
+
 .sideMenus__icon {
   // distance between sidedrawer's menu's -> icons and text
   margin-right: 0.45rem;
@@ -280,7 +285,7 @@
   padding: 10px 14px;
   // !footer bg color (when sidedrawer is open & close) + btn color when sidedrawer is open --p
 
-  background: #6434f8;
+  background: white;
   overflow: hidden;
   transition: all ease-in-out 300ms;
 }
@@ -298,14 +303,16 @@
 .setupDetails__menuContainer {
   padding: 1rem; // ? setup detail's ITEM RADIUS
   .setupDetails__menuItem {
+    color: #b1b1b1;
     border-radius: 0.25rem;
     padding: 0.75rem 1rem 0.75rem 0.35rem !important;
   }
   .setupDetails__menuItem:hover {
     cursor: pointer;
+
     // ! setup detail's ITEM HOVER BG COLOR --p
-    background-color: #1d1b31;
-    color: white;
+    background-color: #f6faff;
+    color: black;
   }
 }
 
@@ -313,7 +320,7 @@
 .changeColorToBlackOnHover {
   // ?setup detail's WHOLE CONTAINER RADIUS
   border-radius: 0.25rem;
-  color: white;
+  color: #dee2e5;
   // background-color: white;
   // text-align: center;
   // transition: all ease-in-out 350ms;
@@ -340,7 +347,7 @@
 .setupDetails__mainMenu {
   font-size: 1.8rem;
   // ! setup detail's menu color --p
-  color: white;
+  color: #b1b1b1;
   flex-wrap: wrap;
   display: flex;
   align-items: center;
@@ -348,7 +355,11 @@
   cursor: pointer;
   border-radius: 0.5rem;
   &:hover {
-    background: #fff;
+    background: #f6faff;
     color: black;
+    i {
+      //! icons color --p
+      color: black !important;
+    }
   }
 }

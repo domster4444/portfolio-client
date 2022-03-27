@@ -103,11 +103,19 @@ const SideDrawer: React.FC = () => {
               className="poppins_medium_500 poppins_medium_500"
               style={{
                 // marginLeft: '2.35rem',
-                color: 'white',
+                color: 'rgb(25, 25, 112)',
                 // background: 'blue',
               }}
             >
-              Hex
+              {/* Hex */}
+              <img
+                style={{
+                  height: '5rem',
+                  width: '5rem',
+                }}
+                src="http://localhost:3000/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Floga.8ebcda8c.png&w=64&q=75"
+                alt=""
+              />
             </span>
           </div>
           <i className="bx bx-menu" id="btn">

@@ -1,5 +1,6 @@
 import React from 'react';
 // import { setLoggedInUser } from 'reduxSlice/loggedInUserSlice';
+import { Tooltip } from '@nextui-org/react';
 
 import styled from 'styled-components';
 
@@ -18,6 +19,7 @@ const StatusBoxContainer = styled.div`
   }
 `;
 const StatusBox = styled.div`
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -36,16 +38,20 @@ const StatusBox = styled.div`
   }
 
   &.blue {
-    background-color: #eefdfb;
+    color: #c3ae8f;
+    background-color: #fdead3;
   }
   &.green {
-    background-color: #f7f6f9;
+    color: #7e4a76;
+    background-color: #fde5f9;
   }
   &.orange {
-    background-color: #f2e8ff;
+    color: #1f4b52;
+    background-color: #d0f7ff;
   }
   &.lightsky {
-    background-color: #dcedfe;
+    color: #457542;
+    background-color: #e7fde5;
   }
   /* background-color: ${(props: any) => (props.red ? 'red' : 'green')}; */
 `;
@@ -59,32 +65,62 @@ const TwoColFlexRow = styled.div`
 const StatusCardVal = styled.h3`
   font-size: 3.5rem;
 `;
+const StatusCardIcon = styled.div`
+  position: absolute;
+  height: 7rem;
+  width: 7rem;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px,
+    rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+  background-color: rgba(255, 255, 255, 0.5);
+
+  left: 1rem;
+  top: 1rem;
+  border-radius: 50%;
+  opacity: 0.5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  i {
+    font-size: 4rem;
+  }
+`;
 
 const Index: React.FC = () => {
   return (
     <>
       <DbHomeContainer className="dashboard_home ">
         <section className="analytics_overview">
-          <h2 className="dashboard_subtitle poppins_medium_500">
-            Analytics Overview
-          </h2>
           <StatusBoxContainer className="dasboard_box-container">
             <TwoColFlexRow>
               {/* @ts-ignore */}
+
               <StatusBox className=" lightsky poppins_medium_500">
+                <StatusCardIcon>
+                  <i className="bx bx-user bx-flashing bx-flip-horizontal" />
+                </StatusCardIcon>
                 <StatusCardVal>862K</StatusCardVal> Paid Members
               </StatusBox>
               <StatusBox className=" blue poppins_medium_500">
+                <StatusCardIcon>
+                  <i className="bx bx-award bx-flashing bx-flip-horizontal" />
+                </StatusCardIcon>
                 <StatusCardVal>4.5K</StatusCardVal>
                 Paid Members
               </StatusBox>
             </TwoColFlexRow>
             <TwoColFlexRow>
               <StatusBox className=" orange poppins_medium_500">
+                <StatusCardIcon>
+                  <i className="bx bx-windows bx-flashing bx-flip-horizontal" />
+                </StatusCardIcon>
                 <StatusCardVal>1M</StatusCardVal>
                 Clients Members
               </StatusBox>
               <StatusBox className=" green poppins_medium_500">
+                <StatusCardIcon>
+                  <i className="bx bx-hourglass  bx-flashing bx-flip-horizontal" />
+                </StatusCardIcon>
                 <StatusCardVal>33K</StatusCardVal>
                 Active Members
               </StatusBox>

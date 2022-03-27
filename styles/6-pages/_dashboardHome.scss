@@ -1,0 +1,52 @@
+.dashboard_subtitle {
+  font-size: 1.8rem;
+  color: #6b6b6b;
+  font-weight: 500;
+  margin: 18px;
+}
+
+.two_col-container {
+  align-items: center;
+  display: flex;
+  width: 100%;
+  @include media('<=1720px') {
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+  .col {
+    @include media('<=1720px') {
+      width: 100%;
+    }
+    width: 50%;
+  }
+}
+
+.chart-container {
+  // background-color: red;
+  height: 40rem;
+  width: 40rem;
+}
+
+.sales-card_container {
+  width: 100%;
+  padding-right: 4rem;
+}
+
+.two_col-content {
+  display: flex;
+  // justify-content: center;
+  // align-items: center;
+  width: 100%;
+  @include media('<=1000px') {
+    flex-direction: column;
+  }
+  .col {
+    @include media('<=1720px') {
+    }
+    @include media('<=1000px') {
+      width: 100%;
+      flex-direction: column;
+    }
+    width: 50%;
+  }
+}
