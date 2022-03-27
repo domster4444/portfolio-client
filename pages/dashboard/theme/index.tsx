@@ -59,7 +59,7 @@ const allThemes = [
   {
     isPaid: 'not-premium',
     url: `${globalConstant.baseURL}/7`,
-    useUrl: `${globalConstant.baseURL}/dashboard/set/?info=bio,skills`,
+    useUrl: `${globalConstant.baseURL}/dashboard/set/?info=bio,contacts,education,work,skills,projects,achievements,7`,
     name: 'Violet Theme',
     description: 'This is the clean girl theme',
     imageUrl: 'https://i.imgur.com/ARjoptJ.png',

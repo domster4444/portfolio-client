@@ -189,6 +189,19 @@
   line-height: 60px;
   border-radius: 0px;
 }
+.sidebar .profile button {
+  margin: 0rem 1rem;
+  border: none;
+}
+.sidebar .profile:hover {
+  button {
+    border-radius: 0.25rem;
+    background: #f6faff !important;
+    i {
+      color: black !important;
+    }
+  }
+}
 
 .sidebar.open .profile #log_out {
   width: 50px;
@@ -276,7 +289,7 @@
 .sidebar li.profile {
   // !_______________________HIDE PROFILE Footer hide
 
-  display: none;
+  // display: none;
   position: fixed;
   height: 60px;
   width: 78px;

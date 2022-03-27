@@ -187,6 +187,29 @@ const SetPage: React.FC = () => {
             );
           }
         })()}
+        <div
+          style={{
+            display: 'flex',
+            margin: '2rem',
+            fontSize: '1.5rem',
+            justifyContent: 'center',
+          }}
+        >
+          <button
+            style={{
+              backgroundColor: '#658eff',
+              border: '1px solid #f5f5f5',
+              borderRadius: '5px',
+              padding: '0.5rem',
+              fontSize: '2rem',
+              color: 'white',
+              cursor: 'pointer',
+            }}
+          >
+            {' '}
+            Visit My Portfolio
+          </button>
+        </div>
       </>
     </DashboardLayout>
   );
