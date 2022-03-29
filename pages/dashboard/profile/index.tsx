@@ -8,6 +8,7 @@ import DashboardLayout from 'components/DashboardLayout';
 import Image from 'next/image';
 // import Bg from 'public/images/pages/profile/bg.jpg';
 import member1 from 'public/images/members/member1.jpg';
+import Breadcrumbs from 'components/BreadCrumb/index';
 
 const BgContainer = styled.div`
   height: 30rem;
@@ -27,7 +28,7 @@ const ProfileFormSection = styled.div`
   /* border: 5px solid green; */
   width: 100%;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   @media (max-width: 1275px) {
     flex-direction: column;
     align-items: center;
@@ -40,6 +41,9 @@ const LeftProfile = styled.section`
   width: 40rem;
   @media (max-width: 1275px) {
     width: 40rem;
+  }
+  @media (max-width: 500px) {
+    width: 95%;
   }
 `;
 const RightProfile = styled.section`
@@ -105,9 +109,31 @@ const LeftFormBtn = styled.button`
 
 // ! right form --profile
 const RightFormSection = styled.section`
+  button {
+    margin-top: 1rem;
+
+    @media only screen and (max-width: 1200px) {
+      margin-top: 1rem;
+      width: 90% !important;
+    }
+  }
+
   padding: 1rem;
-  border-radius: 0.35rem;
+  border-radius: 0.85rem;
   background: white;
+  min-height: 46rem;
+  display: flex;
+  align-items: center;
+  position: relative;
+
+  section.form {
+    width: 100%;
+    button {
+      transform: translateX(-50%);
+      margin-left: 50%;
+      width: 98%;
+    }
+  }
 
   box-shadow: rgb(149 157 165 / 20%) 0px 8px 24px;
   input {
@@ -128,9 +154,45 @@ const RightFormSection = styled.section`
     height: 5rem;
   }
 `;
+
+const RightFormBlog = styled.div`
+  height: 6.5rem;
+  width: 6.5rem;
+  border-radius: 50%;
+  position: absolute;
+  box-shadow: rgb(0 0 0 / 5%) 0px 6px 24px 0px, rgb(0 0 0 / 8%) 0px 0px 0px 1px;
+  background-color: rgba(255, 255, 255, 0.5);
+  top: 2rem;
+  left: 3rem;
+  @media only screen and (max-width: 1200px) {
+    top: 3rem;
+    left: 5.5rem;
+  }
+
+  display: flex;
+  justify-content: center;
+
+  align-items: center;
+
+  i {
+    font-size: 4rem;
+    color: #c1c1c1;
+  }
+`;
 const FormTitle = styled.h3`
   font-size: 3rem;
   padding-left: 2rem;
+
+  /*  when row becomes colument */
+
+  @media only screen and (max-width: 1200px) {
+    margin-top: 10rem;
+    /* background: red; */
+
+    transform: translateX(-50%);
+    margin-left: 50%;
+    width: 95%;
+  }
 `;
 const InputRowContainer = styled.h3`
   display: flex;
@@ -140,10 +202,14 @@ const InputRowContainer = styled.h3`
   flex-wrap: wrap;
 
   input {
-    @media only screen and (min-width: 1200px) {
-      display: none;
-    }
     width: 32%;
+
+    /*  when row becomes colument */
+
+    @media only screen and (max-width: 1200px) {
+      width: 90%;
+      margin-top: 2rem;
+    }
   }
 `;
 
@@ -197,7 +263,11 @@ const Index: React.FC = () => {
     <>
       <DashboardLayout>
         <>
-          <BgContainer>{/* <Image src={Bg} alt="" /> */}</BgContainer>
+          <BgContainer>
+            <Breadcrumbs breadCrumbLink={['home', 'service', 'profile']} />
+
+            {/* <Image src={Bg} alt="" /> */}
+          </BgContainer>
           <ProfileFormContainer>
             <ProfileFormSection>
               <LeftProfile>
@@ -246,30 +316,40 @@ const Index: React.FC = () => {
 
               <RightProfile>
                 <RightFormSection>
-                  <header>
-                    <FormTitle>Account Settings</FormTitle>
+                  <RightFormBlog>
+                    <i className="bx bx-user bx-flashing bx-flip-horizontal" />
+                  </RightFormBlog>
+                  <section className="form">
+                    <header>
+                      <FormTitle className="poppins_medium_500">
+                        Account Settings
+                      </FormTitle>
 
-                    <div>
-                      <InputRowContainer>
-                        <input type="text" placeholder="Full Name" />
-                        <input type="text" placeholder="Email" />
+                      <div>
+                        <InputRowContainer>
+                          <input type="text" placeholder="First name" />
+                          <input type="text" placeholder="Middle name" />
 
-                        <input type="number" placeholder="Phone Number" />
-                      </InputRowContainer>
-                      <InputRowContainer>
-                        <input type="text" placeholder="Full Name" />
-                        <input type="text" placeholder="Email" />
+                          <input type="number" placeholder="Last name" />
+                        </InputRowContainer>
+                        <InputRowContainer>
+                          <input type="text" placeholder="Organization Name " />
 
-                        <input type="number" placeholder="Phone Number" />
-                      </InputRowContainer>
-                      <InputRowContainer>
-                        <input type="text" placeholder="Full Name" />
-                        <input type="text" placeholder="Email" />
+                          <input type="number" placeholder="Phone Number" />
+                          <input type="number" placeholder="Age" />
+                        </InputRowContainer>
+                        <InputRowContainer>
+                          <input type="text" placeholder="Country" />
+                          <input type="text" placeholder="City" />
+                          <input type="number" placeholder="Telephone" />
+                        </InputRowContainer>
+                      </div>
+                    </header>
 
-                        <input type="number" placeholder="Phone Number" />
-                      </InputRowContainer>
-                    </div>
-                  </header>
+                    <button className="primary-btn poppins_medium_500">
+                      Upload
+                    </button>
+                  </section>
                 </RightFormSection>
               </RightProfile>
             </ProfileFormSection>
