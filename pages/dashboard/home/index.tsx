@@ -5,6 +5,7 @@ import styled from 'styled-components';
 import StatusCardContainer from 'components/dashboard/StatusCardContainer';
 import Tablee from 'components/dashboard/Table/Table';
 import { DynamicDoughnut } from 'components/Chart/Doughnut/Doughnut';
+import { HorizontalLineChart } from 'components/Chart/HorizontalLineChart/HorizontalLineChart';
 // import { height } from '@mui/system';
 
 const StatusBox = styled.div`
@@ -81,7 +82,7 @@ const Input: React.FC = () => {
                 <DynamicDoughnut />
               </div>
               <div className="chart-container">
-                <DynamicDoughnut />
+                <HorizontalLineChart />
               </div>
             </div>
           </div>
