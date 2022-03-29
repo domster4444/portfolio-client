@@ -7,6 +7,7 @@ import { Text, Textarea, Button, Spacer, Card } from '@nextui-org/react';
 import styled from 'styled-components';
 import ChatBox from 'components/ChatBox';
 import { useUser } from '@auth0/nextjs-auth0';
+import Breadcrumbs from 'components/BreadCrumb/index';
 
 const SupportCard = styled.div`
   display: flex;
@@ -78,6 +79,8 @@ const Index: NextPage = () => {
     <>
       <DashboardLayout>
         <>
+          <Breadcrumbs breadCrumbLink={['dashboard', 'FAQ']} />
+          <header className="text">Supports</header>
           <SupportCard>
             <FormCard>
               <form onSubmit={handleSubmit}>

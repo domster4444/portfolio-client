@@ -8,6 +8,7 @@ import DashboardLayout from 'components/DashboardLayout';
 import { NextPage } from 'next';
 import { globalConstant } from 'constant/constant';
 import { Input, Button } from '@nextui-org/react';
+import Breadcrumbs from 'components/BreadCrumb/index';
 
 const allThemes = [
   // *first
@@ -116,6 +117,8 @@ const Index: NextPage = () => {
         <>
           <div>
             <ScrollToTop smooth />
+            <Breadcrumbs breadCrumbLink={['dashboard', 'FAQ']} />
+
             <header className="text">Themes</header>
             <div className={ThemeStyles.input_container}>
               {/* <h1>{filter}</h1> */}

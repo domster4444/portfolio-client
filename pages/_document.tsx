@@ -9,7 +9,7 @@ import Document, {
   DocumentInitialProps,
 } from 'next/document';
 // ! Enable Google Analytics from _document,_app & /lib/gtag.js
-// import { GA_TRACKING_ID } from 'lib/gtag';
+import { GA_TRACKING_ID } from 'lib/gtag';
 
 class MyDocument extends Document {
   static async getInitialProps(
@@ -44,7 +44,7 @@ class MyDocument extends Document {
 
         {/* google analytics */}
         <link rel="manifest" href="/manifest.json" />
-        {/* <script
+        <script
           async
           src={`https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`}
         ></script>
@@ -59,7 +59,7 @@ class MyDocument extends Document {
             });
             `,
           }}
-        ></script> */}
+        ></script>
 
         {/* google font poppins */}
 

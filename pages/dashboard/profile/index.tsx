@@ -264,7 +264,8 @@ const Index: React.FC = () => {
       <DashboardLayout>
         <>
           <BgContainer>
-            <Breadcrumbs breadCrumbLink={['home', 'service', 'profile']} />
+            <Breadcrumbs breadCrumbLink={['dashboard', 'profile']} />
+            <header className="text">Profile</header>
 
             {/* <Image src={Bg} alt="" /> */}
           </BgContainer>
