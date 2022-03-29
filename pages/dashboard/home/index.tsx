@@ -65,7 +65,7 @@ const Input: React.FC = () => {
               <Tablee />
             </div>
             <div className="col two_col-content">
-              <div className="sales-card_container">
+              {/* <div className="sales-card_container">
                 <StatusBox className="sales-card">
                   <img
                     src="https://cdn.dribbble.com/users/1568450/screenshots/5419750/work_1_dribbble-01_4x.png"
@@ -75,8 +75,11 @@ const Input: React.FC = () => {
                     Try PRO For Free
                   </SalesCardBtn>
                 </StatusBox>
-              </div>
+              </div> */}
 
+              <div className="chart-container">
+                <DynamicDoughnut />
+              </div>
               <div className="chart-container">
                 <DynamicDoughnut />
               </div>

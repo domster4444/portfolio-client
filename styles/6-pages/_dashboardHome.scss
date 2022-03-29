@@ -9,9 +9,11 @@
   align-items: center;
   display: flex;
   width: 100%;
-  @include media('<=1720px') {
+  // background-color: blue;
+  //? row 2nd  of dashboard
+  @include media('<=1155px') {
     flex-wrap: wrap;
-    flex-direction: column;
+    flex-direction: column-reverse;
   }
   .col {
     @include media('<=1720px') {
@@ -25,6 +27,9 @@
   // background-color: red;
   height: 40rem;
   width: 40rem;
+  @include media('<=500px') {
+    width: 80%;
+  }
 }
 
 .sales-card_container {
@@ -33,9 +38,13 @@
 }
 
 .two_col-content {
+  // ?chart container div row
   display: flex;
-  // justify-content: center;
-  // align-items: center;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  // background-color: red;
+
   width: 100%;
   @include media('<=1000px') {
     flex-direction: column;
