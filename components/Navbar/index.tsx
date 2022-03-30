@@ -12,6 +12,11 @@ import Image from 'next/image';
 
 import { Nav, Menu } from './style';
 import Dropdown from 'components/DropDown';
+import styled from 'styled-components';
+const LogoList = styled.li`
+  /* background: red; */
+  cursor: pointer;
+`;
 
 const Navbar = (props: PropsTypes): JSX.Element => {
   const { logo, isLoggedIn, menus } = props;
@@ -19,15 +24,23 @@ const Navbar = (props: PropsTypes): JSX.Element => {
   return (
     <Nav>
       <ul>
-        <li className="Nav__leftDivision">
-          <Image
-            height={60}
-            width={60}
-            // @ts-ignore
-            src={logo !== '' ? logo : LogoImg}
-            alt="logo"
-          />
-        </li>
+        <Link passHref href="/home">
+          <LogoList
+            className="Nav__leftDivision"
+            // style={{
+            // background: 'red',
+            // }}
+          >
+            <Image
+              height={60}
+              width={60}
+              // @ts-ignore
+              src={logo !== '' ? logo : LogoImg}
+              alt="logo"
+            />
+          </LogoList>
+        </Link>
+
         <li className="Nav__rightDivision poppins_regular_400">
           {menus.map((menuItem: string, index: number) => (
             <div id="nav__menus" key={index}>

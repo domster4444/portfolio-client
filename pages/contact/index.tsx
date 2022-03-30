@@ -155,7 +155,7 @@ const ContactPage: NextPage = () => {
                 Interested in any of our products ? talk to our experts today.{' '}
                 <br />
                 <b>US : </b>+1 (800) 888-8888 | <b>Nepal : </b>
-                9816008145
+                +977 9749211234
                 <br />
               </p>
               <a href="tel:+9779749211234">
