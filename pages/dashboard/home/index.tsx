@@ -57,6 +57,7 @@ const Input: React.FC = () => {
           <h2 className="dashboard_subtitle poppins_medium_500">
             Analytics Overview
           </h2>
+
           <StatusCardContainer />
           <h2 className="dashboard_subtitle poppins_medium_500">
             Member Distributon
