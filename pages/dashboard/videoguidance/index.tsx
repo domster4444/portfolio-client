@@ -3,6 +3,7 @@ import React from 'react';
 import DashboardLayout from 'components/DashboardLayout';
 import FullWidthVideo from 'components/FullWidthVideo';
 import Breadcrumbs from 'components/BreadCrumb/index';
+import Accordion from 'components/Accordion/index';
 
 const index = () => {
   return (
@@ -13,6 +14,10 @@ const index = () => {
 
           <header className="text">FAQ & Video Guidance</header>
           <FullWidthVideo />
+
+          <header className="text">Frequently Asked Questions</header>
+
+          <Accordion />
         </>
       </DashboardLayout>
     </>

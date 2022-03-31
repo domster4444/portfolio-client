@@ -44,16 +44,41 @@ const ChatField = styled.input`
     margin-top: 1rem;
     width: 100%;
   }
+
+  &:focus {
+    border: 1px solid #440ccc;
+  }
+
+  background: rgb(249, 249, 249);
+  outline: none;
+  border: 1px solid #ccc;
+  border-radius: 0.25rem;
+  padding: 0.25rem;
 `;
 
-const SendMessage = styled.button`
+const PrimaryBtn = styled.button`
   width: 15%;
-  font-size: 2rem;
+  background: #440ccc;
+  color: white;
+
+  border-top-right-radius: 0.75rem;
+  border-bottom-right-radus: 0.75rem;
+
+  border: none;
+  outline: none;
+  font-size: 2.5rem;
+  /* height: 1; */
+  cursor: pointer;
+  &:hover {
+    background: #3606a7;
+  }
+
   @media (max-width: 960px) {
     margin-top: 1rem;
     width: 100%;
   }
 `;
+
 const SendSection = styled.div`
   @media (max-width: 960px) {
     flex-direction: column;
@@ -178,7 +203,16 @@ const ChatBox = () => {
         JOIN
       </button> */}
       <header>
-        <h1 className="poppins_medium_500">Global Chat Box</h1>
+        <h2
+          className="dashboard_subtitle poppins_medium_500"
+          style={{
+            display: 'flex',
+            justifyContent: 'center',
+            alignItems: 'center',
+          }}
+        >
+          Chat globally with other global members
+        </h2>
       </header>
       <ChatBoxContent>
         <ScrollableFeed>
@@ -223,7 +257,9 @@ const ChatBox = () => {
           }}
           value={messageToSend}
         />
-        <SendMessage onClick={sendMessage}>send</SendMessage>
+        <PrimaryBtn className="poppins_regular_400" onClick={sendMessage}>
+          send
+        </PrimaryBtn>
       </SendSection>
     </Chat>
   );

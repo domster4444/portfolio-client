@@ -6,9 +6,103 @@ import { toast } from 'react-toastify';
 const index = () => {
   return (
     <span className="dropDownContainer">
-      <NavItem>
-        <DropdownMenu></DropdownMenu>
-      </NavItem>
+      <span className="dropDownI">
+        <span className="wrapper">
+          <span className="jumbotron">
+            {/* <!-- Dropdown --> */}
+            <label className="drop">
+              <input type="checkbox" id="target-drop-example" />
+              {/* <!-- Toggle Drop --> */}
+
+              <NavItem />
+
+              {/* <!-- Fake button --> */}
+
+              {/* <!-- Items --> */}
+              <ul className="drop-items">
+                <Link passHref href="/api/auth/login">
+                  <li className="item-drop">
+                    <a
+                      target="_blank"
+                      href="https://codepen.io/robsonklein23"
+                      rel="noreferrer"
+                    >
+                      Login or Register
+                    </a>
+                  </li>
+                </Link>
+
+                <Link passHref href="/home">
+                  <li className="item-drop">
+                    <a
+                      target="_blank"
+                      rel="noreferrer"
+                      href="https://www.behance.net/robsonklein"
+                    >
+                      Home
+                    </a>
+                  </li>
+                </Link>
+                <Link passHref href="/about">
+                  <li className="item-drop">
+                    <a
+                      target="_blank"
+                      rel="noreferrer"
+                      href="https://www.linkedin.com/in/robsonklein/"
+                    >
+                      About
+                    </a>
+                  </li>
+                </Link>
+                <Link passHref href="/contact">
+                  <li className="item-drop">
+                    <a
+                      target="_blank"
+                      rel="noreferrer"
+                      href="https://www.linkedin.com/in/robsonklein/"
+                    >
+                      Contact Us
+                    </a>
+                  </li>
+                </Link>
+                <Link passHref href="/pricing">
+                  <li className="item-drop">
+                    <a
+                      target="_blank"
+                      rel="noreferrer"
+                      href="https://www.linkedin.com/in/robsonklein/"
+                    >
+                      Pricing
+                    </a>
+                  </li>
+                </Link>
+
+                <Link passHref href="/blog">
+                  <li className="item-drop">
+                    <a
+                      target="_blank"
+                      rel="noreferrer"
+                      href="https://www.linkedin.com/in/robsonklein/"
+                    >
+                      Blog
+                    </a>
+                  </li>
+                </Link>
+              </ul>
+
+              {/* <!-- Alternative to close dropdown with click out --> */}
+              <label
+                htmlFor="target-drop-example"
+                className="overlay-close"
+              ></label>
+            </label>
+            {/* <!-- END -- Dropdown --> */}
+          </span>
+        </span>
+      </span>
+
+      {/* <DropdownMenu></DropdownMenu> */}
+      {/* </NavItem> */}
     </span>
   );
 };

@@ -203,6 +203,9 @@ const InputRowContainer = styled.h3`
 
   input {
     width: 32%;
+    &:focus {
+      border: 1px solid #440ccc;
+    }
 
     /*  when row becomes colument */
 

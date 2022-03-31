@@ -9,6 +9,28 @@ import ChatBox from 'components/ChatBox';
 import { useUser } from '@auth0/nextjs-auth0';
 import Breadcrumbs from 'components/BreadCrumb/index';
 
+// btns
+
+const PrimaryBtn = styled.button`
+  width: 15%;
+  background: #440ccc;
+  color: white;
+  border-radius: 0.75rem;
+  border: none;
+  outline: none;
+  font-size: 2.5rem;
+  height: 4rem !important;
+  cursor: pointer;
+  &:hover {
+    background: #3606a7;
+  }
+
+  @media (max-width: 960px) {
+    margin-top: 1rem;
+    width: 100%;
+  }
+`;
+
 const SupportCard = styled.div`
   display: flex;
   background: transparent;
@@ -17,7 +39,7 @@ const SupportCard = styled.div`
 const FormCard = styled.div`
   margin-top: 1rem;
   font-size: 1.8rem;
-  width: 70%;
+  width: 90%;
   background: white;
   border-radius: 0.25rem;
   box-shadow: rgb(149 157 165 / 20%) 0px 8px 24px;
@@ -80,9 +102,21 @@ const Index: NextPage = () => {
       <DashboardLayout>
         <>
           <Breadcrumbs breadCrumbLink={['dashboard', 'FAQ']} />
+
           <header className="text">Supports</header>
+
           <SupportCard>
             <FormCard>
+              <h2
+                className="dashboard_subtitle poppins_medium_500"
+                style={{
+                  display: 'flex',
+                  justifyContent: 'center',
+                  alignItems: 'center',
+                }}
+              >
+                Send your query to us directly
+              </h2>
               <form onSubmit={handleSubmit}>
                 <Spacer y={1} />
                 <label htmlFor="email">
@@ -124,15 +158,16 @@ const Index: NextPage = () => {
                 />
                 <br />
 
-                <Button
-                  size="xl"
+                {/* button to be removed */}
+
+                <PrimaryBtn
+                  className="poppins_regular_400"
                   type="submit"
                   style={SubmitBtn}
                   disabled={state.submitting}
-                  color="gradient"
                 >
-                  SUBMIT
-                </Button>
+                  send
+                </PrimaryBtn>
               </form>
             </FormCard>
           </SupportCard>

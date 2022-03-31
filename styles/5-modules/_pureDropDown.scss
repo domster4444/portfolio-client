@@ -98,7 +98,7 @@
       position: absolute;
       top: calc(100% + 0.4rem);
       right: 0;
-      width: 18rem;
+      width: 22rem;
       padding: 2rem 1rem !important;
       margin: 0;
       transition: all 0.3s ease;
@@ -111,6 +111,7 @@
       z-index: 99;
 
       .item-drop {
+        width: 100%;
         display: flex;
         justify-content: center;
         list-style: none;

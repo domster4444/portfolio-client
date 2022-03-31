@@ -5,7 +5,7 @@ import { Grid, Collapse, Text, css } from '@nextui-org/react';
 import { Fade } from 'react-reveal';
 import styled from 'styled-components';
 const AccordionSection = styled.section`
-  margin: 2rem 0rem;
+  /* margin: 2rem 0rem; */
 `;
 const index: React.FC = () => {
   return (
