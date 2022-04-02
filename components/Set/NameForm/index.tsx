@@ -115,6 +115,7 @@ const Index = ({ nextPreBtn }: { nextPreBtn: boolean }) => {
               <Input
                 value={userName}
                 type="text"
+                id="bioUserName"
                 onChange={(e) => {
                   setUserName(e.target.value);
                 }}

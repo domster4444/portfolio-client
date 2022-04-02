@@ -11,11 +11,20 @@ import { Input, Button } from '@nextui-org/react';
 import Breadcrumbs from 'components/BreadCrumb/index';
 
 const allThemes = [
+  // *seventh
+  {
+    isPaid: 'not-premium',
+    url: `${globalConstant.baseURL}/7`,
+    useUrl: `${globalConstant.baseURL}/dashboard/set/?info=bio,contacts,education,work,skills,projects,achievements,7`,
+    name: 'Violet Theme',
+    description: 'This is the clean girl theme',
+    imageUrl: 'https://i.imgur.com/ARjoptJ.png',
+  },
   // *first
   {
     isPaid: 'full-premium',
     url: `${globalConstant.baseURL}/1`,
-    useUrl: `${globalConstant.baseURL}/dashboard/set/?info=bio,contacts,education,work,skills,projects,achievements`,
+    useUrl: `${globalConstant.baseURL}/dashboard/set/?info=bio,contacts,education,work,skills,projects,achievements,1`,
     name: 'Tarzan Theme',
     description: 'This is the first theme',
     imageUrl: 'https://i.imgur.com/uMQLC1d_d.webp?maxwidth=760&fidelity=grand',
@@ -56,15 +65,7 @@ const allThemes = [
     description: 'This is the clean girl theme',
     imageUrl: 'https://i.imgur.com/yzoKUuj.png',
   },
-  // *seventh
-  {
-    isPaid: 'not-premium',
-    url: `${globalConstant.baseURL}/7`,
-    useUrl: `${globalConstant.baseURL}/dashboard/set/?info=bio,contacts,education,work,skills,projects,achievements,7`,
-    name: 'Violet Theme',
-    description: 'This is the clean girl theme',
-    imageUrl: 'https://i.imgur.com/ARjoptJ.png',
-  },
+
   // *eighth
   {
     isPaid: 'not-premium',

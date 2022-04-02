@@ -25,6 +25,8 @@ import BioForm from 'components/Set/BioForm';
 import DashboardLayout from 'components/DashboardLayout';
 import { toast } from 'react-toastify';
 const SetPage: React.FC = () => {
+  const [VisitBtnUrl, setVisitBtnUrl] = useState('');
+
   //  bio update submit handler
   const submitHandler = (event: React.FormEvent<HTMLFormElement>): void => {
     event.preventDefault();
@@ -44,8 +46,31 @@ const SetPage: React.FC = () => {
 
   console.log(string);
 
-  // const requiredFieldArr = string.split(',');
+  useEffect((): void => {
+    setTimeout(() => {
+      // get theme user selected
+      const windowUrlString = window.location.href;
 
+      // @ts-ignore
+      const requiredFieldArr = windowUrlString.split(',');
+      const userSelectedTheme = requiredFieldArr.at(-1);
+      // const themeNo = requiredFieldArr[7];
+      // ? get user name
+      const bioUserEle = document.getElementById(
+        'bioUserName'
+      ) as HTMLInputElement;
+      if (bioUserEle) {
+        // @ts-ignore
+        const bioUserNameVal = bioUserEle.value;
+        setVisitBtnUrl(`/${userSelectedTheme}/${bioUserNameVal}`);
+      }
+    }, 2000);
+  });
+
+  const getUserName = () => {
+    // log value of input with bioUserName id
+    // @ts-ignore
+  };
   return (
     <DashboardLayout>
       <>
@@ -195,7 +220,9 @@ const SetPage: React.FC = () => {
             justifyContent: 'center',
           }}
         >
-          <button
+          <a
+            type="button"
+            href={VisitBtnUrl}
             style={{
               backgroundColor: '#658eff',
               border: '1px solid #f5f5f5',
@@ -205,10 +232,11 @@ const SetPage: React.FC = () => {
               color: 'white',
               cursor: 'pointer',
             }}
+            onClick={getUserName}
           >
             {' '}
             Visit My Portfolio
-          </button>
+          </a>
         </div>
       </>
     </DashboardLayout>
