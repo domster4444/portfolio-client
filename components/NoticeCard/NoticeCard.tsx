@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 import React, { useEffect } from 'react';
 import { Button, Modal, useModal } from '@nextui-org/react';
 import NoticeCardStyles from './NoticeCard.module.scss';
@@ -50,190 +51,80 @@ const NoticeCard = ({
         </Modal.Header>
         <Modal.Body>
           <p className={NoticeCardStyles.modal__description}>
-            Cras mattis consectetur purus sit amet fermentum. Cras justo odio,
-            dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta
-            ac consectetur ac, vestibulum at eros. Praesent commodo cursus
-            magna, vel scelerisque nisl consectetur et. Cras mattis consectetur
-            purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in,
-            egestas eget quam. Morbi leo risus, porta ac consectetur ac,
-            vestibulum at eros. Praesent commodo cursus magna, vel scelerisque
-            nisl consectetur et. Cras mattis consectetur purus sit amet
-            fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget
-            quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
-            Praesent commodo cursus magna, vel scelerisque nisl consectetur et.
-            Cras mattis consectetur purus sit amet fermentum. Cras justo odio,
-            dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta
-            ac consectetur ac, vestibulum at eros. Praesent commodo cursus
-            magna, vel scelerisque nisl consectetur et. Cras mattis consectetur
-            purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in,
-            egestas eget quam. Morbi leo risus, porta ac consectetur ac,
-            vestibulum at eros. Praesent commodo cursus magna, vel scelerisque
-            nisl consectetur et. Cras mattis consectetur purus sit amet
-            fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget
-            quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
-            Praesent commodo cursus magna, vel scelerisque nisl consectetur et.
-            Cras mattis consectetur purus sit amet fermentum. Cras justo odio,
-            dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta
-            ac consectetur ac, vestibulum at eros. Praesent commodo cursus
-            magna, vel scelerisque nisl consectetur et. Cras mattis consectetur
-            purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in,
-            egestas eget quam. Morbi leo risus, porta ac consectetur ac,
-            vestibulum at eros. Praesent commodo cursus magna, vel scelerisque
-            nisl consectetur et. Cras mattis consectetur purus sit amet
-            fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget
-            quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
-            Praesent commodo cursus magna, vel scelerisque nisl consectetur et.
-            Cras mattis consectetur purus sit amet fermentum. Cras justo odio,
-            dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta
-            ac consectetur ac, vestibulum at eros. Praesent commodo cursus
-            magna, vel scelerisque nisl consectetur et. Cras mattis consectetur
-            purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in,
-            egestas eget quam. Morbi leo risus, porta ac consectetur ac,
-            vestibulum at eros. Praesent commodo cursus magna, vel scelerisque
-            nisl consectetur et. Cras mattis consectetur purus sit amet
-            fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget
-            quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
-            Praesent commodo cursus magna, vel scelerisque nisl consectetur et.
-            Cras mattis consectetur purus sit amet fermentum. Cras justo odio,
-            dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta
-            ac consectetur ac, vestibulum at eros. Praesent commodo cursus
-            magna, vel scelerisque nisl consectetur et. Cras mattis consectetur
-            purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in,
-            egestas eget quam. Morbi leo risus, porta ac consectetur ac,
-            vestibulum at eros. Praesent commodo cursus magna, vel scelerisque
-            nisl consectetur et. Cras mattis consectetur purus sit amet
-            fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget
-            quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
-            Praesent commodo cursus magna, vel scelerisque nisl consectetur et.
-            Cras mattis consectetur purus sit amet fermentum. Cras justo odio,
-            dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta
-            ac consectetur ac, vestibulum at eros. Praesent commodo cursus
-            magna, vel scelerisque nisl consectetur et. Cras mattis consectetur
-            purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in,
-            egestas eget quam. Morbi leo risus, porta ac consectetur ac,
-            vestibulum at eros. Praesent commodo cursus magna, vel scelerisque
-            nisl consectetur et. Cras mattis consectetur purus sit amet
-            fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget
-            quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
-            Praesent commodo cursus magna, vel scelerisque nisl consectetur et.
-            Cras mattis consectetur purus sit amet fermentum. Cras justo odio,
-            dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta
-            ac consectetur ac, vestibulum at eros. Praesent commodo cursus
-            magna, vel scelerisque nisl consectetur et. Cras mattis consectetur
-            purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in,
-            egestas eget quam. Morbi leo risus, porta ac consectetur ac,
-            vestibulum at eros. Praesent commodo cursus magna, vel scelerisque
-            nisl consectetur et. Cras mattis consectetur purus sit amet
-            fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget
-            quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
-            Praesent commodo cursus magna, vel scelerisque nisl consectetur et.
-            Cras mattis consectetur purus sit amet fermentum. Cras justo odio,
-            dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta
-            ac consectetur ac, vestibulum at eros. Praesent commodo cursus
-            magna, vel scelerisque nisl consectetur et. Cras mattis consectetur
-            purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in,
-            egestas eget quam. Morbi leo risus, porta ac consectetur ac,
-            vestibulum at eros. Praesent commodo cursus magna, vel scelerisque
-            nisl consectetur et. Cras mattis consectetur purus sit amet
-            fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget
-            quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
-            Praesent commodo cursus magna, vel scelerisque nisl consectetur et.
-            Cras mattis consectetur purus sit amet fermentum. Cras justo odio,
-            dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta
-            ac consectetur ac, vestibulum at eros. Praesent commodo cursus
-            magna, vel scelerisque nisl consectetur et. Cras mattis consectetur
-            purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in,
-            egestas eget quam. Morbi leo risus, porta ac consectetur ac,
-            vestibulum at eros. Praesent commodo cursus magna, vel scelerisque
-            nisl consectetur et. Cras mattis consectetur purus sit amet
-            fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget
-            quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
-            Praesent commodo cursus magna, vel scelerisque nisl consectetur et.
-            Cras mattis consectetur purus sit amet fermentum. Cras justo odio,
-            dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta
-            ac consectetur ac, vestibulum at eros. Praesent commodo cursus
-            magna, vel scelerisque nisl consectetur et. Cras mattis consectetur
-            purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in,
-            egestas eget quam. Morbi leo risus, porta ac consectetur ac,
-            vestibulum at eros. Praesent commodo cursus magna, vel scelerisque
-            nisl consectetur et. Cras mattis consectetur purus sit amet
-            fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget
-            quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
-            Praesent commodo cursus magna, vel scelerisque nisl consectetur et.
-            Cras mattis consectetur purus sit amet fermentum. Cras justo odio,
-            dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta
-            ac consectetur ac, vestibulum at eros. Praesent commodo cursus
-            magna, vel scelerisque nisl consectetur et. Cras mattis consectetur
-            purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in,
-            egestas eget quam. Morbi leo risus, porta ac consectetur ac,
-            vestibulum at eros. Praesent commodo cursus magna, vel scelerisque
-            nisl consectetur et. Cras mattis consectetur purus sit amet
-            fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget
-            quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
-            Praesent commodo cursus magna, vel scelerisque nisl consectetur et.
-            Cras mattis consectetur purus sit amet fermentum. Cras justo odio,
-            dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta
-            ac consectetur ac, vestibulum at eros. Praesent commodo cursus
-            magna, vel scelerisque nisl consectetur et. Cras mattis consectetur
-            purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in,
-            egestas eget quam. Morbi leo risus, porta ac consectetur ac,
-            vestibulum at eros. Praesent commodo cursus magna, vel scelerisque
-            nisl consectetur et. Cras mattis consectetur purus sit amet
-            fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget
-            quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
-            Praesent commodo cursus magna, vel scelerisque nisl consectetur et.
-            Cras mattis consectetur purus sit amet fermentum. Cras justo odio,
-            dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta
-            ac consectetur ac, vestibulum at eros. Praesent commodo cursus
-            magna, vel scelerisque nisl consectetur et. Cras mattis consectetur
-            purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in,
-            egestas eget quam. Morbi leo risus, porta ac consectetur ac,
-            vestibulum at eros. Praesent commodo cursus magna, vel scelerisque
-            nisl consectetur et. Cras mattis consectetur purus sit amet
-            fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget
-            quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
-            Praesent commodo cursus magna, vel scelerisque nisl consectetur et.
-            Cras mattis consectetur purus sit amet fermentum. Cras justo odio,
-            dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta
-            ac consectetur ac, vestibulum at eros. Praesent commodo cursus
-            magna, vel scelerisque nisl consectetur et. Cras mattis consectetur
-            purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in,
-            egestas eget quam. Morbi leo risus, porta ac consectetur ac,
-            vestibulum at eros. Praesent commodo cursus magna, vel scelerisque
-            nisl consectetur et. Cras mattis consectetur purus sit amet
-            fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget
-            quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
-            Praesent commodo cursus magna, vel scelerisque nisl consectetur et.
-            Cras mattis consectetur purus sit amet fermentum. Cras justo odio,
-            dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta
-            ac consectetur ac, vestibulum at eros. Praesent commodo cursus
-            magna, vel scelerisque nisl consectetur et. Cras mattis consectetur
-            purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in,
-            egestas eget quam. Morbi leo risus, porta ac consectetur ac,
-            vestibulum at eros. Praesent commodo cursus magna, vel scelerisque
-            nisl consectetur et. Cras mattis consectetur purus sit amet
-            fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget
-            quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
-            Praesent commodo cursus magna, vel scelerisque nisl consectetur et.
-            Cras mattis consectetur purus sit amet fermentum. Cras justo odio,
-            dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta
-            ac consectetur ac, vestibulum at eros. Praesent commodo cursus
-            magna, vel scelerisque nisl consectetur et. Cras mattis consectetur
-            purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in,
-            egestas eget quam. Morbi leo risus, porta ac consectetur ac,
-            vestibulum at eros. Praesent commodo cursus magna, vel scelerisque
-            nisl consectetur et. Cras mattis consectetur purus sit amet
-            fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget
-            quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
-            Praesent commodo cursus magna, vel scelerisque nisl consectetur et.
-            Cras mattis consectetur purus sit amet fermentum. Cras justo odio,
-            dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta
-            ac consectetur ac, vestibulum at eros. Praesent commodo cursus
-            magna, vel scelerisque nisl consectetur et. Cras mattis consectetur
-            purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in,
-            egestas eget quam. Morbi leo risus, porta ac consectetur ac,
-            vestibulum at eros. Praesent commodo cursus magna, vel scelerisque
-            nisl consectetur et.
+            Please read the Terms and Conditions carefully before using
+            Hexgrade.com. This electronic record is generated by a computer
+            system and does not require any physical or digital signatures.
+            Introductions Welcome to hexgrade.com. Hexgrade is a portfolio
+            management service for your professional career and these are the
+            terms and conditions governing your access and use of Hexgrade along
+            with its related sub-domains, sites, mobile app, services and tools
+            (the "Site"). By using the Site, you hereby accept these terms and
+            conditions (including the linked information herein) and represent
+            that you agree to comply with these terms and conditions (the "User
+            Agreement"). This User Agreement is deemed effective upon your use
+            of the Site which signifies your acceptance of these terms. If you
+            do not agree to be bound by this User Agreement please do not
+            access, register with or use this Site. Conditions of use Your
+            Account To access certain services offered by the platform, we may
+            require that you create an account with us or provide personal
+            information to complete the creation of an account. We may at any
+            time in our sole and absolute discretion, invalidate the username
+            and/or password without giving any reason or prior notice and shall
+            not be liable or responsible for any losses suffered by, caused by,
+            arising out of, in connection with or by reason of such request or
+            invalidation. You are responsible for maintaining the
+            confidentiality of your user identification, password, account
+            details and related private information. You agree to accept this
+            responsibility and ensure your account and its related details are
+            maintained securely at all times and all necessary steps are taken
+            to prevent misuse of your account. You should inform us immediately
+            if you have any reason to believe that your password has become
+            known to anyone else, or if the password is being, or is likely to
+            be, used in an unauthorized manner. You agree and acknowledge that
+            any use of the Site and related services offered and/or any access
+            to private information, data or communications using your account
+            and password shall be deemed to be either performed by you or
+            authorized by you as the case may be. You agree to be bound by any
+            access of the Site and/or use of any services offered by the Site
+            (whether such access or use are authorized by you or not). You agree
+            that we shall be entitled (but not obliged) to act upon, rely on or
+            hold you solely responsible and liable in respect thereof as if the
+            same were carried out or transmitted by you. You further agree and
+            acknowledge that you shall be bound by and agree to fully indemnify
+            us against any and all losses arising from the use of or access to
+            the Site through your account. Please ensure that the details you
+            provide us with are correct and complete at all times. You are
+            obligated to update details about your account in real time by
+            accessing your account online. For pieces of information you are not
+            able to update by accessing Your Account on the Site, you must
+            inform us via our customer service communication channels to assist
+            you with these changes. We reserve the right to refuse access to the
+            Site, terminate accounts, remove or edit content at any time without
+            prior notice to you. We may at any time in our sole and absolute
+            discretion, request that you update your Personal Data or forthwith
+            invalidate the account or related details without giving any reason
+            or prior notice and shall not be liable or responsible for any
+            losses suffered by or caused by you or arising out of or in
+            connection with or by reason of such request or invalidation. You
+            hereby agree to change your password from time to time and to keep
+            your account secure and also shall be responsible for the
+            confidentiality of your account and liable for any disclosure or use
+            (whether such use is authorised or not) of the username and/or
+            password. B. PRIVACY Please review our Privacy Agreement, which also
+            governs your visit to the Site. The personal information / data
+            provided to us by you or your use of the Site will be treated as
+            strictly confidential, in accordance with the Privacy Agreement and
+            applicable laws and regulations. If you object to your information
+            being transferred or used in the manner specified in the Privacy
+            Agreement, please do not use the Site. C. CONTINUED AVAILABILITY OF
+            THE SITE We will do our utmost to ensure that access to the Site is
+            consistently available and is uninterrupted and error-free. However,
+            due to the nature of the Internet and the nature of the Site, this
+            cannot be guaranteed. Additionally, your access to the Site may also
+            be occasionally suspended or restricted to allow for repairs,
+            maintenance, or the introduction of new facilities or services at
+            any time without prior notice. We will attempt to limit the
+            frequency and duration of any such suspension or restriction.
           </p>
         </Modal.Body>
         <Modal.Footer>
