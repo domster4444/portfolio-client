@@ -35,6 +35,68 @@ export const Textarea = styled.textarea`
   font-size: 2.4rem;
 `;
 
+/**
+ * @description:Styles For AchievementCards
+ * @param {uiElement}
+ */
+
+const AchievementCardListContainer = styled.ul`
+  display: flex;
+  flex-wrap: wrap;
+`;
+
+const AchievementCardList = styled.li`
+  list-style: none;
+`;
+
+const AchievementCards = styled.div`
+  background: #f9f9f9b2;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  margin: 0.5rem 0.5rem;
+  border-radius: 1rem;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 20rem;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  min-height: 25rem;
+
+  img {
+    border-radius: 1rem;
+    width: 100%;
+    height: 100%;
+  }
+  dt {
+    margin: 1rem 0rem;
+    line-height: 1.1;
+    font-size: 1.8rem;
+  }
+
+  dd {
+    height: 5rem;
+    display: block; /* Fallback for non-webkit */
+    display: -webkit-box;
+    max-width: 400px;
+    height: 45px; Fallback for non-webkit
+    margin: 0 auto;
+    font-size: 1.6rem;
+    line-height: 1.5;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 1.6rem;
+  }
+`;
+
+const ImageContainer = styled.div`
+  width: 100%;
+  height: 12rem;
+  overflow: hidden;
+`;
 import { Spacer, Button } from '@nextui-org/react';
 
 const Index: React.FC = () => {
@@ -197,25 +259,36 @@ const Index: React.FC = () => {
           updateAchievementField(e);
         }}
       >
-        {(() => {
-          return achievements.map((item: any, index: number) => {
-            return (
-              <li key={index}>
-                <img
-                  src={item.achievementImage}
-                  height="50"
-                  width="50"
-                  alt=""
-                />
-                <dl>
-                  <dt>{item.achievementName}</dt>
-                  <dd>{item.achievementDescription}</dd>
-                </dl>
-                <hr />
-              </li>
-            );
-          });
-        })()}
+        <AchievementCardListContainer>
+          {(() => {
+            return achievements.map((item: any, index: number) => {
+              return (
+                <AchievementCardList key={index}>
+                  <AchievementCards>
+                    <ImageContainer>
+                      <img
+                        src={item.achievementImage}
+                        height="50"
+                        width="50"
+                        alt=""
+                      />
+                    </ImageContainer>
+
+                    <dl>
+                      <dt className="poppins_medium_500">
+                        {item.achievementName}
+                      </dt>
+                      <dd className="poppins_regular_400">
+                        {item.achievementDescription}
+                      </dd>
+                    </dl>
+                    <hr />
+                  </AchievementCards>
+                </AchievementCardList>
+              );
+            });
+          })()}
+        </AchievementCardListContainer>
 
         <Lable htmlFor="">
           Achievement Image :

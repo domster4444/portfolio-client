@@ -226,6 +226,8 @@ const Index: React.FC = () => {
   const [isEmailVerified, setIsEmailVerified] = React.useState<boolean>(false);
   const [authMethod, setAuthMethod] = React.useState<string>('undefined');
   const [userPlan, setUserPlan] = React.useState<string>('free');
+  const [isProfileDataUpdated, setProfileUpdatedState] =
+    React.useState<boolean>(false);
 
   const axiosinstance = axios.create({
     baseURL: globalConstant.baseURL,
@@ -260,8 +262,11 @@ const Index: React.FC = () => {
 
   useEffect(() => {
     getUserPhoto();
-  }, []);
+  }, [isProfileDataUpdated]);
 
+  const changeHasUpdatedState = () => {
+    setProfileUpdatedState(!isProfileDataUpdated);
+  };
   return (
     <>
       <DashboardLayout>
@@ -331,7 +336,11 @@ const Index: React.FC = () => {
 
                       <div>
                         <InputRowContainer>
-                          <input type="text" placeholder="First name" />
+                          <input
+                            type="text"
+                            placeholder="First name"
+                            // value="userName"
+                          />
                           <input type="text" placeholder="Middle name" />
 
                           <input type="number" placeholder="Last name" />
@@ -345,7 +354,11 @@ const Index: React.FC = () => {
                         <InputRowContainer>
                           <input type="text" placeholder="Country" />
                           <input type="text" placeholder="City" />
-                          <input type="number" placeholder="Telephone" />
+                          <input
+                            type="email"
+                            placeholder="Email"
+                            value={userEmail}
+                          />
                         </InputRowContainer>
                       </div>
                     </header>
