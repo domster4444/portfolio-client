@@ -9,6 +9,7 @@ import Image from 'next/image';
 // import Bg from 'public/images/pages/profile/bg.jpg';
 import member1 from 'public/images/members/member1.jpg';
 import Breadcrumbs from 'components/BreadCrumb/index';
+import ProfileForm from 'components/ProfileForm/index';
 
 const BgContainer = styled.div`
   height: 30rem;
@@ -217,6 +218,16 @@ const InputRowContainer = styled.h3`
 `;
 
 const Index: React.FC = () => {
+  //? PROFILE STATE
+  // const [firstName, setFirstName] = useState<string>('');
+  // const [lastName, setLastName] = useState<string>('');
+  // const [middleName, setMiddleName] = useState<string>('');
+  // const [contactNumber, setContactNumber] = useState<string>('');
+  // const [city, setCity] = useState<string>('');
+  // const [country, setCountry] = useState<string>('');
+  // const [age, setAge] = useState<string>('');
+  // const [organizationName, setOrganizationName] = useState<string>('');
+
   // for profile pic
   const defaultUserPhoto =
     'https://s.gravatar.com/avatar/4f4f3ed466c638ffe9d2afd6a4630fef?s=480&r=pg&d=https%3A%2F%2Fcdn.auth0.com%2Favatars%2Fks.png';
@@ -262,11 +273,14 @@ const Index: React.FC = () => {
 
   useEffect(() => {
     getUserPhoto();
+    // getProfileData();
+    console.log(globalConstant.serverURL);
   }, [isProfileDataUpdated]);
 
   const changeHasUpdatedState = () => {
     setProfileUpdatedState(!isProfileDataUpdated);
   };
+
   return (
     <>
       <DashboardLayout>
@@ -333,39 +347,10 @@ const Index: React.FC = () => {
                       <FormTitle className="poppins_medium_500">
                         Account Settings
                       </FormTitle>
-
-                      <div>
-                        <InputRowContainer>
-                          <input
-                            type="text"
-                            placeholder="First name"
-                            // value="userName"
-                          />
-                          <input type="text" placeholder="Middle name" />
-
-                          <input type="number" placeholder="Last name" />
-                        </InputRowContainer>
-                        <InputRowContainer>
-                          <input type="text" placeholder="Organization Name " />
-
-                          <input type="number" placeholder="Phone Number" />
-                          <input type="number" placeholder="Age" />
-                        </InputRowContainer>
-                        <InputRowContainer>
-                          <input type="text" placeholder="Country" />
-                          <input type="text" placeholder="City" />
-                          <input
-                            type="email"
-                            placeholder="Email"
-                            value={userEmail}
-                          />
-                        </InputRowContainer>
-                      </div>
+                      {/* //! input row container */}
+                      <ProfileForm />
+                      {/* //! input row container */}
                     </header>
-
-                    <button className="primary-btn poppins_medium_500">
-                      Upload
-                    </button>
                   </section>
                 </RightFormSection>
               </RightProfile>

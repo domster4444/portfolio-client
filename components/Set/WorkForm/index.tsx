@@ -8,6 +8,23 @@ import axios from 'axios';
 import { axiosInstance } from 'lib/utilities/api/api';
 import { toast } from 'react-toastify';
 import styled from 'styled-components';
+
+const WorkBoxContainer = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+`;
+
+const WorkBox = styled.div`
+  border-radius: 2rem;
+  background: #f9f9f9b2;
+  box-shadow: rgb(99 99 99 / 20%) 0px 2px 8px 0px;
+  margin: 0.5rem 0.5rem;
+  border-radius: 1rem;
+  padding: 1rem;
+  width: 30%;
+  margin-bottom: 1rem;
+`;
+
 export const Lable = styled.label`
   font-size: 1.8rem;
 `;
@@ -96,24 +113,35 @@ const Index: React.FC = () => {
 
   return (
     <SetCard>
-      {(() => {
-        return workExperience.map((item, index) => {
-          return (
-            <div key={index}>
-              <Lable>
-                Company Name: {item.companyName}
-                <br />
-                Company Destination : {item.destination}
-                <br />
-                Date of Joining : {item.dateOfJoining}
-                <br />
-                Work Description : {item.workDescription}
-              </Lable>
-              <hr />
-            </div>
-          );
-        });
-      })()}
+      <WorkBoxContainer>
+        {(() => {
+          return workExperience.map((item, index) => {
+            return (
+              <WorkBox key={index}>
+                <Lable>
+                  {item.dateOfJoining}
+                  <h4
+                    className="poppins_semibold_600"
+                    style={{
+                      marginTop: '1rem',
+                      margin: '0rem',
+                      padding: '0rem',
+                      fontSize: '1.8rem',
+                    }}
+                  >
+                    {item.companyName}
+                  </h4>
+                  {item.destination}
+                  {/* <br /> */}
+                  {/* <br /> */}
+                  {/* Work Description : {item.workDescription} */}
+                </Lable>
+                {/* <hr /> */}
+              </WorkBox>
+            );
+          });
+        })()}
+      </WorkBoxContainer>
 
       <form
         onSubmit={submitHandler}
