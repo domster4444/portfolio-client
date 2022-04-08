@@ -11,6 +11,23 @@ import styled from 'styled-components';
 export const Lable = styled.label`
   font-size: 1.8rem;
 `;
+
+const WorkBoxContainer = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+`;
+
+const WorkBox = styled.div`
+  border-radius: 2rem;
+  background: #f9f9f9b2;
+  box-shadow: rgb(99 99 99 / 20%) 0px 2px 8px 0px;
+  margin: 0.5rem 0.5rem;
+  border-radius: 1rem;
+  padding: 1rem;
+  width: 30%;
+  margin-bottom: 1rem;
+`;
+
 export const Input = styled.input`
   height: 5rem;
   font-size: 2.4rem;
@@ -104,22 +121,36 @@ const Index: React.FC = () => {
 
   return (
     <SetCard>
-      {(() => {
-        return education.map((item, index) => {
-          return (
-            <div key={index}>
-              <Lable>
-                organization Name: {item.organizationName}
-                <br />
-                date of joining : {item.dateOfJoining}
-                <br />
-                date of Leaving : {item.dateOfLeaving}
-              </Lable>
-              <hr />
-            </div>
-          );
-        });
-      })()}
+      <WorkBoxContainer>
+        {(() => {
+          return education.map((item, index) => {
+            return (
+              <WorkBox key={index}>
+                <Lable>
+                  {item.dateOfJoining}
+                  {/* {item.dateOfLeaving} */}
+                  <h4
+                    className="poppins_semibold_600"
+                    style={{
+                      marginTop: '1rem',
+                      margin: '0rem',
+                      padding: '0rem',
+                      fontSize: '1.8rem',
+                    }}
+                  >
+                    {item.organizationName}
+                  </h4>
+                  {/* {item.destination} */}
+                  {/* <br /> */}
+                  {/* <br /> */}
+                  {/* Work Description : {item.workDescription} */}
+                </Lable>
+                {/* <hr /> */}
+              </WorkBox>
+            );
+          });
+        })()}
+      </WorkBoxContainer>
 
       <form
         action=""
@@ -162,11 +193,25 @@ const Index: React.FC = () => {
           />
         </Lable>
 
-        <Button type="submit" color="success" size="xl">
-          Add To List
-          <Spacer x={0.5} />
-          <TickSquare set="bold" primaryColor="white" />
-        </Button>
+        <Spacer y={0.5} />
+        <button
+          style={{
+            width: '100%',
+          }}
+          type="submit"
+          className="button-69 "
+        >
+          <span
+            style={{
+              fontSize: '1.8rem',
+            }}
+            className="poppins_regular_400 "
+          >
+            Add To List
+          </span>
+          {/* <Spacer x={0.5} /> */}
+          {/* <TickSquare set="bold" primaryColor="white" /> */}
+        </button>
       </form>
     </SetCard>
   );

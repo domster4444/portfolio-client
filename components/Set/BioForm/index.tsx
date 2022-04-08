@@ -5,14 +5,7 @@ import { axiosInstance } from 'lib/utilities/api/api';
 import { useUser } from '@auth0/nextjs-auth0';
 import { globalConstant } from 'constant/constant';
 
-import {
-  Button,
-  Textarea,
-  Container,
-  Card,
-  Spacer,
-  css,
-} from '@nextui-org/react';
+import { Button, Textarea, Container, Card, Spacer } from '@nextui-org/react';
 import { ChevronLeft, ChevronRight, TickSquare } from 'react-iconly';
 
 // @ts-ignore

@@ -191,11 +191,25 @@ const Index: React.FC = () => {
           />
         </Lable>
 
-        <Button type="submit" color="success" size="xl">
-          Add to list
-          <Spacer x={0.5} />
-          <TickSquare set="bold" primaryColor="white" />
-        </Button>
+        <Spacer y={0.5} />
+        <button
+          style={{
+            width: '100%',
+          }}
+          type="submit"
+          className="button-69 "
+        >
+          <span
+            style={{
+              fontSize: '1.8rem',
+            }}
+            className="poppins_regular_400 "
+          >
+            Add to list
+          </span>
+          {/* <Spacer x={0.5} /> */}
+          {/* <TickSquare set="bold" primaryColor="white" /> */}
+        </button>
       </form>
     </SetCard>
   );
