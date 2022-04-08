@@ -166,13 +166,25 @@ const Index: React.FC = () => {
             onChange={(e) => setWebsite(e.target.value)}
           />
         </Lable>
-        <br />
+        <Spacer y={0.5} />
 
-        <Button type="submit" color="success" size="xl">
-          Update
-          <Spacer x={0.5} />
-          <TickSquare set="bold" primaryColor="white" />
-        </Button>
+        <button
+          style={{
+            width: '100%',
+          }}
+          type="submit"
+          className="button-69 "
+        >
+          <span
+            style={{
+              fontSize: '1.8rem',
+            }}
+            className="poppins_regular_400 "
+          >
+            Update
+          </span>
+          {/* <TickSquare set="bold" primaryColor="white" /> */}
+        </button>
       </form>
     </SetCard>
   );

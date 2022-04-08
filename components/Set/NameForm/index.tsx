@@ -160,17 +160,26 @@ const Index = ({ nextPreBtn }: { nextPreBtn: boolean }) => {
             </Lable>
 
             <Spacer y={1.5} />
-            <Button
+
+            <button
+              style={{
+                width: '100%',
+              }}
               type="submit"
-              color="success"
-              size="xl"
-              className={BioStyles.btnContainer__btn}
-              // onClick={updateNameForm}
+              className="button-69 "
             >
-              Update
-              <Spacer x={0.5} />
-              <TickSquare set="bold" primaryColor="white" />
-            </Button>
+              <span
+                style={{
+                  fontSize: '1.8rem',
+                }}
+                className="poppins_regular_400 "
+              >
+                Update
+              </span>
+              {/* <Spacer x={0.5} /> */}
+              {/* <TickSquare set="bold" primaryColor="white" /> */}
+            </button>
+
             <Spacer y={0.5} />
           </form>
 

@@ -6,6 +6,7 @@ import { useUser } from '@auth0/nextjs-auth0';
 import { toast } from 'react-toastify';
 import { globalConstant } from 'constant/constant';
 import styled from 'styled-components';
+import { Spacer, Button } from '@nextui-org/react';
 
 import SetCard from 'components/Set/SetCard';
 import { TickSquare } from 'react-iconly';
@@ -97,7 +98,23 @@ const ImageContainer = styled.div`
   height: 12rem;
   overflow: hidden;
 `;
-import { Spacer, Button } from '@nextui-org/react';
+
+const ImageUploadWrapper = styled.div`
+  margin: 0rem 0rem 3rem 0rem;
+  position: relative;
+  border: 0.3rem dashed #ccc;
+  span {
+    font-size: 2rem;
+    position: absolute;
+    color: #c1c1c1;
+    width: 100%;
+    text-align: center;
+    i {
+      font-size: 6rem;
+      color: #1c8adb;
+    }
+  }
+`;
 
 const Index: React.FC = () => {
   const { user, error, isLoading } = useUser();
@@ -291,9 +308,9 @@ const Index: React.FC = () => {
         </AchievementCardListContainer>
 
         <Lable htmlFor="">
-          Achievement Image :
-          <br />
-          <h2>
+          {/* Achievement Image : */}
+          {/* <br /> */}
+          {/* <h2>
             URL:{' '}
             {(() => {
               if (imageUrl) {
@@ -301,24 +318,56 @@ const Index: React.FC = () => {
               }
               return 'No Image Currently Selected';
             })()}
-          </h2>
+          </h2> */}
           {/* @ts-ignore */}
           <img src={imageUrl ? imageUrl : null} alt="" />
-          <Spacer y={1} />
-          <Spacer y={1} />
           {/* //* preview the image if previewSource is not empty */}
           {previewSource && <img src={previewSource} alt="preview" />}
           <ImageShower />
-          <input
-            name="bio__img"
-            type="file"
-            value={fileInputState}
-            onChange={changeHandler}
-          />
+
+          <ImageUploadWrapper>
+            <span>
+              <i className="bx bx-cloud-upload" />
+              <br />
+              Upload Your File Here
+            </span>
+
+            <input
+              style={{
+                opacity: '0',
+                cursor: 'pointer',
+                width: '100%',
+                height: '10rem',
+              }}
+              name="bio__img"
+              type="file"
+              value={fileInputState}
+              onChange={changeHandler}
+            />
+          </ImageUploadWrapper>
+
+          <p
+            style={{
+              fontSize: '2rem',
+            }}
+          >
+            {/* URL:{' '} */}
+            {(() => {
+              if (imageUrl) {
+                return 'Image Has Been Successfully Uploaded';
+              }
+              return 'Image Not Uploaded Yet';
+            })()}
+          </p>
           {/* submit image btn start */}
-          <Button color="success" size="xl" onClick={submitImageHandler}>
-            submit Image
-            <Spacer x={0.5} />
+
+          <Button
+            color="secondary"
+            bordered
+            size="xl"
+            onClick={submitImageHandler}
+          >
+            Upload Image
           </Button>
         </Lable>
 
@@ -347,11 +396,24 @@ const Index: React.FC = () => {
         </Lable>
         <br />
 
-        <Button color="success" size="xl" type="submit">
-          Update
-          <Spacer x={0.5} />
-          <TickSquare set="bold" primaryColor="white" />
-        </Button>
+        <button
+          style={{
+            width: '100%',
+          }}
+          type="submit"
+          className="button-69 "
+        >
+          <span
+            style={{
+              fontSize: '1.8rem',
+            }}
+            className="poppins_regular_400 "
+          >
+            Update
+          </span>
+          {/* <Spacer x={0.5} /> */}
+          {/* <TickSquare set="bold" primaryColor="white" /> */}
+        </button>
       </form>
     </SetCard>
   );

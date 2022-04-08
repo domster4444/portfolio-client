@@ -83,8 +83,9 @@ const SetPage: React.FC = () => {
           ) {
             return (
               <>
-                <hr />
+                {/* <hr /> */}
                 <NameForm nextPreBtn={false} />
+                <br />
               </>
             );
           }
@@ -99,8 +100,9 @@ const SetPage: React.FC = () => {
           ) {
             return (
               <>
-                <hr />
+                {/* <hr /> */}
                 <BioForm nextPreBtn={false} />
+                <br />
               </>
             );
           }
@@ -114,7 +116,7 @@ const SetPage: React.FC = () => {
           ) {
             return (
               <>
-                <hr />
+                {/* <hr /> */}
                 <ContactForm />
               </>
             );
@@ -130,7 +132,7 @@ const SetPage: React.FC = () => {
           ) {
             return (
               <>
-                <hr />
+                {/* <hr /> */}
                 <EducationForm />
               </>
             );
@@ -145,7 +147,7 @@ const SetPage: React.FC = () => {
           ) {
             return (
               <>
-                <hr />
+                {/* <hr /> */}
                 <WorkForm />
               </>
             );
@@ -160,7 +162,7 @@ const SetPage: React.FC = () => {
           ) {
             return (
               <>
-                <hr />
+                {/* <hr /> */}
                 <SkillsForm />
               </>
             );
@@ -176,7 +178,7 @@ const SetPage: React.FC = () => {
           ) {
             return (
               <>
-                <hr />
+                {/* <hr /> */}
                 <ProjectsForm />
               </>
             );
@@ -191,7 +193,7 @@ const SetPage: React.FC = () => {
           ) {
             return (
               <>
-                <hr />
+                {/* <hr /> */}
                 <AchievementsForm />
               </>
             );
@@ -206,7 +208,7 @@ const SetPage: React.FC = () => {
           ) {
             return (
               <>
-                <hr />
+                {/* <hr /> */}
                 <SecondaryImgForm />
               </>
             );
@@ -221,17 +223,9 @@ const SetPage: React.FC = () => {
           }}
         >
           <a
+            className="button-63"
             type="button"
             href={VisitBtnUrl}
-            style={{
-              backgroundColor: '#658eff',
-              border: '1px solid #f5f5f5',
-              borderRadius: '5px',
-              padding: '0.5rem',
-              fontSize: '2rem',
-              color: 'white',
-              cursor: 'pointer',
-            }}
             onClick={getUserName}
           >
             {' '}

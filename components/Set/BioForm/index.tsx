@@ -35,6 +35,34 @@ export const Input = styled.input`
   background: #f4f4f4;
 `;
 
+export const BioFormImagePreviewer = styled.img`
+  border-radius: 1rem;
+  width: 50%;
+  transform: translateX(-50%);
+  margin-left: 50%;
+  border-top-right-radius: 10rem;
+  border-top-left-radius: 10rem;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+    rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+`;
+
+const ImageUploadWrapper = styled.div`
+  margin: 1rem 0rem 3rem 0rem;
+  position: relative;
+  border: 0.3rem dashed #ccc;
+  span {
+    font-size: 2rem;
+    position: absolute;
+    color: #c1c1c1;
+    width: 100%;
+    text-align: center;
+    i {
+      font-size: 6rem;
+      color: #1c8adb;
+    }
+  }
+`;
+
 const Index = ({ nextPreBtn }: { nextPreBtn: boolean }) => {
   const { user, error, isLoading } = useUser();
   const [imageUrl, setImageUrl] = useState('');
@@ -184,7 +212,7 @@ const Index = ({ nextPreBtn }: { nextPreBtn: boolean }) => {
               updateBioFormHander(e);
             }}
           >
-            <h2>
+            {/* <h2>
               URL:{' '}
               {(() => {
                 if (imageUrl) {
@@ -192,31 +220,55 @@ const Index = ({ nextPreBtn }: { nextPreBtn: boolean }) => {
                 }
                 return 'No Image Currently Selected';
               })()}
-            </h2>
+            </h2> */}
             {/* @ts-ignore */}
-            <img src={imageUrl ? imageUrl : null} alt="" />
-            <Spacer y={1} />
-            <Spacer y={1} />
+            <BioFormImagePreviewer src={imageUrl ? imageUrl : null} alt="" />
             {/* //* preview the image if previewSource is not empty */}
             {previewSource && <img src={previewSource} alt="preview" />}
             <ImageShower />
-            <input
-              name="bio__img"
-              className={BioStyles.bio_fileBtn}
-              type="file"
-              value={fileInputState}
-              onChange={changeHandler}
-            />
+            <ImageUploadWrapper>
+              <span>
+                <i className="bx bx-cloud-upload" />
+                <br />
+                Upload Your File Here
+              </span>
+              <input
+                style={{
+                  opacity: '0',
+                  cursor: 'pointer',
+                  width: '100%',
+                  height: '10rem',
+                }}
+                name="bio__img"
+                className={BioStyles.bio_fileBtn}
+                type="file"
+                value={fileInputState}
+                onChange={changeHandler}
+              />
+            </ImageUploadWrapper>
 
+            <p
+              style={{
+                fontSize: '2rem',
+              }}
+            >
+              {/* URL:{' '} */}
+              {(() => {
+                if (imageUrl) {
+                  return 'Image Has Been Successfully Uploaded';
+                }
+                return 'Image Not Uploaded Yet';
+              })()}
+            </p>
             {/* submit image btn start */}
+
             <Button
-              color="success"
+              color="secondary"
+              bordered
               size="xl"
               onClick={submitImageHandler}
-              className={BioStyles.btnContainer__btn}
             >
-              submit Image
-              <Spacer x={0.5} />
+              Upload Image
             </Button>
 
             {/* submit image btn  end */}
@@ -239,16 +291,24 @@ const Index = ({ nextPreBtn }: { nextPreBtn: boolean }) => {
               />
             </label>
             <Spacer y={1.5} />
-            <Button
+            <button
+              style={{
+                width: '100%',
+              }}
               type="submit"
-              color="success"
-              size="xl"
-              className={BioStyles.btnContainer__btn}
+              className="button-69 "
             >
-              Update
-              <Spacer x={0.5} />
-              <TickSquare set="bold" primaryColor="white" />
-            </Button>
+              <span
+                style={{
+                  fontSize: '1.8rem',
+                }}
+                className="poppins_regular_400 "
+              >
+                Update
+              </span>
+              {/* <Spacer x={0.5} /> */}
+              {/* <TickSquare set="bold" primaryColor="white" /> */}
+            </button>
             <Spacer y={0.5} />
           </form>
 

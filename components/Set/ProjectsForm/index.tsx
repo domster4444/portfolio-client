@@ -36,6 +36,83 @@ export const Textarea = styled.textarea`
   font-size: 2.4rem;
 `;
 
+const ImageUploadWrapper = styled.div`
+  margin: 0rem 0rem 3rem 0rem;
+  position: relative;
+  border: 0.3rem dashed #ccc;
+  span {
+    font-size: 2rem;
+    position: absolute;
+    color: #c1c1c1;
+    width: 100%;
+    text-align: center;
+    i {
+      font-size: 6rem;
+      color: #1c8adb;
+    }
+  }
+`;
+
+// list styles
+
+const AchievementCardListContainer = styled.ul`
+  display: flex;
+  flex-wrap: wrap;
+`;
+
+const AchievementCardList = styled.li`
+  list-style: none;
+`;
+
+const AchievementCards = styled.div`
+  background: #f9f9f9b2;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  margin: 0.5rem 0.5rem;
+  border-radius: 1rem;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 20rem;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  min-height: 25rem;
+
+  img {
+    border-radius: 1rem;
+    width: 100%;
+    height: 100%;
+  }
+  dt {
+    margin: 1rem 0rem;
+    line-height: 1.1;
+    font-size: 1.8rem;
+  }
+
+  dd {
+    height: 5rem;
+    display: block; /* Fallback for non-webkit */
+    display: -webkit-box;
+    max-width: 400px;
+    height: 45px; Fallback for non-webkit
+    margin: 0 auto;
+    font-size: 1.6rem;
+    line-height: 1.5;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 1.6rem;
+  }
+`;
+
+const ImageContainer = styled.div`
+  width: 100%;
+  height: 12rem;
+  overflow: hidden;
+`;
+
 const Index: React.FC = () => {
   const { user, error, isLoading } = useUser();
   const [imageUrl, setImageUrl] = useState<string>('');
@@ -189,23 +266,36 @@ const Index: React.FC = () => {
 
   return (
     <SetCard>
-      {(() => {
-        return projects.map((item: any, index: any) => {
-          return (
-            <li key={index}>
-              <img src={item.projectImage} height="100" alt="" />
-              <h4>{item.projectName && item.projectName}</h4>
-              <h4>{item.projectDescription && item.projectDescription}</h4>
-              <h4>{item.projectVideoLink}</h4>
-              <h4>{item.projectGithubLink && item.projectGithubLink}</h4>
-              <h4>{item.projectWebsiteLink && item.projectWebsiteLink}</h4>
-              <h4>{item.projectDocLink && item.projectDocLink}</h4>
+      <AchievementCardListContainer>
+        {(() => {
+          return projects.map((item: any, index: any) => {
+            return (
+              <AchievementCardList key={index}>
+                <AchievementCards>
+                  <ImageContainer>
+                    <img src={item.projectImage} height="100" alt="" />
+                  </ImageContainer>
 
-              <hr />
-            </li>
-          );
-        });
-      })()}
+                  <dl>
+                    <dt className="poppins_medium_500">
+                      {item.projectName && item.projectName}
+                    </dt>
+                    <dd className="poppins_regular_400">
+                      {item.projectDescription && item.projectDescription}
+                      {/* 
+              {item.projectVideoLink}
+              {item.projectGithubLink && item.projectGithubLink}
+              {item.projectWebsiteLink && item.projectWebsiteLink}
+              {item.projectDocLink && item.projectDocLink} */}
+                    </dd>
+                  </dl>
+                  <hr />
+                </AchievementCards>
+              </AchievementCardList>
+            );
+          });
+        })()}
+      </AchievementCardListContainer>
 
       <form
         onSubmit={(e) => {
@@ -217,34 +307,57 @@ const Index: React.FC = () => {
         }}
       >
         <Lable htmlFor="">
-          Achievement Image :
-          <br />
-          <h2>
-            URL:{' '}
-            {(() => {
-              if (imageUrl) {
-                return imageUrl;
-              }
-              return 'No Image Currently Selected';
-            })()}
-          </h2>
+          {/* Achievement Image : */}
+          {/* <br /> */}
+
           {/* @ts-ignore */}
           <img src={imageUrl ? imageUrl : null} alt="" />
-          <Spacer y={1} />
-          <Spacer y={1} />
+
           {/* //* preview the image if previewSource is not empty */}
           {previewSource && <img src={previewSource} alt="preview" />}
           <ImageShower />
-          <input
-            name="bio__img"
-            type="file"
-            value={fileInputState}
-            onChange={changeHandler}
-          />
+
+          <ImageUploadWrapper>
+            <span>
+              <i className="bx bx-cloud-upload" />
+              <br />
+              Upload Your File Here
+            </span>
+            <input
+              style={{
+                opacity: '0',
+                cursor: 'pointer',
+                width: '100%',
+                height: '10rem',
+              }}
+              name="bio__img"
+              type="file"
+              value={fileInputState}
+              onChange={changeHandler}
+            />
+          </ImageUploadWrapper>
+          <p
+            style={{
+              fontSize: '2rem',
+            }}
+          >
+            {/* URL:{' '} */}
+            {(() => {
+              if (imageUrl) {
+                return 'Image Has Been Successfully Uploaded';
+              }
+              return 'Image Not Uploaded Yet';
+            })()}
+          </p>
+
           {/* submit image btn start */}
-          <Button color="success" size="xl" onClick={submitImageHandler}>
-            submit Image
-            <Spacer x={0.5} />
+          <Button
+            color="secondary"
+            bordered
+            size="xl"
+            onClick={submitImageHandler}
+          >
+            Upload Image
           </Button>
         </Lable>
 
@@ -312,11 +425,24 @@ const Index: React.FC = () => {
           />
         </Lable>
 
-        <Button type="submit" color="success" size="xl">
-          Add To List
-          <Spacer x={0.5} />
-          <TickSquare set="bold" primaryColor="white" />
-        </Button>
+        <button
+          style={{
+            width: '100%',
+          }}
+          type="submit"
+          className="button-69 "
+        >
+          <span
+            style={{
+              fontSize: '1.8rem',
+            }}
+            className="poppins_regular_400 "
+          >
+            Add To List
+          </span>
+          {/* <Spacer x={0.5} /> */}
+          {/* <TickSquare set="bold" primaryColor="white" /> */}
+        </button>
       </form>
     </SetCard>
   );
