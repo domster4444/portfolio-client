@@ -1,5 +1,7 @@
+/* eslint-disable @next/next/link-passhref */
 import React, { useRef } from 'react';
 import emailjs from 'emailjs-com';
+import Link from 'next/link';
 
 const Index = () => {
   const form = useRef();
@@ -36,19 +38,18 @@ const Index = () => {
           <nav className="col-list">
             <ul>
               <li>
-                <a href="#">Formats</a>
+                <Link href="/#workflow">Workflow</Link>
               </li>
               <li>
-                <a href="#">Compression</a>
+                <Link href="/#faq">FAQ</Link>
               </li>
+
               <li>
-                <a href="#">Pricing</a>
+                <a href="/#team">Our Team</a>
               </li>
+
               <li>
-                <a href="#">FAQ</a>
-              </li>
-              <li>
-                <a href="#">Status</a>
+                <a href="/#testimonial">Testimonial</a>
               </li>
             </ul>
           </nav>
@@ -59,10 +60,10 @@ const Index = () => {
           <nav className="col-list">
             <ul>
               <li>
-                <a href="#">Developer API</a>
+                <a href="#">Home</a>
               </li>
               <li>
-                <a href="#">Tools</a>
+                <a href="#">Pricing</a>
               </li>
               <li>
                 <a href="#">Blog</a>
@@ -79,7 +80,7 @@ const Index = () => {
                 <a href="#">About Us</a>
               </li>
               <li>
-                <a href="#">Sustainability</a>
+                <a href="#">Contact</a>
               </li>
               <li>
                 <a href="#">Terms of Service</a>
@@ -111,20 +112,31 @@ const Index = () => {
           <div className="social-media">
             <h3 className="social-col-title">Follow us</h3>
             <ul className="social-media-list">
-              <li>
-                <a href="#" className="facebook">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="16"
-                    height="16"
-                    fill="currentColor"
-                    className="bi bi-facebook"
-                    viewBox="0 0 16 16"
+              <Link
+                href="  
+                https://www.facebook.com/Hexgrade-102835182389659
+        "
+              >
+                <li>
+                  <a
+                    href="#"
+                    //  @ts-ignore
+                    className="facebook"
                   >
-                    <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z" />
-                  </svg>
-                </a>
-              </li>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      fill="currentColor"
+                      className="bi bi-facebook"
+                      viewBox="0 0 16 16"
+                    >
+                      <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z" />
+                    </svg>
+                  </a>
+                </li>
+              </Link>
+
               <li>
                 <a href="#" className="twitter">
                   <svg

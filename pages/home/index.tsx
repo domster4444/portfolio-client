@@ -534,6 +534,7 @@ const HomePage: NextPage = () => {
 
           {/* team section */}
           <section
+            id="team"
             style={{
               margin: '10rem 0rem',
             }}
@@ -672,6 +673,7 @@ const HomePage: NextPage = () => {
 
           {/* //? Testimonial Section */}
           <section
+            id="testimonial"
             className="testimonial"
             style={{
               margin: '15rem 0rem',
@@ -1030,7 +1032,7 @@ const HomePage: NextPage = () => {
             <ClientCarousel />
           </section>
           {/* workflow section */}
-          <section className="workflow_section">
+          <section id="workflow" className="workflow_section">
             <h2 className="workflow-title source_700">Workflow</h2>
 
             <p className="workflow-paragraph">Steps To Create Your Portfolio</p>
@@ -1184,6 +1186,7 @@ const HomePage: NextPage = () => {
 
           {/* //? FAQ */}
           <section
+            id="faq"
             style={{
               margin: '10rem 0rem',
             }}
@@ -1219,9 +1222,11 @@ const HomePage: NextPage = () => {
               <JoinNowSectionTitle className="source_700">
                 Try It For Free
               </JoinNowSectionTitle>
-              <JoinNowSectionBtn className="poppins_regular_400">
-                Try Demo
-              </JoinNowSectionBtn>
+              <Link passHref href="/api/auth/login">
+                <JoinNowSectionBtn className="poppins_regular_400">
+                  Try Demo
+                </JoinNowSectionBtn>
+              </Link>
             </JoinNowSection>
           </Fade>
         </main>
