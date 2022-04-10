@@ -20,6 +20,9 @@ import ProjectsForm from 'components/Set/ProjectsForm';
 import AchievementsForm from 'components/Set/AchievementsForm';
 import SecondaryImgForm from 'components/Set/SecondaryImgForm';
 import BioForm from 'components/Set/BioForm';
+// @ts-ignore
+
+import { Zoom } from 'react-reveal';
 
 // @ts-ignore
 import DashboardLayout from 'components/DashboardLayout';
@@ -84,7 +87,9 @@ const SetPage: React.FC = () => {
             return (
               <>
                 {/* <hr /> */}
-                <NameForm nextPreBtn={false} />
+                <Zoom>
+                  <NameForm nextPreBtn={false} />
+                </Zoom>
                 <br />
               </>
             );
@@ -101,8 +106,9 @@ const SetPage: React.FC = () => {
             return (
               <>
                 {/* <hr /> */}
-                <BioForm nextPreBtn={false} />
-                <br />
+                <Zoom>
+                  <BioForm nextPreBtn={false} />
+                </Zoom>
               </>
             );
           }
@@ -117,7 +123,9 @@ const SetPage: React.FC = () => {
             return (
               <>
                 {/* <hr /> */}
-                <ContactForm />
+                <Zoom>
+                  <ContactForm />
+                </Zoom>
               </>
             );
           }
@@ -133,7 +141,9 @@ const SetPage: React.FC = () => {
             return (
               <>
                 {/* <hr /> */}
-                <EducationForm />
+                <Zoom>
+                  <EducationForm />
+                </Zoom>
               </>
             );
           }
@@ -148,7 +158,9 @@ const SetPage: React.FC = () => {
             return (
               <>
                 {/* <hr /> */}
-                <WorkForm />
+                <Zoom>
+                  <WorkForm />
+                </Zoom>
               </>
             );
           }
@@ -163,7 +175,9 @@ const SetPage: React.FC = () => {
             return (
               <>
                 {/* <hr /> */}
-                <SkillsForm />
+                <Zoom>
+                  <SkillsForm />
+                </Zoom>
               </>
             );
           }
@@ -179,7 +193,9 @@ const SetPage: React.FC = () => {
             return (
               <>
                 {/* <hr /> */}
-                <ProjectsForm />
+                <Zoom>
+                  <ProjectsForm />
+                </Zoom>
               </>
             );
           }
@@ -194,7 +210,9 @@ const SetPage: React.FC = () => {
             return (
               <>
                 {/* <hr /> */}
-                <AchievementsForm />
+                <Zoom>
+                  <AchievementsForm />
+                </Zoom>
               </>
             );
           }
@@ -209,7 +227,9 @@ const SetPage: React.FC = () => {
             return (
               <>
                 {/* <hr /> */}
-                <SecondaryImgForm />
+                <Zoom>
+                  <SecondaryImgForm />
+                </Zoom>
               </>
             );
           }

@@ -10,6 +10,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import { ToastContainer } from 'react-toastify';
 import store from 'main/store';
 import { Provider } from 'react-redux';
+import Head from 'next/head';
 
 function MyApp({ Component, pageProps }: AppProps) {
   // const router = useRouter();
@@ -68,6 +69,27 @@ function MyApp({ Component, pageProps }: AppProps) {
 
   return (
     <>
+      <Head>
+        <link rel="shortcut icon" href="/images/favicon.ico" />
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="180x180"
+          href="/images/icon180_180.png"
+        />
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="32x32"
+          href="/images/icon32_32.png"
+        />
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="16x16"
+          href="/images/icon16_16.png"
+        />
+      </Head>
       <Provider store={store}>
         <UserProvider>
           <NextUIProvider>
@@ -82,3 +104,4 @@ function MyApp({ Component, pageProps }: AppProps) {
 }
 
 export default MyApp;
+

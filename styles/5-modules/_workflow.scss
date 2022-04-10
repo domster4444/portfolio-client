@@ -36,6 +36,7 @@
     &:hover {
       .workflow_card-img-container {
         background: #ff0d81;
+        color: white;
         i {
           color: white;
         }
@@ -72,8 +73,9 @@
       margin-left: 50%;
       border-radius: 50%;
       background: white;
+      font-size: 3rem;
+
       i {
-        font-size: 3rem;
       }
     }
 

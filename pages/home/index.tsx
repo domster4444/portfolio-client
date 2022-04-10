@@ -207,7 +207,8 @@ const HomePage: NextPage = () => {
                   letterSpacing: '0.1rem',
                 }}
               >
-                Get Your <br /> desired portfolio
+                Create the portfolio <br />
+                of your dreams
               </h1>
               <p
                 style={{
@@ -217,8 +218,8 @@ const HomePage: NextPage = () => {
                   letterSpacing: '0.1rem',
                 }}
               >
-                Portfolio Generator is a tool that helps you to <br /> create
-                your desired portfolio in just a few minutes.
+                Hexgrade is a simple Portfolio Generator tool <br /> that
+                enables you to create your portfolio within Minutes.
               </p>
 
               <Link passHref href="/api/auth/login">
@@ -556,7 +557,7 @@ const HomePage: NextPage = () => {
           {/* //? Why section */}
           <WhySection className="whySection">
             <WhySectionTitle className="whySection__title source_700">
-              <Fade bottom>Why choose our portfollio with us?</Fade>
+              <Fade bottom>Create a portfolio you're proud of</Fade>
             </WhySectionTitle>
             <WhySectionContainer>
               <Fade left>
@@ -574,11 +575,11 @@ const HomePage: NextPage = () => {
                   >
                     <path d="M16.5,8c0,1.5-0.5,3.5-2.9,4.3c0.7-1.7,0.8-3.4,0.3-5c-0.7-2.1-3-3.7-4.6-4.6C8.9,2.4,8.2,2.8,8.3,3.4c0,1.1-0.3,2.7-2,4.4  C4.1,10,3,12.3,3,14.5C3,17.4,5,21,9,21c-4-4-1-7.5-1-7.5c0.8,5.9,5,7.5,7,7.5c1.7,0,5-1.2,5-6.4c0-3.1-1.3-5.5-2.4-6.9  C17.3,7.2,16.6,7.5,16.5,8"></path>
                   </svg>
-                  <h3>We're actually free</h3>
+                  <h3>Professionally Designed Free Templates</h3>
                   <p className="poppins_regular_400">
-                    No gimmicks, no freemium features, no joke. Get everything
-                    you need to build a professional resume that shows off your
-                    best qualities to help you land your next job.
+                    This is the real deal! Acquire the resources necessary to
+                    build a professional resume to display the best qualities to
+                    help you land your next job.
                   </p>
                 </WhySectionCard>
               </Fade>
@@ -600,10 +601,11 @@ const HomePage: NextPage = () => {
                   </svg>
                   <h3>Data-Driven Templates</h3>
                   <p className="poppins_regular_400">
-                    Rest assured that the templates you find on here are the
-                    best around. Based on data from what employers want to see
-                    in candidates, we’ve created our templates with hiring in
-                    mind..
+                    Created straight out of the data that assures the best
+                    portfolios in the world, We provide you with the
+                    foundational structure of portfolios created by professional
+                    designers. Choose a template, enter your experience and
+                    conquer each job interview.
                   </p>
                 </WhySectionCard>
               </Fade>
@@ -622,11 +624,12 @@ const HomePage: NextPage = () => {
                   >
                     <path d="M22,3.41l-.12-1.26-1.2.4a13.84,13.84,0,0,1-6.41.64,11.87,11.87,0,0,0-6.68.9A7.23,7.23,0,0,0,3.3,9.5a9,9,0,0,0,.39,4.58,16.6,16.6,0,0,1,1.18-2.2A9.85,9.85,0,0,1,8.94,8.45a11.16,11.16,0,0,1,5.06-1v0A12.08,12.08,0,0,0,9.34,9.2a9.48,9.48,0,0,0-1.86,1.53,11.38,11.38,0,0,0-1.39,1.91,16.39,16.39,0,0,0-1.57,4.54A26.42,26.42,0,0,0,4,22H6a30.69,30.69,0,0,1,.59-4.32,9.25,9.25,0,0,0,4.52,1.11,11,11,0,0,0,4.28-.87C23,14.67,22,3.86,22,3.41Z"></path>
                   </svg>
-                  <h3>Get Seen</h3>
+                  <h3>Expand Your Online Presence</h3>
                   <p className="poppins_regular_400">
-                    With your resume ready for top employers, easily share with
-                    millions of interested employers on Indeed, the world’s #1
-                    job site.
+                    We know the importance of a Portfolio accessible anywhere at
+                    any time. Hexgrade enables you to easily share your
+                    Portfolio with millions of businesses to get you your dream
+                    jobs.
                   </p>
                 </WhySectionCard>
               </Fade>
@@ -1030,71 +1033,65 @@ const HomePage: NextPage = () => {
           <section className="workflow_section">
             <h2 className="workflow-title source_700">Workflow</h2>
 
-            <p className="workflow-paragraph">
-              We takle a broad variety of disciplines in the process of creating{' '}
-              <br />
-              meaningful products for customer satisfation.
-            </p>
+            <p className="workflow-paragraph">Steps To Create Your Portfolio</p>
 
             <div className="workflow_card-section">
               <div className="workflow_card ">
-                <div className="workflow_card-img-container">
-                  {/* <img src="" alt="" /> */}
-                  <i className="bx bx-award"></i>
+                <div className="workflow_card-img-container  poppins_medium_500">
+                  {/* <img src="" alt="" /> */}1
+                  {/* <i className="bx bx-award"></i> */}
                 </div>
 
                 <h3 className="poppins_medium_500">
-                  01. Research Competitor to selling points
+                  Sign Up For A Free Portfolio Builder
                 </h3>
 
                 <p className="workflow_card-paragraph poppins_regular_400">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Reprehenderit fugiat recusandae
+                  Choose what kind of portfolio you want to create.
                 </p>
               </div>
               <div className="workflow_card ">
-                <div className="workflow_card-img-container">
-                  {/* <img src="" alt="" /> */}
-                  <i className="bx bx-award"></i>
+                <div className="workflow_card-img-container poppins_medium_500">
+                  2{/* <img src="" alt="" /> */}
+                  {/* <i className="bx bx-award"></i> */}
                 </div>
 
                 <h3 className="poppins_medium_500">
-                  01. Research Competitor to selling points
+                  Choose Your Starting Point.
                 </h3>
 
                 <p className="workflow_card-paragraph poppins_regular_400">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Reprehenderit fugiat recusandae
+                  Use or Customize a template or get a portfolio made for you.
                 </p>
               </div>
               <div className="workflow_card ">
-                <div className="workflow_card-img-container">
-                  {/* <img src="" alt="" /> */}
-                  <i className="bx bx-award"></i>
+                <div className="workflow_card-img-container poppins_medium_500">
+                  3{/* <img src="" alt="" /> */}
+                  {/* <i className="bx bx-award"></i> */}
                 </div>
 
                 <h3 className="poppins_medium_500">
-                  01. Research Competitor to selling points
+                  Display Your Achievements
                 </h3>
 
                 <p className="workflow_card-paragraph poppins_regular_400">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Reprehenderit fugiat recusandae
+                  Enter the required fields to fill your customized templates.
+                  Add certificates, prior experience, and more.
                 </p>
               </div>
               <div className="workflow_card ">
-                <div className="workflow_card-img-container">
-                  {/* <img src="" alt="" /> */}
-                  <i className="bx bx-award"></i>
+                <div className="workflow_card-img-container poppins_medium_500">
+                  4{/* <img src="" alt="" /> */}
+                  {/* <i className="bx bx-award"></i> */}
                 </div>
 
                 <h3 className="poppins_medium_500">
-                  01. Research Competitor to selling points
+                  Receive Your Finished Portfolio
                 </h3>
 
                 <p className="workflow_card-paragraph poppins_regular_400">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Reprehenderit fugiat recusandae
+                  Get redirected to your generated portfolio and send it out to
+                  clients throughout the world.
                 </p>
               </div>
             </div>
@@ -1108,36 +1105,38 @@ const HomePage: NextPage = () => {
             <Fade left>
               <div className="left-division">
                 <h3 className="two-col_title source_700">
-                  Here we help ideas grow gradually
+                  Freedom to Create the Portfolio of your dreams
                 </h3>
 
                 <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Tempora velit assumenda debitis. Repudiandae est id commodi
-                  quod ex nam veniam!
+                  Design and build your high-quality portfolios. Showcase your
+                  achievements in the best designs possible and impress your
+                  clients. All without having prior knowledge in coding. Drag
+                  and drop the designs to create your masterpiece.
                 </p>
 
                 <div className="left-division_footer-section">
                   <div className="footer_icon-card">
                     <div className="icon_card-wrapper">
-                      <i className="bx bx-rocket" />
+                      <i className="bx bx-paper-plane" />
                     </div>
 
-                    <span className="poppins_regular_400">Typography</span>
+                    <span className="poppins_regular_400">Easy</span>
+                  </div>
+
+                  <div className="footer_icon-card">
+                    <div className="icon_card-wrapper">
+                      <i className="bx bx-customize" />
+                    </div>
+
+                    <span className="poppins_regular_400">Customizable</span>
                   </div>
                   <div className="footer_icon-card">
                     <div className="icon_card-wrapper">
                       <i className="bx bx-rocket" />
                     </div>
 
-                    <span className="poppins_regular_400">Animation</span>
-                  </div>
-                  <div className="footer_icon-card">
-                    <div className="icon_card-wrapper">
-                      <i className="bx bx-rocket" />
-                    </div>
-
-                    <span className="poppins_regular_400">Easy to edit</span>
+                    <span className="poppins_regular_400">Fast</span>
                   </div>
                 </div>
               </div>
@@ -1147,7 +1146,7 @@ const HomePage: NextPage = () => {
                 <img
                   className="tworow_section-img"
                   src="
-                https://images.unsplash.com/photo-1611078489935-0cb964de46d6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8bGFwdG9wc3xlbnwwfHwwfHw%3D&w=1000&q=80
+                  http://html.designstream.co.in/psume/landing/images/banner-moc-1-2.png
               "
                   alt=""
                 />
@@ -1161,13 +1160,13 @@ const HomePage: NextPage = () => {
             <Fade right>
               <div className="left-division-secondary">
                 <h3 className="two-col_title source_700">
-                  Where all yours innovation starts
+                  Crack your next job interview
                 </h3>
 
                 <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Tempora velit assumenda debitis. Repudiandae est id commodi
-                  quod ex nam veniam!
+                  Portfolio of hexgrade significantly increases the chances of
+                  cracking your next job interview by creating an impressive
+                  portfolio that is unique to you.
                 </p>
               </div>
             </Fade>
@@ -1176,7 +1175,7 @@ const HomePage: NextPage = () => {
                 <img
                   className="tworow_section-img"
                   src="
-                  https://images.unsplash.com/photo-1603302576837-37561b2e2302?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTJ8fGxhcHRvcHxlbnwwfHwwfHw%3D&w=1000&q=80  "
+                  https://images.pexels.com/photos/4126724/pexels-photo-4126724.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1 "
                   alt=""
                 />
               </div>
@@ -1198,7 +1197,7 @@ const HomePage: NextPage = () => {
               }}
               className="source_700"
             >
-              Frequently Asked Question
+              FAQ
               <div
                 style={{
                   background: '#191970',
