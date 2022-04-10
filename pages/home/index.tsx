@@ -1146,7 +1146,7 @@ const HomePage: NextPage = () => {
                 <img
                   className="tworow_section-img"
                   src="
-                  http://html.designstream.co.in/psume/landing/images/banner-moc-1-2.png
+                  https://i.imgur.com/sfpPtDx.png
               "
                   alt=""
                 />
