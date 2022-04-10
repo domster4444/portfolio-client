@@ -60,13 +60,13 @@ const Index = () => {
           <nav className="col-list">
             <ul>
               <li>
-                <Link href="#">Home</Link>
+                <Link href="/home">Home</Link>
               </li>
               <li>
-                <Link href="#">Pricing</Link>
+                <Link href="/pricing">Pricing</Link>
               </li>
               <li>
-                <Link href="#">Blog</Link>
+                <Link href="/blog">Blog</Link>
               </li>
             </ul>
           </nav>
@@ -77,16 +77,16 @@ const Index = () => {
           <nav className="col-list">
             <ul>
               <li>
-                <Link href="#">About Us</Link>
+                <Link href="/about">About Us</Link>
               </li>
               <li>
-                <Link href="#">Contact</Link>
+                <Link href="/contact">Contact</Link>
               </li>
               <li>
-                <Link href="#">Terms of Service</Link>
+                <Link href="/terms">Terms of Service</Link>
               </li>
               <li>
-                <Link href="#">Privacy</Link>
+                <Link href="/privacy">Privacy</Link>
               </li>
             </ul>
           </nav>
