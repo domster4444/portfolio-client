@@ -8,7 +8,7 @@ const index = () => {
     <>
       <DashboardLayout>
         <>
-          <ProjectsForm />
+          <ProjectsForm nextPreBtn={true} />
         </>
       </DashboardLayout>
     </>
