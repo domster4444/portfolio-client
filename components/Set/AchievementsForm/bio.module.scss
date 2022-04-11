@@ -1,0 +1,24 @@
+.bio_fileBtn {
+  font-size: 2rem;
+}
+
+.card {
+  max-width: 95rem;
+  label {
+    font-size: 1.8rem;
+  }
+  p {
+    font-size: 1.8rem;
+  }
+}
+.prevNext__btnContainer {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.btnContainer__btn {
+  margin-top: 0.5rem;
+  padding: 1.8rem !important;
+  font-size: 1.8rem !important;
+}

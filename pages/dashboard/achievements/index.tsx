@@ -1,12 +1,14 @@
 import React from 'react';
 // @ts-ignore
 import DashboardLayout from 'components/DashboardLayout';
+import AchievementsForm from 'components/Set/AchievementsForm';
+
 const index = () => {
   return (
     <>
       <DashboardLayout>
         <>
-          <h1>this is achievements</h1>
+          <AchievementsForm />
         </>
       </DashboardLayout>
     </>

@@ -12,6 +12,7 @@ import { ChevronLeft, ChevronRight, TickSquare } from 'react-iconly';
 import DashboardLayout from 'components/DashboardLayout';
 import { toast } from 'react-toastify';
 import BioStyles from './bio.module.scss';
+import Link from 'next/link';
 
 import styled from 'styled-components';
 export const Lable = styled.label`
@@ -310,24 +311,28 @@ const Index = ({ nextPreBtn }: { nextPreBtn: boolean }) => {
           {nextPreBtn === true && (
             <>
               <div className={BioStyles.prevNext__btnContainer}>
-                <Button
-                  shadow
-                  color="secondary"
-                  size="xl"
-                  className={BioStyles.btnContainer__btn}
-                >
-                  <ChevronLeft set="bold" primaryColor="white" />
-                  Previous Page
-                </Button>
-                <Button
-                  shadow
-                  color="primary"
-                  size="xl"
-                  className={BioStyles.btnContainer__btn}
-                >
-                  Next Page
-                  <ChevronRight set="bold" primaryColor="white" />
-                </Button>
+                {/* <Button
+                    shadow
+                    color="secondary"
+                    size="xl"
+                    className={BioStyles.btnContainer__btn}
+                  >
+                    <ChevronLeft set="bold" primaryColor="white" />
+                    Previous Page
+                  </Button> */}
+
+                <span></span>
+                <Link passHref href="/dashboard/contacts">
+                  <Button
+                    shadow
+                    color="primary"
+                    size="xl"
+                    className={BioStyles.btnContainer__btn}
+                  >
+                    Next Page
+                    <ChevronRight set="bold" primaryColor="white" />
+                  </Button>
+                </Link>
               </div>
             </>
           )}

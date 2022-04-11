@@ -6,8 +6,11 @@ import axios from 'axios';
 import { useUser } from '@auth0/nextjs-auth0';
 import { axiosInstance } from 'lib/utilities/api/api';
 import { toast } from 'react-toastify';
-
+import { ChevronLeft, ChevronRight } from 'react-iconly';
+import { Container, Card } from '@nextui-org/react';
 import styled from 'styled-components';
+import BioStyles from './bio.module.scss';
+import Link from 'next/link';
 
 const SkillBoxContainer = styled.div`
   display: flex;
@@ -50,7 +53,7 @@ export const Textarea = styled.textarea`
   font-size: 2.4rem;
 `;
 
-const Index: React.FC = () => {
+const Index = ({ nextPreBtn }: { nextPreBtn: boolean }) => {
   const { user, error, isLoading } = useUser();
   const [skillName, setSkillName] = React.useState('');
   const [skillLevel, setSkillLevel] = React.useState('');
@@ -208,6 +211,34 @@ const Index: React.FC = () => {
           {/* <Spacer x={0.5} /> */}
           {/* <TickSquare set="bold" primaryColor="white" /> */}
         </button>
+        {nextPreBtn === true && (
+          <>
+            <div className={BioStyles.prevNext__btnContainer}>
+              <Link passHref href="/dashboard/work">
+                <Button
+                  shadow
+                  color="secondary"
+                  size="xl"
+                  className={BioStyles.btnContainer__btn}
+                >
+                  <ChevronLeft set="bold" primaryColor="white" />
+                  Previous Page
+                </Button>
+              </Link>
+              <Link passHref href="/dashboard/projects">
+                <Button
+                  shadow
+                  color="primary"
+                  size="xl"
+                  className={BioStyles.btnContainer__btn}
+                >
+                  Next Page
+                  <ChevronRight set="bold" primaryColor="white" />
+                </Button>
+              </Link>
+            </div>
+          </>
+        )}
       </form>
     </SetCard>
   );

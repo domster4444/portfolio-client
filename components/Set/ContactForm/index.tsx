@@ -5,6 +5,10 @@ import { Spacer, Button } from '@nextui-org/react';
 import { axiosInstance } from 'lib/utilities/api/api';
 import { useUser } from '@auth0/nextjs-auth0';
 import { toast } from 'react-toastify';
+import Link from 'next/link';
+
+import { ChevronLeft, ChevronRight } from 'react-iconly';
+import BioStyles from './bio.module.scss';
 
 import styled from 'styled-components';
 export const Lable = styled.label`
@@ -21,7 +25,7 @@ export const Input = styled.input`
   background: #f4f4f4;
 `;
 
-const Index: React.FC = () => {
+const Index = ({ nextPreBtn = true }: { nextPreBtn: boolean }) => {
   const { user, error, isLoading } = useUser();
   const [twitter, setTwitter] = useState<string>('');
   const [facebook, setFacebook] = useState<string>('');
@@ -185,6 +189,34 @@ const Index: React.FC = () => {
           </span>
           {/* <TickSquare set="bold" primaryColor="white" /> */}
         </button>
+        {nextPreBtn === true && (
+          <>
+            <div className={BioStyles.prevNext__btnContainer}>
+              <Link passHref href="/dashboard/bio">
+                <Button
+                  shadow
+                  color="secondary"
+                  size="xl"
+                  className={BioStyles.btnContainer__btn}
+                >
+                  <ChevronLeft set="bold" primaryColor="white" />
+                  Previous Page
+                </Button>
+              </Link>
+              <Link passHref href="/dashboard/education">
+                <Button
+                  shadow
+                  color="primary"
+                  size="xl"
+                  className={BioStyles.btnContainer__btn}
+                >
+                  Next Page
+                  <ChevronRight set="bold" primaryColor="white" />
+                </Button>
+              </Link>
+            </div>
+          </>
+        )}
       </form>
     </SetCard>
   );

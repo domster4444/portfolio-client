@@ -6,6 +6,9 @@ import { useUser } from '@auth0/nextjs-auth0';
 import axios from 'axios';
 import { axiosInstance } from 'lib/utilities/api/api';
 import { toast } from 'react-toastify';
+import Link from 'next/link';
+import { ChevronLeft, ChevronRight } from 'react-iconly';
+import BioStyles from './bio.module.scss';
 
 import styled from 'styled-components';
 export const Lable = styled.label`
@@ -49,7 +52,7 @@ export const Textarea = styled.textarea`
   font-size: 2.4rem;
 `;
 
-const Index: React.FC = () => {
+const Index = ({ nextPreBtn = true }: { nextPreBtn: boolean }) => {
   const { user, error, isLoading } = useUser();
   const [organizationName, setOrganizationName] = useState('');
   const [dateOfJoining, setDateOfJoining] = useState('');
@@ -212,6 +215,34 @@ const Index: React.FC = () => {
           {/* <Spacer x={0.5} /> */}
           {/* <TickSquare set="bold" primaryColor="white" /> */}
         </button>
+        {nextPreBtn === true && (
+          <>
+            <div className={BioStyles.prevNext__btnContainer}>
+              <Link passHref href="/dashboard/contacts">
+                <Button
+                  shadow
+                  color="secondary"
+                  size="xl"
+                  className={BioStyles.btnContainer__btn}
+                >
+                  <ChevronLeft set="bold" primaryColor="white" />
+                  Previous Page
+                </Button>
+              </Link>
+              <Link passHref href="/dashboard/work">
+                <Button
+                  shadow
+                  color="primary"
+                  size="xl"
+                  className={BioStyles.btnContainer__btn}
+                >
+                  Next Page
+                  <ChevronRight set="bold" primaryColor="white" />
+                </Button>
+              </Link>
+            </div>
+          </>
+        )}
       </form>
     </SetCard>
   );

@@ -1,12 +1,14 @@
 import React from 'react';
 // @ts-ignore
 import DashboardLayout from 'components/DashboardLayout';
+import ProjectsForm from 'components/Set/ProjectsForm';
+
 const index = () => {
   return (
     <>
       <DashboardLayout>
         <>
-          <h1>this is projects</h1>
+          <ProjectsForm />
         </>
       </DashboardLayout>
     </>

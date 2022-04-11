@@ -1,16 +1,19 @@
 import React from 'react';
 // @ts-ignore
+import SkillsForm from 'components/Set/SkillsForm';
+
 import DashboardLayout from 'components/DashboardLayout';
-const index = () => {
+
+const Index = () => {
   return (
     <>
       <DashboardLayout>
         <>
-          <h1>this is skills</h1>
+          <SkillsForm nextPreBtn={true} />
         </>
       </DashboardLayout>
     </>
   );
 };
 
-export default index;
+export default Index;

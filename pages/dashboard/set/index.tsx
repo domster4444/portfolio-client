@@ -124,7 +124,7 @@ const SetPage: React.FC = () => {
               <>
                 {/* <hr /> */}
                 <Zoom>
-                  <ContactForm />
+                  <ContactForm nextPreBtn={false} />
                 </Zoom>
               </>
             );
@@ -142,7 +142,7 @@ const SetPage: React.FC = () => {
               <>
                 {/* <hr /> */}
                 <Zoom>
-                  <EducationForm />
+                  <EducationForm nextPreBtn={false} />
                 </Zoom>
               </>
             );
@@ -159,7 +159,7 @@ const SetPage: React.FC = () => {
               <>
                 {/* <hr /> */}
                 <Zoom>
-                  <WorkForm />
+                  <WorkForm nextPreBtn={false} />
                 </Zoom>
               </>
             );
@@ -176,7 +176,7 @@ const SetPage: React.FC = () => {
               <>
                 {/* <hr /> */}
                 <Zoom>
-                  <SkillsForm />
+                  <SkillsForm nextPreBtn={false} />
                 </Zoom>
               </>
             );
@@ -194,7 +194,7 @@ const SetPage: React.FC = () => {
               <>
                 {/* <hr /> */}
                 <Zoom>
-                  <ProjectsForm />
+                  <ProjectsForm nextPreBtn={false} />
                 </Zoom>
               </>
             );
@@ -211,7 +211,7 @@ const SetPage: React.FC = () => {
               <>
                 {/* <hr /> */}
                 <Zoom>
-                  <AchievementsForm />
+                  <AchievementsForm nextPreBtn={false} />
                 </Zoom>
               </>
             );

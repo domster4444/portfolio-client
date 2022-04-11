@@ -8,6 +8,9 @@ import axios from 'axios';
 import { axiosInstance } from 'lib/utilities/api/api';
 import { toast } from 'react-toastify';
 import styled from 'styled-components';
+import { ChevronLeft, ChevronRight } from 'react-iconly';
+import BioStyles from './bio.module.scss';
+import Link from 'next/link';
 
 const WorkBoxContainer = styled.div`
   display: flex;
@@ -39,7 +42,7 @@ export const Input = styled.input`
   background: #f4f4f4;
 `;
 
-const Index: React.FC = () => {
+const Index = ({ nextPreBtn = true }: { nextPreBtn: boolean }) => {
   const { user, error, isLoading } = useUser();
   const [companyName, setCompanyName] = useState<string>('');
   const [destination, setDestination] = useState<string>('');
@@ -210,6 +213,34 @@ const Index: React.FC = () => {
           {/* <Spacer x={0.5} /> */}
           {/* <TickSquare set="bold" primaryColor="white" /> */}
         </button>
+        {nextPreBtn === true && (
+          <>
+            <div className={BioStyles.prevNext__btnContainer}>
+              <Link passHref href="/dashboard/education">
+                <Button
+                  shadow
+                  color="secondary"
+                  size="xl"
+                  className={BioStyles.btnContainer__btn}
+                >
+                  <ChevronLeft set="bold" primaryColor="white" />
+                  Previous Page
+                </Button>
+              </Link>
+              <Link passHref href="/dashboard/skills">
+                <Button
+                  shadow
+                  color="primary"
+                  size="xl"
+                  className={BioStyles.btnContainer__btn}
+                >
+                  Next Page
+                  <ChevronRight set="bold" primaryColor="white" />
+                </Button>
+              </Link>
+            </div>
+          </>
+        )}
       </form>
     </SetCard>
   );
