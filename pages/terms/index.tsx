@@ -163,7 +163,17 @@ const index = () => {
           be occasionally suspended or restricted to allow for repairs,
           maintenance, or the introduction of new facilities or services at any
           time without prior notice. We will attempt to limit the frequency and
-          duration of any such suspension or restriction.
+          duration of any such suspension or restriction. We will attempt to
+          limit the frequency and duration of any such suspension or
+          restriction.
+        </Paragraph>
+
+        <Paragraph className="poppins_regular_400">
+          <h2 className="poppins_regular_400">GOVERNING LAW AND JURIDICTION</h2>
+          These terms and conditions are governed by and construed in accordance
+          with the laws of the Federal Democratic Republic of Nepal. You agree,
+          as we do, to submit to the exclusive jurisdiction of the courts in
+          Kathmandu.
         </Paragraph>
       </PrivacyWrapper>
     </Layout>
