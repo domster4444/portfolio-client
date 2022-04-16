@@ -7,6 +7,7 @@ export default async (req, res) => {
     { url: '/home', changefreq: 'daily', priority: 0.9 },
     { url: '/about', changefreq: 'daily', priority: 0.9 },
     { url: '/contact', changefreq: 'daily', priority: 0.9 },
+    { url: '/api/auth/login', changefreq: 'daily', priority: 0.8 },
     { url: '/pricing', changefreq: 'daily', priority: 0.9 },
     { url: '/blog', changefreq: 'daily', priority: 0.9 },
     {
