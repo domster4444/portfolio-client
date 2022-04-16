@@ -130,8 +130,8 @@ const RightFormSection = styled.section`
   section.form {
     width: 100%;
     button {
-      transform: translateX(-50%);
-      margin-left: 50%;
+      /* transform: translateX(-50%); */
+      /* margin-left: 50%; */
       width: 98%;
     }
   }
