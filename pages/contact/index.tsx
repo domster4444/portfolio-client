@@ -2,6 +2,8 @@
 import React from 'react';
 import Head from 'next/head';
 
+import { useForm, ValidationError } from '@formspree/react';
+
 import Layout from 'components/Layout';
 import { NextPage } from 'next';
 import styled from 'styled-components';
@@ -51,6 +53,8 @@ const ContactContainerRight = styled.div`
 `;
 
 const ContactPage: NextPage = () => {
+  const [state, handleSubmit] = useForm('xdobeqnz');
+
   return (
     <Layout>
       <>
@@ -165,6 +169,12 @@ const ContactPage: NextPage = () => {
               </a>
             </ContactContainerLeft>
             <ContactContainerRight>
+              {(() => {
+                if (state.succeeded) {
+                  return <h3>successfully submitted</h3>;
+                }
+              })()}
+
               <form>
                 <h3
                   className="contactForm__title source_700"

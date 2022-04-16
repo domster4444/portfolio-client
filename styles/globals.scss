@@ -191,3 +191,25 @@ html {
   }
 }
 
+// profile dashboard frame
+.user-image {
+  position: relative;
+  /* background-color: blue; */
+}
+#profile_frame {
+  height: 126px;
+  width: 126px;
+  /* background-color: red; */
+  position: relative;
+}
+#profile_dp {
+  height: 84px;
+  width: 84px;
+  position: absolute;
+  z-index: 100;
+  margin-left: 50%;
+  margin-top: 50%;
+  transform: translateY(-50%) translateX(-50%);
+  border-radius: 0.25rem;
+  clip-path: polygon(50% 2%, 91% 25%, 91% 75%, 50% 98%, 9% 75%, 9% 26%);
+}

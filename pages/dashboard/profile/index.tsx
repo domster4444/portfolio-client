@@ -296,12 +296,147 @@ const Index: React.FC = () => {
               <LeftProfile>
                 <LeftFormSection>
                   <UserAvatar>
-                    <Image
+                    <span className="user-image user-image--large">
+                      <img
+                        id="profile_dp"
+                        className="user-image__avatar user-image__avatar--moonstone"
+                        src="https://lh3.googleusercontent.com/a-/AOh14Gh0BmnM-RW-_yaRfUETIvPCrH1Z38nfRTCG0veX6g=s96-c"
+                        alt="user"
+                      />
+                      <svg
+                        id="profile_frame"
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="106"
+                        height="120"
+                        viewBox="0 0 106 120"
+                        name="GemstoneMoonstone"
+                        className="user-image__gem"
+                      >
+                        <defs>
+                          <linearGradient
+                            id="GemstoneMoonstone_svg__a"
+                            x1="67.638%"
+                            x2="22.239%"
+                            y1="69.379%"
+                            y2="-4.429%"
+                          >
+                            <stop offset="0%" stopColor="#0B90FF"></stop>
+                            <stop offset="51.042%" stopColor="#0059A3"></stop>
+                            <stop offset="100%" stopColor="#003561"></stop>
+                          </linearGradient>
+                          <linearGradient
+                            id="GemstoneMoonstone_svg__b"
+                            x1="44.257%"
+                            x2="55.458%"
+                            y1="16.681%"
+                            y2="54.959%"
+                          >
+                            <stop offset="0%" stopColor="#0B90FF"></stop>
+                            <stop offset="51.042%" stopColor="#0059A3"></stop>
+                            <stop offset="100%" stopColor="#003561"></stop>
+                          </linearGradient>
+                          <linearGradient
+                            id="GemstoneMoonstone_svg__c"
+                            x1="88.184%"
+                            x2="44.044%"
+                            y1="26.589%"
+                            y2="100.06%"
+                          >
+                            <stop offset="0%" stopColor="#0B90FF"></stop>
+                            <stop offset="51.042%" stopColor="#0059A3"></stop>
+                            <stop offset="100%" stopColor="#003561"></stop>
+                          </linearGradient>
+                          <linearGradient
+                            id="GemstoneMoonstone_svg__d"
+                            x1="50%"
+                            x2="78.082%"
+                            y1="22.805%"
+                            y2="65.531%"
+                          >
+                            <stop offset="0%" stopColor="#0B90FF"></stop>
+                            <stop offset="51.042%" stopColor="#0059A3"></stop>
+                            <stop offset="100%" stopColor="#003561"></stop>
+                          </linearGradient>
+                          <linearGradient
+                            id="GemstoneMoonstone_svg__e"
+                            x1="50%"
+                            x2="54.011%"
+                            y1="0%"
+                            y2="129.265%"
+                          >
+                            <stop offset="0%" stopColor="#0B90FF"></stop>
+                            <stop offset="51.042%" stopColor="#0059A3"></stop>
+                            <stop offset="100%" stopColor="#003561"></stop>
+                          </linearGradient>
+                          <linearGradient
+                            id="GemstoneMoonstone_svg__f"
+                            x1="107.132%"
+                            x2="49.561%"
+                            y1="44.194%"
+                            y2="62.808%"
+                          >
+                            <stop offset="0%" stopColor="#0B90FF"></stop>
+                            <stop offset="51.042%" stopColor="#0059A3"></stop>
+                            <stop offset="100%" stopColor="#003561"></stop>
+                          </linearGradient>
+                          <linearGradient
+                            id="GemstoneMoonstone_svg__g"
+                            x1="76.576%"
+                            x2="41.778%"
+                            y1="13.688%"
+                            y2="58.819%"
+                          >
+                            <stop offset="0%" stopColor="#0B90FF"></stop>
+                            <stop offset="51.042%" stopColor="#0059A3"></stop>
+                            <stop offset="100%" stopColor="#003561"></stop>
+                          </linearGradient>
+                        </defs>
+                        <g fillRule="nonzero" fill="none">
+                          <path
+                            fill="url(#GemstoneMoonstone_svg__a)"
+                            d="M90.127 36.194l13.866-7.953L55.055 0v15.905c.306.102.611.204.815.408L89.107 35.48c.408.204.714.51 1.02.714z"
+                            transform="translate(.035)"
+                          ></path>
+                          <path
+                            fill="url(#GemstoneMoonstone_svg__b)"
+                            d="M13.56 80.339c-.102-.306-.102-.714-.102-1.121V40.78c0-.408 0-.918.102-1.325L0 31.707v56.482l13.56-7.85z"
+                            transform="translate(.035)"
+                          ></path>
+                          {/* <!-- <path
+            fill="url(#GemstoneMoonstone_svg__c)"
+            d="M87.897 79.005V40.997c0-.706-.403-1.411-1.008-1.714L53.922 20.33a1.832 1.832 0 00-2.016 0L19.039 39.283c-.604.404-1.008 1.008-1.008 1.714v38.008c0 .706.404 1.411 1.008 1.714l32.867 18.953a1.828 1.828 0 002.016 0L86.788 80.72c.706-.303 1.109-.907 1.109-1.714z"
+            transform="translate(.035)"
+          ></path> --> */}
+                          <path
+                            fill="url(#GemstoneMoonstone_svg__d)"
+                            d="M15.7 36.092c.205-.204.51-.408.817-.51l33.236-19.167c.408-.204.816-.408 1.224-.51V0L2.039 28.14l13.662 7.952z"
+                            transform="translate(.035)"
+                          ></path>
+                          <path
+                            fill="url(#GemstoneMoonstone_svg__e)"
+                            d="M92.164 39.761c.102.408.102.714.102 1.122V79.32c0 .305 0 .611-.102.917l13.764 7.952V31.707l-13.764 8.054z"
+                            transform="translate(.035)"
+                          ></path>
+                          <path
+                            fill="url(#GemstoneMoonstone_svg__f)"
+                            d="M50.977 104.299c-.408-.102-.816-.306-1.224-.509L16.517 84.52c-.306-.204-.612-.407-.918-.713l-13.56 7.85 48.938 28.241v-15.599z"
+                            transform="translate(.035)"
+                          ></path>
+                          <path
+                            fill="url(#GemstoneMoonstone_svg__g)"
+                            d="M90.229 83.807c-.306.305-.714.51-1.122.815L55.87 103.79c-.306.203-.611.305-.815.407V120l48.938-28.241-13.764-7.952z"
+                            transform="translate(.035)"
+                          ></path>
+                        </g>
+                      </svg>
+                    </span>
+                    {/* ? default dp v1 */}
+                    {/* <Image
                       height={'100rem'}
                       width={'100rem'}
                       src={`${userPhoto}`}
                       alt="user photograph"
-                    />
+                    /> */}
 
                     <h2 className="poppins_regular_400">{userName}</h2>
                     <span className="poppins_regular_400">{userEmail}</span>
