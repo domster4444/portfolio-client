@@ -25,6 +25,10 @@ const InputRowContainer = styled.h3`
       width: 90%;
       margin-top: 2rem;
     }
+    @media only screen and (max-width: 415px) {
+      width: 100%;
+      margin-top: 2rem;
+    }
   }
 `;
 const Index: React.FC = () => {

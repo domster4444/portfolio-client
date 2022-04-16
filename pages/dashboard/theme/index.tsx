@@ -139,33 +139,56 @@ const Index: NextPage = () => {
               />
 
               <Button
+                className="poppins_regular_400"
                 onClick={renderAllTheme}
                 type="button"
-                style={{ fontSize: '2rem', margin: '0rem 1rem' }}
+                style={{
+                  fontSize: '2rem',
+                  margin: '0rem 1rem',
+                  borderRadius: '0.5rem',
+                  border: '1px solid #c7c7c7',
+
+                  color: '#5a5a5a',
+                }}
                 color="primary"
                 auto
-                shadow
+                bordered
                 size="xl"
               >
                 All
               </Button>
               <Button
+                className="poppins_regular_400"
                 onClick={renderPaidTheme}
                 type="button"
-                style={{ fontSize: '2rem', margin: '0rem 1rem' }}
-                color="error"
+                style={{
+                  fontSize: '2rem',
+                  margin: '0rem 1rem',
+                  borderRadius: '0.5rem',
+                  border: '1px solid #c7c7c7',
+                  color: '#5a5a5a',
+                }}
+                color="secondary"
                 auto
-                shadow
                 size="xl"
+                bordered
               >
                 Premium
               </Button>
               <Button
+                className="poppins_regular_400"
                 onClick={renderFreeTheme}
                 type="button"
-                shadow
-                style={{ fontSize: '2rem', margin: '0rem 1rem' }}
+                style={{
+                  fontSize: '2rem',
+                  margin: '0rem 1rem',
+                  borderRadius: '0.5rem',
+                  border: '1px solid #c7c7c7',
+
+                  color: '#5a5a5a',
+                }}
                 color="success"
+                bordered
                 auto
                 size="xl"
               >

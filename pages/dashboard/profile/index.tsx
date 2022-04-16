@@ -439,7 +439,14 @@ const Index: React.FC = () => {
                     /> */}
 
                     <h2 className="poppins_regular_400">{userName}</h2>
-                    <span className="poppins_regular_400">{userEmail}</span>
+                    <span
+                      style={{
+                        wordBreak: 'break-word',
+                      }}
+                      className="poppins_regular_400"
+                    >
+                      {userEmail}
+                    </span>
                   </UserAvatar>
                   <br />
                   <StatusTab>
