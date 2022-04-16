@@ -153,6 +153,10 @@ const RightFormSection = styled.section`
     border-radius: 1rem;
 
     height: 5rem;
+
+    @media only screen and (max-width: 350px) {
+      width: 100%;
+    }
   }
 `;
 

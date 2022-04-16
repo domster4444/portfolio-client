@@ -173,83 +173,78 @@ const ThemeCard = ({
       {(() => {
         if (isLoaded !== false) {
           return (
-            <Link passHref href={`${url}`}>
-              <ThemeCardSmall
-                ref={(el) => {
-                  // @ts-ignore
-                  animateThemeCard = el;
+            <ThemeCardSmall
+              ref={(el) => {
+                // @ts-ignore
+                animateThemeCard = el;
+              }}
+            >
+              <div className="theme_img-container">
+                <ThemeCardImg src={`${imageUrl}`} alt="" />
+              </div>
+              <span
+                className="poppins_regular_400"
+                style={{
+                  fontSize: '1.8rem',
+                  color: '#4747476c',
                 }}
               >
-                <div className="theme_img-container">
-                  <ThemeCardImg src={`${imageUrl}`} alt="" />
-                </div>
-                <span
-                  className="poppins_regular_400"
-                  style={{
-                    fontSize: '1.8rem',
-                    color: '#4747476c',
-                  }}
-                >
-                  &nbsp;&nbsp;{name}
-                </span>
-                <div
-                  className="themeCard__btnContainer"
-                  style={themeCardBtnContainer}
-                >
-                  <Link passHref href={`${url}`}>
-                    <UseBtn
-                      className="medium poppins_regular_400"
-                      type="button"
-                    >
-                      Preview
-                    </UseBtn>
-                  </Link>
-
-                  <UseBtn
-                    className="medium poppins_regular_400"
-                    type="button"
-                    onClick={handler}
-                  >
-                    Use
+                &nbsp;&nbsp;{name}
+              </span>
+              <div
+                className="themeCard__btnContainer"
+                style={themeCardBtnContainer}
+              >
+                <Link passHref href={`${url}`}>
+                  <UseBtn className="medium poppins_regular_400" type="button">
+                    Preview
                   </UseBtn>
+                </Link>
 
-                  <Modal
-                    closeButton
-                    blur
-                    aria-labelledby="modal-title"
-                    open={visible}
-                    onClose={closeHandler}
-                  >
-                    <Modal.Header>
-                      <Text id="modal-title" size={18}>
-                        Do you really want to use this &nbsp;
-                        <Text b size={18}>
-                          Theme ?
-                        </Text>
+                <UseBtn
+                  className="medium poppins_regular_400"
+                  type="button"
+                  onClick={handler}
+                >
+                  Use
+                </UseBtn>
+
+                <Modal
+                  closeButton
+                  blur
+                  aria-labelledby="modal-title"
+                  open={visible}
+                  onClose={closeHandler}
+                >
+                  <Modal.Header>
+                    <Text id="modal-title" size={18}>
+                      Do you really want to use this &nbsp;
+                      <Text b size={18}>
+                        Theme ?
                       </Text>
-                    </Modal.Header>
+                    </Text>
+                  </Modal.Header>
 
-                    <Modal.Footer>
-                      <Button
-                        auto
-                        flat
-                        color="error"
-                        size="xl"
-                        onClick={closeHandler}
-                      >
-                        No Go Back
+                  <Modal.Footer>
+                    <Button
+                      auto
+                      flat
+                      color="error"
+                      size="xl"
+                      onClick={closeHandler}
+                    >
+                      No Go Back
+                    </Button>
+
+                    <Link passHref href={`${useUrl}`}>
+                      <Button auto size="xl" onClick={closeHandler}>
+                        Yes I want to use it
                       </Button>
-
-                      <Link passHref href={`${useUrl}`}>
-                        <Button auto size="xl" onClick={closeHandler}>
-                          Yes I want to use it
-                        </Button>
-                      </Link>
-                    </Modal.Footer>
-                  </Modal>
-                </div>
-              </ThemeCardSmall>
-            </Link>
+                    </Link>
+                  </Modal.Footer>
+                </Modal>
+              </div>
+            </ThemeCardSmall>
           );
         }
         return (
