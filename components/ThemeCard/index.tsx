@@ -6,6 +6,7 @@ import styled from 'styled-components';
 import { TweenMax, Power3 } from 'gsap';
 
 const ThemeCardSmall = styled.div`
+  position: relative;
   border-radius: 1.35rem;
   .theme_img-container {
     height: 30rem;
@@ -17,7 +18,7 @@ const ThemeCardSmall = styled.div`
   cursor: pointer;
   margin: 1rem;
   font-size: 1.4rem;
-  overflow: hidden;
+  /* overflow: hidden; */
   box-shadow: 0px 0px 10px 1px lightgrey;
   /* background-color: rgb(17, 16, 29); */
   /* border: 0.25rem solid black; */
@@ -37,7 +38,14 @@ const ThemeCardSmall = styled.div`
     transition: all 0.3s ease-in-out;
     transform: scale(1.05) !important;
   }
+  .price {
+    transition: all 0s ease-in-out;
+  }
   &:hover {
+    .price {
+      transition: all 0s ease-in-out;
+      visibility: visible;
+    }
     img {
       /* border: 0.2rem solid black; */
       transform: scale(1.1) !important;
@@ -179,6 +187,8 @@ const ThemeCard = ({
                 animateThemeCard = el;
               }}
             >
+              <span className="price">495,-</span>
+
               <div className="theme_img-container">
                 <ThemeCardImg src={`${imageUrl}`} alt="" />
               </div>

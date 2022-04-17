@@ -11,7 +11,7 @@ import { Input, Button } from '@nextui-org/react';
 import Breadcrumbs from 'components/BreadCrumb/index';
 
 const allThemes = [
-  // *seventh
+  // *first
   {
     isPaid: 'not-premium',
     url: `${globalConstant.baseURL}/7`,
@@ -20,7 +20,16 @@ const allThemes = [
     description: 'This is the clean girl theme',
     imageUrl: 'https://i.imgur.com/ARjoptJ.png',
   },
-  // *first
+  // *second
+  {
+    isPaid: 'not-premium',
+    url: `${globalConstant.baseURL}/8`,
+    useUrl: `${globalConstant.baseURL}/dashboard/set/?info=bio,skills`,
+    name: 'Venom Theme',
+    description: 'This is the clean girl theme',
+    imageUrl: 'https://i.imgur.com/S8jb1NW.png',
+  },
+  // *third
   {
     isPaid: 'full-premium',
     url: `${globalConstant.baseURL}/1`,
@@ -29,7 +38,7 @@ const allThemes = [
     description: 'This is the first theme',
     imageUrl: 'https://i.imgur.com/uMQLC1d_d.webp?maxwidth=760&fidelity=grand',
   },
-  // *second
+  // *fourth
   {
     isPaid: 'full-premium',
     url: `${globalConstant.baseURL}/3`,
@@ -38,7 +47,7 @@ const allThemes = [
     description: 'This is the third theme',
     imageUrl: 'https://i.imgur.com/6zJPuJw.png',
   },
-  // *third
+  // *fifth
   {
     isPaid: 'full-premium',
     url: `${globalConstant.baseURL}/2`,
@@ -47,7 +56,7 @@ const allThemes = [
     description: 'portfolio by author kshitiz',
     imageUrl: 'https://i.imgur.com/pDTrAxx.jpg',
   },
-  // *fourth
+  // *sixth
   {
     isPaid: 'not-premium',
     url: `${globalConstant.baseURL}/4`,
@@ -56,7 +65,7 @@ const allThemes = [
     description: 'This is the fourth theme',
     imageUrl: 'https://i.imgur.com/AaQy0W5.png',
   },
-  // *fifth
+  // *seventh
   {
     isPaid: 'not-premium',
     url: `${globalConstant.baseURL}/5`,
@@ -67,15 +76,6 @@ const allThemes = [
   },
 
   // *eighth
-  {
-    isPaid: 'not-premium',
-    url: `${globalConstant.baseURL}/5`,
-    useUrl: `${globalConstant.baseURL}/dashboard/set/?info=bio,skills`,
-    name: 'Venom Theme',
-    description: 'This is the clean girl theme',
-    imageUrl: 'https://i.imgur.com/S8jb1NW.png',
-  },
-  // *nine
   {
     isPaid: 'not-premium',
     url: `${globalConstant.baseURL}/9`,

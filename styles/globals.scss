@@ -213,3 +213,61 @@ html {
   border-radius: 0.25rem;
   clip-path: polygon(50% 2%, 91% 25%, 91% 75%, 50% 98%, 9% 75%, 9% 26%);
 }
+
+// ? PRICING TAG
+
+.price {
+  visibility: hidden;
+
+  @include media('<=tablet') {
+    visibility: visible;
+  }
+  color: rgba(0, 0, 0, 0.6);
+  background-color: #ffe68b;
+  display: block;
+  width: 60px;
+  padding: 10px 5px 10px 0px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 100;
+  text-align: right;
+  font-family: courier;
+  border-radius: 2px;
+  filter: drop-shadow(1px 1px 0.8px rgba(0, 0, 0, 0.2));
+  transform: rotateZ(-5deg) scale(1);
+  transition: all 0.5s ease;
+}
+
+.price {
+  transform: rotateZ(2deg) scale(1);
+}
+
+.price {
+  transform: rotateZ(6deg) scale(1);
+}
+
+.price::before {
+  content: '';
+  padding: 18px;
+  position: absolute;
+  background-color: #ffe68b;
+  left: -6px;
+  top: 1px;
+  border-bottom-left-radius: 50%;
+  border-top-left-radius: 50%;
+  z-index: -1;
+}
+
+.price::after {
+  content: '';
+  padding: 18px;
+  position: absolute;
+  background-color: #ffe68b;
+  right: -6px;
+  top: 1px;
+  border-bottom-right-radius: 50%;
+  border-top-right-radius: 50%;
+  z-index: -1;
+}
+

@@ -106,7 +106,7 @@ class MyDocument extends Document {
         <meta name="author" content="Kshitiz Shah" />
         <meta
           name="description"
-          content="Create your online presence with your skills, work, achievements, portfolios and professional career with an online portfolio website."
+          content="Create your online presence with your skills, work, achievements, portfolios and professional career with an online portfolio website with hexgrade."
         />
         <meta
           name="keywords"

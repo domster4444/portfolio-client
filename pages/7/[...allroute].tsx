@@ -26,6 +26,7 @@ const ThemeSeven = () => {
   const [facebook, setFacebook] = React.useState('');
   const [linkedIn, setLinkedIn] = React.useState('');
   const [instagram, setInstagram] = React.useState('');
+  const [github, setGithub] = React.useState('');
   const [skills, setSkills] = React.useState<any[]>([]);
   const [projects, setProjects] = React.useState<any[]>([]);
   const [workHistory, setWorkHistory] = React.useState<any[]>([]);
@@ -77,6 +78,8 @@ const ThemeSeven = () => {
         setFacebook(res.data.detailExist.facebook);
         setLinkedIn(res.data.detailExist.linkedin);
         setInstagram(res.data.detailExist.instagram);
+        setGithub(res.data.detailExist.github);
+        setLinkedIn(res.data.detailExist.github);
         setSkills(res.data.detailExist.skills);
         setEmail(res.data.detailExist.email);
         setWorkHistory(res.data.detailExist.workExperience);
@@ -271,15 +274,28 @@ const ThemeSeven = () => {
             </div>
 
             <div className="home__social">
-              <a href="" className="home__social-link">
-                <i className="bx bxl-linkedin-square"></i>
-              </a>
-              <a href="" className="home__social-link">
-                <i className="bx bxl-github"></i>
-              </a>
-              <a href="" className="home__social-link">
-                <i className="bx bxl-github"></i>
-              </a>
+              {facebook && (
+                <a href="" className="home__social-link">
+                  <i className="bx bxl-facebook-square"></i>
+                </a>
+              )}
+              {linkedIn && (
+                <a href="" className="home__social-link">
+                  <i className="bx bxl-linkedin-square"></i>
+                </a>
+              )}
+
+              {github && (
+                <a href="" className="home__social-link">
+                  <i className="bx bxl-github"></i>
+                </a>
+              )}
+
+              {instagram && (
+                <a href="" className="home__social-link">
+                  <i className="bx bxl-instagram-alt"></i>
+                </a>
+              )}
             </div>
             <a href="#about" className="home__scroll">
               <i className="bx bx-mouse"></i>
@@ -555,22 +571,50 @@ const ThemeSeven = () => {
                     <p className="work__paragraph">
                       {item.projectDescription}{' '}
                     </p>
-                    <a href={item.projectVideoLink} className="work__button">
-                      vdo
-                      <i className="bx bx-right-arrow-alt work__icon"></i>
-                    </a>
-                    <a href={item.projectGithubLink} className="work__button">
-                      github
-                      <i className="bx bx-right-arrow-alt work__icon"></i>
-                    </a>
-                    <a href={item.projectWebsiteLink} className="work__button">
-                      website
-                      <i className="bx bx-right-arrow-alt work__icon"></i>
-                    </a>
-                    <a href={item.projectDocLink} className="work__button">
-                      website
-                      <i className="bx bx-right-arrow-alt work__icon"></i>
-                    </a>
+
+                    <div
+                      className="link-container"
+                      style={{
+                        display: 'flex',
+                      }}
+                    >
+                      <a
+                        style={{
+                          margin: '0rem 0.5rem',
+                        }}
+                        href={item.projectVideoLink}
+                        className="work__button"
+                      >
+                        <i className="bx bxs-video-recording work__icon" />{' '}
+                      </a>
+                      <a
+                        style={{
+                          margin: '0rem 0.5rem',
+                        }}
+                        href={item.projectGithubLink}
+                        className="work__button"
+                      >
+                        <i className="bx bxl-github work__icon"></i>
+                      </a>
+                      <a
+                        style={{
+                          margin: '0rem 0.5rem',
+                        }}
+                        href={item.projectWebsiteLink}
+                        className="work__button"
+                      >
+                        <i className="bx bx-link work__icon"></i>
+                      </a>
+                      <a
+                        style={{
+                          margin: '0rem 0.5rem',
+                        }}
+                        href={item.projectDocLink}
+                        className="work__button"
+                      >
+                        <i className="bx bxs-file-doc work__icon"></i>
+                      </a>
+                    </div>
                   </div>
                 );
               });
@@ -594,9 +638,9 @@ const ThemeSeven = () => {
                     <h3 className="contact__card-title">Email</h3>
                     <span className="contact__card-data">{email}</span>
                     <a
-                      href="mailto:examplemail@correo.com"
-                      target="_blank"
+                      href={`mailto:${email}?subject=Request Letter to Hire a New Employee&body=Hello There, I am ...... and I would like to hire you for our project. Please contact me back."`}
                       className="contact__button"
+                      target="_blank"
                       rel="noopener noreferrer"
                     >
                       Write me
@@ -697,30 +741,37 @@ const ThemeSeven = () => {
           </ul>
 
           <ul className="footer__social">
-            <a
-              href={facebook && facebook}
-              target="_blank"
-              className="footer__social-link"
-              rel="noopener noreferrer"
-            >
-              <i className="bx bxl-facebook"></i>
-            </a>
-            <a
-              href={instagram && instagram}
-              target="_blank"
-              className="footer__social-link"
-              rel="noopener noreferrer"
-            >
-              <i className="bx bxl-instagram"></i>
-            </a>
-            <a
-              href={linkedIn && linkedIn}
-              target="_blank"
-              className="footer__social-link"
-              rel="noopener noreferrer"
-            >
-              <i className="bx bxl-linkedin"></i>
-            </a>
+            {facebook && (
+              <a
+                href={facebook && facebook}
+                target="_blank"
+                className="footer__social-link"
+                rel="noopener noreferrer"
+              >
+                <i className="bx bxl-facebook"></i>
+              </a>
+            )}
+
+            {instagram && (
+              <a
+                href={instagram}
+                target="_blank"
+                className="footer__social-link"
+                rel="noopener noreferrer"
+              >
+                <i className="bx bxl-instagram"></i>
+              </a>
+            )}
+            {linkedIn && (
+              <a
+                href={linkedIn}
+                target="_blank"
+                className="footer__social-link"
+                rel="noopener noreferrer"
+              >
+                <i className="bx bxl-linkedin"></i>
+              </a>
+            )}
           </ul>
 
           <span className="footer__copy">
