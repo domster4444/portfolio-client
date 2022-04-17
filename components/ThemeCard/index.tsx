@@ -136,6 +136,7 @@ type ThemeProps = {
   description: string;
   imageUrl: string;
   useUrl: string;
+  price: string;
 };
 // eslint-disable-next-line object-curly-newline
 const ThemeCard = ({
@@ -144,6 +145,7 @@ const ThemeCard = ({
   description,
   imageUrl,
   useUrl,
+  price,
 }: ThemeProps) => {
   const [isLoaded, setIsLoaded] = useState(false);
   let animateThemeCard = useRef(null);
@@ -187,7 +189,15 @@ const ThemeCard = ({
                 animateThemeCard = el;
               }}
             >
-              <span className="price">495,-</span>
+              <span
+                className="price"
+                style={{
+                  textAlign: 'center',
+                }}
+              >
+                Rs.{price}
+              </span>
+              {/* <span className="price">Free</span> */}
 
               <div className="theme_img-container">
                 <ThemeCardImg src={`${imageUrl}`} alt="" />

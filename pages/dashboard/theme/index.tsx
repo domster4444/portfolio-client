@@ -13,6 +13,7 @@ import Breadcrumbs from 'components/BreadCrumb/index';
 const allThemes = [
   // *first
   {
+    price: 'free',
     isPaid: 'not-premium',
     url: `${globalConstant.baseURL}/7`,
     useUrl: `${globalConstant.baseURL}/dashboard/set/?info=bio,contacts,education,work,skills,projects,achievements,7`,
@@ -22,6 +23,7 @@ const allThemes = [
   },
   // *second
   {
+    price: 'free',
     isPaid: 'not-premium',
     url: `${globalConstant.baseURL}/8`,
     useUrl: `${globalConstant.baseURL}/dashboard/set/?info=bio,skills`,
@@ -31,6 +33,7 @@ const allThemes = [
   },
   // *third
   {
+    price: '200',
     isPaid: 'full-premium',
     url: `${globalConstant.baseURL}/1`,
     useUrl: `${globalConstant.baseURL}/dashboard/set/?info=bio,contacts,education,work,skills,projects,achievements,1`,
@@ -40,6 +43,7 @@ const allThemes = [
   },
   // *fourth
   {
+    price: '220',
     isPaid: 'full-premium',
     url: `${globalConstant.baseURL}/3`,
     useUrl: `${globalConstant.baseURL}/dashboard/set/?info=bio,skills`,
@@ -49,6 +53,7 @@ const allThemes = [
   },
   // *fifth
   {
+    price: '300',
     isPaid: 'full-premium',
     url: `${globalConstant.baseURL}/2`,
     useUrl: `${globalConstant.baseURL}/dashboard/set/?info=bio,skills`,
@@ -58,6 +63,7 @@ const allThemes = [
   },
   // *sixth
   {
+    price: 'free',
     isPaid: 'not-premium',
     url: `${globalConstant.baseURL}/4`,
     useUrl: `${globalConstant.baseURL}/dashboard/set/?info=bio,skills`,
@@ -67,6 +73,7 @@ const allThemes = [
   },
   // *seventh
   {
+    price: 'free',
     isPaid: 'not-premium',
     url: `${globalConstant.baseURL}/5`,
     useUrl: `${globalConstant.baseURL}/dashboard/set/?info=bio,skills`,
@@ -77,6 +84,7 @@ const allThemes = [
 
   // *eighth
   {
+    price: 'free',
     isPaid: 'not-premium',
     url: `${globalConstant.baseURL}/9`,
     useUrl: `${globalConstant.baseURL}/dashboard/set/?info=bio,skills`,
@@ -205,6 +213,7 @@ const Index: NextPage = () => {
                     imageUrl={item.imageUrl}
                     name={item.name}
                     useUrl={item.useUrl}
+                    price={item.price}
                   />
                 ));
               })()}

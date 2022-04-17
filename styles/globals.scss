@@ -222,10 +222,10 @@ html {
   @include media('<=tablet') {
     visibility: visible;
   }
-  color: rgba(0, 0, 0, 0.6);
-  background-color: #ffe68b;
+  color: white;
+  background-color: #179dff;
   display: block;
-  width: 60px;
+  width: 70px;
   padding: 10px 5px 10px 0px;
   position: absolute;
   top: 0;
@@ -251,7 +251,7 @@ html {
   content: '';
   padding: 18px;
   position: absolute;
-  background-color: #ffe68b;
+  background-color: #179dff;
   left: -6px;
   top: 1px;
   border-bottom-left-radius: 50%;
@@ -263,7 +263,8 @@ html {
   content: '';
   padding: 18px;
   position: absolute;
-  background-color: #ffe68b;
+  background-color: #179dff;
+
   right: -6px;
   top: 1px;
   border-bottom-right-radius: 50%;

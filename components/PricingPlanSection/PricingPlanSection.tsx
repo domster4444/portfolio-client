@@ -28,7 +28,15 @@ export default function PricingPlanSection(): JSX.Element {
               }}
             >
               <b style={{ fontSize: '2rem', margin: '0rem 0.5rem' }}>
-                Switch To Annual Subscription
+                Switch To
+                <span
+                  style={{
+                    color: 'blue',
+                  }}
+                >
+                  {isAnnual === true ? ' monthly ' : ' annually '}
+                </span>
+                Subscription
               </b>
               <Switch
                 animated={false}
@@ -41,7 +49,7 @@ export default function PricingPlanSection(): JSX.Element {
             </div>
             <div className="container">
               <SidePricingCard
-                priceTag={isAnnual === true ? 'रु 4800' : 'रु 400'}
+                priceTag={isAnnual === true ? 'Rs. 4800' : 'Rs. 400'}
                 title="For enterprise use"
                 description="
 
@@ -50,7 +58,7 @@ export default function PricingPlanSection(): JSX.Element {
                 priceAmount={isAnnual === true ? 4800 : 400}
               />
               <CenterPricingCard
-                priceTag={isAnnual === true ? 'रु 8400' : 'रु 700'}
+                priceTag={isAnnual === true ? 'Rs. 8400' : 'Rs. 700'}
                 title="For enterprise use"
                 description="
                 My lady bits and bobs cup of tea bubble and squeak brolly
@@ -59,7 +67,7 @@ export default function PricingPlanSection(): JSX.Element {
                 priceAmount={isAnnual === true ? 8400 : 700}
               />
               <SidePricingCard
-                priceTag={isAnnual === true ? 'रु 7800' : 'रु 650'}
+                priceTag={isAnnual === true ? 'Rs. 7800' : 'Rs. 650'}
                 title="For enterprise use"
                 description="
                 My lady bits and bobs cup of tea bubble and squeak brolly
