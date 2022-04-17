@@ -146,6 +146,7 @@ const RightFormSection = styled.section`
     }
     /* background: blue; */
     width: 35rem;
+
     margin: 0.25rem;
     border: none;
 
@@ -154,7 +155,7 @@ const RightFormSection = styled.section`
 
     height: 5rem;
 
-    @media only screen and (max-width: 350px) {
+    @media only screen and (max-width: 400px) {
       width: 100%;
     }
   }
