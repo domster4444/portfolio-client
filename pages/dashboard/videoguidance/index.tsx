@@ -10,7 +10,7 @@ const index = () => {
     <>
       <DashboardLayout>
         <>
-          <Breadcrumbs breadCrumbLink={['dashboard', 'FAQ']} />
+          <Breadcrumbs breadCrumbLink={['dashboard', 'faq']} />
 
           <header className="text">FAQ & Video Guidance</header>
           <FullWidthVideo />

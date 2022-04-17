@@ -118,7 +118,7 @@ const Index: NextPage = () => {
         <>
           <div>
             <ScrollToTop smooth />
-            <Breadcrumbs breadCrumbLink={['dashboard', 'FAQ']} />
+            <Breadcrumbs breadCrumbLink={['dashboard', 'theme']} />
 
             <header className="text">Themes</header>
             <div className={ThemeStyles.input_container}>

@@ -43,7 +43,7 @@ const LayoutValidator: React.FC<Props> = ({ children }) => {
   }
 
   if (user) {
-    router.push('/dashboard/home'); //!history will have "/about" only ,everything else will be removed from history,if you get back you will end in  chrome daily dev home page cozz, there is no history before "/about" */}
+    router.push('/dashboard/profile'); //!history will have "/about" only ,everything else will be removed from history,if you get back you will end in  chrome daily dev home page cozz, there is no history before "/about" */}
     return null;
   } else {
     return <Layout>{children}</Layout>;

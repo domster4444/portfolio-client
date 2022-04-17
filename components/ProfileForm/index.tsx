@@ -195,7 +195,7 @@ const Index: React.FC = () => {
       </div>
       {/* @ts-ignore */}
       <button onClick={handleSubmit} className="primary-btn poppins_medium_500">
-        Upload
+        Update
       </button>
     </>
   );

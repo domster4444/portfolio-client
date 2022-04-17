@@ -101,7 +101,7 @@ const Index: NextPage = () => {
     <>
       <DashboardLayout>
         <>
-          <Breadcrumbs breadCrumbLink={['dashboard', 'FAQ']} />
+          <Breadcrumbs breadCrumbLink={['dashboard', 'support']} />
 
           <header className="text">Supports</header>
 

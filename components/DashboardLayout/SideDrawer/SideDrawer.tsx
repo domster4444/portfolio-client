@@ -139,14 +139,14 @@ const SideDrawer: React.FC = () => {
           <input type="text" placeholder="Search..." />
           <span className="tooltip">Search</span>
         </li> */}
-          <Link passHref href="/dashboard/home">
+          {/* <Link passHref href="/dashboard/home">
             <li className="dashboardLayout__sideMenus">
               <i className="bx bx-customize" />
               <span className="links_name poppins_regular_400 hideName">
                 Home
               </span>
             </li>
-          </Link>
+          </Link> */}
 
           <Link passHref href="/dashboard/profile">
             <li className="dashboardLayout__sideMenus">

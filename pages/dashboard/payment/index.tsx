@@ -9,9 +9,12 @@ const index = () => {
       <DashboardLayout>
         <>
           <div>
-            <Breadcrumbs breadCrumbLink={['dashboard', 'FAQ']} />
+            <Breadcrumbs breadCrumbLink={['dashboard', 'payment']} />
 
             <header className="text">Payment</header>
+
+            <h3>QR CODE</h3>
+
             <section className="pricing__plan">
               <PricingPlanSection />
             </section>
