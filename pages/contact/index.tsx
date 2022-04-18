@@ -1,6 +1,8 @@
 /* eslint-disable react/no-unescaped-entities */
-import React from 'react';
+import React, { useRef } from 'react';
 import Head from 'next/head';
+import emailjs from 'emailjs-com';
+import { toast } from 'react-toastify';
 
 import { useForm, ValidationError } from '@formspree/react';
 
@@ -53,7 +55,57 @@ const ContactContainerRight = styled.div`
 `;
 
 const ContactPage: NextPage = () => {
-  const [state, handleSubmit] = useForm('xdobeqnz');
+  // const [state, handleSubmit] = useForm('xdobeqnz');
+
+  const [firstName, setFirstName] = React.useState('');
+  const [lastName, setLastName] = React.useState('');
+  const [email, setEmail] = React.useState('');
+  const [message, setMessage] = React.useState('');
+
+  const form = useRef();
+
+  const sendEmail = (e: any) => {
+    e.preventDefault();
+    if (!firstName || !lastName || !email || !message) {
+      toast.error('Please fill out all fields');
+      return;
+    }
+
+    emailjs
+      .sendForm(
+        // service id
+        'service_n27rpec',
+        // templateid
+        'template_yhkd945',
+        //  @ts-ignore
+        form.current,
+        // user id
+        //? ___PUBLIC KEY ITSELF IS user id
+
+        'F5CyFrLcvh_TsAGBU'
+      )
+      .then(
+        (result) => {
+          // console.log(result.text);
+          toast.success('Message sent successfully');
+          clearFormField();
+        },
+        (error) => {
+          toast.error("Couldn't send message. Please try again");
+          // console.log(error.text);
+        }
+      )
+      .finally(() => {
+        clearFormField();
+      });
+  };
+
+  const clearFormField = () => {
+    setFirstName('');
+    setLastName('');
+    setEmail('');
+    setMessage('');
+  };
 
   return (
     <Layout>
@@ -169,13 +221,13 @@ const ContactPage: NextPage = () => {
               </a>
             </ContactContainerLeft>
             <ContactContainerRight>
-              {(() => {
-                if (state.succeeded) {
-                  return <h3>successfully submitted</h3>;
-                }
-              })()}
-
-              <form>
+              <form
+                // {/* @ts-ignore */}
+                ref={form}
+                onSubmit={(e) => {
+                  sendEmail(e);
+                }}
+              >
                 <h3
                   className="contactForm__title source_700"
                   style={{
@@ -201,12 +253,22 @@ const ContactPage: NextPage = () => {
                     width="45%"
                     placeholder="First Name"
                     bordered
+                    name="user_first"
+                    value={firstName}
+                    onChange={(e) => {
+                      setFirstName(e.target.value);
+                    }}
                   />
                   <Input
                     size="xl"
                     width="45%"
                     placeholder="Last Name"
                     bordered
+                    name="user_second"
+                    value={lastName}
+                    onChange={(e) => {
+                      setLastName(e.target.value);
+                    }}
                   />
                 </div>
                 <Spacer y={0.5} />
@@ -219,13 +281,28 @@ const ContactPage: NextPage = () => {
                     flexDirection: 'column',
                   }}
                 >
-                  <Input size="xl" width="95%" placeholder="Email" bordered />
+                  <Input
+                    size="xl"
+                    width="95%"
+                    placeholder="Email"
+                    bordered
+                    name="user_email"
+                    value={email}
+                    onChange={(e) => {
+                      setEmail(e.target.value);
+                    }}
+                  />
                   <Spacer y={0.5} />
                   <Input
                     size="xl"
                     width="95%"
                     placeholder="Subject of query"
                     bordered
+                    name="message"
+                    value={message}
+                    onChange={(e) => {
+                      setMessage(e.target.value);
+                    }}
                   />
                   <Spacer y={0.5} />
 
@@ -239,6 +316,7 @@ const ContactPage: NextPage = () => {
                   style={{
                     width: '100%',
                   }}
+                  type="submit"
                 >
                   Send Request
                 </Button>

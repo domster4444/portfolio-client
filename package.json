@@ -19,7 +19,7 @@
     "@sanity/block-content-to-react": "^3.0.0",
     "@sanity/image-url": "^1.0.1",
     "@types/react-transition-group": "^4.4.4",
-    "ajv": "^8.10.0",
+    "ajv": "^8.11.0",
     "axios": "^0.25.0",
     "cloudinary-react": "^1.7.1",
     "emailjs-com": "^3.2.0",
