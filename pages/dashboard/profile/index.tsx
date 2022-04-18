@@ -305,7 +305,7 @@ const Index: React.FC = () => {
                       <img
                         id="profile_dp"
                         className="user-image__avatar user-image__avatar--moonstone"
-                        src="https://lh3.googleusercontent.com/a-/AOh14Gh0BmnM-RW-_yaRfUETIvPCrH1Z38nfRTCG0veX6g=s96-c"
+                        src={userPhoto}
                         alt="user"
                       />
 

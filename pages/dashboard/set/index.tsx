@@ -82,7 +82,7 @@ const SetPage: React.FC = () => {
           if (
             string &&
             // @ts-ignore
-            string.split(',').includes('bio')
+            string.split(',').includes('name')
           ) {
             return (
               <>
@@ -118,7 +118,7 @@ const SetPage: React.FC = () => {
           if (
             string &&
             // @ts-ignore
-            string.split(',').includes('contacts')
+            string.split(',').includes('contact')
           ) {
             return (
               <>
@@ -153,7 +153,7 @@ const SetPage: React.FC = () => {
           if (
             string &&
             // @ts-ignore
-            string.split(',').includes('education')
+            string.split(',').includes('work')
           ) {
             return (
               <>
@@ -170,7 +170,7 @@ const SetPage: React.FC = () => {
           if (
             string &&
             // @ts-ignore
-            string.split(',').includes('education')
+            string.split(',').includes('skill')
           ) {
             return (
               <>
@@ -188,7 +188,7 @@ const SetPage: React.FC = () => {
           if (
             string &&
             // @ts-ignore
-            string.split(',').includes('education')
+            string.split(',').includes('project')
           ) {
             return (
               <>
@@ -205,7 +205,7 @@ const SetPage: React.FC = () => {
           if (
             string &&
             // @ts-ignore
-            string.split(',').includes('education')
+            string.split(',').includes('achievement')
           ) {
             return (
               <>

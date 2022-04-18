@@ -16,7 +16,7 @@ const allThemes = [
     price: 'free',
     isPaid: 'not-premium',
     url: `${globalConstant.baseURL}/7`,
-    useUrl: `${globalConstant.baseURL}/dashboard/set/?info=bio,contacts,education,work,skills,projects,achievements,7`,
+    useUrl: `${globalConstant.baseURL}/dashboard/set/?info=name,bio,contact,education,work,skill,project,achievement,simg,7`,
     name: 'Violet Theme',
     description: 'This is the clean girl theme',
     imageUrl: 'https://i.imgur.com/ARjoptJ.png',
@@ -26,7 +26,8 @@ const allThemes = [
     price: 'free',
     isPaid: 'not-premium',
     url: `${globalConstant.baseURL}/8`,
-    useUrl: `${globalConstant.baseURL}/dashboard/set/?info=bio,skills`,
+    useUrl: `${globalConstant.baseURL}/dashboard/set/?info=bio,contact,education,work,skill,project,achievement,simg,8`,
+
     name: 'Venom Theme',
     description: 'This is the clean girl theme',
     imageUrl: 'https://i.imgur.com/S8jb1NW.png',
@@ -36,7 +37,7 @@ const allThemes = [
     price: '200',
     isPaid: 'full-premium',
     url: `${globalConstant.baseURL}/1`,
-    useUrl: `${globalConstant.baseURL}/dashboard/set/?info=bio,contacts,education,work,skills,projects,achievements,1`,
+    useUrl: `${globalConstant.baseURL}/dashboard/set/?info=bio,contact,education,work,skill,project,achievement,simg,1`,
     name: 'Tarzan Theme',
     description: 'This is the first theme',
     imageUrl: 'https://i.imgur.com/uMQLC1d_d.webp?maxwidth=760&fidelity=grand',
@@ -46,7 +47,8 @@ const allThemes = [
     price: '220',
     isPaid: 'full-premium',
     url: `${globalConstant.baseURL}/3`,
-    useUrl: `${globalConstant.baseURL}/dashboard/set/?info=bio,skills`,
+    useUrl: `${globalConstant.baseURL}/dashboard/set/?info=bio,contact,education,work,skill,project,achievement,simg,3`,
+
     name: 'Deep Thought Theme',
     description: 'This is the third theme',
     imageUrl: 'https://i.imgur.com/6zJPuJw.png',
@@ -56,7 +58,9 @@ const allThemes = [
     price: '300',
     isPaid: 'full-premium',
     url: `${globalConstant.baseURL}/2`,
-    useUrl: `${globalConstant.baseURL}/dashboard/set/?info=bio,skills`,
+
+    useUrl: `${globalConstant.baseURL}/dashboard/set/?info=bio,contact,education,work,skill,project,achievement,simg,2`,
+
     name: 'Black Finished Theme',
     description: 'portfolio by author kshitiz',
     imageUrl: 'https://i.imgur.com/pDTrAxx.jpg',
@@ -66,7 +70,8 @@ const allThemes = [
     price: 'free',
     isPaid: 'not-premium',
     url: `${globalConstant.baseURL}/4`,
-    useUrl: `${globalConstant.baseURL}/dashboard/set/?info=bio,skills`,
+    useUrl: `${globalConstant.baseURL}/dashboard/set/?info=bio,contact,education,work,skill,project,achievement,simg,4`,
+
     name: 'Basic Theme',
     description: 'This is the fourth theme',
     imageUrl: 'https://i.imgur.com/AaQy0W5.png',
@@ -76,7 +81,8 @@ const allThemes = [
     price: 'free',
     isPaid: 'not-premium',
     url: `${globalConstant.baseURL}/5`,
-    useUrl: `${globalConstant.baseURL}/dashboard/set/?info=bio,skills`,
+    useUrl: `${globalConstant.baseURL}/dashboard/set/?info=bio,contact,education,work,skill,project,achievement,simg,5`,
+
     name: 'Minimal Theme',
     description: 'This is the clean girl theme',
     imageUrl: 'https://i.imgur.com/yzoKUuj.png',
@@ -87,7 +93,9 @@ const allThemes = [
     price: 'free',
     isPaid: 'not-premium',
     url: `${globalConstant.baseURL}/9`,
-    useUrl: `${globalConstant.baseURL}/dashboard/set/?info=bio,skills`,
+
+    useUrl: `${globalConstant.baseURL}/dashboard/set/?info=bio,contact,education,work,skill,project,achievement,simg,9`,
+
     name: 'Purple Theme',
     description: 'This is the purble blakish theme',
     imageUrl: 'https://i.imgur.com/Pag5efi.png',

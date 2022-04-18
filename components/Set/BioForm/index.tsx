@@ -68,7 +68,7 @@ const Index = ({ nextPreBtn }: { nextPreBtn: boolean }) => {
     event.preventDefault();
 
     if (imageUrl === '' || bioFieldData === '') {
-      if (imageUrl === '') {
+      if (imageUrl === '' || imageUrl === undefined) {
         toast('Image should be uploaded & submitted', {
           position: 'top-center',
         });
@@ -166,7 +166,6 @@ const Index = ({ nextPreBtn }: { nextPreBtn: boolean }) => {
   // * UPLOAD IMAGE END
 
   // ? GET ALL DATA
-
   useEffect(() => {
     if (user) {
       const dataToSend: any = {

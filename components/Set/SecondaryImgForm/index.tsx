@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import React, { useState, useEffect } from 'react';
 import ImageShower from 'components/ImageShower/ImageShower';
 import Image from 'next/image';
@@ -8,6 +9,23 @@ import { globalConstant } from 'constant/constant';
 import styled from 'styled-components';
 import SetCard from 'components/Set/SetCard';
 import { TickSquare } from 'react-iconly';
+
+const ImageUploadWrapper = styled.div`
+  margin: 0rem 0rem 3rem 0rem;
+  position: relative;
+  border: 0.3rem dashed #ccc;
+  span {
+    font-size: 2rem;
+    position: absolute;
+    color: #c1c1c1;
+    width: 100%;
+    text-align: center;
+    i {
+      font-size: 6rem;
+      color: #1c8adb;
+    }
+  }
+`;
 
 export const Lable = styled.label`
   font-size: 1.8rem;
@@ -35,6 +53,7 @@ export const Textarea = styled.textarea`
 `;
 
 import { Spacer, Button } from '@nextui-org/react';
+import axios from 'axios';
 
 const Index: React.FC = () => {
   const { user, error, isLoading } = useUser();
@@ -52,7 +71,9 @@ const Index: React.FC = () => {
 
         .then((res: any) => {
           console.log('💚axios NameForm update Success', res.data);
-          console.log(res.data.detailExist.achievements);
+          console.log('🌂🌂🌂🌂🌂🌂🌂🌂🌂🌂🌂🌂🌂🌂');
+          console.log(res.data.detailExist.secondaryPicture);
+          setImageUrl(res.data.detailExist.secondaryPicture);
         })
         .catch((error) => {
           console.log(' 🟠axios NameForm error', error);
@@ -129,6 +150,39 @@ const Index: React.FC = () => {
     fetchAllDataAndSet();
   }, []);
 
+  const submitSecondaryImageForm = (
+    event: React.FormEvent<HTMLFormElement>
+  ): void => {
+    alert('submitted');
+    if (imageUrl == '' || imageUrl == undefined) {
+      toast.error('image should be uploaded and submitted');
+    } else {
+      if (user) {
+        const dataToSend = {
+          secondaryPicture: imageUrl,
+          email: user.email,
+        };
+        alert('request sent');
+
+        axiosInstance
+          .patch('/api/v1/users/secondaryimg', dataToSend)
+
+          .then((res: any) => {
+            console.log('💚axios SecondaryImageForm update Success', res.data);
+            toast(res.data.message, {
+              position: 'top-center',
+            });
+          })
+          .catch((error) => {
+            console.log(' 🟠axios SecondaryImageForm error', error);
+            toast(error, {
+              position: 'top-center',
+            });
+          });
+      }
+    }
+  };
+
   return (
     <SetCard>
       <form
@@ -137,12 +191,16 @@ const Index: React.FC = () => {
         }}
         onSubmit={(e) => {
           // UPLOOAD FOR TO SERVER
+          e.preventDefault();
+
+          // window.alert('secondary image successfully submitted');
+          submitSecondaryImageForm(e);
         }}
       >
         <Lable htmlFor="">
-          Secondary Image :
-          <br />
-          <h2>
+          {/* Secondary Image : */}
+          {/* <br /> */}
+          {/* <h2>
             URL:{' '}
             {(() => {
               if (imageUrl) {
@@ -150,7 +208,8 @@ const Index: React.FC = () => {
               }
               return 'No Image Currently Selected';
             })()}
-          </h2>
+          </h2> */}
+          {/*  //? SERVER IMAGE */}
           {/* @ts-ignore */}
           <img src={imageUrl ? imageUrl : null} alt="" />
           <Spacer y={1} />
@@ -158,14 +217,33 @@ const Index: React.FC = () => {
           {/* //* preview the image if previewSource is not empty */}
           {previewSource && <img src={previewSource} alt="preview" />}
           <ImageShower />
-          <input
-            name="bio__img"
-            type="file"
-            value={fileInputState}
-            onChange={changeHandler}
-          />
+          <ImageUploadWrapper>
+            <span>
+              <i className="bx bx-cloud-upload" />
+              <br />
+              Upload Your File Here
+            </span>
+
+            <input
+              style={{
+                opacity: '0',
+                cursor: 'pointer',
+                width: '100%',
+                height: '10rem',
+              }}
+              name="bio__img"
+              type="file"
+              value={fileInputState}
+              onChange={changeHandler}
+            />
+          </ImageUploadWrapper>
           {/* submit image btn start */}
-          <Button color="success" size="xl" onClick={submitImageHandler}>
+          <Button
+            color="secondary"
+            bordered
+            size="xl"
+            onClick={submitImageHandler}
+          >
             submit Image
             <Spacer x={0.5} />
           </Button>
@@ -175,11 +253,24 @@ const Index: React.FC = () => {
 
         <br />
 
-        <Button color="success" size="xl" type="submit">
-          Update
-          <Spacer x={0.5} />
-          <TickSquare set="bold" primaryColor="white" />
-        </Button>
+        <button
+          style={{
+            width: '100%',
+          }}
+          type="submit"
+          className="button-69 "
+        >
+          <span
+            style={{
+              fontSize: '1.8rem',
+            }}
+            className="poppins_regular_400 "
+          >
+            Update
+          </span>
+          {/* <Spacer x={0.5} /> */}
+          {/* <TickSquare set="bold" primaryColor="white" /> */}
+        </button>
       </form>
     </SetCard>
   );
