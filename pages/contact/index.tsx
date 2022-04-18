@@ -62,7 +62,7 @@ const ContactPage: NextPage = () => {
   const [email, setEmail] = React.useState('');
   const [message, setMessage] = React.useState('');
 
-  const form = useRef();
+  const form: any = useRef();
 
   const sendEmail = (e: any) => {
     e.preventDefault();
