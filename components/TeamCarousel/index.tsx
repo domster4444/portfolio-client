@@ -9,9 +9,16 @@ import Link from 'next/link';
 // @ts-ignore
 import { Fade, Zoom } from 'react-reveal';
 
+import styled from 'styled-components';
+const TeamCarousel = styled.div`
+  i {
+    color: rgb(25, 25, 112);
+  }
+`;
+
 const index: React.FC = () => {
   return (
-    <div className="teamCarousel">
+    <TeamCarousel className="teamCarousel">
       <div className="container">
         <input type="radio" name="dot" id="one" />
         <input type="radio" name="dot" id="two" />
@@ -38,16 +45,16 @@ const index: React.FC = () => {
                   </div>
                   <div className="media-icons">
                     <a href="#">
-                      <i className="fab fa-facebook-f"></i>
+                      <i className="bx bxl-facebook"></i>
                     </a>
                     <a href="#">
-                      <i className="fab fa-twitter"></i>
+                      <i className="bx bxl-instagram"></i>
                     </a>
                     <a href="#">
-                      <i className="fab fa-instagram"></i>
+                      <i className="bx bxl-linkedin"></i>
                     </a>
                     <a href="#">
-                      <i className="fab fa-youtube"></i>
+                      <i className="bx bx-link"></i>
                     </a>
                   </div>
 
@@ -116,16 +123,16 @@ const index: React.FC = () => {
                   </div>
                   <div className="media-icons">
                     <a href="#">
-                      <i className="fab fa-facebook-f"></i>
+                      <i className="bx bxl-facebook"></i>
                     </a>
                     <a href="#">
-                      <i className="fab fa-twitter"></i>
+                      <i className="bx bxl-instagram"></i>
                     </a>
                     <a href="#">
-                      <i className="fab fa-instagram"></i>
+                      <i className="bx bxl-linkedin"></i>
                     </a>
                     <a href="#">
-                      <i className="fab fa-youtube"></i>
+                      <i className="bx bx-link"></i>
                     </a>
                   </div>
 
@@ -191,16 +198,16 @@ const index: React.FC = () => {
                   </div>
                   <div className="media-icons">
                     <a href="#">
-                      <i className="fab fa-facebook-f"></i>
+                      <i className="bx bxl-facebook"></i>
                     </a>
                     <a href="#">
-                      <i className="fab fa-twitter"></i>
+                      <i className="bx bxl-instagram"></i>
                     </a>
                     <a href="#">
-                      <i className="fab fa-instagram"></i>
+                      <i className="bx bxl-linkedin"></i>
                     </a>
                     <a href="#">
-                      <i className="fab fa-youtube"></i>
+                      <i className="bx bx-link"></i>
                     </a>
                   </div>
 
@@ -263,16 +270,16 @@ const index: React.FC = () => {
                 </div>
                 <div className="media-icons">
                   <a href="#">
-                    <i className="fab fa-facebook-f"></i>
+                    <i className="bx bxl-facebook"></i>
                   </a>
                   <a href="#">
-                    <i className="fab fa-twitter"></i>
+                    <i className="bx bxl-instagram"></i>
                   </a>
                   <a href="#">
-                    <i className="fab fa-instagram"></i>
+                    <i className="bx bxl-linkedin"></i>
                   </a>
                   <a href="#">
-                    <i className="fab fa-youtube"></i>
+                    <i className="bx bx-link"></i>
                   </a>
                 </div>
 
@@ -327,16 +334,16 @@ const index: React.FC = () => {
                 </div>
                 <div className="media-icons">
                   <a href="#">
-                    <i className="fab fa-facebook-f"></i>
+                    <i className="bx bxl-facebook"></i>
                   </a>
                   <a href="#">
-                    <i className="fab fa-twitter"></i>
+                    <i className="bx bxl-instagram"></i>
                   </a>
                   <a href="#">
-                    <i className="fab fa-instagram"></i>
+                    <i className="bx bxl-linkedin"></i>
                   </a>
                   <a href="#">
-                    <i className="fab fa-youtube"></i>
+                    <i className="bx bx-link"></i>
                   </a>
                 </div>
 
@@ -398,7 +405,7 @@ const index: React.FC = () => {
                     rel="noopener noreferrer"
                     className="social-icon facebook grayscale"
                   >
-                    <i className="fab fa-facebook-f"></i>
+                    <i className="bx bxl-facebook"></i>
                   </a>
                   <a
                     href="https://twitter.com"
@@ -407,7 +414,7 @@ const index: React.FC = () => {
                     rel="noopener noreferrer"
                     className="social-icon twitter grayscale"
                   >
-                    <i className="fab fa-twitter"></i>
+                    <i className="bx bxl-instagram"></i>
                   </a>
 
                   <a
@@ -417,7 +424,7 @@ const index: React.FC = () => {
                     rel="noopener noreferrer"
                     className="social-icon instagram grayscale"
                   >
-                    <i className="fab fa-instagram"></i>
+                    <i className="bx bxl-linkedin"></i>
                   </a>
                   <a
                     href="https://linkedin.com"
@@ -426,7 +433,7 @@ const index: React.FC = () => {
                     rel="noopener noreferrer"
                     className="social-icon youtube grayscale"
                   >
-                    <i className="fab fa-youtube"></i>
+                    <i className="bx bx-link"></i>
                   </a>
                 </div>
 
@@ -474,7 +481,7 @@ const index: React.FC = () => {
           </label>
         </div>
       </div>
-    </div>
+    </TeamCarousel>
   );
 };
 

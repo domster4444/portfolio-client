@@ -22,6 +22,7 @@ const ThemeSeven = () => {
   const [middleName, setMiddleName] = React.useState('');
   const [lastName, setLastName] = React.useState('');
   const [profilePhoto, setProfilePhoto] = React.useState('');
+  const [secondaryPicture, setSecondaryPicture] = React.useState('');
   const [bio, setBio] = React.useState('');
   const [facebook, setFacebook] = React.useState('');
   const [linkedIn, setLinkedIn] = React.useState('');
@@ -84,6 +85,7 @@ const ThemeSeven = () => {
         setEmail(res.data.detailExist.email);
         setWorkHistory(res.data.detailExist.workExperience);
         setProjects(res.data.detailExist.projects);
+        setSecondaryPicture(res.data.detailExist.secondaryPicture);
       })
       .catch((error) => {
         console.log(' 🟠axios themeDetails error', error);
@@ -309,10 +311,10 @@ const ThemeSeven = () => {
           <h2 className="section__title">About me</h2>
           <div className="about__container container grid">
             {(() => {
-              if (profilePhoto) {
+              if (secondaryPicture) {
                 return (
                   <img
-                    src={profilePhoto && profilePhoto}
+                    src={secondaryPicture && secondaryPicture}
                     alt=""
                     // height={1000}
                     // width={1000}
