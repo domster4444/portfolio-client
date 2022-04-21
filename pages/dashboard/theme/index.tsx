@@ -26,7 +26,7 @@ const allThemes = [
     price: 'free',
     isPaid: 'not-premium',
     url: `${globalConstant.baseURL}/8`,
-    useUrl: `${globalConstant.baseURL}/dashboard/set/?info=bio,contact,education,work,skill,project,achievement,simg,8`,
+    useUrl: `${globalConstant.baseURL}/dashboard/set/?info=name,bio,contact,education,work,skill,project,achievement,simg,8`,
 
     name: 'Venom Theme',
     description: 'This is the clean girl theme',

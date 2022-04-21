@@ -10,7 +10,22 @@ import styled from 'styled-components';
 import SetCard from 'components/Set/SetCard';
 import { TickSquare } from 'react-iconly';
 
+const SecondaryImgWrapper = styled.div`
+  /* background: red; */
+  display: flex;
+  justify-content: center;
+  img {
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+
+    border-bottom-right-radius: 2rem;
+    border-bottom-left-radius: 2rem;
+    border-top-right-radius: 10rem;
+    border-top-left-radius: 10rem;
+  }
+`;
+
 const ImageUploadWrapper = styled.div`
+  /* background: red; */
   margin: 0rem 0rem 3rem 0rem;
   position: relative;
   border: 0.3rem dashed #ccc;
@@ -209,13 +224,35 @@ const Index: React.FC = () => {
               return 'No Image Currently Selected';
             })()}
           </h2> */}
-          {/*  //? SERVER IMAGE */}
-          {/* @ts-ignore */}
-          <img src={imageUrl ? imageUrl : null} alt="" />
+
+          <SecondaryImgWrapper>
+            {/*  //? SERVER IMAGE */}
+            <img
+              id="secondaryImage"
+              // {/* @ts-ignore */}
+              src={imageUrl ? imageUrl : undefined}
+              alt=""
+            />
+          </SecondaryImgWrapper>
           <Spacer y={1} />
           <Spacer y={1} />
-          {/* //* preview the image if previewSource is not empty */}
-          {previewSource && <img src={previewSource} alt="preview" />}
+
+          <div
+            className="container-previe-img"
+            style={{
+              transform: 'translateX(-50%)',
+              marginLeft: '50%',
+              // background: 'red',
+              width: '50%',
+              borderRadius: '1rem',
+              // height: '35rem',
+              overflow: 'hidden',
+            }}
+          >
+            {/* //* preview the image if previewSource is not empty */}
+
+            {previewSource && <img src={previewSource} alt="preview" />}
+          </div>
           <ImageShower />
           <ImageUploadWrapper>
             <span>

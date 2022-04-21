@@ -95,6 +95,9 @@ const ThemeSeven = () => {
       });
   }, []);
 
+  /**
+   * @param (string:str) : converts to title case to str
+   */
   function toTitleCase(str: string) {
     return str.replace(/\w\S*/g, function (txt) {
       return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
@@ -367,10 +370,28 @@ const ThemeSeven = () => {
                     let printCount = 0;
                     return skills.map((item, index) => {
                       printCount++;
-                      //? up to 1- 4
+                      //for all 5th 6th 7th skills, show null in left part
                       if (printCount > 4) {
                         return null;
                       }
+                      //return all 1st 2nd 3rd 4th skills
+                      return (
+                        <div className="skills__group" key={index}>
+                          <div className="skills__data">
+                            <i className="bx bxs-badge-check"></i>
+                            <div>
+                              <h3 className="skills__name">{item.skillName}</h3>
+                              <h3 className="skills__level">
+                                {item.skillLevel}
+                              </h3>
+                            </div>
+                          </div>
+                        </div>
+                      );
+                    });
+                  } else {
+                    // if less than 4 skills then show all skills in left part
+                    return skills.map((item, index) => {
                       return (
                         <div className="skills__group" key={index}>
                           <div className="skills__data">
@@ -403,11 +424,12 @@ const ThemeSeven = () => {
                 </div> */}
 
                 {(() => {
-                  if (skills.length >= 2) {
+                  if (skills.length >= 4) {
                     let a = 0;
                     return skills.map((item, index) => {
                       a++;
                       // ?? 5-......
+                      // dont show 1 2 3 4th skills
                       if (a < 5) {
                         return null;
                       }

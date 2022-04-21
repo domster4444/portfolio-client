@@ -11,6 +11,8 @@ import { ChevronLeft, ChevronRight, TickSquare } from 'react-iconly';
 import { axiosInstance } from 'lib/utilities/api/api';
 import { useUser } from '@auth0/nextjs-auth0';
 
+import Link from 'next/link';
+
 // @ts-ignore
 import DashboardLayout from 'components/DashboardLayout';
 import { toast } from 'react-toastify';
@@ -133,7 +135,6 @@ const Index = ({ nextPreBtn }: { nextPreBtn: boolean }) => {
               />
             </Lable>
             <Spacer y={1} />
-
             <Lable htmlFor="">
               MiddleName :
               <br />
@@ -146,7 +147,6 @@ const Index = ({ nextPreBtn }: { nextPreBtn: boolean }) => {
               />
             </Lable>
             <Spacer y={1} />
-
             <Lable htmlFor="">
               LastName :
               <br />
@@ -158,9 +158,7 @@ const Index = ({ nextPreBtn }: { nextPreBtn: boolean }) => {
                 }}
               />
             </Lable>
-
             <Spacer y={1.5} />
-
             <button
               style={{
                 width: '100%',
@@ -179,36 +177,37 @@ const Index = ({ nextPreBtn }: { nextPreBtn: boolean }) => {
               {/* <Spacer x={0.5} /> */}
               {/* <TickSquare set="bold" primaryColor="white" /> */}
             </button>
-
             <Spacer y={0.5} />
+            {nextPreBtn === true && (
+              <>
+                <div className={BioStyles.prevNext__btnContainer} style={{}}>
+                  {/* <Link passHref href="/dashboard/skills">
+                    <Button
+                      shadow
+                      color="secondary"
+                      size="xl"
+                      className={BioStyles.btnContainer__btn}
+                    >
+                      <ChevronLeft set="bold" primaryColor="white" />
+                      Previous Page
+                    </Button>
+                  </Link> */}
+                  <Link passHref href="/dashboard/bio">
+                    <Button
+                      shadow
+                      color="primary"
+                      size="xl"
+                      bordered
+                      className={BioStyles.btnContainer__btn}
+                    >
+                      Next Page
+                      <ChevronRight set="bold" primaryColor="white" />
+                    </Button>
+                  </Link>
+                </div>
+              </>
+            )}
           </form>
-
-          {/* btn container */}
-
-          {nextPreBtn === true && (
-            <>
-              <div className={BioStyles.prevNext__btnContainer}>
-                <Button
-                  shadow
-                  color="secondary"
-                  size="xl"
-                  className={BioStyles.btnContainer__btn}
-                >
-                  <ChevronLeft set="bold" primaryColor="white" />
-                  Previous Page
-                </Button>
-                <Button
-                  shadow
-                  color="primary"
-                  size="xl"
-                  className={BioStyles.btnContainer__btn}
-                >
-                  Next Page
-                  <ChevronRight set="bold" primaryColor="white" />
-                </Button>
-              </div>
-            </>
-          )}
         </Card>
       </Container>
     </>

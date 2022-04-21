@@ -26,6 +26,10 @@ const DropDown = ({ opened }: any) => {
                     }
               }
             >
+              <Link passHref href="/dashboard/general">
+                <li className="setupDetails__menuItem">General</li>
+              </Link>
+
               <Link passHref href="/dashboard/bio">
                 <li className="setupDetails__menuItem">Bio</li>
               </Link>

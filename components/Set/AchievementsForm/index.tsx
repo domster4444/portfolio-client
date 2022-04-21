@@ -425,6 +425,7 @@ const Index = ({ nextPreBtn = true }: { nextPreBtn: boolean }) => {
                   shadow
                   color="secondary"
                   size="xl"
+                  bordered
                   className={BioStyles.btnContainer__btn}
                 >
                   <ChevronLeft set="bold" primaryColor="white" />

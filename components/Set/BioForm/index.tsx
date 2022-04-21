@@ -33,9 +33,12 @@ export const BioFormImagePreviewer = styled.img`
   border-radius: 1rem;
   width: 50%;
   transform: translateX(-50%);
+
   margin-left: 50%;
   border-top-right-radius: 10rem;
   border-top-left-radius: 10rem;
+  border-bottom-right-radius: 2rem;
+  border-bottom-left-radius: 2rem;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
     rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
 `;
@@ -61,6 +64,9 @@ const Index = ({ nextPreBtn }: { nextPreBtn: boolean }) => {
   const { user, error, isLoading } = useUser();
   const [imageUrl, setImageUrl] = useState('');
   const [bioFieldData, setBioFieldData] = useState('');
+  const [noOfCompletedProjects, setCompletedProjects] =
+    useState<number | null>(null);
+  const [yearsOfExperience, setExperienceYear] = useState<number | null>(null);
 
   const updateBioFormHander = (
     event: React.FormEvent<HTMLFormElement>
@@ -86,6 +92,8 @@ const Index = ({ nextPreBtn }: { nextPreBtn: boolean }) => {
           profilePhoto: imageUrl,
           bio: bioFieldData,
           email: user.email,
+          yearsOfExperience,
+          noOfCompletedProjects,
         };
 
         axiosInstance
@@ -179,6 +187,8 @@ const Index = ({ nextPreBtn }: { nextPreBtn: boolean }) => {
           console.log('💚axios NameForm update Success', res.data);
           setImageUrl(res.data.detailExist.profilePhoto);
           setBioFieldData(res.data.detailExist.bio);
+          setExperienceYear(res.data.detailExist.yearsOfExperience);
+          setCompletedProjects(res.data.detailExist.noOfCompletedProjects);
         })
         .catch((error) => {
           console.log(' 🟠axios NameForm error', error);
@@ -217,7 +227,20 @@ const Index = ({ nextPreBtn }: { nextPreBtn: boolean }) => {
             {/* @ts-ignore */}
             <BioFormImagePreviewer src={imageUrl ? imageUrl : null} alt="" />
             {/* //* preview the image if previewSource is not empty */}
-            {previewSource && <img src={previewSource} alt="preview" />}
+            <div
+              className="container-previe-img"
+              style={{
+                transform: 'translateX(-50%)',
+                marginLeft: '50%',
+                // background: 'red',
+                width: '50%',
+                borderRadius: '2rem',
+                // height: '35rem',
+                overflow: 'hidden',
+              }}
+            >
+              {previewSource && <img src={previewSource} alt="preview" />}
+            </div>
             <ImageShower />
             <ImageUploadWrapper>
               <span>
@@ -239,7 +262,6 @@ const Index = ({ nextPreBtn }: { nextPreBtn: boolean }) => {
                 onChange={changeHandler}
               />
             </ImageUploadWrapper>
-
             <p
               style={{
                 fontSize: '2rem',
@@ -254,7 +276,6 @@ const Index = ({ nextPreBtn }: { nextPreBtn: boolean }) => {
               })()}
             </p>
             {/* submit image btn start */}
-
             <Button
               color="secondary"
               bordered
@@ -263,9 +284,7 @@ const Index = ({ nextPreBtn }: { nextPreBtn: boolean }) => {
             >
               Upload Image
             </Button>
-
             {/* submit image btn  end */}
-
             <Spacer y={1.5} />
             <label htmlFor="bio__info">
               <Textarea
@@ -283,7 +302,40 @@ const Index = ({ nextPreBtn }: { nextPreBtn: boolean }) => {
                 style={{ minHeight: '20rem', fontSize: '2rem' }}
               />
             </label>
+
             <Spacer y={1.5} />
+            <Lable htmlFor="">
+              Experience Year :
+              <br />
+              <Input
+                value={yearsOfExperience === null ? '' : yearsOfExperience}
+                // value={firstName}
+                placeholder="Enter work experience in year"
+                type="text"
+                onChange={(e) => {
+                  // @ts-ignore
+                  setExperienceYear(e.target.value);
+                }}
+              />
+            </Lable>
+            <Spacer y={1.5} />
+            <Lable htmlFor="">
+              Completed Projects:
+              <br />
+              <Input
+                // value={firstName}
+                type="text"
+                placeholder="Enter no of projects you have completed"
+                value={
+                  noOfCompletedProjects === null ? '' : noOfCompletedProjects
+                }
+                onChange={(e) => {
+                  // @ts-ignore
+                  setCompletedProjects(e.target.value);
+                }}
+              />
+            </Lable>
+            {/* //? Not of experience //? No of completed projects //? */}
             <button
               style={{
                 width: '100%',
@@ -305,27 +357,27 @@ const Index = ({ nextPreBtn }: { nextPreBtn: boolean }) => {
             <Spacer y={0.5} />
           </form>
 
-          {/* btn container */}
-
           {nextPreBtn === true && (
             <>
-              <div className={BioStyles.prevNext__btnContainer}>
-                {/* <Button
+              <div className={BioStyles.prevNext__btnContainer} style={{}}>
+                <Link passHref href="/dashboard/general">
+                  <Button
                     shadow
                     color="secondary"
                     size="xl"
+                    bordered
                     className={BioStyles.btnContainer__btn}
                   >
                     <ChevronLeft set="bold" primaryColor="white" />
                     Previous Page
-                  </Button> */}
-
-                <span></span>
+                  </Button>
+                </Link>
                 <Link passHref href="/dashboard/contacts">
                   <Button
                     shadow
                     color="primary"
                     size="xl"
+                    bordered
                     className={BioStyles.btnContainer__btn}
                   >
                     Next Page

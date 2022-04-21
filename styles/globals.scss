@@ -59,6 +59,7 @@
 @import '6-pages/seventhTheme';
 @import '6-pages/eightTheme';
 @import '6-pages/ninthTheme';
+@import '6-pages/tenthTheme';
 @import '6-pages/blog';
 @import '6-pages/dashboardHome';
 
@@ -270,5 +271,9 @@ html {
   border-bottom-right-radius: 50%;
   border-top-right-radius: 50%;
   z-index: -1;
+}
+
+.invisible {
+  visibility: hidden;
 }
 

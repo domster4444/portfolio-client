@@ -1,0 +1,390 @@
+#tenMainPage {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  h4 {
+    letter-spacing: 0.2rem;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 200;
+  }
+  p {
+    font-size: 1.5rem;
+  }
+  font-size: 1.5rem;
+  .header-container {
+    display: flex;
+  }
+
+  .header-details {
+    background-color: white;
+    padding: 100px;
+  }
+
+  h1 {
+    font-size: 1.1 * 90px;
+    color: #454042;
+  }
+
+  .header-details h2 {
+    background-color: #454042;
+    color: white;
+    width: fit-content;
+    padding: 10px;
+    letter-spacing: 3px;
+  }
+
+  .header-details p {
+    margin-top: 30px;
+    color: #454042;
+  }
+
+  .header-details p span {
+    font-weight: 900;
+    font-size: 1.1 * 18px;
+  }
+
+  .main-skill-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    background: #2a2f32;
+    padding: 20px 100px;
+  }
+
+  .main-skill {
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+  }
+
+  .main-skill-container .icon-box {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    color: white;
+    font-size: 1.1 * 25px;
+  }
+
+  h4 {
+    color: white;
+    white-space: nowrap;
+  }
+
+  h5 {
+    color: #fff;
+    font-size: 1.1 * 18px;
+  }
+
+  .img-box {
+    border-top-left-radius: 5rem;
+    overflow: hidden;
+    position: relative;
+    height: inherit;
+    width: 480px;
+    flex-shrink: 0;
+  }
+
+  img {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  /* body container starts here */
+
+  .body-container {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    background: #30343b;
+    padding: 100px 100px 50px 100px;
+    column-gap: 50px;
+  }
+
+  h3 {
+    color: #fff;
+    letter-spacing: 3px;
+    margin-top: 50px;
+    font-size: 1.1 * 30px;
+  }
+
+  #followme,
+  #education,
+  #interests,
+  #languages {
+    margin-top: 0;
+  }
+
+  .body-container hr {
+    margin: 20px 0;
+    border-color: #4d545f;
+    height: 5px;
+  }
+
+  .icon-box-small {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 20px;
+  }
+
+  .body-container a {
+    text-decoration: none;
+    color: #dbdbdb;
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+
+  .contact .icon-box-small {
+    border-radius: 50%;
+    background: white;
+    color: #454042;
+  }
+
+  .contact a {
+    margin-bottom: 10px;
+  }
+
+  /* skills */
+
+  .skill {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    color: #cecece;
+  }
+
+  .skill-progress-cover {
+    position: relative;
+    width: 60%;
+    border: 2px solid white;
+    border-radius: 10px;
+  }
+
+  #communication,
+  #creativity,
+  #teamwork,
+  #organization {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background: white;
+    border-radius: 10px 0 0 10px;
+  }
+
+  #communication {
+    width: 65%;
+  }
+
+  #creativity {
+    width: 80%;
+  }
+
+  #teamwork {
+    width: 60%;
+  }
+
+  #organization {
+    width: 50%;
+  }
+
+  /* hobbies */
+
+  .hobby {
+    display: flex;
+    justify-content: space-between;
+    color: #cecece;
+    margin-bottom: 20px;
+    width: 80%;
+  }
+
+  .icon-box {
+    color: white;
+  }
+
+  .icon-box i {
+    font-size: 1.1 * 20px;
+  }
+
+  /* Education */
+
+  .education {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 50px;
+    color: #cecece;
+  }
+
+  .title {
+    color: white;
+  }
+
+  /* experience */
+
+  .experience {
+    position: relative;
+    margin-bottom: 50px;
+  }
+
+  .experience h5 {
+    margin: 10px 0;
+    color: #cecece;
+  }
+
+  .experience p {
+    color: #979797;
+  }
+
+  .date {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+
+  /* interest and languages */
+
+  .interests-languages {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 50px;
+  }
+
+  .interest-container,
+  .language-container {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+  }
+
+  .interest p {
+    margin-top: 10px;
+    color: #cecece;
+  }
+
+  .language p {
+    margin-bottom: 10px;
+    color: #cecece;
+  }
+
+  .language .icons {
+    white-space: nowrap;
+  }
+
+  .language i {
+    color: white;
+    margin-right: 2px;
+    font-size: 1.1 * 10px;
+  }
+
+  /* responsive starts here */
+
+  @media (max-width: 1230px) {
+    h1 {
+      font-size: 1.1 * 70px;
+    }
+    h2 {
+      font-size: 1.1 * 20px;
+    }
+    .img-box {
+      width: 380px;
+    }
+  }
+
+  @media (max-width: 1100px) {
+    .header-details {
+      padding: 50px;
+    }
+    .main-skill-container {
+      padding: 20px 50px;
+    }
+    .body-container {
+      padding: 50px;
+    }
+  }
+
+  @media (max-width: 980px) {
+    .main-skill-item h4,
+    .main-skill-item h5 {
+      font-size: 1.1 * 14px;
+    }
+    .img-box {
+      width: 280px;
+    }
+  }
+
+  @media (max-width: 880px) {
+    h1 {
+      font-size: 1.1 * 50px;
+    }
+    .header-details p {
+      margin-top: 20px;
+    }
+    .main-skill-item h4,
+    .main-skill-item h5 {
+      font-size: 1.1 * 10px;
+    }
+    .body-container {
+      grid-template-columns: 1fr;
+    }
+    .side-section {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-gap: 20px;
+    }
+    #contact {
+      margin-top: 0;
+    }
+    #education {
+      margin-top: 30px;
+    }
+    h3 {
+      margin-top: 30px;
+    }
+  }
+
+  @media (max-width: 740px) {
+    .side-section {
+      grid-template-columns: 1fr;
+    }
+    .header-container {
+      flex-direction: column;
+    }
+    .img-box {
+      height: 500px;
+      width: 100%;
+    }
+  }
+
+  @media (max-width: 560px) {
+    .interests-languages {
+      grid-template-columns: 1fr;
+    }
+    .education {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    .header-details,
+    .body-container,
+    .main-skill-container {
+      padding: 20px;
+    }
+    #languages,
+    #contact {
+      margin-top: 30px;
+    }
+    .main-skill-container .icon-box {
+      width: 30px;
+      height: 30px;
+      font-size: 1.1 * 20px;
+    }
+    .side-section {
+      grid-gap: 0;
+    }
+  }
+}
