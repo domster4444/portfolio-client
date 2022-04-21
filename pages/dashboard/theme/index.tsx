@@ -11,17 +11,17 @@ import { Input, Button } from '@nextui-org/react';
 import Breadcrumbs from 'components/BreadCrumb/index';
 
 const allThemes = [
-  // *first
+  // *seventh
   {
     price: 'free',
     isPaid: 'not-premium',
     url: `${globalConstant.baseURL}/7`,
     useUrl: `${globalConstant.baseURL}/dashboard/set/?info=name,bio,contact,education,work,skill,project,achievement,simg,7`,
     name: 'Violet Theme',
-    description: 'This is the clean girl theme',
+    description: 'Poison theme',
     imageUrl: 'https://i.imgur.com/ARjoptJ.png',
   },
-  // *second
+  // *eighth
   {
     price: 'free',
     isPaid: 'not-premium',
@@ -29,10 +29,21 @@ const allThemes = [
     useUrl: `${globalConstant.baseURL}/dashboard/set/?info=name,bio,contact,education,work,skill,project,achievement,simg,8`,
 
     name: 'Venom Theme',
-    description: 'This is the clean girl theme',
+    description: 'African theme',
     imageUrl: 'https://i.imgur.com/S8jb1NW.png',
   },
-  // *third
+  // *tenth
+  {
+    price: 'free',
+    isPaid: 'not-premium',
+    url: `${globalConstant.baseURL}/10`,
+    useUrl: `${globalConstant.baseURL}/dashboard/set/?info=name,bio,contact,education,work,skill,project,achievement,simg,10`,
+
+    name: 'Venom Theme',
+    description: 'Manly theme',
+    imageUrl: 'https://i.imgur.com/t4QZWZo.png',
+  },
+  // *first
   {
     price: '200',
     isPaid: 'full-premium',
@@ -42,7 +53,7 @@ const allThemes = [
     description: 'This is the first theme',
     imageUrl: 'https://i.imgur.com/uMQLC1d_d.webp?maxwidth=760&fidelity=grand',
   },
-  // *fourth
+  // *third
   {
     price: '220',
     isPaid: 'full-premium',
@@ -53,7 +64,7 @@ const allThemes = [
     description: 'This is the third theme',
     imageUrl: 'https://i.imgur.com/6zJPuJw.png',
   },
-  // *fifth
+  // *second
   {
     price: '300',
     isPaid: 'full-premium',
@@ -65,7 +76,7 @@ const allThemes = [
     description: 'portfolio by author kshitiz',
     imageUrl: 'https://i.imgur.com/pDTrAxx.jpg',
   },
-  // *sixth
+  // *fourth
   {
     price: 'free',
     isPaid: 'not-premium',
@@ -76,7 +87,7 @@ const allThemes = [
     description: 'This is the fourth theme',
     imageUrl: 'https://i.imgur.com/AaQy0W5.png',
   },
-  // *seventh
+  // *fifth
   {
     price: 'free',
     isPaid: 'not-premium',
@@ -88,7 +99,7 @@ const allThemes = [
     imageUrl: 'https://i.imgur.com/yzoKUuj.png',
   },
 
-  // *eighth
+  // *ninth
   {
     price: 'free',
     isPaid: 'not-premium',
