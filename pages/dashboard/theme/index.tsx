@@ -11,7 +11,7 @@ import { Input, Button } from '@nextui-org/react';
 import Breadcrumbs from 'components/BreadCrumb/index';
 
 const allThemes = [
-  // *seventh
+  // *first
   {
     price: 'free',
     isPaid: 'not-premium',
@@ -21,7 +21,7 @@ const allThemes = [
     description: 'Poison theme',
     imageUrl: 'https://i.imgur.com/ARjoptJ.png',
   },
-  // *eighth
+  // *second
   {
     price: 'free',
     isPaid: 'not-premium',
@@ -32,28 +32,28 @@ const allThemes = [
     description: 'African theme',
     imageUrl: 'https://i.imgur.com/S8jb1NW.png',
   },
-  // *tenth
+  // *third
   {
     price: 'free',
     isPaid: 'not-premium',
     url: `${globalConstant.baseURL}/10`,
     useUrl: `${globalConstant.baseURL}/dashboard/set/?info=name,bio,contact,education,work,skill,project,achievement,simg,10`,
 
-    name: 'Venom Theme',
+    name: 'Manly theme',
     description: 'Manly theme',
     imageUrl: 'https://i.imgur.com/t4QZWZo.png',
   },
-  // *first
+  // *foruth
   {
     price: '200',
     isPaid: 'full-premium',
     url: `${globalConstant.baseURL}/1`,
-    useUrl: `${globalConstant.baseURL}/dashboard/set/?info=bio,contact,education,work,skill,project,achievement,simg,1`,
+    useUrl: `${globalConstant.baseURL}/dashboard/set/?info=name,bio,contact,education,work,skill,project,achievement,simg,10`,
     name: 'Tarzan Theme',
     description: 'This is the first theme',
     imageUrl: 'https://i.imgur.com/uMQLC1d_d.webp?maxwidth=760&fidelity=grand',
   },
-  // *third
+  // *fifth
   {
     price: '220',
     isPaid: 'full-premium',
@@ -64,7 +64,29 @@ const allThemes = [
     description: 'This is the third theme',
     imageUrl: 'https://i.imgur.com/6zJPuJw.png',
   },
-  // *second
+  // *sixth
+  {
+    price: '220',
+    isPaid: 'full-premium',
+    url: `${globalConstant.baseURL}/11`,
+    useUrl: `${globalConstant.baseURL}/dashboard/set/?info=name,bio,contact,education,work,skill,project,achievement,simg,11`,
+
+    name: 'Yellow Eleventh Theme',
+    description: 'This is the third theme',
+    imageUrl: 'https://i.imgur.com/uk60NCq_d.webp?maxwidth=760&fidelity=grand',
+  },
+  // *sixth
+  {
+    price: '220',
+    isPaid: 'full-premium',
+    url: `${globalConstant.baseURL}/12`,
+    useUrl: `${globalConstant.baseURL}/dashboard/set/?info=name,bio,contact,education,work,skill,project,achievement,simg,12`,
+
+    name: 'Yellow Eleventh Theme',
+    description: 'This is the third theme',
+    imageUrl: 'https://i.imgur.com/78vGxgi.png',
+  },
+  // *seventh
   {
     price: '300',
     isPaid: 'full-premium',
@@ -76,7 +98,7 @@ const allThemes = [
     description: 'portfolio by author kshitiz',
     imageUrl: 'https://i.imgur.com/pDTrAxx.jpg',
   },
-  // *fourth
+  // *eighth
   {
     price: 'free',
     isPaid: 'not-premium',
@@ -87,7 +109,7 @@ const allThemes = [
     description: 'This is the fourth theme',
     imageUrl: 'https://i.imgur.com/AaQy0W5.png',
   },
-  // *fifth
+  // *ninth
   {
     price: 'free',
     isPaid: 'not-premium',
@@ -99,7 +121,7 @@ const allThemes = [
     imageUrl: 'https://i.imgur.com/yzoKUuj.png',
   },
 
-  // *ninth
+  // *tenth
   {
     price: 'free',
     isPaid: 'not-premium',
@@ -114,6 +136,7 @@ const allThemes = [
 ];
 
 const Index: NextPage = () => {
+  const [rangeValue, setRangeValue] = useState(0);
   const [filter, setFilter] = useState('');
   const inputChangeHandler = (e: any) => {
     setFilter(e.target.value);
@@ -222,6 +245,7 @@ const Index: NextPage = () => {
                 Free
               </Button>
             </div>
+
             <div className={ThemeStyles.cardContainer}>
               {(() => {
                 return dataSearch.map((item) => (

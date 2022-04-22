@@ -63,7 +63,7 @@ export default function PricingPlanSection(): JSX.Element {
                 priceTag={isAnnual === true ? 'रु 4800 /year' : 'रु 400 /month'}
                 title="Basic"
                 description="
-                The most popular plan.If your are seeking for a job, this is the plan for you.
+                This package provides you the best offer every received by our fellow comrates.It's worth buying.
 
                 "
                 priceAmount={isAnnual === true ? 4800 : 400}
@@ -72,7 +72,8 @@ export default function PricingPlanSection(): JSX.Element {
                 priceTag={isAnnual === true ? 'रु 8400 /year' : 'रु 700 /month'}
                 title="Elite"
                 description="
-                Elite plan is for those who really want all the features and full access to our future plans.
+                Wanna get the feeting of VIP ? 
+                Join us in an instance & rceive all our 
                 
                 "
                 priceAmount={isAnnual === true ? 8400 : 700}
@@ -86,6 +87,13 @@ export default function PricingPlanSection(): JSX.Element {
                 priceAmount={isAnnual === true ? 7800 : 650}
               />
             </div>
+
+            <hr
+              style={{
+                border: '1px solid #c1c1c1',
+                margin: '10rem 0rem',
+              }}
+            />
           </main>
         </div>
       </div>

@@ -44,7 +44,14 @@ const Index = () => {
                       <h3 className="poppins_regular_400">
                         Select Payment Method
                       </h3>
-                      <div className="payment-method_container">
+                      <div
+                        className="payment-method_container"
+                        style={{
+                          display: 'flex',
+                          flexDirection: 'row',
+                          flexWrap: 'wrap',
+                        }}
+                      >
                         {/* @ts-ignore */}
 
                         <div

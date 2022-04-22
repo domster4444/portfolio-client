@@ -77,77 +77,125 @@ const Index = () => {
             <hr />
             <a href="#">
               <div className="icon-box-small">
-                <i className="fas fa-phone-alt"></i>
+                <i className="bx bxl-facebook"></i>
               </div>{' '}
               +94 77 0123456
             </a>
             <a href="#">
               <div className="icon-box-small">
-                <i className="fas fa-envelope"></i>
+                <i className="bx bxl-github"></i>
               </div>{' '}
               robertsmith@gmail.com
             </a>
             <a href="#">
               <div className="icon-box-small">
-                <i className="fas fa-globe-asia"></i>
+                <i className="bx bxl-instagram"></i>
               </div>{' '}
-              www.websitename.com
+              www.instagram.com/@john
             </a>
             <a href="#">
               <div className="icon-box-small">
-                <i className="fas fa-map-marker-alt"></i>
+                <i className="bx bxl-linkedin"></i>
               </div>
-              Ur Street name 12/B, <br />
-              ABC City, <br /> United Kingdom
+              @@john11
             </a>
           </div>
           <div className="skills">
             <h3>SKILLS</h3>
             <hr />
-            <div className="skill">
+            <div
+              className="skill"
+              style={{
+                display: 'flex',
+                alignItems: 'center',
+              }}
+            >
               <p>Communication</p>
-              <div className="skill-progress-cover">
+              {/* <div className="skill-progress-cover">
                 <div id="communication"></div>
-              </div>
+              </div> */}
+              <span
+                style={{
+                  color: '#c1c1c1',
+                }}
+              >
+                EXPERT
+              </span>
             </div>
-            <div className="skill">
-              <p>Creativity</p>
-              <div className="skill-progress-cover">
-                <div id="creativity"></div>
-              </div>
+            <div
+              className="skill"
+              style={{
+                display: 'flex',
+                alignItems: 'center',
+              }}
+            >
+              <p>Communication</p>
+              {/* <div className="skill-progress-cover">
+                <div id="communication"></div>
+              </div> */}
+              <span
+                style={{
+                  color: '#c1c1c1',
+                }}
+              >
+                EXPERT
+              </span>
             </div>
-            <div className="skill">
-              <p>Teamwork</p>
-              <div className="skill-progress-cover">
-                <div id="teamwork"></div>
-              </div>
+            <div
+              className="skill"
+              style={{
+                display: 'flex',
+                alignItems: 'center',
+              }}
+            >
+              <p>Communication</p>
+              {/* <div className="skill-progress-cover">
+                <div id="communication"></div>
+              </div> */}
+              <span
+                style={{
+                  color: '#c1c1c1',
+                }}
+              >
+                EXPERT
+              </span>
             </div>
-            <div className="skill">
-              <p>Organization</p>
-              <div className="skill-progress-cover">
-                <div id="organization"></div>
-              </div>
+            <div
+              className="skill"
+              style={{
+                display: 'flex',
+                alignItems: 'center',
+              }}
+            >
+              <p>Communication</p>
+              {/* <div className="skill-progress-cover">
+                <div id="communication"></div>
+              </div> */}
+              <span
+                style={{
+                  color: '#c1c1c1',
+                }}
+              >
+                EXPERT
+              </span>
             </div>
           </div>
           <div className="hobbies">
-            <h3>HOBBIES</h3>
+            <h3>Misc</h3>
             <hr />
             <div className="hobby">
-              <p>Road Trips</p>
+              <p>Years Of Experience</p>
               <div className="icon-box">
                 <i className="fas fa-motorcycle"></i>
               </div>
             </div>
             <div className="hobby">
-              <p>Photography</p>
+              <p>No Of Completed Projects</p>
               <div className="icon-box">
-                <i className="fas fa-camera-retro"></i>
-              </div>
-            </div>
-            <div className="hobby">
-              <p>Football</p>
-              <div className="icon-box">
-                <i className="fas fa-futbol"></i>
+                <span>
+                  <i className="fas fa-motorcycle"></i>
+                  55
+                </span>
               </div>
             </div>
           </div>

@@ -15,9 +15,9 @@ const index = () => {
           <header className="text">FAQ & Video Guidance</header>
           <FullWidthVideo />
 
-          <header className="text">Frequently Asked Questions</header>
+          {/* <header className="text">Frequently Asked Questions</header> */}
 
-          <Accordion />
+          {/* <Accordion /> */}
         </>
       </DashboardLayout>
     </>
