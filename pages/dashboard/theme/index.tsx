@@ -82,9 +82,21 @@ const allThemes = [
     url: `${globalConstant.baseURL}/12`,
     useUrl: `${globalConstant.baseURL}/dashboard/set/?info=name,bio,contact,education,work,skill,project,achievement,simg,12`,
 
-    name: 'Yellow Eleventh Theme',
+    name: 'CoffeeMan Twelve Theme',
     description: 'This is the third theme',
     imageUrl: 'https://i.imgur.com/78vGxgi.png',
+  },
+  // *sixth
+  {
+    price: '220',
+    isPaid: 'full-premium',
+    url: `${globalConstant.baseURL}/13`,
+    useUrl: `${globalConstant.baseURL}/dashboard/set/?info=name,bio,contact,education,work,skill,project,achievement,simg,13`,
+
+    name: 'Singleton Minimal Theme',
+    description: 'This is the third theme',
+
+    imageUrl: 'https://i.imgur.com/dbdQxSD.png',
   },
   // *seventh
   {
