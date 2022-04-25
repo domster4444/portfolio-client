@@ -110,8 +110,8 @@ class MyDocument extends Document {
         />
         <meta
           name="keywords"
-          content="Online Portfolio, Portfolio Site, Job Portfolio Website, Online Occupation Website, professional Portfolio , Student Website, Student Portfolio, career ePortfolio,Career Portfolio, Online ePortfolio, Portfolio, Student Resume, Online Job Portfolio, Career Portfolio, web-based portfolio, job portfolio, job resume, online nursing portfolio, Website Portfolio, online personal portfolio, nusrse portfolio website, nurse portfolio, student portfolio, student portfolio website, education portfolio, education portfolio website,
-          portfolio gen,portfolio generator free,website screenshot portfolio generator,online portfolio generator,portfolio generator online,eportfolio generator,hexgrade"
+          content="Online Portfolio,portfolio generator, Portfolio Site, Job Portfolio Website, Online Occupation Website, professional Portfolio , Student Website, Student Portfolio, career ePortfolio,Career Portfolio, Online ePortfolio, Portfolio, Student Resume, Online Job Portfolio, Career Portfolio, web-based portfolio, job portfolio, job resume, online nursing portfolio, Website Portfolio, online personal portfolio, nurse portfolio website, nurse portfolio, student portfolio, student portfolio website, education portfolio, education portfolio website,
+          hexgrade portfolio,hexgrade portfolio generator,portfolio generator free,website screenshot portfolio generator,online portfolio generator,portfolio generator online,eportfolio generator,hexgrade"
         />
         <body>
           <Main />
