@@ -152,24 +152,25 @@ const ThemeCard = ({
   useEffect(() => {
     setTimeout(() => {
       setIsLoaded(true);
-    }, 400);
-
-    // alert('not loaded');
-    TweenMax.to(animateThemeCard, 0.1, {
-      opacity: 0,
-      scale: 0.1,
-      ease: Power3.easeOut,
-    });
+    }, 300);
   }, []);
-  useEffect(() => {
-    if (isLoaded === true) {
-      TweenMax.to(animateThemeCard, 0.2, {
-        opacity: 1,
-        scale: 1,
-        ease: Power3.easeOut,
-      });
-    }
-  }, [isLoaded]);
+
+  //   // alert('not loaded');
+  //   TweenMax.to(animateThemeCard, 0.1, {
+  //     opacity: 0,
+  //     scale: 0.1,
+  //     ease: Power3.easeOut,
+  //   });
+  // }, []);
+  // useEffect(() => {
+  //   if (isLoaded === true) {
+  //     TweenMax.to(animateThemeCard, 0.2, {
+  //       opacity: 1,
+  //       scale: 1,
+  //       ease: Power3.easeOut,
+  //     });
+  //   }
+  // }, [isLoaded]);
 
   // modal with use modal
   const [visible, setVisible] = React.useState(false);
@@ -269,35 +270,18 @@ const ThemeCard = ({
         }
         return (
           <ThemeCardSmall
+            className="margin-skeleton-card"
             ref={(el) => {
               // @ts-ignore
               animateThemeCard = el;
             }}
           >
-            <h1>skeleton here</h1>
-            {/* <Stack spacing={1}>
-              <Skeleton
-                variant="rectangular"
-                style={{ width: '100%' }}
-                height={158}
-              />
-
-              <div style={{ display: 'flex', justifyContent: 'space-between' }}>
-                <Skeleton
-                  style={{ margin: '1rem' }}
-                  variant="rectangular"
-                  width={100}
-                  height={40}
-                />
-
-                <Skeleton
-                  style={{ margin: '1rem' }}
-                  variant="rectangular"
-                  width={100}
-                  height={40}
-                />
-              </div>
-            </Stack> */}
+            <div className="skeleton-box"></div>
+            <div className="skeleton-box-text"></div>
+            <div className="skeleton-box-btn-container">
+              <div className="skeleton-box-btn"></div>
+              <div className="skeleton-box-btn"></div>
+            </div>
           </ThemeCardSmall>
         );
       })()}
