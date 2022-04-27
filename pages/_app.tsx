@@ -77,7 +77,7 @@ function MyApp({ Component, pageProps }: AppProps) {
           sizes="180x180"
           href="/images/icon180_180.png"
         />
-        <linkj
+        <link
           rel="icon"
           type="image/png"
           sizes="32x32"
