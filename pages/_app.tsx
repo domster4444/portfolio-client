@@ -63,7 +63,7 @@ function MyApp({ Component, pageProps }: AppProps) {
     } else {
       console.log('OFFLINE');
 
-      location.href = `${globalConstant.baseURL}/home`;
+      // location.href = `${globalConstant.baseURL}/home`;
     }
   });
 
@@ -77,7 +77,7 @@ function MyApp({ Component, pageProps }: AppProps) {
           sizes="180x180"
           href="/images/icon180_180.png"
         />
-        <link
+        <linkj
           rel="icon"
           type="image/png"
           sizes="32x32"
