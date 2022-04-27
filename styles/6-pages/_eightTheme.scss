@@ -1,14 +1,19 @@
 .eightMainPage {
+  background-color: #202124;
   /*===== GOOGLE FONTS =====*/
   @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
   span {
     font-size: 1.4rem !important;
   }
   p {
+    color: white;
+
     font-size: 1.9rem !important;
   }
 
   h2.section-title {
+    color: white;
+
     font-size: 4.2rem !important;
   }
   h1 {
@@ -358,6 +363,7 @@
   .qualification__title {
     font-size: var(--h3-font-size);
     color: var(--first-color);
+    color: white;
     margin-bottom: var(--mb-2);
     display: flex;
     align-items: center;
@@ -366,6 +372,7 @@
   .qualification__title-icon {
     font-size: 1.5rem;
     margin-right: var(--mb-1);
+    color: white;
   }
   .qualification__box {
     padding-bottom: 1rem;
@@ -376,6 +383,7 @@
     color: var(--first-color);
     margin-bottom: var(--mb-1);
     font-weight: var(--font-medium);
+    color: white;
   }
 
   .qualification__icon,
@@ -384,6 +392,7 @@
     color: var(--first-color-light);
   }
   .qualification__work {
+    color: #ccc;
     display: block;
   }
   /*===== SERVICES =====*/
@@ -503,8 +512,9 @@
   .contact__content {
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   }
+
   .contact__box {
-    background-color: #fff;
+    background-color: white;
     border-radius: 0.5rem;
     padding: 1.5rem;
     text-align: center;
