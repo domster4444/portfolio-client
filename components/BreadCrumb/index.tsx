@@ -33,7 +33,11 @@ const BreadCrumb = styled.span`
   }
 `;
 
-const Index = ({ breadCrumbLink }: { breadCrumbLink: any }) => {
+interface IProps {
+  breadCrumbLink: string[];
+}
+
+const Index: React.FC<IProps> = ({ breadCrumbLink }): React.ReactElement => {
   return (
     <BreadCrumb className="bread-crumb">
       <span className="box">

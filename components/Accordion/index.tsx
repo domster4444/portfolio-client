@@ -7,7 +7,7 @@ import styled from 'styled-components';
 const AccordionSection = styled.section`
   /* margin: 2rem 0rem; */
 `;
-const index: React.FC = () => {
+const index: React.FC = (): React.ReactElement => {
   return (
     <>
       <Fade bottom>

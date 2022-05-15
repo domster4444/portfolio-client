@@ -15,7 +15,7 @@ export const DeleteIcon: React.FC<IconProps> = ({
   height,
   width,
   ...props
-}) => {
+}): React.ReactElement => {
   return (
     <svg
       width={size || width || 24}

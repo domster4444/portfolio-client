@@ -17,6 +17,6 @@ export const data = {
   ],
 };
 
-export function DynamicDoughnut() {
+export const  DynamicDoughnut:React.FC =():React.ReactElement=> {
   return <Doughnut data={data} />;
 }

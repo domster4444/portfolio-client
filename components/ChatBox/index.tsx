@@ -8,6 +8,7 @@ import ScrollableFeed from 'react-scrollable-feed';
 import Message from './components/Message';
 import { useUser } from '@auth0/nextjs-auth0';
 import { Button } from '@nextui-org/react';
+import { ChangeEvent } from 'react';
 
 const ENDPOINT = globalConstant.chatServerURL;
 
@@ -100,7 +101,7 @@ type MessageObjTypes = {
   id: string;
 };
 
-const ChatBox = () => {
+const ChatBox: React.FC = (): React.ReactElement => {
   const { user, error, isLoading } = useUser();
 
   // ?STATE
@@ -157,12 +158,12 @@ const ChatBox = () => {
   // };
 
   // change state of message to send on change of input
-  const updateMessage = (e: any) => {
+  const updateMessage = (e: any): void => {
     // @ts-ignore
     setMessageToSend(e.target.value);
   };
   // send message to socket server
-  const sendMessage = () => {
+  const sendMessage = (): void => {
     //! send message to socket server
     socket.emit('message', { message: messageToSend, id });
     // ? blank the message after sending

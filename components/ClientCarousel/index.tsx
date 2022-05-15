@@ -9,7 +9,7 @@ import client4 from 'public/images/clients/4.jpg';
 
 // components
 
-const index: React.FC = () => {
+const Index: React.FC = (): React.ReactElement => {
   return (
     <div>
       <div className="slider">
@@ -132,4 +132,4 @@ const index: React.FC = () => {
   );
 };
 
-export default index;
+export default Index;

@@ -86,7 +86,7 @@ const StatusCardIcon = styled.div`
   }
 `;
 
-const Index: React.FC = () => {
+const Index: React.FC = (): React.ReactElement => {
   return (
     <>
       <DbHomeContainer className="dashboard_home ">

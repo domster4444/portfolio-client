@@ -50,6 +50,6 @@ export const data = {
   ],
 };
 
-export function HorizontalLineChart() {
+export const HorizontalLineChart: React.FC = (): React.ReactElement => {
   return <Bar options={options} data={data} />;
-}
+};
