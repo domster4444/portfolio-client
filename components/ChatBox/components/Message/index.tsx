@@ -4,7 +4,7 @@ import styled from 'styled-components';
 const MessageContainer = styled.div`
   /* background: #929292; */
 `;
-const Message = ({ user, message, classs }: any) => {
+const Message:React.FC = ({ user, message, classs }: any) => {
   if (user) {
     return (
       <MessageContainer className="MessageContainer">
